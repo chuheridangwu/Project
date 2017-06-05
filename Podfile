@@ -4,5 +4,5 @@ target'Project'do
 pod'AFNetworking'
 pod 'SDWebImage'
 pod 'Masonry'
-
+pod 'JPush', '3.0.2'
 end
