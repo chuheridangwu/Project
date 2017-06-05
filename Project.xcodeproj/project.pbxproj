@@ -20,7 +20,6 @@
 		30A988B61EE57F8E00D04924 /* XBRequestNetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988B51EE57F8E00D04924 /* XBRequestNetTool.m */; };
 		30E7AD131EE45F5B000609DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7AD121EE45F5B000609DB /* main.m */; };
 		30E7AD161EE45F5B000609DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7AD151EE45F5B000609DB /* AppDelegate.m */; };
-		30E7AD191EE45F5B000609DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7AD181EE45F5B000609DB /* ViewController.m */; };
 		30E7AD1C1EE45F5B000609DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E7AD1A1EE45F5B000609DB /* Main.storyboard */; };
 		30E7AD211EE45F5B000609DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E7AD1F1EE45F5B000609DB /* LaunchScreen.storyboard */; };
 		30E7AD2C1EE45F5B000609DB /* ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7AD2B1EE45F5B000609DB /* ProjectTests.m */; };
@@ -74,8 +73,6 @@
 		30E7AD121EE45F5B000609DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		30E7AD141EE45F5B000609DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		30E7AD151EE45F5B000609DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		30E7AD171EE45F5B000609DB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		30E7AD181EE45F5B000609DB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		30E7AD1B1EE45F5B000609DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30E7AD201EE45F5B000609DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30E7AD221EE45F5B000609DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -235,8 +232,6 @@
 				30E7AD141EE45F5B000609DB /* AppDelegate.h */,
 				30E7AD151EE45F5B000609DB /* AppDelegate.m */,
 				30A988511EE5564700D04924 /* Class */,
-				30E7AD171EE45F5B000609DB /* ViewController.h */,
-				30E7AD181EE45F5B000609DB /* ViewController.m */,
 				305592681EE4E58A00864E6E /* ProjectHeader.pch */,
 				30E7AD1A1EE45F5B000609DB /* Main.storyboard */,
 				30E7AD1F1EE45F5B000609DB /* LaunchScreen.storyboard */,
@@ -475,7 +470,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30E7AD191EE45F5B000609DB /* ViewController.m in Sources */,
 				30A988591EE5566700D04924 /* XBTabBarController.m in Sources */,
 				30A988B61EE57F8E00D04924 /* XBRequestNetTool.m in Sources */,
 				30A9885C1EE5568800D04924 /* XBNavigationController.m in Sources */,
