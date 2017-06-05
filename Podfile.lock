@@ -18,6 +18,7 @@ PODS:
   - JPush (3.0.2):
     - JCore (~> 1.1.1)
   - Masonry (1.0.2)
+  - MJRefresh (3.1.12)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -26,6 +27,7 @@ DEPENDENCIES:
   - AFNetworking
   - JPush (= 3.0.2)
   - Masonry
+  - MJRefresh
   - SDWebImage
 
 SPEC CHECKSUMS:
@@ -33,8 +35,9 @@ SPEC CHECKSUMS:
   JCore: dff3c50e9a7522a508cd9096ca79165968e1aed3
   JPush: 01a693fafe51b93eafc2e368bbc7a7cc07e12ce4
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: 314337f1d0a3cb5801d15dee5cd484327e29ff17
+PODFILE CHECKSUM: da23cb9de76a0205e347afa7bf95ba9a72b59fe6
 
 COCOAPODS: 1.2.1

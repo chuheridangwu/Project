@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		3055926D1EE4F9DF00864E6E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3055926C1EE4F9DF00864E6E /* Images.xcassets */; };
+		30A988591EE5566700D04924 /* XBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988581EE5566700D04924 /* XBTabBarController.m */; };
+		30A9885C1EE5568800D04924 /* XBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9885B1EE5568800D04924 /* XBNavigationController.m */; };
+		30A9885F1EE556A100D04924 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9885E1EE556A100D04924 /* HomeViewController.m */; };
+		30A988621EE556C000D04924 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988611EE556C000D04924 /* BaseViewController.m */; };
+		30A988651EE556E400D04924 /* DisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988641EE556E400D04924 /* DisViewController.m */; };
+		30A988681EE556F100D04924 /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988671EE556F100D04924 /* PersonViewController.m */; };
+		30A9886B1EE5570100D04924 /* OneBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9886A1EE5570100D04924 /* OneBuyViewController.m */; };
+		30A988701EE562B600D04924 /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9886F1EE562B600D04924 /* BaseWebViewController.m */; };
+		30A988B31EE57D7A00D04924 /* XBGuidePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988B21EE57D7A00D04924 /* XBGuidePage.m */; };
+		30A988B61EE57F8E00D04924 /* XBRequestNetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988B51EE57F8E00D04924 /* XBRequestNetTool.m */; };
 		30E7AD131EE45F5B000609DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7AD121EE45F5B000609DB /* main.m */; };
 		30E7AD161EE45F5B000609DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7AD151EE45F5B000609DB /* AppDelegate.m */; };
 		30E7AD191EE45F5B000609DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7AD181EE45F5B000609DB /* ViewController.m */; };
@@ -40,6 +50,26 @@
 		305592681EE4E58A00864E6E /* ProjectHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectHeader.pch; sourceTree = "<group>"; };
 		305592691EE4F06B00864E6E /* Project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Project.entitlements; sourceTree = "<group>"; };
 		3055926C1EE4F9DF00864E6E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		30A988571EE5566700D04924 /* XBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBTabBarController.h; sourceTree = "<group>"; };
+		30A988581EE5566700D04924 /* XBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBTabBarController.m; sourceTree = "<group>"; };
+		30A9885A1EE5568800D04924 /* XBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBNavigationController.h; sourceTree = "<group>"; };
+		30A9885B1EE5568800D04924 /* XBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBNavigationController.m; sourceTree = "<group>"; };
+		30A9885D1EE556A100D04924 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		30A9885E1EE556A100D04924 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		30A988601EE556C000D04924 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		30A988611EE556C000D04924 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		30A988631EE556E400D04924 /* DisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisViewController.h; sourceTree = "<group>"; };
+		30A988641EE556E400D04924 /* DisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisViewController.m; sourceTree = "<group>"; };
+		30A988661EE556F100D04924 /* PersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
+		30A988671EE556F100D04924 /* PersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
+		30A988691EE5570100D04924 /* OneBuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneBuyViewController.h; sourceTree = "<group>"; };
+		30A9886A1EE5570100D04924 /* OneBuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneBuyViewController.m; sourceTree = "<group>"; };
+		30A9886E1EE562B600D04924 /* BaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWebViewController.h; sourceTree = "<group>"; };
+		30A9886F1EE562B600D04924 /* BaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWebViewController.m; sourceTree = "<group>"; };
+		30A988B11EE57D7A00D04924 /* XBGuidePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBGuidePage.h; sourceTree = "<group>"; };
+		30A988B21EE57D7A00D04924 /* XBGuidePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBGuidePage.m; sourceTree = "<group>"; };
+		30A988B41EE57F8E00D04924 /* XBRequestNetTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBRequestNetTool.h; sourceTree = "<group>"; };
+		30A988B51EE57F8E00D04924 /* XBRequestNetTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBRequestNetTool.m; sourceTree = "<group>"; };
 		30E7AD0E1EE45F5B000609DB /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E7AD121EE45F5B000609DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		30E7AD141EE45F5B000609DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -93,6 +123,89 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		30A988511EE5564700D04924 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				30A9886D1EE55D2D00D04924 /* Common */,
+				30A988521EE5564700D04924 /* Discover */,
+				30A988531EE5564700D04924 /* Home */,
+				30A988541EE5564700D04924 /* OneYuanBuy */,
+				30A988551EE5564700D04924 /* Person */,
+				30A988561EE5564700D04924 /* ProjectBase */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		30A988521EE5564700D04924 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				30A988631EE556E400D04924 /* DisViewController.h */,
+				30A988641EE556E400D04924 /* DisViewController.m */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		30A988531EE5564700D04924 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				30A9885D1EE556A100D04924 /* HomeViewController.h */,
+				30A9885E1EE556A100D04924 /* HomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		30A988541EE5564700D04924 /* OneYuanBuy */ = {
+			isa = PBXGroup;
+			children = (
+				30A988691EE5570100D04924 /* OneBuyViewController.h */,
+				30A9886A1EE5570100D04924 /* OneBuyViewController.m */,
+			);
+			path = OneYuanBuy;
+			sourceTree = "<group>";
+		};
+		30A988551EE5564700D04924 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				30A988661EE556F100D04924 /* PersonViewController.h */,
+				30A988671EE556F100D04924 /* PersonViewController.m */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		30A988561EE5564700D04924 /* ProjectBase */ = {
+			isa = PBXGroup;
+			children = (
+				30A988571EE5566700D04924 /* XBTabBarController.h */,
+				30A988581EE5566700D04924 /* XBTabBarController.m */,
+				30A9885A1EE5568800D04924 /* XBNavigationController.h */,
+				30A9885B1EE5568800D04924 /* XBNavigationController.m */,
+				30A988601EE556C000D04924 /* BaseViewController.h */,
+				30A988611EE556C000D04924 /* BaseViewController.m */,
+				30A9886E1EE562B600D04924 /* BaseWebViewController.h */,
+				30A9886F1EE562B600D04924 /* BaseWebViewController.m */,
+				30A988B41EE57F8E00D04924 /* XBRequestNetTool.h */,
+				30A988B51EE57F8E00D04924 /* XBRequestNetTool.m */,
+			);
+			path = ProjectBase;
+			sourceTree = "<group>";
+		};
+		30A9886D1EE55D2D00D04924 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				30A988B01EE57D7A00D04924 /* XBControls */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		30A988B01EE57D7A00D04924 /* XBControls */ = {
+			isa = PBXGroup;
+			children = (
+				30A988B11EE57D7A00D04924 /* XBGuidePage.h */,
+				30A988B21EE57D7A00D04924 /* XBGuidePage.m */,
+			);
+			path = XBControls;
+			sourceTree = "<group>";
+		};
 		30E7AD051EE45F5B000609DB = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +234,7 @@
 				305592691EE4F06B00864E6E /* Project.entitlements */,
 				30E7AD141EE45F5B000609DB /* AppDelegate.h */,
 				30E7AD151EE45F5B000609DB /* AppDelegate.m */,
+				30A988511EE5564700D04924 /* Class */,
 				30E7AD171EE45F5B000609DB /* ViewController.h */,
 				30E7AD181EE45F5B000609DB /* ViewController.m */,
 				305592681EE4E58A00864E6E /* ProjectHeader.pch */,
@@ -362,8 +476,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				30E7AD191EE45F5B000609DB /* ViewController.m in Sources */,
+				30A988591EE5566700D04924 /* XBTabBarController.m in Sources */,
+				30A988B61EE57F8E00D04924 /* XBRequestNetTool.m in Sources */,
+				30A9885C1EE5568800D04924 /* XBNavigationController.m in Sources */,
 				30E7AD161EE45F5B000609DB /* AppDelegate.m in Sources */,
 				30E7AD131EE45F5B000609DB /* main.m in Sources */,
+				30A988681EE556F100D04924 /* PersonViewController.m in Sources */,
+				30A9886B1EE5570100D04924 /* OneBuyViewController.m in Sources */,
+				30A988701EE562B600D04924 /* BaseWebViewController.m in Sources */,
+				30A988651EE556E400D04924 /* DisViewController.m in Sources */,
+				30A988B31EE57D7A00D04924 /* XBGuidePage.m in Sources */,
+				30A988621EE556C000D04924 /* BaseViewController.m in Sources */,
+				30A9885F1EE556A100D04924 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

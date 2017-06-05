@@ -17,5 +17,16 @@
 #import "Masonry.h"
 #import "UIImageView+WebCache.h"
 #import "AFNetworking.h"
+#import "MJRefresh.h"
+#import "XBRequestNetTool.h"
+
+
+
+#define XBAPPBaseColor [UIColor colorWithRed:199/256.0 green:23/256.0 blue:36/256.0 alpha:1.0]
+// 屏幕高度
+#define SCREEN_HEIGHT         [[UIScreen mainScreen] bounds].size.height
+// 屏幕宽度
+#define SCREEN_WIDTH          [[UIScreen mainScreen] bounds].size.width
+
 
 #endif /* ProjectHeader_pch */

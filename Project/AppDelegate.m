@@ -17,6 +17,10 @@
 // 如果需要使用idfa功能所需要引入的头文件（可选）
 #import <AdSupport/AdSupport.h>
 
+#import "XBTabBarController.h"
+
+#import "XBGuidePage.h"
+
 
 @interface AppDelegate ()<JPUSHRegisterDelegate>
 
@@ -28,6 +32,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    XBTabBarController *tabbarVC = [[XBTabBarController alloc]init];
+    self.window.rootViewController = tabbarVC;
+    [self.window makeKeyWindow];
+    
+    
+    //引导页
+    [self appGuidaPage:tabbarVC.view];
     
     //极光推送
     [self setJupsh:launchOptions];
@@ -35,8 +47,14 @@
     return YES;
 }
 
+//引导页
+- (void)appGuidaPage:(UIView*)view{
+    [XBGuidePage showGuidePageaWith:view imgs:@[@"guidePage_0.jpg",@"guidePage_1.jpg",@"guidePage_2.jpg",@"guidePage_3.jpg"]];
+}
+
+
+
 - (void)setJupsh:(NSDictionary *)launchOptions{
-   
     
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
     entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
