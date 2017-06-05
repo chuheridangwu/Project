@@ -3,5 +3,6 @@ use_frameworks!
 target'Project'do
 pod'AFNetworking'
 pod 'SDWebImage'
+pod 'Masonry'
 
 end
