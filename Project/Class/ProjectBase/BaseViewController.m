@@ -30,11 +30,11 @@
         make.height.equalTo(@180);
     }];
     
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64) style:UITableViewStylePlain];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];
-    _tableView.contentInset = UIEdgeInsetsMake(0, 0,49, 0);
+    _tableView.contentInset = UIEdgeInsetsMake(0, 0,113, 0);
     _tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     
     MJRefreshNormalHeader *heard = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(tableViewDownRefresh)];

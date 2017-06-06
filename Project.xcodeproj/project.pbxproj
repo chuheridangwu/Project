@@ -26,6 +26,7 @@
 		30A988701EE562B600D04924 /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9886F1EE562B600D04924 /* BaseWebViewController.m */; };
 		30A988B31EE57D7A00D04924 /* XBGuidePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988B21EE57D7A00D04924 /* XBGuidePage.m */; };
 		30A988B61EE57F8E00D04924 /* XBRequestNetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988B51EE57F8E00D04924 /* XBRequestNetTool.m */; };
+		30D601C81EE6E3B700A70B93 /* UIColor+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D601C71EE6E3B700A70B93 /* UIColor+Color.m */; };
 		30DF95091EE646CE000261C8 /* XBRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DF95081EE646CE000261C8 /* XBRequestModel.m */; };
 		30DF950C1EE69476000261C8 /* Discover.json in Resources */ = {isa = PBXBuildFile; fileRef = 30DF950B1EE69476000261C8 /* Discover.json */; };
 		30DF950F1EE69860000261C8 /* DIscoverItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DF950E1EE69860000261C8 /* DIscoverItem.m */; };
@@ -102,6 +103,8 @@
 		30A988B21EE57D7A00D04924 /* XBGuidePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBGuidePage.m; sourceTree = "<group>"; };
 		30A988B41EE57F8E00D04924 /* XBRequestNetTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBRequestNetTool.h; sourceTree = "<group>"; };
 		30A988B51EE57F8E00D04924 /* XBRequestNetTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBRequestNetTool.m; sourceTree = "<group>"; };
+		30D601C61EE6E3B700A70B93 /* UIColor+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Color.h"; sourceTree = "<group>"; };
+		30D601C71EE6E3B700A70B93 /* UIColor+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Color.m"; sourceTree = "<group>"; };
 		30DF95071EE646CE000261C8 /* XBRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBRequestModel.h; sourceTree = "<group>"; };
 		30DF95081EE646CE000261C8 /* XBRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBRequestModel.m; sourceTree = "<group>"; };
 		30DF950B1EE69476000261C8 /* Discover.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Discover.json; sourceTree = "<group>"; };
@@ -218,6 +221,8 @@
 			children = (
 				30263D5D1EE63816007B30C8 /* UIImage+image.h */,
 				30263D5E1EE63816007B30C8 /* UIImage+image.m */,
+				30D601C61EE6E3B700A70B93 /* UIColor+Color.h */,
+				30D601C71EE6E3B700A70B93 /* UIColor+Color.m */,
 			);
 			name = Category;
 			path = Categoty;
@@ -632,6 +637,7 @@
 				30E7AD161EE45F5B000609DB /* AppDelegate.m in Sources */,
 				30E7AD131EE45F5B000609DB /* main.m in Sources */,
 				30A988681EE556F100D04924 /* PersonViewController.m in Sources */,
+				30D601C81EE6E3B700A70B93 /* UIColor+Color.m in Sources */,
 				30263D591EE635ED007B30C8 /* XBArrowSettingItem.m in Sources */,
 				30DF95151EE6AA77000261C8 /* DisContentEntity.m in Sources */,
 				30A9886B1EE5570100D04924 /* OneBuyViewController.m in Sources */,
