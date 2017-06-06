@@ -12,6 +12,7 @@
 
 @interface BaseViewController ()
 @property (nonatomic,assign)CGFloat offsetY; //偏移量
+@property (nonatomic,strong)UIView *noneView; //没有数据的View;
 @end
 
 @implementation BaseViewController
@@ -19,10 +20,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view
-    _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self.view addSubview:self.noneView];
+    [self.noneView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view.centerX).offset(0);
+        make.centerY.equalTo(self.view.centerY).offset(-20);
+        make.left.right.equalTo(0);
+        make.height.equalTo(@180);
+    }];
+    
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];
+    _tableView.contentInset = UIEdgeInsetsMake(0, 0,49, 0);
     _tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     
     MJRefreshNormalHeader *heard = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(tableViewDownRefresh)];
@@ -32,6 +44,8 @@
     _tableView.mj_footer.hidden = YES;
     _requestModel = [[XBRequestModel alloc]init];
     _requestModel.delegate  = self;
+    
+    
 }
 
 - (void)setRequestUrl:(NSString *)requestUrl{
@@ -40,6 +54,12 @@
 }
 
 - (void)tableViewDownRefresh{
+    
+    if (self.requestUrl.length == 0){
+        [self requestNetWorkSuccess:nil];
+        return;
+    }
+    
     [self.requestModel requestNetWorkURL:self.requestUrl];
 }
 
@@ -51,7 +71,21 @@
 - (void)requestNetWorkSuccess:(id)outcome{
     [_tableView.mj_footer endRefreshing];
     [_tableView.mj_header endRefreshing];
+    self.noneView.hidden = YES;
+    _tableView.hidden = NO;
 }
+
+- (void)requestNetWorkFailure{
+    [_tableView.mj_footer endRefreshing];
+    [_tableView.mj_header endRefreshing];
+    _noneView.hidden  = NO;
+    _tableView.hidden = YES;
+    
+}
+
+
+
+
 
 #pragma mark - scrollView的代理方法
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
@@ -88,7 +122,7 @@
 // 显示tabbar
 - (void)showTabBar
 {
-    [UIView animateWithDuration:0.6 animations:^{
+    [UIView animateWithDuration:0.4 animations:^{
         self.tabBarController.tabBar.frame = CGRectMake(0, SCREEN_HEIGHT - 49, SCREEN_WIDTH, 49);
     }];
 }
@@ -101,8 +135,38 @@
     }];
 }
 
+- (NSMutableArray*)dataList{
+    if (!_dataList) {
+        _dataList = [NSMutableArray array];
+    }
+    return _dataList;
+}
 
-
+- (UIView*)noneView{
+    if (!_noneView) {
+        _noneView = [[UIView alloc]init];
+        UIImageView *imageView = [UIImageView new];
+        imageView.image = [UIImage imageNamed:@"shopEmpty"];
+        imageView.contentMode = UIViewContentModeCenter;
+        [_noneView addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.top.right.equalTo(0);
+            make.height.equalTo(_noneView.height).multipliedBy(0.5);
+        }];
+        
+        UILabel *label = [UILabel new];
+        label.text = @"不要刷新那么快嘛!\n人家很辛苦的";
+        label.font = [UIFont systemFontOfSize:14];
+        label.textColor = [UIColor grayColor];
+        label.textAlignment = NSTextAlignmentCenter;
+        [_noneView addSubview:label];
+        [label mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.bottom.equalTo(0);
+            make.top.equalTo(imageView.bottom).offset(0);
+        }];
+    }
+    return _noneView;
+}
 
 
 - (void)didReceiveMemoryWarning {

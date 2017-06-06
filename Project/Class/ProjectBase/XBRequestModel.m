@@ -20,7 +20,10 @@
         }
         
     } failure:^(NSError *error) {
-        
+        NSLog(@"网络请求错误\n -----%@",error);
+        if ([self.delegate respondsToSelector:@selector(requestNetWorkFailure)]) {
+            [self.delegate requestNetWorkFailure];
+        }
     }];
 }
 

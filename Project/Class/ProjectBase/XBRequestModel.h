@@ -16,5 +16,5 @@
 
 @protocol XBRequestModelDelegate <NSObject>
 - (void)requestNetWorkSuccess:(id)outcome;
-
+- (void)requestNetWorkFailure;
 @end

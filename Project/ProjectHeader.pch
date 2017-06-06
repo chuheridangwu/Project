@@ -13,7 +13,10 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 
+//define this constant if you want to use Masonry without the 'mas_' prefix
 #define MAS_SHORTHAND
+//define this constant if you want to enable auto-boxing for default syntax
+#define MAS_SHORTHAND_GLOBALS
 #import "Masonry.h"
 #import "UIImageView+WebCache.h"
 #import "AFNetworking.h"

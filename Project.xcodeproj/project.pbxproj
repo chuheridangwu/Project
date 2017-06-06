@@ -27,6 +27,14 @@
 		30A988B31EE57D7A00D04924 /* XBGuidePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988B21EE57D7A00D04924 /* XBGuidePage.m */; };
 		30A988B61EE57F8E00D04924 /* XBRequestNetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988B51EE57F8E00D04924 /* XBRequestNetTool.m */; };
 		30DF95091EE646CE000261C8 /* XBRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DF95081EE646CE000261C8 /* XBRequestModel.m */; };
+		30DF950C1EE69476000261C8 /* Discover.json in Resources */ = {isa = PBXBuildFile; fileRef = 30DF950B1EE69476000261C8 /* Discover.json */; };
+		30DF950F1EE69860000261C8 /* DIscoverItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DF950E1EE69860000261C8 /* DIscoverItem.m */; };
+		30DF95121EE69F78000261C8 /* DisContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DF95111EE69F78000261C8 /* DisContentController.m */; };
+		30DF95151EE6AA77000261C8 /* DisContentEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DF95141EE6AA77000261C8 /* DisContentEntity.m */; };
+		30DF95191EE6B1BC000261C8 /* DisContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DF95181EE6B1BC000261C8 /* DisContentCell.m */; };
+		30DF951C1EE6B322000261C8 /* XBBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DF951B1EE6B322000261C8 /* XBBaseTableViewCell.m */; };
+		30DF95201EE6BA4E000261C8 /* XBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DF951F1EE6BA4E000261C8 /* XBTabBar.m */; };
+		30DF95231EE6BAE8000261C8 /* XBTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DF95221EE6BAE8000261C8 /* XBTabBarButton.m */; };
 		30E7AD131EE45F5B000609DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7AD121EE45F5B000609DB /* main.m */; };
 		30E7AD161EE45F5B000609DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7AD151EE45F5B000609DB /* AppDelegate.m */; };
 		30E7AD1C1EE45F5B000609DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E7AD1A1EE45F5B000609DB /* Main.storyboard */; };
@@ -96,6 +104,21 @@
 		30A988B51EE57F8E00D04924 /* XBRequestNetTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBRequestNetTool.m; sourceTree = "<group>"; };
 		30DF95071EE646CE000261C8 /* XBRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBRequestModel.h; sourceTree = "<group>"; };
 		30DF95081EE646CE000261C8 /* XBRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBRequestModel.m; sourceTree = "<group>"; };
+		30DF950B1EE69476000261C8 /* Discover.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Discover.json; sourceTree = "<group>"; };
+		30DF950D1EE69860000261C8 /* DIscoverItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIscoverItem.h; sourceTree = "<group>"; };
+		30DF950E1EE69860000261C8 /* DIscoverItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIscoverItem.m; sourceTree = "<group>"; };
+		30DF95101EE69F78000261C8 /* DisContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisContentController.h; sourceTree = "<group>"; };
+		30DF95111EE69F78000261C8 /* DisContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisContentController.m; sourceTree = "<group>"; };
+		30DF95131EE6AA77000261C8 /* DisContentEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisContentEntity.h; sourceTree = "<group>"; };
+		30DF95141EE6AA77000261C8 /* DisContentEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisContentEntity.m; sourceTree = "<group>"; };
+		30DF95171EE6B1BC000261C8 /* DisContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisContentCell.h; sourceTree = "<group>"; };
+		30DF95181EE6B1BC000261C8 /* DisContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisContentCell.m; sourceTree = "<group>"; };
+		30DF951A1EE6B322000261C8 /* XBBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBBaseTableViewCell.h; sourceTree = "<group>"; };
+		30DF951B1EE6B322000261C8 /* XBBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBBaseTableViewCell.m; sourceTree = "<group>"; };
+		30DF951E1EE6BA4E000261C8 /* XBTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBTabBar.h; sourceTree = "<group>"; };
+		30DF951F1EE6BA4E000261C8 /* XBTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBTabBar.m; sourceTree = "<group>"; };
+		30DF95211EE6BAE8000261C8 /* XBTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBTabBarButton.h; sourceTree = "<group>"; };
+		30DF95221EE6BAE8000261C8 /* XBTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBTabBarButton.m; sourceTree = "<group>"; };
 		30E7AD0E1EE45F5B000609DB /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E7AD121EE45F5B000609DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		30E7AD141EE45F5B000609DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -219,6 +242,10 @@
 			children = (
 				30A988631EE556E400D04924 /* DisViewController.h */,
 				30A988641EE556E400D04924 /* DisViewController.m */,
+				30DF95101EE69F78000261C8 /* DisContentController.h */,
+				30DF95111EE69F78000261C8 /* DisContentController.m */,
+				30DF95161EE6AFDC000261C8 /* View */,
+				30DF950A1EE69202000261C8 /* Model */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -255,12 +282,15 @@
 			children = (
 				30A988571EE5566700D04924 /* XBTabBarController.h */,
 				30A988581EE5566700D04924 /* XBTabBarController.m */,
+				30DF951D1EE6BA36000261C8 /* XBTabBar */,
 				30A9885A1EE5568800D04924 /* XBNavigationController.h */,
 				30A9885B1EE5568800D04924 /* XBNavigationController.m */,
 				30A988601EE556C000D04924 /* BaseViewController.h */,
 				30A988611EE556C000D04924 /* BaseViewController.m */,
 				30A9886E1EE562B600D04924 /* BaseWebViewController.h */,
 				30A9886F1EE562B600D04924 /* BaseWebViewController.m */,
+				30DF951A1EE6B322000261C8 /* XBBaseTableViewCell.h */,
+				30DF951B1EE6B322000261C8 /* XBBaseTableViewCell.m */,
 				30A988B41EE57F8E00D04924 /* XBRequestNetTool.h */,
 				30A988B51EE57F8E00D04924 /* XBRequestNetTool.m */,
 				30DF95071EE646CE000261C8 /* XBRequestModel.h */,
@@ -287,6 +317,38 @@
 				30A988B21EE57D7A00D04924 /* XBGuidePage.m */,
 			);
 			path = XBControls;
+			sourceTree = "<group>";
+		};
+		30DF950A1EE69202000261C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30DF950B1EE69476000261C8 /* Discover.json */,
+				30DF950D1EE69860000261C8 /* DIscoverItem.h */,
+				30DF950E1EE69860000261C8 /* DIscoverItem.m */,
+				30DF95131EE6AA77000261C8 /* DisContentEntity.h */,
+				30DF95141EE6AA77000261C8 /* DisContentEntity.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		30DF95161EE6AFDC000261C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30DF95171EE6B1BC000261C8 /* DisContentCell.h */,
+				30DF95181EE6B1BC000261C8 /* DisContentCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30DF951D1EE6BA36000261C8 /* XBTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				30DF951E1EE6BA4E000261C8 /* XBTabBar.h */,
+				30DF951F1EE6BA4E000261C8 /* XBTabBar.m */,
+				30DF95211EE6BAE8000261C8 /* XBTabBarButton.h */,
+				30DF95221EE6BAE8000261C8 /* XBTabBarButton.m */,
+			);
+			path = XBTabBar;
 			sourceTree = "<group>";
 		};
 		30E7AD051EE45F5B000609DB = {
@@ -481,6 +543,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30DF950C1EE69476000261C8 /* Discover.json in Resources */,
 				30E7AD211EE45F5B000609DB /* LaunchScreen.storyboard in Resources */,
 				3055926D1EE4F9DF00864E6E /* Images.xcassets in Resources */,
 				30E7AD1C1EE45F5B000609DB /* Main.storyboard in Resources */,
@@ -556,11 +619,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30DF951C1EE6B322000261C8 /* XBBaseTableViewCell.m in Sources */,
 				30A988591EE5566700D04924 /* XBTabBarController.m in Sources */,
 				30263D4A1EE6340B007B30C8 /* XBBaseTableViewVC.m in Sources */,
 				30263D531EE63556007B30C8 /* XBSettingCell.m in Sources */,
 				30263D5F1EE63816007B30C8 /* UIImage+image.m in Sources */,
 				30A988B61EE57F8E00D04924 /* XBRequestNetTool.m in Sources */,
+				30DF95121EE69F78000261C8 /* DisContentController.m in Sources */,
 				30263D561EE635D1007B30C8 /* XBSwtichSettingItem.m in Sources */,
 				30DF95091EE646CE000261C8 /* XBRequestModel.m in Sources */,
 				30A9885C1EE5568800D04924 /* XBNavigationController.m in Sources */,
@@ -568,10 +633,15 @@
 				30E7AD131EE45F5B000609DB /* main.m in Sources */,
 				30A988681EE556F100D04924 /* PersonViewController.m in Sources */,
 				30263D591EE635ED007B30C8 /* XBArrowSettingItem.m in Sources */,
+				30DF95151EE6AA77000261C8 /* DisContentEntity.m in Sources */,
 				30A9886B1EE5570100D04924 /* OneBuyViewController.m in Sources */,
+				30DF950F1EE69860000261C8 /* DIscoverItem.m in Sources */,
+				30DF95231EE6BAE8000261C8 /* XBTabBarButton.m in Sources */,
 				30A988701EE562B600D04924 /* BaseWebViewController.m in Sources */,
+				30DF95191EE6B1BC000261C8 /* DisContentCell.m in Sources */,
 				30A988651EE556E400D04924 /* DisViewController.m in Sources */,
 				30A988B31EE57D7A00D04924 /* XBGuidePage.m in Sources */,
+				30DF95201EE6BA4E000261C8 /* XBTabBar.m in Sources */,
 				30263D621EE63BD5007B30C8 /* XBUITool.m in Sources */,
 				30A988621EE556C000D04924 /* BaseViewController.m in Sources */,
 				30263D501EE634F9007B30C8 /* XBSettingItem.m in Sources */,

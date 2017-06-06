@@ -7,6 +7,8 @@
 //
 
 #import "DisViewController.h"
+#import "DIscoverItem.h"
+#import "DisContentController.h"
 
 @interface DisViewController ()
 
@@ -17,21 +19,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSString *path = [[NSBundle mainBundle]pathForResource:@"Discover.json" ofType:nil];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    for (NSDictionary *dict  in jsonDict[@"content"]) {
+        DIscoverItem *item = [DIscoverItem disCoverItemWithDict:dict];
+        [self.dataList addObject:item];
+    }
     
-//    [XBRequestNetTool post:@"http://zx.caipiao.163.com/libraryapi/league_matchRank.html?leagueId=7&product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=67A4CF88-1A62-435A-A4F9-EE79F0D5064D" params:nil success:^(id responseObj) {
-//        
-//        //        NSLog(@" -------------\n  %@",responseObj);
-//    } failure:^(NSError *error) {
-//        
-//    }];
     
-    self.requestUrl = @"http://zx.caipiao.163.com/libraryapi/league_matchRank.html?leagueId=7&product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=67A4CF88-1A62-435A-A4F9-EE79F0D5064D";
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *str = @"wrwerew";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:str];
+    }
+    DIscoverItem *item = self.dataList[indexPath.row];
+    cell.textLabel.text = item.title;
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    DIscoverItem *item = self.dataList[indexPath.row];
+    DisContentController *contentVC = [[DisContentController alloc]init];
+    [self.navigationController pushViewController:contentVC animated:YES];
+    contentVC.url = item.url;
+    contentVC.title = item.title;
 }
 
 
 - (void)requestNetWorkSuccess:(id)outcome{
     [super requestNetWorkSuccess:outcome];
-    NSLog(@"%@ ---",outcome);
 }
 
 - (void)didReceiveMemoryWarning {
