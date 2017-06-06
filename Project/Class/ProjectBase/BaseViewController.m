@@ -46,6 +46,10 @@
     _requestModel.delegate  = self;
     
     
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    
 }
 
 - (void)setRequestUrl:(NSString *)requestUrl{
@@ -122,6 +126,8 @@
 // 显示tabbar
 - (void)showTabBar
 {
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+
     [UIView animateWithDuration:0.4 animations:^{
         self.tabBarController.tabBar.frame = CGRectMake(0, SCREEN_HEIGHT - 49, SCREEN_WIDTH, 49);
     }];
@@ -130,6 +136,7 @@
 
 // 隐藏tabbar
 - (void)hideTabBar {
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     [UIView animateWithDuration:0.6 animations:^{
         self.tabBarController.tabBar.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, 49);
     }];
