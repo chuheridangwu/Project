@@ -18,7 +18,9 @@
 #import "UIImageView+WebCache.h"
 #import "AFNetworking.h"
 #import "MJRefresh.h"
+
 #import "XBRequestNetTool.h"
+#import "XBUITool.h"
 
 
 

@@ -10,7 +10,7 @@
 
 @interface XBRequestNetTool : NSObject
 
-+ (instancetype)shareXBRequestNetTool;
++ (instancetype)shareBaseHttpTool;
 
 /**
  *  @param url     请求路径

@@ -17,6 +17,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+//    [XBRequestNetTool post:@"http://zx.caipiao.163.com/libraryapi/league_matchRank.html?leagueId=7&product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=67A4CF88-1A62-435A-A4F9-EE79F0D5064D" params:nil success:^(id responseObj) {
+//        
+//        //        NSLog(@" -------------\n  %@",responseObj);
+//    } failure:^(NSError *error) {
+//        
+//    }];
+    
+    self.requestUrl = @"http://zx.caipiao.163.com/libraryapi/league_matchRank.html?leagueId=7&product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=67A4CF88-1A62-435A-A4F9-EE79F0D5064D";
+}
+
+
+- (void)requestNetWorkSuccess:(id)outcome{
+    [super requestNetWorkSuccess:outcome];
+    NSLog(@"%@ ---",outcome);
 }
 
 - (void)didReceiveMemoryWarning {

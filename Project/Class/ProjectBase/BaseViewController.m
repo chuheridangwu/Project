@@ -7,11 +7,10 @@
 //
 
 #import "BaseViewController.h"
+#import "XBRequestModel.h"
 
 
-
-@interface BaseViewController ()<UITableViewDataSource,UITableViewDelegate>
-@property (nonatomic,strong)UITableView *tableView;
+@interface BaseViewController ()
 @property (nonatomic,assign)CGFloat offsetY; //偏移量
 @end
 
@@ -19,36 +18,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64)];
-    [self.view addSubview:_tableView];
-    _tableView.dataSource = self;
+    // Do any additional setup after loading the view
+    _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _tableView.delegate = self;
+    _tableView.dataSource = self;
+    [self.view addSubview:_tableView];
+    _tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     
-    NSLog(@"%@ ---%f",_tableView,_tableView.scrollIndicatorInsets.top);
+    MJRefreshNormalHeader *heard = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(tableViewDownRefresh)];
+    _tableView.mj_header = heard;
     
-//    _tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
-    _tableView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 0, 0);
-    
-    self.view.backgroundColor = [UIColor redColor];
+    _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(tableViewPullLoading)];
+    _tableView.mj_footer.hidden = YES;
+    _requestModel = [[XBRequestModel alloc]init];
+    _requestModel.delegate  = self;
+}
+
+- (void)setRequestUrl:(NSString *)requestUrl{
+    _requestUrl = requestUrl;
+    [self tableViewDownRefresh];
+}
+
+- (void)tableViewDownRefresh{
+    [self.requestModel requestNetWorkURL:self.requestUrl];
 }
 
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 10;
+- (void)tableViewPullLoading{
+    
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"3232"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"3232"];
-    }
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld ----- %ld",indexPath.section,indexPath.row];
-    return cell;
+- (void)requestNetWorkSuccess:(id)outcome{
+    [_tableView.mj_footer endRefreshing];
+    [_tableView.mj_header endRefreshing];
 }
 
 #pragma mark - scrollView的代理方法
@@ -58,11 +60,9 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     if (scrollView.contentOffset.y > _offsetY) {
-//        [self hideNavgationBar];
         [self hideTabBar];
     }else{
         [self showTabBar];
-//        [self showNavgationBar];
     }
 }
 
@@ -72,25 +72,18 @@
     }
 }
 
-
-- (void)showNavgationBar{
-    _tableView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 0, 0);
-//    self.automaticallyAdjustsScrollViewInsets = YES;
-    [UIView animateWithDuration:0.8 animations:^{
-//        self.navigationController.navigationBar.frame = CGRectMake(0, 0, SCREEN_WIDTH, 64);
-        self.navigationController.navigationBar.hidden = NO;
-    }];
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
 }
 
-- (void)hideNavgationBar{
-    _tableView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 0, 0);
-//    self.automaticallyAdjustsScrollViewInsets = NO;
-    [UIView animateWithDuration:0.8 animations:^{
-        self.navigationController.navigationBar.hidden = YES;
-
-//        self.navigationController.navigationBar.frame = CGRectMake(0, -64, SCREEN_WIDTH, 64);
-    }];
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.dataList.count;
 }
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return nil;
+}
+
 
 // 显示tabbar
 - (void)showTabBar

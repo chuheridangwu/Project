@@ -20,13 +20,27 @@
     
     self.view.backgroundColor = [UIColor redColor];
     
-    [XBRequestNetTool post:@"http://zx.caipiao.163.com/libraryapi/league_matchRank.html?leagueId=7&product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=67A4CF88-1A62-435A-A4F9-EE79F0D5064D" params:nil success:^(id responseObj) {
-      
-        NSLog(@" -------------\n  %@",responseObj);
-    } failure:^(NSError *error) {
-        
-    }];
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 10;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *str = @"2323";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:str];
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld --- %ld",indexPath.section,indexPath.row];
+    return cell;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

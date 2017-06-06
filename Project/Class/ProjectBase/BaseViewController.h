@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XBRequestModel.h"
 
-@interface BaseViewController : UIViewController
+@interface BaseViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,XBRequestModelDelegate>
+@property (nonatomic,strong)UITableView *tableView;
+@property (nonatomic,copy)NSString *requestUrl;
+@property (nonatomic,strong)NSMutableArray *dataList;
+@property (nonatomic,strong)XBRequestModel *requestModel;
 
+//下拉刷新
+- (void)tableViewDownRefresh;
 @end

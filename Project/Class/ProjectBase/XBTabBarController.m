@@ -38,8 +38,8 @@
     PersonViewController *personVC = [[PersonViewController alloc] init];
     [self addChildVC:personVC vcTitle:@"个人中心" tabBarItemTitle:@"个人中心" image:@"gouwu" selectedImage:@"gouwuD"];
     
-    //    MemberCenterVC * memberCenterVC = [[MemberCenterVC alloc] init];
-    //    [self addChildVC:memberCenterVC vcTitle:@"会员中心" tabBarItemTitle:@"会员中心" image:@"gerenCenter" selectedImage:@"gerenCenterD"];
+    DisViewController * memberCenterVC = [[DisViewController alloc] init];
+    [self addChildVC:memberCenterVC vcTitle:@"开奖" tabBarItemTitle:@"开奖记录" image:@"gerenCenter" selectedImage:@"gerenCenterD"];
 }
 
 
