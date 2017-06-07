@@ -11,5 +11,6 @@
 @interface DIscoverItem : NSObject
 @property (nonatomic,copy)NSString *title;
 @property (nonatomic,copy)NSString *url;
+@property (nonatomic,copy)NSString *iconName;
 + (instancetype)disCoverItemWithDict:(NSDictionary*)dict;
 @end

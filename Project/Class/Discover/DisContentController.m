@@ -19,7 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.tableView.rowHeight = 160;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
     self.requestUrl = self.url;
 }
 
@@ -29,7 +31,6 @@
     DisContentCell *cell = [DisContentCell tableViewCellInitializeWithTableView:tableView withIdtifier:@"DisContentCell"];
     DisContentEntity *entity = self.dataList[indexPath.row];
     cell.entity = entity;
-    cell.textLabel.text = entity.time;
     return cell;
 }
 
@@ -45,6 +46,7 @@
     }
     [self.tableView reloadData];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

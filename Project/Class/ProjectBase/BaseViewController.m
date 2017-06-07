@@ -88,7 +88,17 @@
 }
 
 
-
+- (void)setNoneDataBackImage:(NSString*)imageName  explain:(NSString*)explain{
+    for (UIView *view in self.noneView.subviews) {
+        if ([view isKindOfClass:[UIImageView class]]) {
+            UIImageView *imageView = (UIImageView*)view;
+            imageView.image = [UIImage imageNamed:imageName];
+        }else if ([view isKindOfClass:[UILabel class]]){
+            UILabel *label = (UILabel*)view;
+            label.text = explain;
+        }
+    }
+}
 
 
 #pragma mark - scrollView的代理方法

@@ -17,7 +17,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
     // 通过setTintColor设置导航条文字的颜色
     [self.navigationBar setTintColor:[UIColor whiteColor]];
     [self.navigationBar setBarTintColor:RGBColor(235, 49, 58)];

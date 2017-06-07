@@ -10,7 +10,9 @@
 #import <UIKit/UIKit.h>
 
 @interface XBUITool : NSObject
-+ (void)showTabbar;
-+ (void)hideTabbar;
+//提醒视图
++ (void)showRmindView:(NSString*)text;
+//当前系统版本号
++(NSString*)currentVersion;
 
 @end
