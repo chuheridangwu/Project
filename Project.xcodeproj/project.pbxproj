@@ -41,6 +41,10 @@
 		301EB49F1EE80EC60081F1D1 /* x3d_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 301EB4821EE80EC60081F1D1 /* x3d_howto.html */; };
 		301EB4A01EE80EC60081F1D1 /* y11_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 301EB4831EE80EC60081F1D1 /* y11_howto.html */; };
 		301EB4A11EE80EC60081F1D1 /* znzh.html in Resources */ = {isa = PBXBuildFile; fileRef = 301EB4841EE80EC60081F1D1 /* znzh.html */; };
+		301F6B131EE8420200B8443F /* XBScrollViewLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 301F6B0E1EE8420200B8443F /* XBScrollViewLabel.m */; };
+		301F6B141EE8420200B8443F /* XBScrollViewPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 301F6B101EE8420200B8443F /* XBScrollViewPhoto.m */; };
+		301F6B151EE8420200B8443F /* XBWebImgManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 301F6B121EE8420200B8443F /* XBWebImgManager.m */; };
+		301F6B181EE8422800B8443F /* HomeTopPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 301F6B171EE8422800B8443F /* HomeTopPhotoCell.m */; };
 		30263D4A1EE6340B007B30C8 /* XBBaseTableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 30263D491EE6340B007B30C8 /* XBBaseTableViewVC.m */; };
 		30263D4D1EE634B1007B30C8 /* XBSettingGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 30263D4C1EE634B1007B30C8 /* XBSettingGroup.m */; };
 		30263D501EE634F9007B30C8 /* XBSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 30263D4F1EE634F9007B30C8 /* XBSettingItem.m */; };
@@ -144,6 +148,14 @@
 		301EB4821EE80EC60081F1D1 /* x3d_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = x3d_howto.html; sourceTree = "<group>"; };
 		301EB4831EE80EC60081F1D1 /* y11_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = y11_howto.html; sourceTree = "<group>"; };
 		301EB4841EE80EC60081F1D1 /* znzh.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = znzh.html; sourceTree = "<group>"; };
+		301F6B0D1EE8420200B8443F /* XBScrollViewLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBScrollViewLabel.h; sourceTree = "<group>"; };
+		301F6B0E1EE8420200B8443F /* XBScrollViewLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBScrollViewLabel.m; sourceTree = "<group>"; };
+		301F6B0F1EE8420200B8443F /* XBScrollViewPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBScrollViewPhoto.h; sourceTree = "<group>"; };
+		301F6B101EE8420200B8443F /* XBScrollViewPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBScrollViewPhoto.m; sourceTree = "<group>"; };
+		301F6B111EE8420200B8443F /* XBWebImgManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBWebImgManager.h; sourceTree = "<group>"; };
+		301F6B121EE8420200B8443F /* XBWebImgManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBWebImgManager.m; sourceTree = "<group>"; };
+		301F6B161EE8422800B8443F /* HomeTopPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTopPhotoCell.h; sourceTree = "<group>"; };
+		301F6B171EE8422800B8443F /* HomeTopPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTopPhotoCell.m; sourceTree = "<group>"; };
 		30263D481EE6340B007B30C8 /* XBBaseTableViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBBaseTableViewVC.h; sourceTree = "<group>"; };
 		30263D491EE6340B007B30C8 /* XBBaseTableViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBBaseTableViewVC.m; sourceTree = "<group>"; };
 		30263D4B1EE634B1007B30C8 /* XBSettingGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBSettingGroup.h; sourceTree = "<group>"; };
@@ -349,6 +361,8 @@
 		301EB4A21EE81CB90081F1D1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				301F6B161EE8422800B8443F /* HomeTopPhotoCell.h */,
+				301F6B171EE8422800B8443F /* HomeTopPhotoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -358,6 +372,19 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		301F6B0C1EE841E800B8443F /* Circularly */ = {
+			isa = PBXGroup;
+			children = (
+				301F6B0D1EE8420200B8443F /* XBScrollViewLabel.h */,
+				301F6B0E1EE8420200B8443F /* XBScrollViewLabel.m */,
+				301F6B0F1EE8420200B8443F /* XBScrollViewPhoto.h */,
+				301F6B101EE8420200B8443F /* XBScrollViewPhoto.m */,
+				301F6B111EE8420200B8443F /* XBWebImgManager.h */,
+				301F6B121EE8420200B8443F /* XBWebImgManager.m */,
+			);
+			path = Circularly;
 			sourceTree = "<group>";
 		};
 		30263D441EE6332A007B30C8 /* XBTableView */ = {
@@ -505,6 +532,7 @@
 			children = (
 				30263D601EE63BD5007B30C8 /* XBUITool.h */,
 				30263D611EE63BD5007B30C8 /* XBUITool.m */,
+				301F6B0C1EE841E800B8443F /* Circularly */,
 				30A988B01EE57D7A00D04924 /* XBControls */,
 			);
 			path = Common;
@@ -886,6 +914,7 @@
 			files = (
 				30DF951C1EE6B322000261C8 /* XBBaseTableViewCell.m in Sources */,
 				30A988591EE5566700D04924 /* XBTabBarController.m in Sources */,
+				301F6B141EE8420200B8443F /* XBScrollViewPhoto.m in Sources */,
 				30263D4A1EE6340B007B30C8 /* XBBaseTableViewVC.m in Sources */,
 				30263D531EE63556007B30C8 /* XBSettingCell.m in Sources */,
 				301EB3EC1EE80B680081F1D1 /* XBHtmlItem.m in Sources */,
@@ -900,6 +929,7 @@
 				30C728B41EE7DFC900CAD4C0 /* ContinueView.m in Sources */,
 				30A9885C1EE5568800D04924 /* XBNavigationController.m in Sources */,
 				30C728B01EE7DF8D00CAD4C0 /* GameViewController.m in Sources */,
+				301F6B131EE8420200B8443F /* XBScrollViewLabel.m in Sources */,
 				30C728C01EE7DFD200CAD4C0 /* DidView.m in Sources */,
 				30E7AD161EE45F5B000609DB /* AppDelegate.m in Sources */,
 				30E7AD131EE45F5B000609DB /* main.m in Sources */,
@@ -913,11 +943,13 @@
 				301EB3E01EE800120081F1D1 /* LotteryNoticeVC.m in Sources */,
 				301EB3E61EE80AC80081F1D1 /* LotteryHelpVC.m in Sources */,
 				30DF950F1EE69860000261C8 /* DIscoverItem.m in Sources */,
+				301F6B181EE8422800B8443F /* HomeTopPhotoCell.m in Sources */,
 				30DF95231EE6BAE8000261C8 /* XBTabBarButton.m in Sources */,
 				30A988701EE562B600D04924 /* BaseWebViewController.m in Sources */,
 				30DF95191EE6B1BC000261C8 /* DisContentCell.m in Sources */,
 				30A988651EE556E400D04924 /* DisViewController.m in Sources */,
 				30C728BE1EE7DFD200CAD4C0 /* BottonView.m in Sources */,
+				301F6B151EE8420200B8443F /* XBWebImgManager.m in Sources */,
 				30A988B31EE57D7A00D04924 /* XBGuidePage.m in Sources */,
 				30DF95201EE6BA4E000261C8 /* XBTabBar.m in Sources */,
 				30263D621EE63BD5007B30C8 /* XBUITool.m in Sources */,
