@@ -21,6 +21,7 @@
 #import "UIImageView+WebCache.h"
 #import "AFNetworking.h"
 #import "MJRefresh.h"
+#import "MBProgressHUD.h"
 
 #import "XBRequestNetTool.h"
 #import "XBUITool.h"
@@ -31,7 +32,8 @@
 
 
 
-#define XBAPPBaseColor [UIColor colorWithRed:199/256.0 green:23/256.0 blue:36/256.0 alpha:1.0]
+#define XBAPPBaseColor  RGBColor(235, 49, 58)
+//[UIColor colorWithRed:235/256.0 green:49/256.0 blue:58/256.0 alpha:1.0]
 // 屏幕高度
 #define SCREEN_HEIGHT         [[UIScreen mainScreen] bounds].size.height
 // 屏幕宽度

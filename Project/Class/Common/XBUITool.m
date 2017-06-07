@@ -11,15 +11,31 @@
 #import "XBTabBarController.h"
 
 @implementation XBUITool
-+ (void)showTabbar{
-    for (UIViewController *vcs in [UIApplication sharedApplication].windows) {
-        NSLog(@"%@  ------- \nkeyWindow  ---%@",vcs,[UIApplication sharedApplication].keyWindow);
-    }
+//设置弹框
++ (void)showRmindView:(NSString*)text{
+    UILabel *label  =[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 220, 35)];
+    label.text = text;
+    label.textColor = [UIColor whiteColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.center = [UIApplication sharedApplication].keyWindow.center;
+    label.backgroundColor = XBAPPBaseColor;
+    label.alpha = 0;
+    [[UIApplication sharedApplication].keyWindow addSubview:label];
+    label.layer.masksToBounds = YES;
+    label.layer.cornerRadius = 5;
+    [UIView animateWithDuration:1.0 animations:^{
+        label.alpha = 1;
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:2.0 animations:^{
+            label.alpha = 0;
+        } completion:^(BOOL finished) {
+            [label removeFromSuperview];
+        }];
+    }];
 }
 
-+ (void)hideTabbar{
-    
++(NSString*)currentVersion{
+    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
 }
-
 
 @end

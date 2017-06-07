@@ -17,4 +17,7 @@
 
 //下拉刷新
 - (void)tableViewDownRefresh;
+
+//如果没有数据，显示图片和文字
+- (void)setNoneDataBackImage:(NSString*)imageName  explain:(NSString*)explain;
 @end
