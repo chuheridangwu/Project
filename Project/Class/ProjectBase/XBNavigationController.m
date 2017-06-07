@@ -17,20 +17,36 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    
+    // 通过setTintColor设置导航条文字的颜色
+    [self.navigationBar setTintColor:[UIColor whiteColor]];
+    [self.navigationBar setBarTintColor:RGBColor(235, 49, 58)];
+    self.navigationBar.translucent = NO;
+//    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"NavBar64"] forBarMetrics:UIBarMetricsDefault];
 
+    // 设置导航条标题颜色
+    NSMutableDictionary *titleAttr = [NSMutableDictionary dictionary];
+    titleAttr[NSForegroundColorAttributeName] = [UIColor whiteColor];
+    titleAttr[NSFontAttributeName] = [UIFont boldSystemFontOfSize:20];
+    [self.navigationBar setTitleTextAttributes:titleAttr];
+    
+    
 }
 
+
+
+
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
-    if (self.viewControllers.count > 0) {
+
+    if (self.viewControllers.count != 0) {
         viewController.hidesBottomBarWhenPushed = YES;
     }
     if (viewController.navigationItem.leftBarButtonItem == nil && [self.viewControllers count] > 0){
-        UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"Main_back"] style:UIBarButtonItemStylePlain target:self action:@selector(popSelf)];
-        backItem.tintColor = XBAPPBaseColor;
+        UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"NavBack"] style:UIBarButtonItemStylePlain target:self action:@selector(popSelf)];
         viewController.navigationItem.leftBarButtonItem = backItem;
     }
-    self.interactivePopGestureRecognizer.delegate = (id)self;
     
+    self.interactivePopGestureRecognizer.delegate = (id)self;
     [super pushViewController:viewController animated:animated];
 }
 

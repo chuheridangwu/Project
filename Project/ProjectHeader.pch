@@ -25,6 +25,10 @@
 #import "XBRequestNetTool.h"
 #import "XBUITool.h"
 
+#import "UIColor+Color.h"
+#import "UIImage+image.h"
+
+
 
 
 #define XBAPPBaseColor [UIColor colorWithRed:199/256.0 green:23/256.0 blue:36/256.0 alpha:1.0]

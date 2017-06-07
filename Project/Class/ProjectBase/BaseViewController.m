@@ -30,11 +30,11 @@
         make.height.equalTo(@180);
     }];
     
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64) style:UITableViewStylePlain];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];
-    _tableView.contentInset = UIEdgeInsetsMake(0, 0,49, 0);
+    _tableView.contentInset = UIEdgeInsetsMake(0, 0,113, 0);
     _tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     
     MJRefreshNormalHeader *heard = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(tableViewDownRefresh)];
@@ -45,6 +45,10 @@
     _requestModel = [[XBRequestModel alloc]init];
     _requestModel.delegate  = self;
     
+    
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
     
 }
 
@@ -122,6 +126,8 @@
 // 显示tabbar
 - (void)showTabBar
 {
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+
     [UIView animateWithDuration:0.4 animations:^{
         self.tabBarController.tabBar.frame = CGRectMake(0, SCREEN_HEIGHT - 49, SCREEN_WIDTH, 49);
     }];
@@ -130,6 +136,7 @@
 
 // 隐藏tabbar
 - (void)hideTabBar {
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     [UIView animateWithDuration:0.6 animations:^{
         self.tabBarController.tabBar.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, 49);
     }];
