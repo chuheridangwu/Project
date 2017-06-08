@@ -14,6 +14,7 @@
 #import "OneBuyViewController.h"
 #import "PersonViewController.h"
 #import "DisViewController.h"
+#import "FoundViewController.h"
 
 
 @interface XBTabBarController ()<XBTabBarDelegate>
@@ -78,7 +79,7 @@
     
     
     // 发现
-    DisViewController *discover = [[DisViewController alloc]init];
+    FoundViewController *discover = [[FoundViewController alloc]init];
     [self setUpOneChildViewController:discover image:[UIImage imageNamed:@"TabBar_Discovery_new"] selImage:[UIImage imageNamed:@"TabBar_Discovery_selected_new"] title:@"发现"];
     
     // 开奖信息

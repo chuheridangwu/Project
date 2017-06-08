@@ -1,0 +1,57 @@
+{
+  "flag": 1,
+  "data": [
+    {
+      "activityColor": "",
+      "activityText": "",
+      "activityTextColor": "",
+      "badgeIcon": "",
+      "cardDesc": "名家预测汇总",
+      "cardName": "双色球",
+      "jumpUrl": "http://zxwap.caipiao.163.com/ssq#fr=app",
+      "logo": "http://pimg1.126.net/caipiao_info/images/headFigure/newAppHall/1425110780960_1.png",
+      "rankMax": 0,
+      "rankMin": 0,
+      "shiftLeft": ""
+    },
+    {
+      "activityColor": "",
+      "activityText": "",
+      "activityTextColor": "",
+      "badgeIcon": "",
+      "cardDesc": "每日投注分析",
+      "cardName": "竞彩篮球",
+      "jumpUrl": "http://zxwap.caipiao.163.com/lancai#fr=app",
+      "logo": "http://pimg1.126.net/caipiao_info/images/headFigure/newAppHall/1425111194327_1.png",
+      "rankMax": 0,
+      "rankMin": 0,
+      "shiftLeft": ""
+    },
+    {
+      "activityColor": "",
+      "activityText": "",
+      "activityTextColor": "",
+      "badgeIcon": "",
+      "cardDesc": "独家推荐",
+      "cardName": "竞彩足球",
+      "jumpUrl": "http://zxwap.caipiao.163.com/jingcai#fr=app",
+      "logo": "http://pimg1.126.net/caipiao_info/images/headFigure/newAppHall/1425111156690_1.png",
+      "rankMax": 0,
+      "rankMin": 0,
+      "shiftLeft": ""
+    },
+    {
+      "activityColor": "",
+      "activityText": "",
+      "activityTextColor": "",
+      "badgeIcon": "",
+      "cardDesc": "免费精品预测",
+      "cardName": "大乐透",
+      "jumpUrl": "http://zxwap.caipiao.163.com/dlt#fr=app",
+      "logo": "http://pimg1.126.net/caipiao_info/images/headFigure/newAppHall/1425111120220_1.png",
+      "rankMax": 0,
+      "rankMin": 0,
+      "shiftLeft": ""
+    }
+  ]
+}

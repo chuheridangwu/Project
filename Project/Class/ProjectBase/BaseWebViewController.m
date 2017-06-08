@@ -23,7 +23,7 @@
     [self.view addSubview:_webView];
     _webView.delegate = self;
     _webView.scrollView.delegate = self;
-
+    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.webUrl]]];
 }
 
 - (void)setWebUrl:(NSString *)webUrl{
@@ -31,6 +31,17 @@
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:webUrl]]];
 }
 
+- (void)webViewDidStartLoad:(UIWebView *)webView{
+    //隐藏标题栏
+    [webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByClassName('header')[0].style.display='none'"];
+    [webView stringByEvaluatingJavaScriptFromString:@"document.getElementById('header').style.display='none'"];
+}
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+    
+    //隐藏标题栏
+    [webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByClassName('header')[0].style.display='none'"];
+    [webView stringByEvaluatingJavaScriptFromString:@"document.getElementById('header').style.display='none'"];
+}
 
 #pragma mark - scrollView的代理方法
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{

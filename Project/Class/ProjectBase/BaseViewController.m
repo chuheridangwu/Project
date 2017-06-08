@@ -75,7 +75,7 @@
 - (void)requestNetWorkSuccess:(id)outcome{
     [_tableView.mj_footer endRefreshing];
     [_tableView.mj_header endRefreshing];
-    self.noneView.hidden = YES;
+    _noneView.hidden = YES;
     _tableView.hidden = NO;
 }
 

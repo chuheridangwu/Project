@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseWebViewController : UIViewController
+
 @property (nonatomic,copy)NSString *webUrl;
+
 @end

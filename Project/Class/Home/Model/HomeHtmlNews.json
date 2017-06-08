@@ -1,0 +1,57 @@
+{
+  "flag": 1,
+  "data": [
+    {
+       "activityColor":"",
+                    "activityText":"",
+                    "activityTextColor":"",
+                    "badgeIcon":"",
+                    "cardDesc":"五大联赛激战",
+                    "cardName":"国际足球",
+                    "jumpUrl":"http://zxwap.caipiao.163.com/world#fr=app",
+                    "logo":"http://pimg1.126.net/caipiao_info/images/headFigure/newAppHall/1425111242833_1.png",
+                    "rankMax":0,
+                    "rankMin":0,
+                    "shiftLeft":""
+    },
+    {
+     "activityColor":"",
+                    "activityText":"",
+                    "activityTextColor":"",
+                    "badgeIcon":"",
+                    "cardDesc":"中超群雄逐鹿",
+                    "cardName":"中国足球",
+                    "jumpUrl":"http://zxwap.caipiao.163.com/china#fr=app",
+                    "logo":"http://pimg1.126.net/caipiao_info/images/headFigure/newAppHall/1425111278479_1.png",
+                    "rankMax":0,
+                    "rankMin":0,
+                    "shiftLeft":""
+    },
+    {
+     "activityColor":"",
+                    "activityText":"",
+                    "activityTextColor":"",
+                    "badgeIcon":"",
+                    "cardDesc":"冲刺季后赛",
+                    "cardName":"NBA",
+                    "jumpUrl":"http://zxwap.caipiao.163.com/nba#fr=app",
+                    "logo":"http://pimg1.126.net/caipiao_info/images/headFigure/newAppHall/1425111334687_1.png",
+                    "rankMax":0,
+                    "rankMin":0,
+                    "shiftLeft":""
+    },
+    {
+     "activityColor":"",
+                    "activityText":"",
+                    "activityTextColor":"",
+                    "badgeIcon":"",
+                    "cardDesc":"北京成就霸业",
+                    "cardName":"CBA",
+                    "jumpUrl":"http://zxwap.caipiao.163.com/cba#fr=app",
+                    "logo":"http://pimg1.126.net/caipiao_info/images/headFigure/newAppHall/1425111386531_1.png",
+                    "rankMax":0,
+                    "rankMin":0,
+                    "shiftLeft":""
+    }
+  ]
+}

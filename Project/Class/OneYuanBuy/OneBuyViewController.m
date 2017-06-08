@@ -17,8 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.webUrl = @"https://1.163.com/mall/index.do";
+    self.title = @"竞技场";
+    self.webUrl = @"http://m.ailecp.com/saishi/jzscore?flag=1";
 }
 
 - (void)didReceiveMemoryWarning {

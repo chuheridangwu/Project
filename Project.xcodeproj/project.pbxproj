@@ -53,6 +53,15 @@
 		30263D591EE635ED007B30C8 /* XBArrowSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 30263D581EE635ED007B30C8 /* XBArrowSettingItem.m */; };
 		30263D5F1EE63816007B30C8 /* UIImage+image.m in Sources */ = {isa = PBXBuildFile; fileRef = 30263D5E1EE63816007B30C8 /* UIImage+image.m */; };
 		30263D621EE63BD5007B30C8 /* XBUITool.m in Sources */ = {isa = PBXBuildFile; fileRef = 30263D611EE63BD5007B30C8 /* XBUITool.m */; };
+		3053DF081EE8F84300552AF8 /* HomeListSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053DF071EE8F84300552AF8 /* HomeListSectionCell.m */; };
+		3053DF0A1EE91E1400552AF8 /* HomeHtmlLIst.json in Resources */ = {isa = PBXBuildFile; fileRef = 3053DF091EE91E1400552AF8 /* HomeHtmlLIst.json */; };
+		3053DF0D1EE91E6500552AF8 /* HomeDataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053DF0C1EE91E6500552AF8 /* HomeDataEntity.m */; };
+		3053DF101EE91F4000552AF8 /* HomeDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053DF0F1EE91F4000552AF8 /* HomeDataModel.m */; };
+		3053DF131EE9237A00552AF8 /* ProductDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053DF121EE9237A00552AF8 /* ProductDisplayView.m */; };
+		3053DF151EE948C600552AF8 /* HomeHtmlNews.json in Resources */ = {isa = PBXBuildFile; fileRef = 3053DF141EE948C600552AF8 /* HomeHtmlNews.json */; };
+		3053DF181EE94DC300552AF8 /* HomeSectionTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053DF171EE94DC300552AF8 /* HomeSectionTitleCell.m */; };
+		3053DF1F1EE95C0800552AF8 /* FoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053DF1E1EE95C0800552AF8 /* FoundViewController.m */; };
+		3053DF221EE9658B00552AF8 /* FoundInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053DF211EE9658B00552AF8 /* FoundInfoViewController.m */; };
 		3055926D1EE4F9DF00864E6E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3055926C1EE4F9DF00864E6E /* Images.xcassets */; };
 		30A988591EE5566700D04924 /* XBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988581EE5566700D04924 /* XBTabBarController.m */; };
 		30A9885C1EE5568800D04924 /* XBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9885B1EE5568800D04924 /* XBNavigationController.m */; };
@@ -172,6 +181,23 @@
 		30263D5E1EE63816007B30C8 /* UIImage+image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+image.m"; sourceTree = "<group>"; };
 		30263D601EE63BD5007B30C8 /* XBUITool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBUITool.h; sourceTree = "<group>"; };
 		30263D611EE63BD5007B30C8 /* XBUITool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBUITool.m; sourceTree = "<group>"; };
+		3053DF051EE8DD4D00552AF8 /* HomeVCHeard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVCHeard.h; sourceTree = "<group>"; };
+		3053DF061EE8F84300552AF8 /* HomeListSectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeListSectionCell.h; sourceTree = "<group>"; };
+		3053DF071EE8F84300552AF8 /* HomeListSectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeListSectionCell.m; sourceTree = "<group>"; };
+		3053DF091EE91E1400552AF8 /* HomeHtmlLIst.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HomeHtmlLIst.json; sourceTree = "<group>"; };
+		3053DF0B1EE91E6500552AF8 /* HomeDataEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDataEntity.h; sourceTree = "<group>"; };
+		3053DF0C1EE91E6500552AF8 /* HomeDataEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDataEntity.m; sourceTree = "<group>"; };
+		3053DF0E1EE91F4000552AF8 /* HomeDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDataModel.h; sourceTree = "<group>"; };
+		3053DF0F1EE91F4000552AF8 /* HomeDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDataModel.m; sourceTree = "<group>"; };
+		3053DF111EE9237A00552AF8 /* ProductDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDisplayView.h; sourceTree = "<group>"; };
+		3053DF121EE9237A00552AF8 /* ProductDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDisplayView.m; sourceTree = "<group>"; };
+		3053DF141EE948C600552AF8 /* HomeHtmlNews.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HomeHtmlNews.json; sourceTree = "<group>"; };
+		3053DF161EE94DC300552AF8 /* HomeSectionTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeSectionTitleCell.h; sourceTree = "<group>"; };
+		3053DF171EE94DC300552AF8 /* HomeSectionTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeSectionTitleCell.m; sourceTree = "<group>"; };
+		3053DF1D1EE95C0800552AF8 /* FoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundViewController.h; sourceTree = "<group>"; };
+		3053DF1E1EE95C0800552AF8 /* FoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundViewController.m; sourceTree = "<group>"; };
+		3053DF201EE9658B00552AF8 /* FoundInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundInfoViewController.h; sourceTree = "<group>"; };
+		3053DF211EE9658B00552AF8 /* FoundInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundInfoViewController.m; sourceTree = "<group>"; };
 		305592681EE4E58A00864E6E /* ProjectHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectHeader.pch; sourceTree = "<group>"; };
 		305592691EE4F06B00864E6E /* Project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Project.entitlements; sourceTree = "<group>"; };
 		3055926C1EE4F9DF00864E6E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -363,6 +389,12 @@
 			children = (
 				301F6B161EE8422800B8443F /* HomeTopPhotoCell.h */,
 				301F6B171EE8422800B8443F /* HomeTopPhotoCell.m */,
+				3053DF061EE8F84300552AF8 /* HomeListSectionCell.h */,
+				3053DF071EE8F84300552AF8 /* HomeListSectionCell.m */,
+				3053DF111EE9237A00552AF8 /* ProductDisplayView.h */,
+				3053DF121EE9237A00552AF8 /* ProductDisplayView.m */,
+				3053DF161EE94DC300552AF8 /* HomeSectionTitleCell.h */,
+				3053DF171EE94DC300552AF8 /* HomeSectionTitleCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -370,6 +402,12 @@
 		301EB4A31EE81CC00081F1D1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3053DF141EE948C600552AF8 /* HomeHtmlNews.json */,
+				3053DF091EE91E1400552AF8 /* HomeHtmlLIst.json */,
+				3053DF0E1EE91F4000552AF8 /* HomeDataModel.h */,
+				3053DF0F1EE91F4000552AF8 /* HomeDataModel.m */,
+				3053DF0B1EE91E6500552AF8 /* HomeDataEntity.h */,
+				3053DF0C1EE91E6500552AF8 /* HomeDataEntity.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -442,12 +480,25 @@
 			path = Categoty;
 			sourceTree = "<group>";
 		};
+		3053DF191EE95B6600552AF8 /* DisCoverCorrect */ = {
+			isa = PBXGroup;
+			children = (
+				3053DF1D1EE95C0800552AF8 /* FoundViewController.h */,
+				3053DF1E1EE95C0800552AF8 /* FoundViewController.m */,
+				3053DF201EE9658B00552AF8 /* FoundInfoViewController.h */,
+				3053DF211EE9658B00552AF8 /* FoundInfoViewController.m */,
+			);
+			name = DisCoverCorrect;
+			path = LotteryInfo;
+			sourceTree = "<group>";
+		};
 		30A988511EE5564700D04924 /* Class */ = {
 			isa = PBXGroup;
 			children = (
 				30263D5A1EE637A4007B30C8 /* Othre */,
 				30A9886D1EE55D2D00D04924 /* Common */,
 				30A988521EE5564700D04924 /* Discover */,
+				3053DF191EE95B6600552AF8 /* DisCoverCorrect */,
 				30A988531EE5564700D04924 /* Home */,
 				30A988541EE5564700D04924 /* OneYuanBuy */,
 				30A988551EE5564700D04924 /* Person */,
@@ -474,6 +525,7 @@
 			children = (
 				30A9885D1EE556A100D04924 /* HomeViewController.h */,
 				30A9885E1EE556A100D04924 /* HomeViewController.m */,
+				3053DF051EE8DD4D00552AF8 /* HomeVCHeard.h */,
 				301EB4A31EE81CC00081F1D1 /* Model */,
 				301EB4A21EE81CB90081F1D1 /* View */,
 			);
@@ -815,6 +867,7 @@
 				301EB4A01EE80EC60081F1D1 /* y11_howto.html in Resources */,
 				301EB3EE1EE80C700081F1D1 /* help.json in Resources */,
 				30DF950C1EE69476000261C8 /* Discover.json in Resources */,
+				3053DF0A1EE91E1400552AF8 /* HomeHtmlLIst.json in Resources */,
 				301EB48D1EE80EC60081F1D1 /* helpGroupBuy.html in Resources */,
 				301EB4851EE80EC60081F1D1 /* bjdc_howto.html in Resources */,
 				30E7AD211EE45F5B000609DB /* LaunchScreen.storyboard in Resources */,
@@ -833,6 +886,7 @@
 				301EB49F1EE80EC60081F1D1 /* x3d_howto.html in Resources */,
 				301EB4971EE80EC60081F1D1 /* pl3_howto.html in Resources */,
 				301EB4951EE80EC60081F1D1 /* lk11_howto.html in Resources */,
+				3053DF151EE948C600552AF8 /* HomeHtmlNews.json in Resources */,
 				301EB4981EE80EC60081F1D1 /* pl5_howto.html in Resources */,
 				301EB4911EE80EC60081F1D1 /* jxy11_howto.html in Resources */,
 				301EB4931EE80EC60081F1D1 /* k3_howto.html in Resources */,
@@ -914,16 +968,21 @@
 			files = (
 				30DF951C1EE6B322000261C8 /* XBBaseTableViewCell.m in Sources */,
 				30A988591EE5566700D04924 /* XBTabBarController.m in Sources */,
+				3053DF081EE8F84300552AF8 /* HomeListSectionCell.m in Sources */,
 				301F6B141EE8420200B8443F /* XBScrollViewPhoto.m in Sources */,
+				3053DF0D1EE91E6500552AF8 /* HomeDataEntity.m in Sources */,
 				30263D4A1EE6340B007B30C8 /* XBBaseTableViewVC.m in Sources */,
 				30263D531EE63556007B30C8 /* XBSettingCell.m in Sources */,
 				301EB3EC1EE80B680081F1D1 /* XBHtmlItem.m in Sources */,
 				30263D5F1EE63816007B30C8 /* UIImage+image.m in Sources */,
 				30A988B61EE57F8E00D04924 /* XBRequestNetTool.m in Sources */,
 				30C728C41EE7E7AE00CAD4C0 /* MessageViewController.m in Sources */,
+				3053DF221EE9658B00552AF8 /* FoundInfoViewController.m in Sources */,
 				30DF95121EE69F78000261C8 /* DisContentController.m in Sources */,
 				30263D561EE635D1007B30C8 /* XBSwtichSettingItem.m in Sources */,
+				3053DF181EE94DC300552AF8 /* HomeSectionTitleCell.m in Sources */,
 				301EB3E91EE80B1D0081F1D1 /* LotteryHelpContentVC.m in Sources */,
+				3053DF101EE91F4000552AF8 /* HomeDataModel.m in Sources */,
 				30C728C71EE7EAD900CAD4C0 /* AboutViewController.m in Sources */,
 				30DF95091EE646CE000261C8 /* XBRequestModel.m in Sources */,
 				30C728B41EE7DFC900CAD4C0 /* ContinueView.m in Sources */,
@@ -931,6 +990,7 @@
 				30C728B01EE7DF8D00CAD4C0 /* GameViewController.m in Sources */,
 				301F6B131EE8420200B8443F /* XBScrollViewLabel.m in Sources */,
 				30C728C01EE7DFD200CAD4C0 /* DidView.m in Sources */,
+				3053DF1F1EE95C0800552AF8 /* FoundViewController.m in Sources */,
 				30E7AD161EE45F5B000609DB /* AppDelegate.m in Sources */,
 				30E7AD131EE45F5B000609DB /* main.m in Sources */,
 				30A988681EE556F100D04924 /* PersonViewController.m in Sources */,
@@ -953,6 +1013,7 @@
 				30A988B31EE57D7A00D04924 /* XBGuidePage.m in Sources */,
 				30DF95201EE6BA4E000261C8 /* XBTabBar.m in Sources */,
 				30263D621EE63BD5007B30C8 /* XBUITool.m in Sources */,
+				3053DF131EE9237A00552AF8 /* ProductDisplayView.m in Sources */,
 				30A988621EE556C000D04924 /* BaseViewController.m in Sources */,
 				30263D501EE634F9007B30C8 /* XBSettingItem.m in Sources */,
 				30263D4D1EE634B1007B30C8 /* XBSettingGroup.m in Sources */,
