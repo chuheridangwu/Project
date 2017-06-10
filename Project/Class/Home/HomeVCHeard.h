@@ -12,6 +12,7 @@
 #import "HomeDataModel.h"
 
 #import "BaseWebViewController.h"
+#import "BaseDataViewController.h"
 
 #import "HomeTopPhotoCell.h"
 #import "HomeListSectionCell.h"
@@ -19,6 +20,7 @@
 
 enum{
     HomeSeciton_ScrollPicture = 0, //轮播图
+    HomeSection_DataBase, // 资料库
     HomeSeciton_List,
     HomeSeciton_Banner,
     HomeSection_ListNews, //体育新闻

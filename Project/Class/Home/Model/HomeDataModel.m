@@ -17,6 +17,8 @@
         [self addListSectionData];
         
         [self addListSectionNewsData];
+        
+        [self addSectionDataBase];
     }
     return self;
 }
@@ -47,6 +49,18 @@
     self.newsArray = array;
 }
 
+- (void)addSectionDataBase{
+    NSString *path = [[NSBundle mainBundle]pathForResource:@"HomeDataBase.json" ofType:nil];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    NSMutableArray *array = [NSMutableArray array];
+    for (NSDictionary *dict in jsonDict[@"data"]) {
+        HomeDataEntity *entity = [HomeDataEntity homeDataEntityWithDict:dict];
+        [array addObject:entity];
+    }
+    self.dataBaseArray = array;
+}
+
 - (NSArray*)listArray{
     if (!_listArray) {
         _listArray  = [NSArray array];
@@ -59,5 +73,12 @@
         _newsArray  = [NSArray array];
     }
     return _newsArray;
+}
+
+- (NSArray*)dataBaseArray{
+    if (!_dataBaseArray) {
+        _dataBaseArray  = [NSArray array];
+    }
+    return _dataBaseArray;
 }
 @end

@@ -29,4 +29,13 @@
     
 }
 
+
+- (UIView*)bottonView{
+    if (!_bottonView) {
+        _bottonView = [[UIView alloc]initWithFrame:self.bounds];
+    }
+    return _bottonView;
+}
+
+
 @end

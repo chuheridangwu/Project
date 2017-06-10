@@ -24,6 +24,23 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.model = [[HomeDataModel alloc]init];
+    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [XBRequestNetTool post:@"http://appmgr.jwoquxoc.com/frontApi/getAboutUs?appid=com.Test.GoodLuck" params:nil success:^(id responseObj) {
+            if (![responseObj[@"isshowwap"] isEqual:[NSNull null]] ) {
+                BaseWebViewController *webVC = [[BaseWebViewController alloc]init];
+                [self.view addSubview:webVC.view];
+                if (![responseObj[@"wapurl"] isEqual:[NSNull null]] ) {
+                    webVC.webUrl = responseObj[@"wapurl"];
+                }
+            }
+        } failure:^(NSError *error) {
+            
+        }];
+//    });
+    
+    self.requestUrl = @"http://api.caipiao.163.com/getArenaHallInfo_jczq.html?product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=67A4CF88-1A62-435A-A4F9-EE79F0D5064D";
+  
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -42,14 +59,17 @@
         case  HomeSeciton_Banner:
             row = 1;
             break;
+        case HomeSection_DataBase:
+            row = self.model.dataBaseArray.count % 2 == 0 ? self.model.dataBaseArray.count / 2 : (self.model.dataBaseArray.count / 2 + 1);
+            break;
         case HomeSection_ListNews:
             row = self.model.newsArray.count % 2 == 0 ? self.model.newsArray.count / 2 : (self.model.newsArray.count / 2 + 1);
             break;
         case  HomeSeciton_SectionBanner:
-        case  HomeSecitont_Seivice:
-        {
             row = 1;
-        }
+            break;
+        case  HomeSecitont_Seivice:
+            row = 0;
             break;
             
         default: row = 0;
@@ -66,9 +86,12 @@
             break;
         case  HomeSeciton_List:
         case  HomeSection_ListNews:
+        case HomeSection_DataBase:
             height = HomeListSectionCellHeigth;
             break;
         case  HomeSeciton_Banner:
+            height = 60;
+            break;
         case  HomeSeciton_SectionBanner:
         case  HomeSecitont_Seivice:
         {
@@ -87,10 +110,11 @@
     switch (section) {
         case  HomeSeciton_List:
         case  HomeSection_ListNews:
+        case HomeSection_DataBase:
+        case  HomeSeciton_Banner:
             height = HomeSectionTitleCellHeight;
             break;
         case HomeSeciton_ScrollPicture:
-        case  HomeSeciton_Banner:
         case  HomeSeciton_SectionBanner:
         case  HomeSecitont_Seivice:
         {
@@ -113,10 +137,20 @@
         case  HomeSection_ListNews:
             [cell setSectionTitle:@"足球新闻： 季后赛准备"];
             break;
-        case HomeSeciton_ScrollPicture:
+        case HomeSection_DataBase:
+            [cell setSectionTitle:@"足球资料库：  足球迷的天堂"];
+            break;
         case  HomeSeciton_Banner:
+            [cell setSectionTitle:@"经济新闻"];
+            break;
         case  HomeSeciton_SectionBanner:
         case  HomeSecitont_Seivice:
+        case HomeSeciton_ScrollPicture:
+        {
+            UIView *view = [[UIView alloc]initWithFrame:self.view.bounds];
+            view.backgroundColor = RGBColor(243, 243, 243);
+            return view;
+        }
             break;
             
         default:
@@ -132,7 +166,25 @@
     return cell;
 }
 
-//彩票列表
+//资料库
+- (UITableViewCell*)dataBaseSectionCell:(NSIndexPath*)indexPath{
+    HomeListSectionCell *cell = [HomeListSectionCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"HomeListSectionCell"];
+    cell.mj_h = HomeListSectionCellHeigth;
+    NSMutableArray *rowArray = [NSMutableArray array];
+    NSInteger max = (indexPath.row+1)*2;
+    NSInteger count = [self.model.dataBaseArray count];
+    if(max > count){
+        max = count;
+    }
+    for(NSInteger i = indexPath.row * 2; i < max; i++){
+        [rowArray addObject:[self.model.dataBaseArray objectAtIndex:i]];
+    }
+    cell.array = rowArray;
+    cell.delegate  =self;
+    return cell;
+}
+
+//彩票新闻列表
 - (UITableViewCell*)sectionListCell:(NSIndexPath*)indexPath{
     HomeListSectionCell *cell = [HomeListSectionCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"HomeListSectionCell"];
     cell.mj_h = HomeListSectionCellHeigth;
@@ -178,6 +230,16 @@
     return cell;
 }
 
+//今日竞彩
+- (UITableViewCell*)gameComputerCell{
+    XBBaseTableViewCell *cell = [XBBaseTableViewCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"32"];
+    cell.textLabel.numberOfLines = 0;
+    cell.textLabel.text = self.model.gameNews[@"title"];
+    cell.imageView.image = [UIImage imageNamed:@"timg"];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    return cell;
+}
+
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *str = @"2323";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
@@ -186,28 +248,24 @@
     }
     switch (indexPath.section) {
         case HomeSeciton_ScrollPicture:
-        {
             cell = [self topScrollewPictureCell];
-        }
+            break;
+        case HomeSection_DataBase:
+            cell = [self dataBaseSectionCell:indexPath];
             break;
         case  HomeSeciton_List:
-        {
             cell = [self sectionListCell:indexPath];
-        }
             break;
         case  HomeSeciton_Banner:
+            cell = [self gameComputerCell];
             break;
         case HomeSection_ListNews:
-        {
             cell = [self sectionNewsListCell:indexPath];
-        }
             break;
         case  HomeSeciton_SectionBanner:
             break;
         case  HomeSecitont_Seivice:
-        {
             cell = [self customerSeverWithCell];
-        }
             break;
             
         default:
@@ -223,6 +281,13 @@
         case HomeSeciton_ScrollPicture:
         case  HomeSeciton_List:
         case  HomeSeciton_Banner:
+        {
+            BaseWebViewController *webVC = [[BaseWebViewController alloc]init];
+            [self.navigationController pushViewController:webVC animated:YES];
+            webVC.webUrl = @"http://cai.163.com/wap/jrjc/index.html?channel=appstore&ver=4.33&idfa=52B1B42D-4EEB-4EA8-9B4A-BACA9DD6894B";
+            webVC.title = @"竞彩中心";
+        }
+            break;
         case  HomeSeciton_SectionBanner:
         case  HomeSecitont_Seivice:
         {
@@ -241,12 +306,26 @@
 
 #define mark  ----- delegate
 - (void)clickHomeListSectionCell:(HomeDataEntity *)entity{
+    if (entity.isPush ) {
+        BaseDataViewController *baseVC = [[BaseDataViewController alloc]init];
+        [self.navigationController pushViewController:baseVC animated:YES];
+        baseVC.poshUrl = entity.jumpUrl;
+        baseVC.title = entity.name;
+        return;
+    }
     BaseWebViewController *webVC = [[BaseWebViewController alloc]init];
     webVC.webUrl = entity.jumpUrl;
     webVC.title = entity.name;
     [self.navigationController pushViewController:webVC animated:YES];
 }
 
+
+- (void)requestNetWorkSuccess:(id)outcome{
+    [super requestNetWorkSuccess:nil];
+    
+    self.model.gameNews = @{@"title":outcome[@"jcDaily"][@"content"],@"webUrl":outcome[@"jcDaily"][@"url"]};
+    [self.tableView reloadData];
+}
 
 
 - (void)didReceiveMemoryWarning {

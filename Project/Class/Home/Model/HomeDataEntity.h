@@ -14,5 +14,7 @@
 @property (nonatomic,strong)NSString *cardDesc;
 @property (nonatomic,strong)NSString *jumpUrl;
 
+@property (nonatomic,assign)BOOL isPush;
+
 + (instancetype)homeDataEntityWithDict:(NSDictionary*)dict;
 @end

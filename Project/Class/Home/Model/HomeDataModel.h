@@ -13,4 +13,7 @@
 
 @property (nonatomic,strong)NSArray *newsArray; //体育新闻
 
+@property (nonatomic,strong)NSArray *dataBaseArray; //资料库
+
+@property (nonatomic,strong)NSDictionary *gameNews; //今日竞彩
 @end

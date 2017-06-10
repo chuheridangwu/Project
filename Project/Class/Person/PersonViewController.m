@@ -41,7 +41,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        return 160;
+        return 180;
     }
     return 44;
 }
@@ -69,7 +69,7 @@
     }
     if (indexPath.section == 0) {
         UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"PersonNav"]];
-        imageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 160);
+        imageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 180);
         [cell.contentView addSubview:imageView];
     }else{
         cell.textLabel.text = [NSString stringWithFormat:@"%@",self.titleArray[indexPath.row]];
