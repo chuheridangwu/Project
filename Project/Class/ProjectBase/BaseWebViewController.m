@@ -26,6 +26,11 @@
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.webUrl]]];
 }
 
+- (void)setWebUrl:(NSString *)webUrl{
+    _webUrl = webUrl;
+    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.webUrl]]];
+}
+
 - (void)webViewDidStartLoad:(UIWebView *)webView{
     [MBProgressHUD hideHUDForView:self.view animated:YES];
     //隐藏标题栏
@@ -38,7 +43,7 @@
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [webView stringByEvaluatingJavaScriptFromString:@"document.getElementById('header').style.display='none'"];
-
+    [webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByClassName('header')[0].style.display='none'"];
 }
 
 #pragma mark - scrollView的代理方法

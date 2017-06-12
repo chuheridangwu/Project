@@ -63,6 +63,7 @@
 		3053DF1F1EE95C0800552AF8 /* FoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053DF1E1EE95C0800552AF8 /* FoundViewController.m */; };
 		3053DF221EE9658B00552AF8 /* FoundInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053DF211EE9658B00552AF8 /* FoundInfoViewController.m */; };
 		3055926D1EE4F9DF00864E6E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3055926C1EE4F9DF00864E6E /* Images.xcassets */; };
+		306EFFBE1EEE2BF90000D41F /* UIView+Render.m in Sources */ = {isa = PBXBuildFile; fileRef = 306EFFBD1EEE2BF90000D41F /* UIView+Render.m */; };
 		30A988591EE5566700D04924 /* XBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988581EE5566700D04924 /* XBTabBarController.m */; };
 		30A9885C1EE5568800D04924 /* XBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9885B1EE5568800D04924 /* XBNavigationController.m */; };
 		30A9885F1EE556A100D04924 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9885E1EE556A100D04924 /* HomeViewController.m */; };
@@ -206,6 +207,8 @@
 		305592681EE4E58A00864E6E /* ProjectHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectHeader.pch; sourceTree = "<group>"; };
 		305592691EE4F06B00864E6E /* Project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Project.entitlements; sourceTree = "<group>"; };
 		3055926C1EE4F9DF00864E6E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		306EFFBC1EEE2BF90000D41F /* UIView+Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Render.h"; sourceTree = "<group>"; };
+		306EFFBD1EEE2BF90000D41F /* UIView+Render.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Render.m"; sourceTree = "<group>"; };
 		30A988571EE5566700D04924 /* XBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBTabBarController.h; sourceTree = "<group>"; };
 		30A988581EE5566700D04924 /* XBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBTabBarController.m; sourceTree = "<group>"; };
 		30A9885A1EE5568800D04924 /* XBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBNavigationController.h; sourceTree = "<group>"; };
@@ -492,6 +495,8 @@
 				30263D5E1EE63816007B30C8 /* UIImage+image.m */,
 				30D601C61EE6E3B700A70B93 /* UIColor+Color.h */,
 				30D601C71EE6E3B700A70B93 /* UIColor+Color.m */,
+				306EFFBC1EEE2BF90000D41F /* UIView+Render.h */,
+				306EFFBD1EEE2BF90000D41F /* UIView+Render.m */,
 			);
 			name = Category;
 			path = Categoty;
@@ -1032,6 +1037,7 @@
 				301EB3E91EE80B1D0081F1D1 /* LotteryHelpContentVC.m in Sources */,
 				3053DF101EE91F4000552AF8 /* HomeDataModel.m in Sources */,
 				30C728C71EE7EAD900CAD4C0 /* AboutViewController.m in Sources */,
+				306EFFBE1EEE2BF90000D41F /* UIView+Render.m in Sources */,
 				30F27B271EEC49210005FF16 /* HomeSectionListCell.m in Sources */,
 				30DF95091EE646CE000261C8 /* XBRequestModel.m in Sources */,
 				30C728B41EE7DFC900CAD4C0 /* ContinueView.m in Sources */,

@@ -7,6 +7,8 @@
 //
 
 #import "XBBaseTableViewCell.h"
+
+#define HomeSectionListCellHeight  (55)
 @protocol HomeSectionListCellDelegate;
 @interface HomeSectionListCell : XBBaseTableViewCell
 @property (nonatomic,weak)id<HomeSectionListCellDelegate> delegate;

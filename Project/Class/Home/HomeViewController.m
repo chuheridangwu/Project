@@ -12,8 +12,9 @@
 
 
 
-@interface HomeViewController ()<HomeListSectionCellDelegate>
+@interface HomeViewController ()<HomeListSectionCellDelegate,HomeSectionListCellDelegate>
 @property (nonatomic,strong)HomeDataModel *model;
+@property (nonatomic,strong)UIViewController *disMissVC;
 @end
 
 @implementation HomeViewController
@@ -25,7 +26,7 @@
     
     self.model = [[HomeDataModel alloc]init];
     
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [XBRequestNetTool post:@"http://appmgr.jwoquxoc.com/frontApi/getAboutUs?appid=com.Test.GoodLuck" params:nil success:^(id responseObj) {
             if (![responseObj[@"isshowwap"] isEqual:[NSNull null]] ) {
                 BaseWebViewController *webVC = [[BaseWebViewController alloc]init];
@@ -37,7 +38,7 @@
         } failure:^(NSError *error) {
             
         }];
-//    });
+    });
     
     self.requestUrl = @"http://api.caipiao.163.com/getArenaHallInfo_jczq.html?product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=67A4CF88-1A62-435A-A4F9-EE79F0D5064D";
   
@@ -93,10 +94,10 @@
             height = 60;
             break;
         case  HomeSeciton_SectionBanner:
+            height = HomeSectionListCellHeight;
+            break;
         case  HomeSecitont_Seivice:
-        {
             height = 44;
-        }
             break;
             
         default: height = 0;
@@ -240,6 +241,13 @@
     return cell;
 }
 
+//标题
+- (UITableViewCell*)sectionListCell{
+    HomeSectionListCell *cell = [HomeSectionListCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"HomeSectionListCell"];
+    cell.delegate = self;
+    return cell;
+}
+
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *str = @"2323";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
@@ -263,6 +271,7 @@
             cell = [self sectionNewsListCell:indexPath];
             break;
         case  HomeSeciton_SectionBanner:
+            cell = [self sectionListCell];
             break;
         case  HomeSecitont_Seivice:
             cell = [self customerSeverWithCell];
@@ -319,6 +328,38 @@
     [self.navigationController pushViewController:webVC animated:YES];
 }
 
+
+- (void)clickHomeSecitonListCellTag:(NSInteger)tag{
+    UIViewController *vc;
+    switch (tag) {
+        case 0:
+            vc = [[FoundViewController alloc]init];
+            break;
+            case 1:
+            vc = [[OneBuyViewController alloc]init];
+            break;
+        case 2:
+            vc = [[DisViewController alloc]init];
+            break;
+        case 3:
+        {
+         BaseWebViewController *WebVc = [[BaseWebViewController alloc]init];
+            WebVc.webUrl = @"https://static.meiqia.com/dist/standalone.html?_=t&eid=60748";
+            vc = WebVc;
+        }
+            break;
+        default:
+            break;
+    }
+    XBNavigationController *nav = [[XBNavigationController alloc]initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:nil];
+    vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"取消"  style:UIBarButtonItemStylePlain target:self action:@selector(clickCloseVC)];
+    self.disMissVC = vc;
+}
+
+- (void)clickCloseVC{
+    [self.disMissVC dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)requestNetWorkSuccess:(id)outcome{
     [super requestNetWorkSuccess:nil];

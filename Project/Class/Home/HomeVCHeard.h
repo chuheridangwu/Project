@@ -13,18 +13,26 @@
 
 #import "BaseWebViewController.h"
 #import "BaseDataViewController.h"
+#import "DisContentController.h"
+#import "LotteryNoticeVC.h"
+#import "FoundViewController.h"
+#import "XBNavigationController.h"
+#import "OneBuyViewController.h"
+#import "DisViewController.h"
+
 
 #import "HomeTopPhotoCell.h"
 #import "HomeListSectionCell.h"
 #import "HomeSectionTitleCell.h"
+#import "HomeSectionListCell.h"
 
 enum{
     HomeSeciton_ScrollPicture = 0, //轮播图
+    HomeSeciton_SectionBanner, 
     HomeSection_DataBase, // 资料库
     HomeSeciton_List,
     HomeSeciton_Banner,
     HomeSection_ListNews, //体育新闻
-    HomeSeciton_SectionBanner,
     HomeSecitont_Seivice,
     
     HomeSeciton_Invalid

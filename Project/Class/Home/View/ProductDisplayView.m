@@ -66,9 +66,6 @@
             make.bottom.equalTo(_imageView.bottom).offset(-2);
         }];
         
-  
-        
-     
     }
     return self;
 }
