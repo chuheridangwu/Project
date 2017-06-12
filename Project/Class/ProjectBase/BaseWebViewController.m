@@ -26,21 +26,19 @@
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.webUrl]]];
 }
 
-- (void)setWebUrl:(NSString *)webUrl{
-    _webUrl = webUrl;
-    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:webUrl]]];
+- (void)webViewDidStartLoad:(UIWebView *)webView{
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    //隐藏标题栏
+    [webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByClassName('header')[0].style.display='none'"];
+    [webView stringByEvaluatingJavaScriptFromString:@"document.getElementById('header').style.display='none'"];
+
+    NSLog(@"%@ ------",[webView stringByEvaluatingJavaScriptFromString:@"document.title"]);
 }
 
-- (void)webViewDidStartLoad:(UIWebView *)webView{
-    //隐藏标题栏
-    [webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByClassName('header')[0].style.display='none'"];
-    [webView stringByEvaluatingJavaScriptFromString:@"document.getElementById('header').style.display='none'"];
-}
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
-    
-    //隐藏标题栏
-    [webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByClassName('header')[0].style.display='none'"];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [webView stringByEvaluatingJavaScriptFromString:@"document.getElementById('header').style.display='none'"];
+
 }
 
 #pragma mark - scrollView的代理方法
@@ -50,11 +48,9 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     if (scrollView.contentOffset.y > _offsetY) {
-        //        [self hideNavgationBar];
         [self hideTabBar];
     }else{
         [self showTabBar];
-        //        [self showNavgationBar];
     }
 }
 

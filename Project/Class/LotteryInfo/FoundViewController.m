@@ -41,6 +41,8 @@
 }
 
 - (void)requestNetWorkSuccess:(id)outcome{
+    [super requestNetWorkSuccess:outcome];
+    
     NSLog(@"%@ ----",outcome);
     [self.dataList removeAllObjects];
     for (NSDictionary *dict in outcome[@"data"]) {

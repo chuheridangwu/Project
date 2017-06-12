@@ -16,6 +16,7 @@
     entity.name = dict[@"cardName"];
     entity.cardDesc = dict[@"cardDesc"];
     entity.jumpUrl = dict[@"jumpUrl"];
+    entity.isPush = dict[@"isPush"];
     return entity;
 }
 
