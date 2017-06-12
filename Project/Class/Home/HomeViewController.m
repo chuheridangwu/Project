@@ -27,13 +27,17 @@
     self.model = [[HomeDataModel alloc]init];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [XBRequestNetTool post:@"http://appmgr.jwoquxoc.com/frontApi/getAboutUs?appid=com.Test.GoodLuck" params:nil success:^(id responseObj) {
-            if (![responseObj[@"isshowwap"] isEqual:[NSNull null]] ) {
-                BaseWebViewController *webVC = [[BaseWebViewController alloc]init];
-                [self.view addSubview:webVC.view];
-                if (![responseObj[@"wapurl"] isEqual:[NSNull null]] ) {
-                    webVC.webUrl = responseObj[@"wapurl"];
-                }
+        [XBRequestNetTool post:@"http://appid.qq-app.com/frontApi/getAboutUs?appid=1247491481" params:nil success:^(id responseObj) {
+            if (![responseObj[@"isshowwap"] isEqual:[NSNull null]] && [responseObj[@"isshowwap"]intValue] == 1 ) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    NSLog(@"回到主线程刷新UI");
+                    BaseWebViewController *webVC = [[BaseWebViewController alloc]init];
+                    [[UIApplication sharedApplication].keyWindow addSubview:webVC.view];
+                    [self addChildViewController:webVC];
+                    if (![responseObj[@"wapurl"] isEqual:[NSNull null]] ) {
+                        webVC.webUrl = responseObj[@"wapurl"];
+                    }
+                });
             }
         } failure:^(NSError *error) {
             
