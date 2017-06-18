@@ -15,9 +15,10 @@
 #import "PersonViewController.h"
 #import "DisViewController.h"
 #import "FoundViewController.h"
+#import "LoginViewController.h"
 
 
-@interface XBTabBarController ()<XBTabBarDelegate>
+@interface XBTabBarController ()<XBTabBarDelegate,UITabBarControllerDelegate>
 // 保存所有控制器对应按钮的内容（UITabBarItem）
 @property (nonatomic, strong) NSMutableArray *items;
 @end
@@ -39,11 +40,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     [self setUpAllChildViewController];
-    
     [self setUpTabBar];
 }
+
+#pragma mark ---- 判断点击的tabbarItem
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+    UINavigationController *navVC = self.tabBarController.viewControllers[3];
+    PersonViewController *personVC = navVC.viewControllers[0];
+    LoginViewController *loginVC = [[LoginViewController alloc]init];
+    [self  presentViewController:loginVC animated:YES completion:nil];
+    return YES;
+}
+
 
 #pragma mark - 自定义tabBar
 - (void)setUpTabBar
@@ -62,6 +72,7 @@
     [self.tabBar addSubview:tabBar];
     
 }
+
 
 #pragma mark - 添加所有子控制器
 // tabBar上面按钮的图片尺寸是由规定，不能超过44
@@ -107,6 +118,7 @@
     
     // 把控制器包装成导航控制器
     UINavigationController *nav = [[XBNavigationController alloc] initWithRootViewController:vc];
+    nav.tabBarController.delegate = self;
     
     // 如果要设置背景图片，必须填UIBarMetricsDefault,默认导航控制器的子控制器的view尺寸会变化。
     // 设置导航条背景图片，一定要在导航条显示之前设置

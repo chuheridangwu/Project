@@ -239,11 +239,20 @@
 - (UITableViewCell*)gameComputerCell{
     XBBaseTableViewCell *cell = [XBBaseTableViewCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"32"];
     cell.textLabel.numberOfLines = 0;
-    cell.textLabel.text = self.model.gameNews[@"title"];
-    cell.imageView.image = [UIImage imageNamed:@"timg"];
+    cell.mj_h = HomeListSectionCellHeigth;
+//    cell.textLabel.text = self.model.gameNews[@"title"];
+    UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(5, 5, cell.mj_h - 10, cell.mj_h - 10)];
+    [cell addSubview:imgView];
+    imgView.image = [UIImage imageNamed:@"timg"];
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(imgView.mj_w + 10, 5, cell.mj_w - cell.mj_h - 50, cell.mj_h - 10)];
+    [cell addSubview:label];
+    label.text = self.model.gameNews[@"title"];
+    label.font = [UIFont systemFontOfSize:14];
+    label.numberOfLines = 2;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
+
 
 //标题
 - (UITableViewCell*)sectionListCell{

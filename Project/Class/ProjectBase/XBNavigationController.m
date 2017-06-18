@@ -7,6 +7,8 @@
 //
 
 #import "XBNavigationController.h"
+#import "PersonViewController.h"
+#import "LoginViewController.h"
 
 @interface XBNavigationController ()
 @end
@@ -30,10 +32,8 @@
     titleAttr[NSForegroundColorAttributeName] = [UIColor whiteColor];
     titleAttr[NSFontAttributeName] = [UIFont boldSystemFontOfSize:20];
     [self.navigationBar setTitleTextAttributes:titleAttr];
-    
-    
+    self.tabBarController.delegate = self;
 }
-
 
 
 

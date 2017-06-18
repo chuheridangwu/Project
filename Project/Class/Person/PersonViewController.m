@@ -13,6 +13,8 @@
 #import "AboutViewController.h"
 #import "LotteryNoticeVC.h"
 #import "LotteryHelpVC.h"
+#import "XBNavigationController.h"
+#import "LoginViewController.h"
 
 @interface PersonViewController ()
 @property (nonatomic,strong)NSArray *titleArray;
@@ -24,6 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UINavigationController  *loginVC=  [[XBNavigationController alloc]initWithRootViewController:[[LoginViewController alloc] init]];
+    [self presentViewController:loginVC animated:YES completion:nil];
+    
     self.titleArray = @[@"消息中心",@"开奖推送",@"开奖记录",@"小游戏",@"关于",@"清除缓存"];
 //    self.imageArray = @[@"message",@"notice",@"prize",@"game",@"about",@"clear"];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"帮助" style:UIBarButtonItemStylePlain target:self action:@selector(clickRightBtn)];

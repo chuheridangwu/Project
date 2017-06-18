@@ -74,6 +74,16 @@
 		30A988701EE562B600D04924 /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9886F1EE562B600D04924 /* BaseWebViewController.m */; };
 		30A988B31EE57D7A00D04924 /* XBGuidePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988B21EE57D7A00D04924 /* XBGuidePage.m */; };
 		30A988B61EE57F8E00D04924 /* XBRequestNetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988B51EE57F8E00D04924 /* XBRequestNetTool.m */; };
+		30B0F5701EF61A0A008AC7E6 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B0F56F1EF61A0A008AC7E6 /* NSString+Helper.m */; };
+		30B0F5881EF620E6008AC7E6 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B0F5871EF620E6008AC7E6 /* UIView+Extension.m */; };
+		30B0F5971EF6257A008AC7E6 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B0F58C1EF6257A008AC7E6 /* AccountViewController.m */; };
+		30B0F5981EF6257A008AC7E6 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B0F58D1EF6257A008AC7E6 /* AccountViewController.xib */; };
+		30B0F5991EF6257A008AC7E6 /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B0F58F1EF6257A008AC7E6 /* ForgetViewController.m */; };
+		30B0F59A1EF6257A008AC7E6 /* ForgetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B0F5901EF6257A008AC7E6 /* ForgetViewController.xib */; };
+		30B0F59B1EF6257A008AC7E6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B0F5921EF6257A008AC7E6 /* LoginViewController.m */; };
+		30B0F59C1EF6257A008AC7E6 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B0F5931EF6257A008AC7E6 /* LoginViewController.xib */; };
+		30B0F59D1EF6257A008AC7E6 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B0F5951EF6257A008AC7E6 /* RegistViewController.m */; };
+		30B0F59E1EF6257A008AC7E6 /* RegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B0F5961EF6257A008AC7E6 /* RegistViewController.xib */; };
 		30C728B01EE7DF8D00CAD4C0 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C728AF1EE7DF8D00CAD4C0 /* GameViewController.m */; };
 		30C728B41EE7DFC900CAD4C0 /* ContinueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C728B31EE7DFC900CAD4C0 /* ContinueView.m */; };
 		30C728BE1EE7DFD200CAD4C0 /* BottonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C728B71EE7DFD200CAD4C0 /* BottonView.m */; };
@@ -229,6 +239,22 @@
 		30A988B21EE57D7A00D04924 /* XBGuidePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBGuidePage.m; sourceTree = "<group>"; };
 		30A988B41EE57F8E00D04924 /* XBRequestNetTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBRequestNetTool.h; sourceTree = "<group>"; };
 		30A988B51EE57F8E00D04924 /* XBRequestNetTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBRequestNetTool.m; sourceTree = "<group>"; };
+		30B0F56E1EF61A0A008AC7E6 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
+		30B0F56F1EF61A0A008AC7E6 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
+		30B0F5861EF620E6008AC7E6 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		30B0F5871EF620E6008AC7E6 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		30B0F58B1EF6257A008AC7E6 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		30B0F58C1EF6257A008AC7E6 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		30B0F58D1EF6257A008AC7E6 /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		30B0F58E1EF6257A008AC7E6 /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetViewController.h; sourceTree = "<group>"; };
+		30B0F58F1EF6257A008AC7E6 /* ForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetViewController.m; sourceTree = "<group>"; };
+		30B0F5901EF6257A008AC7E6 /* ForgetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetViewController.xib; sourceTree = "<group>"; };
+		30B0F5911EF6257A008AC7E6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		30B0F5921EF6257A008AC7E6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		30B0F5931EF6257A008AC7E6 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		30B0F5941EF6257A008AC7E6 /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
+		30B0F5951EF6257A008AC7E6 /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
+		30B0F5961EF6257A008AC7E6 /* RegistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistViewController.xib; sourceTree = "<group>"; };
 		30C728AE1EE7DF8D00CAD4C0 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		30C728AF1EE7DF8D00CAD4C0 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		30C728B21EE7DFC900CAD4C0 /* ContinueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContinueView.h; sourceTree = "<group>"; };
@@ -491,12 +517,16 @@
 		30263D5C1EE637DB007B30C8 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				30B0F5861EF620E6008AC7E6 /* UIView+Extension.h */,
+				30B0F5871EF620E6008AC7E6 /* UIView+Extension.m */,
 				30263D5D1EE63816007B30C8 /* UIImage+image.h */,
 				30263D5E1EE63816007B30C8 /* UIImage+image.m */,
 				30D601C61EE6E3B700A70B93 /* UIColor+Color.h */,
 				30D601C71EE6E3B700A70B93 /* UIColor+Color.m */,
 				306EFFBC1EEE2BF90000D41F /* UIView+Render.h */,
 				306EFFBD1EEE2BF90000D41F /* UIView+Render.m */,
+				30B0F56E1EF61A0A008AC7E6 /* NSString+Helper.h */,
+				30B0F56F1EF61A0A008AC7E6 /* NSString+Helper.m */,
 			);
 			name = Category;
 			path = Categoty;
@@ -517,6 +547,7 @@
 		30A988511EE5564700D04924 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				30B0F5891EF6257A008AC7E6 /* LoginUser */,
 				30263D5A1EE637A4007B30C8 /* Othre */,
 				30A9886D1EE55D2D00D04924 /* Common */,
 				30A988521EE5564700D04924 /* Discover */,
@@ -620,6 +651,33 @@
 				30A988B21EE57D7A00D04924 /* XBGuidePage.m */,
 			);
 			path = XBControls;
+			sourceTree = "<group>";
+		};
+		30B0F5891EF6257A008AC7E6 /* LoginUser */ = {
+			isa = PBXGroup;
+			children = (
+				30B0F58A1EF6257A008AC7E6 /* Controller */,
+			);
+			path = LoginUser;
+			sourceTree = "<group>";
+		};
+		30B0F58A1EF6257A008AC7E6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				30B0F58B1EF6257A008AC7E6 /* AccountViewController.h */,
+				30B0F58C1EF6257A008AC7E6 /* AccountViewController.m */,
+				30B0F58D1EF6257A008AC7E6 /* AccountViewController.xib */,
+				30B0F58E1EF6257A008AC7E6 /* ForgetViewController.h */,
+				30B0F58F1EF6257A008AC7E6 /* ForgetViewController.m */,
+				30B0F5901EF6257A008AC7E6 /* ForgetViewController.xib */,
+				30B0F5911EF6257A008AC7E6 /* LoginViewController.h */,
+				30B0F5921EF6257A008AC7E6 /* LoginViewController.m */,
+				30B0F5931EF6257A008AC7E6 /* LoginViewController.xib */,
+				30B0F5941EF6257A008AC7E6 /* RegistViewController.h */,
+				30B0F5951EF6257A008AC7E6 /* RegistViewController.m */,
+				30B0F5961EF6257A008AC7E6 /* RegistViewController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		30C728AD1EE7DF6D00CAD4C0 /* Game */ = {
@@ -910,6 +968,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30B0F59C1EF6257A008AC7E6 /* LoginViewController.xib in Resources */,
 				301EB48C1EE80EC60081F1D1 /* help.html in Resources */,
 				301EB48A1EE80EC60081F1D1 /* gdy11_howto.html in Resources */,
 				301EB48B1EE80EC60081F1D1 /* group_record.html in Resources */,
@@ -919,6 +978,7 @@
 				301EB4A01EE80EC60081F1D1 /* y11_howto.html in Resources */,
 				301EB3EE1EE80C700081F1D1 /* help.json in Resources */,
 				30DF950C1EE69476000261C8 /* Discover.json in Resources */,
+				30B0F59E1EF6257A008AC7E6 /* RegistViewController.xib in Resources */,
 				3053DF0A1EE91E1400552AF8 /* HomeHtmlLIst.json in Resources */,
 				30F27B131EEBD6D40005FF16 /* HomeDataBase.json in Resources */,
 				301EB48D1EE80EC60081F1D1 /* helpGroupBuy.html in Resources */,
@@ -926,11 +986,13 @@
 				30E7AD211EE45F5B000609DB /* LaunchScreen.storyboard in Resources */,
 				301EB49B1EE80EC60081F1D1 /* rule.css in Resources */,
 				3055926D1EE4F9DF00864E6E /* Images.xcassets in Resources */,
+				30B0F5981EF6257A008AC7E6 /* AccountViewController.xib in Resources */,
 				301EB4A11EE80EC60081F1D1 /* znzh.html in Resources */,
 				301EB49D1EE80EC60081F1D1 /* ssc_howto.html in Resources */,
 				301EB49E1EE80EC60081F1D1 /* ssq_howto.html in Resources */,
 				301EB49A1EE80EC60081F1D1 /* qxc_howto.html in Resources */,
 				301EB4921EE80EC60081F1D1 /* k2_howto.html in Resources */,
+				30B0F59A1EF6257A008AC7E6 /* ForgetViewController.xib in Resources */,
 				301EB49C1EE80EC60081F1D1 /* sfc_howto.html in Resources */,
 				301EB48F1EE80EC60081F1D1 /* jczq_howto.html in Resources */,
 				301EB4941EE80EC60081F1D1 /* kl8_howto.html in Resources */,
@@ -1021,6 +1083,7 @@
 			files = (
 				30DF951C1EE6B322000261C8 /* XBBaseTableViewCell.m in Sources */,
 				30A988591EE5566700D04924 /* XBTabBarController.m in Sources */,
+				30B0F5991EF6257A008AC7E6 /* ForgetViewController.m in Sources */,
 				3053DF081EE8F84300552AF8 /* HomeListSectionCell.m in Sources */,
 				301F6B141EE8420200B8443F /* XBScrollViewPhoto.m in Sources */,
 				3053DF0D1EE91E6500552AF8 /* HomeDataEntity.m in Sources */,
@@ -1028,6 +1091,7 @@
 				30263D531EE63556007B30C8 /* XBSettingCell.m in Sources */,
 				301EB3EC1EE80B680081F1D1 /* XBHtmlItem.m in Sources */,
 				30263D5F1EE63816007B30C8 /* UIImage+image.m in Sources */,
+				30B0F5701EF61A0A008AC7E6 /* NSString+Helper.m in Sources */,
 				30A988B61EE57F8E00D04924 /* XBRequestNetTool.m in Sources */,
 				30C728C41EE7E7AE00CAD4C0 /* MessageViewController.m in Sources */,
 				3053DF221EE9658B00552AF8 /* FoundInfoViewController.m in Sources */,
@@ -1047,13 +1111,16 @@
 				30F27B241EEBDC270005FF16 /* BaseDataEntity.m in Sources */,
 				30C728C01EE7DFD200CAD4C0 /* DidView.m in Sources */,
 				3053DF1F1EE95C0800552AF8 /* FoundViewController.m in Sources */,
+				30B0F59B1EF6257A008AC7E6 /* LoginViewController.m in Sources */,
 				30E7AD161EE45F5B000609DB /* AppDelegate.m in Sources */,
 				30E7AD131EE45F5B000609DB /* main.m in Sources */,
 				30A988681EE556F100D04924 /* PersonViewController.m in Sources */,
 				30D601C81EE6E3B700A70B93 /* UIColor+Color.m in Sources */,
 				30263D591EE635ED007B30C8 /* XBArrowSettingItem.m in Sources */,
+				30B0F5971EF6257A008AC7E6 /* AccountViewController.m in Sources */,
 				30C728C11EE7DFD200CAD4C0 /* HeardView.m in Sources */,
 				30C728BF1EE7DFD200CAD4C0 /* ContentView.m in Sources */,
+				30B0F5881EF620E6008AC7E6 /* UIView+Extension.m in Sources */,
 				30DF95151EE6AA77000261C8 /* DisContentEntity.m in Sources */,
 				30A9886B1EE5570100D04924 /* OneBuyViewController.m in Sources */,
 				301EB3E01EE800120081F1D1 /* LotteryNoticeVC.m in Sources */,
@@ -1064,6 +1131,7 @@
 				301F6B181EE8422800B8443F /* HomeTopPhotoCell.m in Sources */,
 				30DF95231EE6BAE8000261C8 /* XBTabBarButton.m in Sources */,
 				30A988701EE562B600D04924 /* BaseWebViewController.m in Sources */,
+				30B0F59D1EF6257A008AC7E6 /* RegistViewController.m in Sources */,
 				30DF95191EE6B1BC000261C8 /* DisContentCell.m in Sources */,
 				30A988651EE556E400D04924 /* DisViewController.m in Sources */,
 				30C728BE1EE7DFD200CAD4C0 /* BottonView.m in Sources */,

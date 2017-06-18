@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistViewController">
+            <connections>
+                <outlet property="TelTextField" destination="I39-zh-nP9" id="b4b-fR-0MS"/>
+                <outlet property="duanxinBtn" destination="u2R-zS-io5" id="2hI-C3-bKA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入您的手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I39-zh-nP9">
+                    <rect key="frame" x="10" y="15" width="355" height="45"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="tIg-5X-9xi"/>
+                    </constraints>
+                    <color key="textColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2R-zS-io5">
+                    <rect key="frame" x="10" y="95" width="355" height="45"/>
+                    <color key="backgroundColor" red="0.89607173204421997" green="0.18942448496818542" blue="0.22151076793670654" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="O0P-vd-LRf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="获取短信验证码"/>
+                    <connections>
+                        <action selector="huoquBtnClicked:" destination="-1" eventType="touchUpInside" id="Pan-sv-4S7"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="I39-zh-nP9" secondAttribute="trailing" constant="10" id="39r-Ej-4hs"/>
+                <constraint firstItem="u2R-zS-io5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="5vs-uf-cBY"/>
+                <constraint firstItem="I39-zh-nP9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="7Yc-PY-D9L"/>
+                <constraint firstAttribute="trailing" secondItem="u2R-zS-io5" secondAttribute="trailing" constant="10" id="aru-Rg-b9N"/>
+                <constraint firstItem="u2R-zS-io5" firstAttribute="top" secondItem="I39-zh-nP9" secondAttribute="bottom" constant="35" id="p20-Iv-nan"/>
+                <constraint firstItem="I39-zh-nP9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="t6i-B5-emY"/>
+            </constraints>
+            <point key="canvasLocation" x="314.5" y="354.5"/>
+        </view>
+    </objects>
+</document>
