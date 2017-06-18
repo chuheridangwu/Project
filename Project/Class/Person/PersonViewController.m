@@ -15,6 +15,7 @@
 #import "LotteryHelpVC.h"
 #import "XBNavigationController.h"
 #import "LoginViewController.h"
+#import "PersoninfoCell.h"
 
 @interface PersonViewController ()
 @property (nonatomic,strong)NSArray *titleArray;
@@ -26,8 +27,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UINavigationController  *loginVC=  [[XBNavigationController alloc]initWithRootViewController:[[LoginViewController alloc] init]];
-    [self presentViewController:loginVC animated:YES completion:nil];
+//    UINavigationController  *navVC=  [[XBNavigationController alloc]initWithRootViewController:[[LoginViewController alloc] init]];
+//    navVC.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 100);
+//    [self presentViewController:navVC animated:YES completion:nil];
+    
+    self.tableView.tableFooterView = [self tableViewFootView];
+//   __block LoginViewController *loginVC = [[LoginViewController alloc]init];
+//    [self.view addSubview:loginVC.view];
+//    [self addChildViewController:loginVC];
+//    loginVC.myBlock = ^(){
+//        [loginVC removeFromParentViewController];
+//        [loginVC.view removeFromSuperview];
+//    };
+    
     
     self.titleArray = @[@"消息中心",@"开奖推送",@"开奖记录",@"小游戏",@"关于",@"清除缓存"];
 //    self.imageArray = @[@"message",@"notice",@"prize",@"game",@"about",@"clear"];
@@ -39,6 +51,28 @@
     [self.navigationController pushViewController:helpVC animated:YES];
 }
 
+- (UIView*)tableViewFootView{
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 60)];
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(20, 10, SCREEN_WIDTH - 40, view.mj_h - 20)];
+    btn.backgroundColor = XBAPPBaseColor;
+    [btn addTarget:self action:@selector(clickBtn) forControlEvents:UIControlEventTouchDown];
+    [btn setTitle:@"退出登录" forState:UIControlStateNormal];
+    [btn setBorderRadian:5 width:0 color:[UIColor clearColor]];
+    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [view addSubview:btn];
+    return view;
+}
+
+- (void)clickBtn{
+    __block LoginViewController *loginVC = [[LoginViewController alloc]init];
+    [self.view addSubview:loginVC.view];
+    [self addChildViewController:loginVC];
+    loginVC.myBlock = ^(){
+        [loginVC removeFromParentViewController];
+        [loginVC.view removeFromSuperview];
+    };
+    
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;
@@ -46,7 +80,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        return 180;
+        return PersoninfoCellHeight;
     }
     return 44;
 }
@@ -70,17 +104,16 @@
     NSString *str = @"2323";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
     if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+        if (indexPath.section == 0) {
+            cell = [PersoninfoCell tableViewCellInitializeWithTableView:tableView withIdtifier:@"PersoninfoCell"];
+        }else{
+            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+            cell.textLabel.text = [NSString stringWithFormat:@"%@",self.titleArray[indexPath.row]];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            cell.imageView.image = [UIImage imageNamed:self.imageArray[indexPath.row]];
+        }
     }
-    if (indexPath.section == 0) {
-        UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"PersonNav"]];
-        imageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 180);
-        [cell.contentView addSubview:imageView];
-    }else{
-        cell.textLabel.text = [NSString stringWithFormat:@"%@",self.titleArray[indexPath.row]];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.imageView.image = [UIImage imageNamed:self.imageArray[indexPath.row]];
-    }
+   
     return cell;
 }
 

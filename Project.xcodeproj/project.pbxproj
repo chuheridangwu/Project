@@ -84,6 +84,7 @@
 		30B0F59C1EF6257A008AC7E6 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B0F5931EF6257A008AC7E6 /* LoginViewController.xib */; };
 		30B0F59D1EF6257A008AC7E6 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B0F5951EF6257A008AC7E6 /* RegistViewController.m */; };
 		30B0F59E1EF6257A008AC7E6 /* RegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B0F5961EF6257A008AC7E6 /* RegistViewController.xib */; };
+		30B0F5A21EF64DD8008AC7E6 /* PersoninfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B0F5A11EF64DD8008AC7E6 /* PersoninfoCell.m */; };
 		30C728B01EE7DF8D00CAD4C0 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C728AF1EE7DF8D00CAD4C0 /* GameViewController.m */; };
 		30C728B41EE7DFC900CAD4C0 /* ContinueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C728B31EE7DFC900CAD4C0 /* ContinueView.m */; };
 		30C728BE1EE7DFD200CAD4C0 /* BottonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C728B71EE7DFD200CAD4C0 /* BottonView.m */; };
@@ -255,6 +256,8 @@
 		30B0F5941EF6257A008AC7E6 /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
 		30B0F5951EF6257A008AC7E6 /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
 		30B0F5961EF6257A008AC7E6 /* RegistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistViewController.xib; sourceTree = "<group>"; };
+		30B0F5A01EF64DD8008AC7E6 /* PersoninfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersoninfoCell.h; sourceTree = "<group>"; };
+		30B0F5A11EF64DD8008AC7E6 /* PersoninfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersoninfoCell.m; sourceTree = "<group>"; };
 		30C728AE1EE7DF8D00CAD4C0 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		30C728AF1EE7DF8D00CAD4C0 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		30C728B21EE7DFC900CAD4C0 /* ContinueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContinueView.h; sourceTree = "<group>"; };
@@ -604,6 +607,7 @@
 				30C728C31EE7E7AE00CAD4C0 /* MessageViewController.m */,
 				30C728C51EE7EAD900CAD4C0 /* AboutViewController.h */,
 				30C728C61EE7EAD900CAD4C0 /* AboutViewController.m */,
+				30B0F59F1EF64DB0008AC7E6 /* View */,
 				301EB3DD1EE7FFC80081F1D1 /* LotteryNotice */,
 				30C728AD1EE7DF6D00CAD4C0 /* Game */,
 			);
@@ -678,6 +682,15 @@
 				30B0F5961EF6257A008AC7E6 /* RegistViewController.xib */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		30B0F59F1EF64DB0008AC7E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30B0F5A01EF64DD8008AC7E6 /* PersoninfoCell.h */,
+				30B0F5A11EF64DD8008AC7E6 /* PersoninfoCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		30C728AD1EE7DF6D00CAD4C0 /* Game */ = {
@@ -1095,6 +1108,7 @@
 				30A988B61EE57F8E00D04924 /* XBRequestNetTool.m in Sources */,
 				30C728C41EE7E7AE00CAD4C0 /* MessageViewController.m in Sources */,
 				3053DF221EE9658B00552AF8 /* FoundInfoViewController.m in Sources */,
+				30B0F5A21EF64DD8008AC7E6 /* PersoninfoCell.m in Sources */,
 				30DF95121EE69F78000261C8 /* DisContentController.m in Sources */,
 				30263D561EE635D1007B30C8 /* XBSwtichSettingItem.m in Sources */,
 				3053DF181EE94DC300552AF8 /* HomeSectionTitleCell.m in Sources */,
