@@ -25,6 +25,7 @@
 #import "HomeListSectionCell.h"
 #import "HomeSectionTitleCell.h"
 #import "HomeSectionListCell.h"
+#import "XBRunCircleTextCell.h"
 
 enum{
     HomeSeciton_ScrollPicture = 0, //轮播图

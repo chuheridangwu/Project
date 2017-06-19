@@ -71,6 +71,7 @@
             row = self.model.newsArray.count % 2 == 0 ? self.model.newsArray.count / 2 : (self.model.newsArray.count / 2 + 1);
             break;
         case  HomeSeciton_SectionBanner:
+        case HomeSection_Circle:
             row = 1;
             break;
         case  HomeSecitont_Seivice:
@@ -100,7 +101,8 @@
         case  HomeSeciton_SectionBanner:
             height = HomeSectionListCellHeight;
             break;
-        case  HomeSecitont_Seivice:
+        case HomeSecitont_Seivice:
+        case HomeSection_Circle:
             height = 44;
             break;
             
@@ -119,6 +121,7 @@
         case  HomeSeciton_Banner:
             height = HomeSectionTitleCellHeight;
             break;
+        case HomeSection_Circle:
         case HomeSeciton_ScrollPicture:
         case  HomeSeciton_SectionBanner:
         case  HomeSecitont_Seivice:
@@ -168,6 +171,11 @@
 - (UITableViewCell*)topScrollewPictureCell{
     HomeTopPhotoCell *cell = [HomeTopPhotoCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"HomeTopPhotoCell"];
     [cell loadCell];
+    return cell;
+}
+
+- (UITableViewCell*)circleTextCell{
+    XBRunCircleTextCell *cell = [XBRunCircleTextCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"XBRunCircleTextCell"];
     return cell;
 }
 
@@ -289,7 +297,9 @@
         case  HomeSecitont_Seivice:
             cell = [self customerSeverWithCell];
             break;
-            
+        case HomeSection_Circle:
+            cell = [self circleTextCell];
+            break;
         default:
             break;
     }

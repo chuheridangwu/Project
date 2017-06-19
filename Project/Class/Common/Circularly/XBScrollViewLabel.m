@@ -7,7 +7,7 @@
 //
 
 #import "XBScrollViewLabel.h"
-
+#import "NSString+Helper.h"
 
 
 #define XBScrollView_Width self.frame.size.width
@@ -68,9 +68,22 @@
 
 #pragma mark ------ 先随便写写，不进行深层封装
 - (void)imageWithLeftIndex:(NSInteger)left centent:(NSInteger)centent right:(NSInteger)right{
+    NSArray *Array =   @[@"136XXXX3245",
+                         @"136XXXX4232",
+                         @"156XXXX6435",
+                         @"186XXXX6254",
+                         @"186XXXX1245",
+                         @"176XXXX2375",
+                         @"166XXXX1275",
+                         @"126XXXX5246",
+                         ];
+    NSString *leftSor =Array[left];
+    NSString *centerSor =Array[left];
+    NSString *rightSor =Array[left];
+
 //      NSLog(@"%ld>>>>>>>%ld>>>>>>>>%ld",left,centent,right);
-        self.leftImage.text = [self setImageNamewithindex:left];
-        self.centerImage.text = [self setImageNamewithindex:centent];
+        self.leftImage.attributedText = [NSString changeFontAddColor:[self setImageNamewithindex:left] sonStr:leftSor fontColor:[UIColor redColor] font:[UIFont systemFontOfSize:14]];
+        self.centerImage.attributedText =[NSString changeFontAddColor:[self setImageNamewithindex:centent] sonStr:centerSor fontColor:[UIColor redColor] font:[UIFont systemFontOfSize:14]];;
         self.rightImage.text = [self setImageNamewithindex:right];
     
     [self.scrollew setContentOffset:CGPointMake(0, XBScrollView_Height)];
