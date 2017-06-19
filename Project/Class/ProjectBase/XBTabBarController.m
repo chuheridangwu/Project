@@ -55,7 +55,7 @@
     
     tabBar.delegate = self;
     
-    tabBar.backgroundColor = [UIColor orangeColor];
+    tabBar.backgroundColor = [UIColor blackColor];
     
     tabBar.frame = self.tabBar.bounds;
     
@@ -71,11 +71,11 @@
     HomeViewController *hall = [[HomeViewController alloc] init];
     [self setUpOneChildViewController:hall image:[UIImage imageNamed:@"TabBar_LotteryHall_new"] selImage:[UIImage imageNamed:@"TabBar_LotteryHall_selected_new"] title:@"购彩大厅"];
 
-    // 竞技场
-    OneBuyViewController *arena = [[OneBuyViewController alloc] init];
-    [self setUpOneChildViewController:arena image:[UIImage imageNamed:@"TabBar_Arena_new"] selImage:[UIImage imageNamed:@"TabBar_Arena_selected_new"] title:nil];
-    
-    arena.view.backgroundColor = [UIColor purpleColor];
+//    // 竞技场
+//    OneBuyViewController *arena = [[OneBuyViewController alloc] init];
+//    [self setUpOneChildViewController:arena image:[UIImage imageNamed:@"TabBar_Arena_new"] selImage:[UIImage imageNamed:@"TabBar_Arena_selected_new"] title:nil];
+//    
+//    arena.view.backgroundColor = [UIColor purpleColor];
     
     
     // 发现

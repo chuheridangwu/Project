@@ -63,6 +63,8 @@
 		3053DF1F1EE95C0800552AF8 /* FoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053DF1E1EE95C0800552AF8 /* FoundViewController.m */; };
 		3053DF221EE9658B00552AF8 /* FoundInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053DF211EE9658B00552AF8 /* FoundInfoViewController.m */; };
 		3055926D1EE4F9DF00864E6E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3055926C1EE4F9DF00864E6E /* Images.xcassets */; };
+		306178711EF7CBA700561495 /* FoundEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 306178701EF7CBA700561495 /* FoundEntity.m */; };
+		306178741EF7DB4B00561495 /* XBRunCircleTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 306178731EF7DB4B00561495 /* XBRunCircleTextCell.m */; };
 		306EFFBE1EEE2BF90000D41F /* UIView+Render.m in Sources */ = {isa = PBXBuildFile; fileRef = 306EFFBD1EEE2BF90000D41F /* UIView+Render.m */; };
 		30A988591EE5566700D04924 /* XBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988581EE5566700D04924 /* XBTabBarController.m */; };
 		30A9885C1EE5568800D04924 /* XBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9885B1EE5568800D04924 /* XBNavigationController.m */; };
@@ -207,6 +209,10 @@
 		305592681EE4E58A00864E6E /* ProjectHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectHeader.pch; sourceTree = "<group>"; };
 		305592691EE4F06B00864E6E /* Project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Project.entitlements; sourceTree = "<group>"; };
 		3055926C1EE4F9DF00864E6E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3061786F1EF7CBA700561495 /* FoundEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundEntity.h; sourceTree = "<group>"; };
+		306178701EF7CBA700561495 /* FoundEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundEntity.m; sourceTree = "<group>"; };
+		306178721EF7DB4B00561495 /* XBRunCircleTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBRunCircleTextCell.h; sourceTree = "<group>"; };
+		306178731EF7DB4B00561495 /* XBRunCircleTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBRunCircleTextCell.m; sourceTree = "<group>"; };
 		306EFFBC1EEE2BF90000D41F /* UIView+Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Render.h"; sourceTree = "<group>"; };
 		306EFFBD1EEE2BF90000D41F /* UIView+Render.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Render.m"; sourceTree = "<group>"; };
 		30A988571EE5566700D04924 /* XBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBTabBarController.h; sourceTree = "<group>"; };
@@ -414,6 +420,8 @@
 				3053DF171EE94DC300552AF8 /* HomeSectionTitleCell.m */,
 				30F27B251EEC49210005FF16 /* HomeSectionListCell.h */,
 				30F27B261EEC49210005FF16 /* HomeSectionListCell.m */,
+				306178721EF7DB4B00561495 /* XBRunCircleTextCell.h */,
+				306178731EF7DB4B00561495 /* XBRunCircleTextCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -509,9 +517,19 @@
 				3053DF1E1EE95C0800552AF8 /* FoundViewController.m */,
 				3053DF201EE9658B00552AF8 /* FoundInfoViewController.h */,
 				3053DF211EE9658B00552AF8 /* FoundInfoViewController.m */,
+				3061786E1EF7CB8900561495 /* Model */,
 			);
 			name = DisCoverCorrect;
 			path = LotteryInfo;
+			sourceTree = "<group>";
+		};
+		3061786E1EF7CB8900561495 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3061786F1EF7CBA700561495 /* FoundEntity.h */,
+				306178701EF7CBA700561495 /* FoundEntity.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		30A988511EE5564700D04924 /* Class */ = {
@@ -1022,6 +1040,7 @@
 				30DF951C1EE6B322000261C8 /* XBBaseTableViewCell.m in Sources */,
 				30A988591EE5566700D04924 /* XBTabBarController.m in Sources */,
 				3053DF081EE8F84300552AF8 /* HomeListSectionCell.m in Sources */,
+				306178711EF7CBA700561495 /* FoundEntity.m in Sources */,
 				301F6B141EE8420200B8443F /* XBScrollViewPhoto.m in Sources */,
 				3053DF0D1EE91E6500552AF8 /* HomeDataEntity.m in Sources */,
 				30263D4A1EE6340B007B30C8 /* XBBaseTableViewVC.m in Sources */,
@@ -1058,6 +1077,7 @@
 				30A9886B1EE5570100D04924 /* OneBuyViewController.m in Sources */,
 				301EB3E01EE800120081F1D1 /* LotteryNoticeVC.m in Sources */,
 				301EB3E61EE80AC80081F1D1 /* LotteryHelpVC.m in Sources */,
+				306178741EF7DB4B00561495 /* XBRunCircleTextCell.m in Sources */,
 				30F27B211EEBDBC00005FF16 /* BaseDataTabCell.m in Sources */,
 				30DF950F1EE69860000261C8 /* DIscoverItem.m in Sources */,
 				30F27B1E1EEBDB9E0005FF16 /* BaseDataViewController.m in Sources */,
