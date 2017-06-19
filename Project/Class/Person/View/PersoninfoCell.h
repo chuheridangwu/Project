@@ -7,7 +7,7 @@
 //
 
 #import "XBBaseTableViewCell.h"
-#define PersoninfoCellHeight  (100)
+#define PersoninfoCellHeight  (120)
 @interface PersoninfoCell : XBBaseTableViewCell
 
 @end
