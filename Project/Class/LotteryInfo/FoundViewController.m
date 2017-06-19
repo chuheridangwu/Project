@@ -9,6 +9,7 @@
 #import "FoundViewController.h"
 #import "XBBaseTableViewCell.h"
 #import "FoundInfoViewController.h"
+#import "FoundEntity.h"
 
 @interface FoundViewController ()
 
@@ -20,18 +21,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.tableView.rowHeight = 160;
-    self.requestUrl = @"http://client.ailecp.com/activity/activitySong.htm?appVersion=1&appid=108&client=ios&clientUserSession=&fetchSize=20&firstRow=0&requestServer=0&requestType=1&version=1.1.1";
+//    self.requestUrl = @"http://client.ailecp.com/activity/activitySong.htm?appVersion=1&appid=108&client=ios&clientUserSession=&fetchSize=20&firstRow=0&requestServer=0&requestType=1&version=1.1.1";
+    self.requestUrl = @"https://smapi.159cai.com/discovery/forecast/jclq/index.json?channel=ttwincai&version=1";
 }
 
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     XBBaseTableViewCell *cell = [XBBaseTableViewCell tableViewCellInitializeWithTableView:tableView withIdtifier:@"XBBaseTableViewCell"];
-    
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 5, SCREEN_WIDTH - 20, 160 - 10)];
-    imageView.layer.masksToBounds = YES;
-    imageView.layer.cornerRadius = 10;
-    [imageView sd_setImageWithURL:[NSURL URLWithString:self.dataList[indexPath.row]]];
-    [cell.contentView addSubview:imageView];
+    FoundEntity *entity = self.dataList[indexPath.row];
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:entity.imgUrl]];
+    cell.textLabel.text = entity.title;
+    cell.detailTextLabel.text = entity.descir;
+//    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 5, SCREEN_WIDTH - 20, 160 - 10)];
+//    imageView.layer.masksToBounds = YES;
+//    imageView.layer.cornerRadius = 10;
+//    [imageView sd_setImageWithURL:[NSURL URLWithString:self.dataList[indexPath.row]]];
+//    [cell.contentView addSubview:imageView];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -46,7 +51,8 @@
     NSLog(@"%@ ----",outcome);
     [self.dataList removeAllObjects];
     for (NSDictionary *dict in outcome[@"data"]) {
-        [self.dataList addObject:dict[@"img"]];
+        FoundEntity *entity = [FoundEntity foundEntityWithDic:dict];
+        [self.dataList addObject:entity];
     }
     [self.tableView reloadData];
 }
