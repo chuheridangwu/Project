@@ -66,6 +66,9 @@
 		306178711EF7CBA700561495 /* FoundEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 306178701EF7CBA700561495 /* FoundEntity.m */; };
 		306178741EF7DB4B00561495 /* XBRunCircleTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 306178731EF7DB4B00561495 /* XBRunCircleTextCell.m */; };
 		306EFFBE1EEE2BF90000D41F /* UIView+Render.m in Sources */ = {isa = PBXBuildFile; fileRef = 306EFFBD1EEE2BF90000D41F /* UIView+Render.m */; };
+		3074DD001EF8B64C00C8E9C9 /* FoundInfoEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3074DCFF1EF8B64C00C8E9C9 /* FoundInfoEntity.m */; };
+		3074DD031EF8BA1E00C8E9C9 /* FoundNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3074DD021EF8BA1E00C8E9C9 /* FoundNewsCell.m */; };
+		3074DD071EF8BBA400C8E9C9 /* FoundNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3074DD061EF8BBA400C8E9C9 /* FoundNewsCell.xib */; };
 		30A988591EE5566700D04924 /* XBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988581EE5566700D04924 /* XBTabBarController.m */; };
 		30A9885C1EE5568800D04924 /* XBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9885B1EE5568800D04924 /* XBNavigationController.m */; };
 		30A9885F1EE556A100D04924 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9885E1EE556A100D04924 /* HomeViewController.m */; };
@@ -226,6 +229,11 @@
 		306178731EF7DB4B00561495 /* XBRunCircleTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBRunCircleTextCell.m; sourceTree = "<group>"; };
 		306EFFBC1EEE2BF90000D41F /* UIView+Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Render.h"; sourceTree = "<group>"; };
 		306EFFBD1EEE2BF90000D41F /* UIView+Render.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Render.m"; sourceTree = "<group>"; };
+		3074DCFE1EF8B64C00C8E9C9 /* FoundInfoEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundInfoEntity.h; sourceTree = "<group>"; };
+		3074DCFF1EF8B64C00C8E9C9 /* FoundInfoEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundInfoEntity.m; sourceTree = "<group>"; };
+		3074DD011EF8BA1E00C8E9C9 /* FoundNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundNewsCell.h; sourceTree = "<group>"; };
+		3074DD021EF8BA1E00C8E9C9 /* FoundNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundNewsCell.m; sourceTree = "<group>"; };
+		3074DD061EF8BBA400C8E9C9 /* FoundNewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoundNewsCell.xib; sourceTree = "<group>"; };
 		30A988571EE5566700D04924 /* XBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBTabBarController.h; sourceTree = "<group>"; };
 		30A988581EE5566700D04924 /* XBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBTabBarController.m; sourceTree = "<group>"; };
 		30A9885A1EE5568800D04924 /* XBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBNavigationController.h; sourceTree = "<group>"; };
@@ -543,16 +551,17 @@
 			path = Categoty;
 			sourceTree = "<group>";
 		};
-		3053DF191EE95B6600552AF8 /* DisCoverCorrect */ = {
+		3053DF191EE95B6600552AF8 /* Found */ = {
 			isa = PBXGroup;
 			children = (
 				3053DF1D1EE95C0800552AF8 /* FoundViewController.h */,
 				3053DF1E1EE95C0800552AF8 /* FoundViewController.m */,
 				3053DF201EE9658B00552AF8 /* FoundInfoViewController.h */,
 				3053DF211EE9658B00552AF8 /* FoundInfoViewController.m */,
+				3074DCFD1EF8B5D000C8E9C9 /* View */,
 				3061786E1EF7CB8900561495 /* Model */,
 			);
-			name = DisCoverCorrect;
+			name = Found;
 			path = LotteryInfo;
 			sourceTree = "<group>";
 		};
@@ -561,8 +570,20 @@
 			children = (
 				3061786F1EF7CBA700561495 /* FoundEntity.h */,
 				306178701EF7CBA700561495 /* FoundEntity.m */,
+				3074DCFE1EF8B64C00C8E9C9 /* FoundInfoEntity.h */,
+				3074DCFF1EF8B64C00C8E9C9 /* FoundInfoEntity.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3074DCFD1EF8B5D000C8E9C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3074DD011EF8BA1E00C8E9C9 /* FoundNewsCell.h */,
+				3074DD021EF8BA1E00C8E9C9 /* FoundNewsCell.m */,
+				3074DD061EF8BBA400C8E9C9 /* FoundNewsCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		30A988511EE5564700D04924 /* Class */ = {
@@ -572,7 +593,7 @@
 				30263D5A1EE637A4007B30C8 /* Othre */,
 				30A9886D1EE55D2D00D04924 /* Common */,
 				30A988521EE5564700D04924 /* Discover */,
-				3053DF191EE95B6600552AF8 /* DisCoverCorrect */,
+				3053DF191EE95B6600552AF8 /* Found */,
 				30A988531EE5564700D04924 /* Home */,
 				30A988541EE5564700D04924 /* OneYuanBuy */,
 				30A988551EE5564700D04924 /* Person */,
@@ -1012,6 +1033,7 @@
 				30B0F59E1EF6257A008AC7E6 /* RegistViewController.xib in Resources */,
 				3053DF0A1EE91E1400552AF8 /* HomeHtmlLIst.json in Resources */,
 				30F27B131EEBD6D40005FF16 /* HomeDataBase.json in Resources */,
+				3074DD071EF8BBA400C8E9C9 /* FoundNewsCell.xib in Resources */,
 				301EB48D1EE80EC60081F1D1 /* helpGroupBuy.html in Resources */,
 				301EB4851EE80EC60081F1D1 /* bjdc_howto.html in Resources */,
 				30E7AD211EE45F5B000609DB /* LaunchScreen.storyboard in Resources */,
@@ -1155,6 +1177,7 @@
 				30C728BF1EE7DFD200CAD4C0 /* ContentView.m in Sources */,
 				30B0F5881EF620E6008AC7E6 /* UIView+Extension.m in Sources */,
 				30DF95151EE6AA77000261C8 /* DisContentEntity.m in Sources */,
+				3074DD001EF8B64C00C8E9C9 /* FoundInfoEntity.m in Sources */,
 				30A9886B1EE5570100D04924 /* OneBuyViewController.m in Sources */,
 				301EB3E01EE800120081F1D1 /* LotteryNoticeVC.m in Sources */,
 				301EB3E61EE80AC80081F1D1 /* LotteryHelpVC.m in Sources */,
@@ -1166,6 +1189,7 @@
 				30DF95231EE6BAE8000261C8 /* XBTabBarButton.m in Sources */,
 				30A988701EE562B600D04924 /* BaseWebViewController.m in Sources */,
 				30B0F59D1EF6257A008AC7E6 /* RegistViewController.m in Sources */,
+				3074DD031EF8BA1E00C8E9C9 /* FoundNewsCell.m in Sources */,
 				30DF95191EE6B1BC000261C8 /* DisContentCell.m in Sources */,
 				30A988651EE556E400D04924 /* DisViewController.m in Sources */,
 				30C728BE1EE7DFD200CAD4C0 /* BottonView.m in Sources */,

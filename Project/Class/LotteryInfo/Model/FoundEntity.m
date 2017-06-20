@@ -8,14 +8,29 @@
 //
 
 #import "FoundEntity.h"
+#import "FoundInfoEntity.h"
 
 @implementation FoundEntity
 + (instancetype)foundEntityWithDic:(NSDictionary *)dict{
     FoundEntity *entity = [[FoundEntity alloc]init];
-    entity.title = dict[@""];
-    entity.imgUrl = dict[@"image"];
-    entity.descir = dict[@"expertabstract"];
-    entity.webUrl = dict[@"url"];
+    entity.homeLogo = dict[@"homeLogo"];
+    entity.homeName = dict[@"homeName"];
+    entity.awayLogo = dict[@"awayLogo"];
+    entity.awayName = dict[@"awayName"];
+    entity.leagueName = dict[@"leagueName"];
+    NSMutableArray *array = [NSMutableArray array];
+    for (NSDictionary*infoDict in dict[@"tips"]) {
+        FoundInfoEntity *infoEntity = [FoundInfoEntity foundInfoEntityWith:infoDict];
+        [array addObject:infoEntity];
+    }
+    entity.tipsArray = array;
     return entity;
+}
+
+- (NSArray*)tipsArray{
+    if (!_tipsArray) {
+        _tipsArray = [NSArray array];
+    }
+    return _tipsArray;
 }
 @end

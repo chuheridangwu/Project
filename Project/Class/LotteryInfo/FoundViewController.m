@@ -21,7 +21,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.tableView.rowHeight = 160;
-//    self.requestUrl = @"http://client.ailecp.com/activity/activitySong.htm?appVersion=1&appid=108&client=ios&clientUserSession=&fetchSize=20&firstRow=0&requestServer=0&requestType=1&version=1.1.1";
     self.requestUrl = @"https://smapi.159cai.com/discovery/forecast/jclq/index.json?channel=ttwincai&version=1";
 }
 

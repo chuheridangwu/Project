@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface FoundEntity : NSObject
-@property (nonatomic,copy)NSString *title;
-@property (nonatomic,copy)NSString *imgUrl;
-@property (nonatomic,copy)NSString *webUrl;
-@property (nonatomic,copy)NSString *descir;
+@property (nonatomic,copy)NSString *homeLogo;
+@property (nonatomic,copy)NSString *awayLogo;
+@property (nonatomic,copy)NSString *homeName;
+@property (nonatomic,copy)NSString *awayName;
+@property (nonatomic,copy)NSString *leagueName;
+@property (nonatomic,strong)NSArray *tipsArray;
 + (instancetype)foundEntityWithDic:(NSDictionary*)dict;
 @end
