@@ -356,7 +356,7 @@
     UIViewController *vc;
     switch (tag) {
         case 0:
-            vc = [[FoundViewController alloc]init];
+            vc = [[GameViewController alloc]init];
             break;
             case 1:
             vc = [[OneBuyViewController alloc]init];

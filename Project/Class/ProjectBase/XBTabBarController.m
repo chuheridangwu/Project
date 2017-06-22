@@ -14,7 +14,7 @@
 #import "OneBuyViewController.h"
 #import "PersonViewController.h"
 #import "DisViewController.h"
-#import "FoundViewController.h"
+#import "GoodsEvaluationVC.h"
 #import "LoginViewController.h"
 
 
@@ -90,7 +90,7 @@
     
     
     // 发现
-    FoundViewController *discover = [[FoundViewController alloc]init];
+    GoodsEvaluationVC *discover = [[GoodsEvaluationVC alloc]init];
     [self setUpOneChildViewController:discover image:[UIImage imageNamed:@"TabBar_Discovery_new"] selImage:[UIImage imageNamed:@"TabBar_Discovery_selected_new"] title:@"发现"];
     
     // 开奖信息

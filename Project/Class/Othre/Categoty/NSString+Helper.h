@@ -40,4 +40,6 @@
 + (NSString*)stringMD5:(NSString*)input;
 
 +(NSString *)dictionaryToJson:(NSDictionary *)dic;
+
+- (CGSize)sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;
 @end

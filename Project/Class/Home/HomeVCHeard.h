@@ -15,7 +15,7 @@
 #import "BaseDataViewController.h"
 #import "DisContentController.h"
 #import "LotteryNoticeVC.h"
-#import "FoundViewController.h"
+#import "GameViewController.h"
 #import "XBNavigationController.h"
 #import "OneBuyViewController.h"
 #import "DisViewController.h"
