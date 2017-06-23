@@ -24,6 +24,8 @@
 @property (nonatomic,assign)NSInteger level;
 @property (nonatomic,copy)NSString *time;
 @property (nonatomic,copy)NSString *type;
+@property (nonatomic,strong)NSArray *iconArray;
+@property (nonatomic,strong)NSArray *nameArray;
 @property (nonatomic,strong)NSMutableArray *luckArray;
 + (ShopEntity*)ShopEntityWithDic:(NSDictionary*)dic;
 @end

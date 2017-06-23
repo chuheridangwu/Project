@@ -149,7 +149,7 @@
 }
 
 - (void)clickShop{
-    [self.delegate clickShopView];
+    [self.delegate clickShopView:self.entity];
 }
 
 + (CGFloat)goodsEvationHeight:(id)info{

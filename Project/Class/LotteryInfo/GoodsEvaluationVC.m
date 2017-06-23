@@ -9,7 +9,7 @@
 #import "GoodsEvaluationVC.h"
 #import "GAGoodsCeverScrollView.h"
 #import "GoodsEvaModel.h"
-
+#import "ShopInfoView.h"
 #import "GAGoodsEvationCell.h"
 
 #define Size self.view.frame.size
@@ -56,8 +56,8 @@
     [GAGoodsCeverScrollView hiddenImageViewFrame:frame imgs:imgsURL index:index ImgStyle:GAGoodsImgsStyle_ImgURL];
 }
 
-- (void)clickShopView{
-    
+- (void)clickShopView:(GAGoodsEvaEntity *)entity{
+    [[ShopInfoView shareShopInfoView] showWithShopInfo:entity];
 }
 
 - (void)requestNetWorkSuccess:(id)outcome{

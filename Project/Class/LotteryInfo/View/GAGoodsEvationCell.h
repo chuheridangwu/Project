@@ -20,5 +20,5 @@
 
 @protocol GAGoodsEvationCellDelegate <NSObject>
 - (void)clickGoodsEvationCellImgFrame:(CGRect)frame imgsURL:(NSArray*)imgsURL index:(NSInteger)index;
-- (void)clickShopView;
+- (void)clickShopView:(GAGoodsEvaEntity*)entity;
 @end

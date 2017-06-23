@@ -114,6 +114,7 @@
 		30E8F6171EFB702A00103942 /* GAGoodsCeverScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E8F6161EFB702A00103942 /* GAGoodsCeverScrollView.m */; };
 		30E8F61A1EFB70EB00103942 /* GoodsEvaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E8F6191EFB70EB00103942 /* GoodsEvaModel.m */; };
 		30E8F61C1EFB730000103942 /* ShopLive.json in Resources */ = {isa = PBXBuildFile; fileRef = 30E8F61B1EFB730000103942 /* ShopLive.json */; };
+		30E8F67E1EFCC3EE00103942 /* ShopInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E8F67D1EFCC3EE00103942 /* ShopInfoView.m */; };
 		30F27B131EEBD6D40005FF16 /* HomeDataBase.json in Resources */ = {isa = PBXBuildFile; fileRef = 30F27B121EEBD6D40005FF16 /* HomeDataBase.json */; };
 		30F27B1E1EEBDB9E0005FF16 /* BaseDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F27B1D1EEBDB9E0005FF16 /* BaseDataViewController.m */; };
 		30F27B211EEBDBC00005FF16 /* BaseDataTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F27B201EEBDBC00005FF16 /* BaseDataTabCell.m */; };
@@ -320,6 +321,8 @@
 		30E8F6181EFB70EB00103942 /* GoodsEvaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsEvaModel.h; sourceTree = "<group>"; };
 		30E8F6191EFB70EB00103942 /* GoodsEvaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsEvaModel.m; sourceTree = "<group>"; };
 		30E8F61B1EFB730000103942 /* ShopLive.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ShopLive.json; sourceTree = "<group>"; };
+		30E8F67C1EFCC3EE00103942 /* ShopInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopInfoView.h; sourceTree = "<group>"; };
+		30E8F67D1EFCC3EE00103942 /* ShopInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopInfoView.m; sourceTree = "<group>"; };
 		30F27B121EEBD6D40005FF16 /* HomeDataBase.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HomeDataBase.json; sourceTree = "<group>"; };
 		30F27B1C1EEBDB9E0005FF16 /* BaseDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDataViewController.h; sourceTree = "<group>"; };
 		30F27B1D1EEBDB9E0005FF16 /* BaseDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDataViewController.m; sourceTree = "<group>"; };
@@ -580,6 +583,8 @@
 			children = (
 				30E8F60C1EFB6F0A00103942 /* GAGoodsEvationCell.h */,
 				30E8F60D1EFB6F0A00103942 /* GAGoodsEvationCell.m */,
+				30E8F67C1EFCC3EE00103942 /* ShopInfoView.h */,
+				30E8F67D1EFCC3EE00103942 /* ShopInfoView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1134,6 +1139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E8F67E1EFCC3EE00103942 /* ShopInfoView.m in Sources */,
 				30E8F6171EFB702A00103942 /* GAGoodsCeverScrollView.m in Sources */,
 				30DF951C1EE6B322000261C8 /* XBBaseTableViewCell.m in Sources */,
 				30E8F60E1EFB6F0A00103942 /* GAGoodsEvationCell.m in Sources */,
