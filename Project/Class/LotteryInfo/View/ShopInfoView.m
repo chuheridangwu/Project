@@ -9,7 +9,7 @@
 #import "ShopInfoView.h"
 #import "GAGoodsEvaEntity.h"
 
-@interface ShopInfoView ()
+@interface ShopInfoView ()<UIScrollViewDelegate>
 @property (nonatomic, strong) UIView *backView;
 
 @property (nonatomic, strong) UIImageView *iconimage;
@@ -101,8 +101,24 @@
     lable1.font = [UIFont systemFontOfSize:14];
     
     
+    offsetY += lable1.mj_h + 10;
+    UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, offsetY, _contentView.mj_w, _contentView.mj_h - offsetY)];
+    scrollView.delegate = self;
+    [_contentView addSubview:scrollView];
     
+    CGFloat margin = 5;
+    CGFloat width = (_contentView.mj_w - margin) / 3;
+    for (int i = 0; i < entity.shop.nameArray.count; i++) {
+        CGFloat row = i / 3;
+        CGFloat col = i % 3;
+        CGFloat x = row * (margin + width);
+        CGFloat y = col * (margin + width);
+        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(x, y, width, width)];
+        view.backgroundColor = [UIColor redColor];
+        [scrollView addSubview:view];
+    }
     
+    scrollView.contentSize = CGSizeMake(_contentView.mj_w,660);
     
     
     [_iconimage sd_setImageWithURL:[NSURL URLWithString:entity.shop.shopIcom] placeholderImage:[UIImage imageNamed:@""]];
