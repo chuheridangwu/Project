@@ -32,6 +32,7 @@
 #import "UIView+Render.h"
 #import "NSString+Helper.h"
 #import "UIView+Extension.h"
+#import "UIButton+XBAlignment.h"
 
 
 

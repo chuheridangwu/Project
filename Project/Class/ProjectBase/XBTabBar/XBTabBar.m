@@ -28,13 +28,21 @@
         
         btn.tag = self.subviews.count;
         
-        [btn setBackgroundImage:item.image forState:UIControlStateNormal];
+//        [btn setBackgroundImage:item.image forState:UIControlStateNormal];
+        [btn setImage:item.image forState:UIControlStateNormal];
+        [btn setTitle:item.title forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        [btn setTitleColor:XBAPPBaseColor forState:UIControlStateSelected];
+        [btn setImage:item.selectedImage forState:UIControlStateSelected];
         
-        [btn setBackgroundImage:item.selectedImage forState:UIControlStateSelected];
-        
+        btn.titleLabel.font = [UIFont systemFontOfSize:14];
         [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchDown];
         
         [self addSubview:btn];
+        
+        
+       
+        
         
         if (self.subviews.count == 1) {
             // 默认选中第一个
@@ -81,6 +89,8 @@
         x = i * w;
         
         btn.frame = CGRectMake(x, y, w, h);
+        
+        [btn buttonImageTitleAlignment:topImageBottomTitle WithSpace:1];
     }
 }
 

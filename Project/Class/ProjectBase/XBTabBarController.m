@@ -65,7 +65,7 @@
     
     tabBar.delegate = self;
     
-    tabBar.backgroundColor = [UIColor blackColor];
+//    tabBar.backgroundColor = [UIColor blackColor];
     
     tabBar.frame = self.tabBar.bounds;
     
@@ -80,7 +80,7 @@
 {
     // 购彩大厅
     HomeViewController *hall = [[HomeViewController alloc] init];
-    [self setUpOneChildViewController:hall image:[UIImage imageNamed:@"TabBar_LotteryHall_new"] selImage:[UIImage imageNamed:@"TabBar_LotteryHall_selected_new"] title:@"购彩大厅"];
+    [self setUpOneChildViewController:hall image:[UIImage imageNamed:@"TabBar_LotteryHall_new"] selImage:[UIImage imageNamed:@"TabBar_LotteryHall_selected_new"] title:@"首页"];
 
 //    // 竞技场
 //    OneBuyViewController *arena = [[OneBuyViewController alloc] init];
@@ -91,15 +91,15 @@
     
     // 发现
     GoodsEvaluationVC *discover = [[GoodsEvaluationVC alloc]init];
-    [self setUpOneChildViewController:discover image:[UIImage imageNamed:@"TabBar_Discovery_new"] selImage:[UIImage imageNamed:@"TabBar_Discovery_selected_new"] title:@"发现"];
+    [self setUpOneChildViewController:discover image:[UIImage imageNamed:@"TabBar_Store"] selImage:[UIImage imageNamed:@"TabBar_Store_selected_new"] title:@"发现"];
     
     // 开奖信息
     DisViewController *history = [[DisViewController alloc] init];
-    [self setUpOneChildViewController:history image:[UIImage imageNamed:@"TabBar_History_new"] selImage:[UIImage imageNamed:@"TabBar_History_selected_new"] title:@"开奖信息"];
+    [self setUpOneChildViewController:history image:[UIImage imageNamed:@"TabBar_History_new"] selImage:[UIImage imageNamed:@"TabBar_History_selected_new"] title:@"开奖"];
     
     // 我的彩票
     PersonViewController *myLottery = [[PersonViewController alloc] init];
-    [self setUpOneChildViewController:myLottery image:[UIImage imageNamed:@"TabBar_MyLottery_new"] selImage:[UIImage imageNamed:@"TabBar_MyLottery_selected_new"] title:@"我的彩票"];
+    [self setUpOneChildViewController:myLottery image:[UIImage imageNamed:@"TabBar_MyLottery_new"] selImage:[UIImage imageNamed:@"TabBar_MyLottery_selected_new"] title:@"个人中心"];
 }
 
 
@@ -112,6 +112,7 @@
     // 描述对应按钮的内容
     vc.tabBarItem.image = image;
     vc.tabBarItem.selectedImage = selImage;
+    vc.tabBarItem.title = title;
     
     // 记录所有控制器对应按钮的内容
     [self.items addObject:vc.tabBarItem];

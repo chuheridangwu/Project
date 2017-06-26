@@ -81,6 +81,7 @@
 		30774C4C1F000CC10001C77A /* course_33.html in Resources */ = {isa = PBXBuildFile; fileRef = 30774C3A1F000CC10001C77A /* course_33.html */; };
 		30774C4D1F000CC10001C77A /* local.html in Resources */ = {isa = PBXBuildFile; fileRef = 30774C3B1F000CC10001C77A /* local.html */; };
 		30774C4E1F000CC10001C77A /* shishicaiIntroduce.html in Resources */ = {isa = PBXBuildFile; fileRef = 30774C3C1F000CC10001C77A /* shishicaiIntroduce.html */; };
+		30A41DCF1F009C890051FAF7 /* UIButton+XBAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A41DCE1F009C890051FAF7 /* UIButton+XBAlignment.m */; };
 		30A988591EE5566700D04924 /* XBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988581EE5566700D04924 /* XBTabBarController.m */; };
 		30A9885C1EE5568800D04924 /* XBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9885B1EE5568800D04924 /* XBNavigationController.m */; };
 		30A9885F1EE556A100D04924 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9885E1EE556A100D04924 /* HomeViewController.m */; };
@@ -260,6 +261,8 @@
 		30774C3A1F000CC10001C77A /* course_33.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = course_33.html; sourceTree = "<group>"; };
 		30774C3B1F000CC10001C77A /* local.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = local.html; sourceTree = "<group>"; };
 		30774C3C1F000CC10001C77A /* shishicaiIntroduce.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = shishicaiIntroduce.html; sourceTree = "<group>"; };
+		30A41DCD1F009C890051FAF7 /* UIButton+XBAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+XBAlignment.h"; sourceTree = "<group>"; };
+		30A41DCE1F009C890051FAF7 /* UIButton+XBAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XBAlignment.m"; sourceTree = "<group>"; };
 		30A988571EE5566700D04924 /* XBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBTabBarController.h; sourceTree = "<group>"; };
 		30A988581EE5566700D04924 /* XBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBTabBarController.m; sourceTree = "<group>"; };
 		30A9885A1EE5568800D04924 /* XBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBNavigationController.h; sourceTree = "<group>"; };
@@ -575,6 +578,8 @@
 		30263D5C1EE637DB007B30C8 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				30A41DCD1F009C890051FAF7 /* UIButton+XBAlignment.h */,
+				30A41DCE1F009C890051FAF7 /* UIButton+XBAlignment.m */,
 				30B0F5861EF620E6008AC7E6 /* UIView+Extension.h */,
 				30B0F5871EF620E6008AC7E6 /* UIView+Extension.m */,
 				30263D5D1EE63816007B30C8 /* UIImage+image.h */,
@@ -1266,6 +1271,7 @@
 				30DF95151EE6AA77000261C8 /* DisContentEntity.m in Sources */,
 				30A9886B1EE5570100D04924 /* OneBuyViewController.m in Sources */,
 				301EB3E01EE800120081F1D1 /* LotteryNoticeVC.m in Sources */,
+				30A41DCF1F009C890051FAF7 /* UIButton+XBAlignment.m in Sources */,
 				301EB3E61EE80AC80081F1D1 /* LotteryHelpVC.m in Sources */,
 				306178741EF7DB4B00561495 /* XBRunCircleTextCell.m in Sources */,
 				30F27B211EEBDBC00005FF16 /* BaseDataTabCell.m in Sources */,
