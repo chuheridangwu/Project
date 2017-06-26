@@ -20,6 +20,7 @@
     // Do any additional setup after loading the view.
     [self addGroup0];
     self.title = @"开奖通知";
+    
 }
 
 - (void)addGroup0

@@ -88,7 +88,6 @@
 		30A988621EE556C000D04924 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988611EE556C000D04924 /* BaseViewController.m */; };
 		30A988651EE556E400D04924 /* DisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988641EE556E400D04924 /* DisViewController.m */; };
 		30A988681EE556F100D04924 /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988671EE556F100D04924 /* PersonViewController.m */; };
-		30A9886B1EE5570100D04924 /* OneBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9886A1EE5570100D04924 /* OneBuyViewController.m */; };
 		30A988701EE562B600D04924 /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9886F1EE562B600D04924 /* BaseWebViewController.m */; };
 		30A988B31EE57D7A00D04924 /* XBGuidePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988B21EE57D7A00D04924 /* XBGuidePage.m */; };
 		30A988B61EE57F8E00D04924 /* XBRequestNetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988B51EE57F8E00D04924 /* XBRequestNetTool.m */; };
@@ -275,8 +274,6 @@
 		30A988641EE556E400D04924 /* DisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisViewController.m; sourceTree = "<group>"; };
 		30A988661EE556F100D04924 /* PersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
 		30A988671EE556F100D04924 /* PersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
-		30A988691EE5570100D04924 /* OneBuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneBuyViewController.h; sourceTree = "<group>"; };
-		30A9886A1EE5570100D04924 /* OneBuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneBuyViewController.m; sourceTree = "<group>"; };
 		30A9886E1EE562B600D04924 /* BaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWebViewController.h; sourceTree = "<group>"; };
 		30A9886F1EE562B600D04924 /* BaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWebViewController.m; sourceTree = "<group>"; };
 		30A988B11EE57D7A00D04924 /* XBGuidePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBGuidePage.h; sourceTree = "<group>"; };
@@ -665,7 +662,6 @@
 				30A988521EE5564700D04924 /* Discover */,
 				3053DF191EE95B6600552AF8 /* Found */,
 				30A988531EE5564700D04924 /* Home */,
-				30A988541EE5564700D04924 /* OneYuanBuy */,
 				30A988551EE5564700D04924 /* Person */,
 				30A988561EE5564700D04924 /* ProjectBase */,
 			);
@@ -696,15 +692,6 @@
 				301EB4A21EE81CB90081F1D1 /* View */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		30A988541EE5564700D04924 /* OneYuanBuy */ = {
-			isa = PBXGroup;
-			children = (
-				30A988691EE5570100D04924 /* OneBuyViewController.h */,
-				30A9886A1EE5570100D04924 /* OneBuyViewController.m */,
-			);
-			path = OneYuanBuy;
 			sourceTree = "<group>";
 		};
 		30A988551EE5564700D04924 /* Person */ = {
@@ -1269,7 +1256,6 @@
 				30C728BF1EE7DFD200CAD4C0 /* ContentView.m in Sources */,
 				30B0F5881EF620E6008AC7E6 /* UIView+Extension.m in Sources */,
 				30DF95151EE6AA77000261C8 /* DisContentEntity.m in Sources */,
-				30A9886B1EE5570100D04924 /* OneBuyViewController.m in Sources */,
 				301EB3E01EE800120081F1D1 /* LotteryNoticeVC.m in Sources */,
 				30A41DCF1F009C890051FAF7 /* UIButton+XBAlignment.m in Sources */,
 				301EB3E61EE80AC80081F1D1 /* LotteryHelpVC.m in Sources */,

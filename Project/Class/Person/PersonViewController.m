@@ -41,7 +41,7 @@
 //    };
     
     
-    self.titleArray = @[@"消息中心",@"开奖推送",@"开奖记录",@"小游戏",@"关于",@"清除缓存"];
+    self.titleArray = @[@"消息中心",@"开奖推送",@"开奖记录",@"关于",@"清除缓存"];
 //    self.imageArray = @[@"message",@"notice",@"prize",@"game",@"about",@"clear"];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"帮助" style:UIBarButtonItemStylePlain target:self action:@selector(clickRightBtn)];
 }
@@ -148,17 +148,11 @@
             break;
         case 3:
         {
-            GameViewController *gameVC = [[GameViewController alloc]init];
-            [self.navigationController pushViewController:gameVC animated:YES];
-        }
-            break;
-        case 4:
-        {
             AboutViewController *gameVC = [[AboutViewController alloc]init];
             [self.navigationController pushViewController:gameVC animated:YES];
         }
             break;
-        case 5:
+        case 4:
         {
             UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否要清楚缓存" preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *carcen = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
