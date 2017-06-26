@@ -11,7 +11,6 @@
 #import "XBTabBar.h"
 
 #import "HomeViewController.h"
-#import "OneBuyViewController.h"
 #import "PersonViewController.h"
 #import "DisViewController.h"
 #import "GoodsEvaluationVC.h"

@@ -107,7 +107,7 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    if (scrollView.contentOffset.y > _offsetY) {
+    if (scrollView.contentOffset.y > _offsetY && scrollView.contentOffset.y > 10) {
         [self hideTabBar];
     }else{
         [self showTabBar];

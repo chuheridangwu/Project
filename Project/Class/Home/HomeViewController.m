@@ -359,7 +359,7 @@
             vc = [[GameViewController alloc]init];
             break;
             case 1:
-            vc = [[OneBuyViewController alloc]init];
+//            vc = [[OneBuyViewController alloc]init];
             break;
         case 2:
             vc = [[DisViewController alloc]init];

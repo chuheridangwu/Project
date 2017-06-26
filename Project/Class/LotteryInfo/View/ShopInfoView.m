@@ -10,7 +10,6 @@
 #import "GAGoodsEvaEntity.h"
 
 @interface ShopInfoView ()<UIScrollViewDelegate>
-@property (nonatomic, strong) UIView *backView;
 
 @property (nonatomic, strong) UIImageView *iconimage;
 @property (nonatomic, strong) UILabel *timeL;
@@ -27,21 +26,33 @@
     static ShopInfoView *infoView = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        infoView = [[ShopInfoView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+        infoView = [[ShopInfoView alloc]init];
     });
     return infoView;
 }
 
 -(instancetype)initWithFrame:(CGRect)frame
 {
-    if (self = [super initWithFrame:frame]) {
+    
+    if (self = [super initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)]) {
         self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
-
-        self.backView = [[UIView alloc]initWithFrame:self.bounds];
-        [self addSubview:self.backView];
+        
+        UIView *backView = [[UIView alloc]initWithFrame:self.bounds];
+        [self addSubview:backView];
         
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeShopInfoView)];
-        [self.backView addGestureRecognizer:tap];
+        [backView addGestureRecognizer:tap];
+        
+        
+        _contentView = [[UIView alloc]initWithFrame:CGRectMake(30, 120,SCREEN_WIDTH - 60,SCREEN_HEIGHT - 260)];
+        _contentView.layer.masksToBounds = YES;
+        _contentView.layer.cornerRadius = 10;
+        _contentView.backgroundColor = [UIColor whiteColor];
+        [self addSubview:_contentView];
+        
+        
+        UIImageView *imgView = [[UIImageView alloc]initWithFrame:_contentView.bounds];
+        [_contentView addSubview:imgView];
         
     }
     return self;
@@ -50,14 +61,7 @@
 
 
 - (void)addSubViewShopInfo:(GAGoodsEvaEntity*)entity{
-    
-    [_contentView removeFromSuperview];
-    _contentView = [[UIView alloc]initWithFrame:CGRectMake(30, 120,SCREEN_WIDTH - 60,300)];
-    _contentView.layer.masksToBounds = YES;
-    _contentView.layer.cornerRadius = 10;
-    _contentView.backgroundColor = [UIColor whiteColor];
-    _contentView.userInteractionEnabled = NO;
-    [_backView addSubview:self.contentView];
+    [_contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
 
     [_contentView addSubview:self.iconimage];
@@ -90,7 +94,7 @@
     [_contentView addSubview:self.levelView];
     for (int i = 0; i < entity.shop.level; i++) {
         UIImageView *levImgView = [[UIImageView alloc]initWithFrame:CGRectMake((lable.mj_h + 6) * i, 0, lable.mj_h , lable.mj_h )];
-        levImgView.image = [UIImage imageNamed:@"oederSelected"];
+        levImgView.image = [UIImage imageNamed:@"grade"];
         [_levelView addSubview:levImgView];
     }
     
@@ -103,23 +107,28 @@
     
     offsetY += lable1.mj_h + 10;
     UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, offsetY, _contentView.mj_w, _contentView.mj_h - offsetY)];
-    scrollView.delegate = self;
     [_contentView addSubview:scrollView];
     
     CGFloat margin = 5;
-    CGFloat width = (_contentView.mj_w - margin) / 3;
-    for (int i = 0; i < entity.shop.nameArray.count; i++) {
-        CGFloat row = i / 3;
-        CGFloat col = i % 3;
-        CGFloat x = row * (margin + width);
-        CGFloat y = col * (margin + width);
-        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(x, y, width, width)];
-        view.backgroundColor = [UIColor redColor];
-        [scrollView addSubview:view];
+    NSInteger index = 4;
+    CGFloat width = (_contentView.mj_w - margin * (index + 1)) / index;
+    CGFloat height = width + 3;
+    NSInteger count = arc4random()%(entity.shop.nameArray.count) >7 ? arc4random()%(entity.shop.nameArray.count) : 9;
+    for (int i = 0; i < count; i++) {
+        CGFloat row = i % index;
+        CGFloat col = i / index;
+        CGFloat x = row * (margin + width)+ margin;
+        CGFloat y = col * (margin + height);
+        UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(x, y, width, height)];
+        [scrollView addSubview:btn];
+        [btn setImage:[UIImage imageNamed:entity.shop.iconArray[i]] forState:UIControlStateNormal];
+//        [btn setTitle:entity.shop.nameArray[i] forState:UIControlStateNormal];
+//        [btn setTitleColor:XBAPPBaseColor forState:UIControlStateNormal];
+//        btn.titleLabel.font = [UIFont systemFontOfSize:12];
+        [btn buttonImageTitleAlignment:topImageBottomTitle WithSpace:0];
+
+        [scrollView setContentSize:CGSizeMake(scrollView.mj_w,y + height + margin)];
     }
-    
-    scrollView.contentSize = CGSizeMake(_contentView.mj_w,660);
-    
     
     [_iconimage sd_setImageWithURL:[NSURL URLWithString:entity.shop.shopIcom] placeholderImage:[UIImage imageNamed:@""]];
     _shopNameL.text = entity.shop.shopName;
@@ -138,23 +147,27 @@
 }
 
 - (void)showWithShopInfo:(GAGoodsEvaEntity*)entity{
-    WS(ws);
+    _contentView.frame = CGRectMake((SCREEN_WIDTH - 10) / 2, (SCREEN_HEIGHT - 10) / 2, 10, 10);
+
+
     [[UIApplication sharedApplication].keyWindow addSubview:[ShopInfoView shareShopInfoView]];
-    [UIView animateWithDuration:0.3 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.6 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:1 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.alpha = 1;
+        _contentView.frame = CGRectMake(30, 120,SCREEN_WIDTH - 60,SCREEN_HEIGHT - 260);
+        [self addSubViewShopInfo:entity];
+
     } completion:^(BOOL finished) {
-        
     }];
     
-    [self  addSubViewShopInfo:entity];
+  
 }
 
 
 - (void)closeShopInfoView{
     [UIView animateWithDuration:0.3 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.6 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        self.alpha = 0;
+        _contentView.frame = CGRectMake((SCREEN_WIDTH - 10) / 2, (SCREEN_HEIGHT - 10) / 2, 10, 10);
     } completion:^(BOOL finished) {
-        
+        self.alpha = 0;
     }];
 }
 

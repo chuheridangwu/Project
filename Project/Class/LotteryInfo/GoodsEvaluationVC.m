@@ -24,6 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.requestUrl = @"http://mapi.yjcp.com/api/gain/tenawardinfo?lotId=33&pageNum=1&sid=31000000000";
+//    self.title = @"店铺信息";
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
@@ -58,6 +59,7 @@
 
 - (void)clickShopView:(GAGoodsEvaEntity *)entity{
     [[ShopInfoView shareShopInfoView] showWithShopInfo:entity];
+//    [[StoreInfoView shareShopInfoView]showWithShopInfo:entity];
 }
 
 - (void)requestNetWorkSuccess:(id)outcome{
