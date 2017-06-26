@@ -81,16 +81,9 @@
     HomeViewController *hall = [[HomeViewController alloc] init];
     [self setUpOneChildViewController:hall image:[UIImage imageNamed:@"TabBar_LotteryHall_new"] selImage:[UIImage imageNamed:@"TabBar_LotteryHall_selected_new"] title:@"首页"];
 
-//    // 竞技场
-//    OneBuyViewController *arena = [[OneBuyViewController alloc] init];
-//    [self setUpOneChildViewController:arena image:[UIImage imageNamed:@"TabBar_Arena_new"] selImage:[UIImage imageNamed:@"TabBar_Arena_selected_new"] title:nil];
-//    
-//    arena.view.backgroundColor = [UIColor purpleColor];
-    
-    
     // 发现
     GoodsEvaluationVC *discover = [[GoodsEvaluationVC alloc]init];
-    [self setUpOneChildViewController:discover image:[UIImage imageNamed:@"TabBar_Store"] selImage:[UIImage imageNamed:@"TabBar_Store_selected_new"] title:@"发现"];
+    [self setUpOneChildViewController:discover image:[UIImage imageNamed:@"TabBar_Store"] selImage:[UIImage imageNamed:@"TabBar_Store_selected_new"] title:@"店铺"];
     
     // 开奖信息
     DisViewController *history = [[DisViewController alloc] init];

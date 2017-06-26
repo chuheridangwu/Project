@@ -8,14 +8,19 @@
 
 #import "GoodsEvaluationVC.h"
 #import "GAGoodsCeverScrollView.h"
+#import "StoreViewController.h"
+
 #import "GoodsEvaModel.h"
 #import "ShopInfoView.h"
 #import "GAGoodsEvationCell.h"
+#import "RFSegmentView.h"
 
 #define Size self.view.frame.size
 
-@interface GoodsEvaluationVC ()<UITableViewDelegate,UITableViewDataSource,GoodsEvaModelDelegate,GAGoodsEvationCellDelegate>
+@interface GoodsEvaluationVC ()<UITableViewDelegate,UITableViewDataSource,GoodsEvaModelDelegate,GAGoodsEvationCellDelegate,RFSegmentViewDelegate>
 @property (nonatomic,strong)GoodsEvaModel *GAEvaModel;
+@property (nonatomic,strong) RFSegmentView * segmentControl;
+@property (nonatomic,strong)StoreViewController *storeVC;
 @end
 
 @implementation GoodsEvaluationVC
@@ -24,12 +29,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.requestUrl = @"http://mapi.yjcp.com/api/gain/tenawardinfo?lotId=33&pageNum=1&sid=31000000000";
-//    self.title = @"店铺信息";
+    
+    self.storeVC = [[StoreViewController alloc]init];
+    [self addChildViewController:self.storeVC];
+    [self.view addSubview:_storeVC.view];
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     [self.GAEvaModel  lookGoodsEvaluationShopLive];
 
+    CGFloat segWidth = 180;
+    CGFloat segHeight = 30;
+    self.segmentControl = [[RFSegmentView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH-segWidth)/2,5, segWidth, segHeight) items:@[@"店铺",@"店铺动态"]];
+    self.segmentControl.tintColor = [UIColor whiteColor];
+    self.segmentControl.delegate = self;
+    [self.navigationController.navigationBar addSubview:self.segmentControl];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -38,7 +52,6 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return [GAGoodsEvationCell goodsEvationHeight:self.self.GAEvaModel.evaArrar[indexPath.row]];
-//    return 120;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -59,12 +72,22 @@
 
 - (void)clickShopView:(GAGoodsEvaEntity *)entity{
     [[ShopInfoView shareShopInfoView] showWithShopInfo:entity];
-//    [[StoreInfoView shareShopInfoView]showWithShopInfo:entity];
 }
 
 - (void)requestNetWorkSuccess:(id)outcome{
     [super requestNetWorkSuccess:outcome];
     
+}
+
+
+
+#pragma MARK    -----------   代理
+- (void)segmentViewSelectIndex:(NSInteger)index{
+    if (index == 0) {
+        _storeVC.view.hidden = NO;
+    }else{
+        _storeVC.view.hidden = YES;
+    }
 }
 
 
