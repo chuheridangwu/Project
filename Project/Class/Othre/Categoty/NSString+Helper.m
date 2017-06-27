@@ -276,4 +276,11 @@
 }
 
 
+- (BOOL)isValidUrl
+{
+    NSString *regex =@"[a-zA-z]+://[^\\s]*";
+    NSPredicate *urlTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+    return [urlTest evaluateWithObject:self];
+}
+
 @end

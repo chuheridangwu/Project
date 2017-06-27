@@ -8,6 +8,8 @@
 
 #import "XBBaseTableViewCell.h"
 
+#define XBRunCircleTextCellHeigtHt  (35)
+
 @interface XBRunCircleTextCell : XBBaseTableViewCell
 
 @end

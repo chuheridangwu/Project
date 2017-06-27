@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		301ADFC41F02841D00268DA1 /* LuckBall.json in Resources */ = {isa = PBXBuildFile; fileRef = 301ADFC31F02841C00268DA1 /* LuckBall.json */; };
 		301EB3E01EE800120081F1D1 /* LotteryNoticeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 301EB3DF1EE800120081F1D1 /* LotteryNoticeVC.m */; };
 		301EB3E61EE80AC80081F1D1 /* LotteryHelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 301EB3E51EE80AC80081F1D1 /* LotteryHelpVC.m */; };
 		301EB3E91EE80B1D0081F1D1 /* LotteryHelpContentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 301EB3E81EE80B1D0081F1D1 /* LotteryHelpContentVC.m */; };
@@ -65,6 +66,7 @@
 		306EFFBE1EEE2BF90000D41F /* UIView+Render.m in Sources */ = {isa = PBXBuildFile; fileRef = 306EFFBD1EEE2BF90000D41F /* UIView+Render.m */; };
 		3072F6191F01F60000170C95 /* StoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3072F6181F01F60000170C95 /* StoreTableViewCell.m */; };
 		3072F61C1F0206A300170C95 /* StoreInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3072F61B1F0206A300170C95 /* StoreInfoViewController.m */; };
+		3072F6271F025D6B00170C95 /* HomeBuyLuckBallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3072F6261F025D6B00170C95 /* HomeBuyLuckBallCell.m */; };
 		30774C3D1F000CC10001C77A /* course_00.html in Resources */ = {isa = PBXBuildFile; fileRef = 30774C2B1F000CC10001C77A /* course_00.html */; };
 		30774C3E1F000CC10001C77A /* course_01.html in Resources */ = {isa = PBXBuildFile; fileRef = 30774C2C1F000CC10001C77A /* course_01.html */; };
 		30774C3F1F000CC10001C77A /* course_02.html in Resources */ = {isa = PBXBuildFile; fileRef = 30774C2D1F000CC10001C77A /* course_02.html */; };
@@ -166,6 +168,7 @@
 
 /* Begin PBXFileReference section */
 		061EE9EA6E7181AD71D1C79E /* Pods-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.release.xcconfig"; sourceTree = "<group>"; };
+		301ADFC31F02841C00268DA1 /* LuckBall.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LuckBall.json; sourceTree = "<group>"; };
 		301EB3DE1EE800120081F1D1 /* LotteryNoticeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryNoticeVC.h; sourceTree = "<group>"; };
 		301EB3DF1EE800120081F1D1 /* LotteryNoticeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryNoticeVC.m; sourceTree = "<group>"; };
 		301EB3E41EE80AC80081F1D1 /* LotteryHelpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryHelpVC.h; sourceTree = "<group>"; };
@@ -252,6 +255,8 @@
 		3072F6181F01F60000170C95 /* StoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreTableViewCell.m; sourceTree = "<group>"; };
 		3072F61A1F0206A300170C95 /* StoreInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreInfoViewController.h; sourceTree = "<group>"; };
 		3072F61B1F0206A300170C95 /* StoreInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreInfoViewController.m; sourceTree = "<group>"; };
+		3072F6251F025D6B00170C95 /* HomeBuyLuckBallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeBuyLuckBallCell.h; sourceTree = "<group>"; };
+		3072F6261F025D6B00170C95 /* HomeBuyLuckBallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeBuyLuckBallCell.m; sourceTree = "<group>"; };
 		30774C2B1F000CC10001C77A /* course_00.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = course_00.html; sourceTree = "<group>"; };
 		30774C2C1F000CC10001C77A /* course_01.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = course_01.html; sourceTree = "<group>"; };
 		30774C2D1F000CC10001C77A /* course_02.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = course_02.html; sourceTree = "<group>"; };
@@ -515,6 +520,8 @@
 				30F27B261EEC49210005FF16 /* HomeSectionListCell.m */,
 				306178721EF7DB4B00561495 /* XBRunCircleTextCell.h */,
 				306178731EF7DB4B00561495 /* XBRunCircleTextCell.m */,
+				3072F6251F025D6B00170C95 /* HomeBuyLuckBallCell.h */,
+				3072F6261F025D6B00170C95 /* HomeBuyLuckBallCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -522,6 +529,7 @@
 		301EB4A31EE81CC00081F1D1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				301ADFC31F02841C00268DA1 /* LuckBall.json */,
 				30F27B121EEBD6D40005FF16 /* HomeDataBase.json */,
 				3053DF141EE948C600552AF8 /* HomeHtmlNews.json */,
 				3053DF091EE91E1400552AF8 /* HomeHtmlLIst.json */,
@@ -1168,6 +1176,7 @@
 				30A41DFD1F0114400051FAF7 /* StoreList.json in Resources */,
 				301EB4861EE80EC60081F1D1 /* coupon_help.html in Resources */,
 				30774C3F1F000CC10001C77A /* course_02.html in Resources */,
+				301ADFC41F02841D00268DA1 /* LuckBall.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1290,6 +1299,7 @@
 				30DF95151EE6AA77000261C8 /* DisContentEntity.m in Sources */,
 				301EB3E01EE800120081F1D1 /* LotteryNoticeVC.m in Sources */,
 				30A41DCF1F009C890051FAF7 /* UIButton+XBAlignment.m in Sources */,
+				3072F6271F025D6B00170C95 /* HomeBuyLuckBallCell.m in Sources */,
 				301EB3E61EE80AC80081F1D1 /* LotteryHelpVC.m in Sources */,
 				306178741EF7DB4B00561495 /* XBRunCircleTextCell.m in Sources */,
 				30F27B211EEBDBC00005FF16 /* BaseDataTabCell.m in Sources */,

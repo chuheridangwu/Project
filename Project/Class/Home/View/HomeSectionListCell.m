@@ -21,9 +21,9 @@
         CGFloat ImgBtnHeight = self.frame.size.height - 8;
         
         for (int i = 0; i < 3; i ++) {
-            NSArray *textArr = @[@"活动",@"比分",@"走势",@"客服"];
+            NSArray *textArr = @[@"商店",@"帮助",@"走势",@"客服"];
             NSArray *imgArr = @[@"img_home_header_activity.png",@"img_home_header_index.png",@"img_home_header_score.png",@"img_home_header_service.png"];
-            NSArray *colorArray = @[RGBColor(106, 203, 150),RGBColor(226, 113, 162),RGBColor(236, 145, 87),RGBColor(158, 130, 231)];
+            NSArray *colorArray = @[RGBColor(106, 203, 150),RGBColor(218, 53, 67),RGBColor(236, 145, 87),RGBColor(158, 130, 231)];
             NSInteger rowCount = 4;
             CGFloat width = (self.frame.size.width - 3)  / rowCount;
             CGFloat baseHeight = ImgBtnHeight;

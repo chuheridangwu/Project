@@ -91,7 +91,7 @@
     
     // 我的彩票
     PersonViewController *myLottery = [[PersonViewController alloc] init];
-    [self setUpOneChildViewController:myLottery image:[UIImage imageNamed:@"TabBar_MyLottery_new"] selImage:[UIImage imageNamed:@"TabBar_MyLottery_selected_new"] title:@"个人中心"];
+    [self setUpOneChildViewController:myLottery image:[UIImage imageNamed:@"TabBar_MyLottery_new"] selImage:[UIImage imageNamed:@"TabBar_MyLottery_selected_new"] title:@"我的"];
 }
 
 

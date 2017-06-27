@@ -18,6 +18,8 @@
 #import "GameViewController.h"
 #import "XBNavigationController.h"
 #import "DisViewController.h"
+#import "GoodsEvaluationVC.h"
+#import "LotteryHelpVC.h"
 
 
 #import "HomeTopPhotoCell.h"
@@ -25,6 +27,7 @@
 #import "HomeSectionTitleCell.h"
 #import "HomeSectionListCell.h"
 #import "XBRunCircleTextCell.h"
+#import "HomeBuyLuckBallCell.h"
 
 enum{
     HomeSeciton_ScrollPicture = 0, //轮播图

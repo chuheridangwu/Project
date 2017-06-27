@@ -38,6 +38,7 @@
         [self addSubview:_priceL];
         
         _imageView = [[UIImageView alloc]initWithFrame:CGRectZero];
+        _imageView.contentMode = UIViewContentModeScaleAspectFit;
         [self addSubview:_imageView];
         [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.offset(5);
@@ -73,7 +74,13 @@
 
 -(void)setModel:(HomeDataEntity *)model{
     _model = model;
-    [_imageView sd_setImageWithURL:[NSURL URLWithString:model.icon] placeholderImage:[UIImage imageNamed:@"zhanwei"] completed:nil];
+    
+    if ([model.icon isValidUrl]) {
+      [_imageView sd_setImageWithURL:[NSURL URLWithString:model.icon] placeholderImage:[UIImage imageNamed:@"zhanwei"] completed:nil];
+    }else{
+        [_imageView  setImage:[UIImage imageNamed:model.icon]];
+    }
+    
     _title.text = model.name;
     _priceL.text = [NSString stringWithFormat:@"%@",model.cardDesc];
 }

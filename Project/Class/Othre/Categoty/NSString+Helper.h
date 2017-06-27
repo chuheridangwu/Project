@@ -42,4 +42,7 @@
 +(NSString *)dictionaryToJson:(NSDictionary *)dic;
 
 - (CGSize)sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;
+
+// 判断是否为URL
+- (BOOL)isValidUrl;
 @end

@@ -35,6 +35,10 @@
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 120)];
     view.backgroundColor = XBAPPBaseColor;
     [_contentView addSubview:view];
+//    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+//    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
+//    effectView.frame = CGRectMake(0, 0, view.frame.size.width, view.frame.size.height);
+//    [view addSubview:effectView];
     
     
     CGFloat imgWidth = 80;

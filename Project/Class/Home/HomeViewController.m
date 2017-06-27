@@ -59,7 +59,7 @@
             row = 1;
             break;
         case  HomeSeciton_List:
-            row = self.model.listArray.count % 2 == 0 ? self.model.listArray.count / 2 : (self.model.listArray.count / 2 + 1);
+            row = 1;
             break;
         case  HomeSeciton_Banner:
             row = 1;
@@ -91,6 +91,8 @@
             height = 160;
             break;
         case  HomeSeciton_List:
+            height = HomeBuyLuckBallCellHeigth;
+            break;
         case  HomeSection_ListNews:
         case HomeSection_DataBase:
             height = HomeListSectionCellHeigth;
@@ -102,8 +104,10 @@
             height = HomeSectionListCellHeight;
             break;
         case HomeSecitont_Seivice:
-        case HomeSection_Circle:
             height = 44;
+            break;
+        case HomeSection_Circle:
+            height = XBRunCircleTextCellHeigtHt;
             break;
             
         default: height = 0;
@@ -121,9 +125,13 @@
         case  HomeSeciton_Banner:
             height = HomeSectionTitleCellHeight;
             break;
-        case HomeSection_Circle:
-        case HomeSeciton_ScrollPicture:
         case  HomeSeciton_SectionBanner:
+            height = 5;
+            break;
+        case HomeSection_Circle:
+            height = 5;
+            break;
+        case HomeSeciton_ScrollPicture:
         case  HomeSecitont_Seivice:
         {
             height = 0;
@@ -140,7 +148,7 @@
     HomeSectionTitleCell *cell = [HomeSectionTitleCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"HomeSectionTitleCell"];
     switch (section) {
         case  HomeSeciton_List:
-            [cell setSectionTitle:@"开奖新闻： 奖池已经积满，等你来拿"];
+            [cell setSectionTitle:@"购买奖品"];
             break;
         case  HomeSection_ListNews:
             [cell setSectionTitle:@"足球新闻： 季后赛准备"];
@@ -154,6 +162,7 @@
         case  HomeSeciton_SectionBanner:
         case  HomeSecitont_Seivice:
         case HomeSeciton_ScrollPicture:
+        case HomeSection_Circle:
         {
             UIView *view = [[UIView alloc]initWithFrame:self.view.bounds];
             view.backgroundColor = RGBColor(243, 243, 243);
@@ -199,19 +208,22 @@
 
 //彩票新闻列表
 - (UITableViewCell*)sectionListCell:(NSIndexPath*)indexPath{
-    HomeListSectionCell *cell = [HomeListSectionCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"HomeListSectionCell"];
-    cell.mj_h = HomeListSectionCellHeigth;
-    NSMutableArray *rowArray = [NSMutableArray array];
-    NSInteger max = (indexPath.row+1)*2;
-    NSInteger count = [self.model.listArray count];
-    if(max > count){
-        max = count;
-    }
-    for(NSInteger i = indexPath.row * 2; i < max; i++){
-        [rowArray addObject:[self.model.listArray objectAtIndex:i]];
-    }
-    cell.array = rowArray;
-    cell.delegate  =self;
+//    HomeListSectionCell *cell = [HomeListSectionCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"HomeListSectionCell"];
+//    cell.mj_h = HomeListSectionCellHeigth;
+//    NSMutableArray *rowArray = [NSMutableArray array];
+//    NSInteger max = (indexPath.row+1)*2;
+//    NSInteger count = [self.model.listArray count];
+//    if(max > count){
+//        max = count;
+//    }
+//    for(NSInteger i = indexPath.row * 2; i < max; i++){
+//        [rowArray addObject:[self.model.listArray objectAtIndex:i]];
+//    }
+//    cell.array = rowArray;
+//    cell.delegate  =self;
+//    return cell;
+
+    HomeBuyLuckBallCell *cell = [HomeBuyLuckBallCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"HomeBuyLuckBallCell"];
     return cell;
 }
 
@@ -356,10 +368,10 @@
     UIViewController *vc;
     switch (tag) {
         case 0:
-            vc = [[GameViewController alloc]init];
+            vc = [[GoodsEvaluationVC alloc]init];
             break;
             case 1:
-//            vc = [[OneBuyViewController alloc]init];
+            vc = [[LotteryHelpVC alloc]init];
             break;
         case 2:
             vc = [[DisViewController alloc]init];

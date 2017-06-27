@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Lotteryhallmessage.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Lotteryhallmessage@2x.png",
+      "filename" : "喇叭.png",
       "scale" : "2x"
     },
     {

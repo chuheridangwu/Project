@@ -89,7 +89,7 @@
         x = i * w;
         
         btn.frame = CGRectMake(x, y, w, h);
-        
+        btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
         [btn buttonImageTitleAlignment:topImageBottomTitle WithSpace:1];
     }
 }

@@ -29,12 +29,8 @@
     [self.contentView addSubview:self.bottonView];
     
     
-    NSArray *imgArray = @[@"http://res.ailecp.com/images/activity/1.jpg",@"http://res.ailecp.com/images/activity/2.jpg",@"http://res.ailecp.com/images/activity/3.jpg",@"http://res.ailecp.com/images/activity/4.jpg",@"http://pimg1.126.net/caipiao_info/images/headFigure/appad/1496837158828_1.jpg",@"http://pimg1.126.net/caipiao_info/images/headFigure/appad/1495619418092_1.jpg"];
-//    for (int i = 0; i < self.entity.rowArray.count; i++) {
-//        CustominCenterEntity *rowEntity = self.entity.rowArray[i];
-//        [imgArray addObject:rowEntity.imgURL];
-//    }
-    
+    NSArray *imgArray = @[@"http://res.ailecp.com/images/activity/2.jpg",@"http://res.ailecp.com/images/activity/3.jpg",@"http://res.ailecp.com/images/activity/4.jpg"];
+//   NSArray *imgArray = @[@"lunbo"];
     XBScrollViewPhoto *photo = [XBScrollViewPhoto scrollViewPhotoWithFrame:self.bottonView.bounds ImgsArray:imgArray clickPhontIndex:^(NSInteger clickIndex) {
 //        CustominCenterEntity *rowEntity = self.entity.rowArray[clickIndex];
 //        if ([self.delegate respondsToSelector:@selector(clickScrollViewImgViewEntity:)]) {

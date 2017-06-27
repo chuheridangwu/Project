@@ -9,7 +9,7 @@
                     "cardDesc":"英超比分",
                     "cardName":"英超",
                     "jumpUrl":"http://zx.caipiao.163.com/libraryapi/league_matchRank.html?leagueId=8&product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=67A4CF88-1A62-435A-A4F9-EE79F0D5064D",
-                    "logo":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497100045540&di=abada36755e866ae62664da69f87cfb3&imgtype=0&src=http%3A%2F%2Fi3.qhimg.com%2Ft019c31604e8435172c.jpg",
+                    "logo":"ycIco",
                     "rankMax":0,
                     "isPush":1,
                     "shiftLeft":""
@@ -22,7 +22,7 @@
                     "cardDesc":"意甲比分",
                     "cardName":"意甲",
                     "jumpUrl":"http://zx.caipiao.163.com/libraryapi/league_matchRank.html?leagueId=13&product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=67A4CF88-1A62-435A-A4F9-EE79F0D5064D",
-                    "logo":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497100102503&di=a24a34a75828960957f5e736d7d62982&imgtype=0&src=http%3A%2F%2Fvansgn.com%2Fbrandvale%2Fwp-content%2Fuploads%2F2012%2F12%2FLega_Calcio_logo.png.png",
+                    "logo":"yjIco",
                     "rankMax":0,
                     "isPush":1,
                     "shiftLeft":""
@@ -35,7 +35,7 @@
                     "cardDesc":"西甲比分",
                     "cardName":"西甲",
                     "jumpUrl":"http://zx.caipiao.163.com/libraryapi/league_matchRank.html?leagueId=7&product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=67A4CF88-1A62-435A-A4F9-EE79F0D5064D",
-                    "logo":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497100188447&di=9616f5f8d8eb9eb3011e38d50d390ced&imgtype=0&src=http%3A%2F%2Fpublic.zgzcw.com%2Fd%2Fimages%2F20148261409045439334_707.png",
+                    "logo":"xjIco",
                     "rankMax":0,
                     "isPush":1,
                     "shiftLeft":""
@@ -48,7 +48,7 @@
                     "cardDesc":"德甲比分",
                     "cardName":"德甲",
                     "jumpUrl":"http://zx.caipiao.163.com/libraryapi/league_matchRank.html?leagueId=9&product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=67A4CF88-1A62-435A-A4F9-EE79F0D5064D",
-                    "logo":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497100244576&di=3a85d9ebfc4af4087aab3724ce441be6&imgtype=0&src=http%3A%2F%2Fwww.coolsc.cn%2Fimages%2Fkutu%2Fbiaozhi%2Ftiyu%2F20081116%2F1%2F49.jpg",
+                    "logo":"djIco",
                     "rankMax":0,
                     "isPush":1,
                     "shiftLeft":""
@@ -61,7 +61,7 @@
                     "cardDesc":"法甲比分",
                     "cardName":"法甲",
                     "jumpUrl":"http://zx.caipiao.163.com/libraryapi/league_matchRank.html?leagueId=16&product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=67A4CF88-1A62-435A-A4F9-EE79F0D5064D",
-                    "logo":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497100269441&di=c85f83e3df6071be1dbfc09eec7d4581&imgtype=0&src=http%3A%2F%2Fwww.logo11.cn%2Fuploads%2F140605%2F1-140605115503458.jpg",
+                    "logo":"fjIco",
                     "rankMax":0,
                     "isPush":1,
                     "shiftLeft":""
