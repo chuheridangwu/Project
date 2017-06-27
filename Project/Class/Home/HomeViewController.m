@@ -385,7 +385,7 @@
 }
 
 - (void)requestNetWorkSuccess:(id)outcome{
-    [super requestNetWorkSuccess:nil];
+    [super requestNetWorkSuccess:outcome];
     
     self.model.gameNews = @{@"title":outcome[@"jcDaily"][@"content"],@"webUrl":outcome[@"jcDaily"][@"url"]};
     [self.tableView reloadData];

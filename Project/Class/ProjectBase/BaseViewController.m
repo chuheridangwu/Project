@@ -166,11 +166,11 @@
         imageView.image = [UIImage imageNamed:@"shopEmpty"];
         imageView.contentMode = UIViewContentModeCenter;
         [_noneView addSubview:imageView];
-        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.top.right.equalTo(0);
-            make.height.equalTo(_noneView.height).multipliedBy(0.5);
-        }];
-        
+//        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.left.top.right.equalTo(0);
+//            make.height.equalTo(_noneView.height).multipliedBy(0.5);
+//        }];
+//        
         UILabel *label = [UILabel new];
         label.text = @"不要刷新那么快嘛!\n人家很辛苦的";
         label.font = [UIFont systemFontOfSize:14];

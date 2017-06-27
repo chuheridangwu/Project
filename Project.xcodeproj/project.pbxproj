@@ -63,6 +63,8 @@
 		3055926D1EE4F9DF00864E6E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3055926C1EE4F9DF00864E6E /* Images.xcassets */; };
 		306178741EF7DB4B00561495 /* XBRunCircleTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 306178731EF7DB4B00561495 /* XBRunCircleTextCell.m */; };
 		306EFFBE1EEE2BF90000D41F /* UIView+Render.m in Sources */ = {isa = PBXBuildFile; fileRef = 306EFFBD1EEE2BF90000D41F /* UIView+Render.m */; };
+		3072F6191F01F60000170C95 /* StoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3072F6181F01F60000170C95 /* StoreTableViewCell.m */; };
+		3072F61C1F0206A300170C95 /* StoreInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3072F61B1F0206A300170C95 /* StoreInfoViewController.m */; };
 		30774C3D1F000CC10001C77A /* course_00.html in Resources */ = {isa = PBXBuildFile; fileRef = 30774C2B1F000CC10001C77A /* course_00.html */; };
 		30774C3E1F000CC10001C77A /* course_01.html in Resources */ = {isa = PBXBuildFile; fileRef = 30774C2C1F000CC10001C77A /* course_01.html */; };
 		30774C3F1F000CC10001C77A /* course_02.html in Resources */ = {isa = PBXBuildFile; fileRef = 30774C2D1F000CC10001C77A /* course_02.html */; };
@@ -246,6 +248,10 @@
 		306178731EF7DB4B00561495 /* XBRunCircleTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBRunCircleTextCell.m; sourceTree = "<group>"; };
 		306EFFBC1EEE2BF90000D41F /* UIView+Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Render.h"; sourceTree = "<group>"; };
 		306EFFBD1EEE2BF90000D41F /* UIView+Render.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Render.m"; sourceTree = "<group>"; };
+		3072F6171F01F5FF00170C95 /* StoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreTableViewCell.h; sourceTree = "<group>"; };
+		3072F6181F01F60000170C95 /* StoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreTableViewCell.m; sourceTree = "<group>"; };
+		3072F61A1F0206A300170C95 /* StoreInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreInfoViewController.h; sourceTree = "<group>"; };
+		3072F61B1F0206A300170C95 /* StoreInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreInfoViewController.m; sourceTree = "<group>"; };
 		30774C2B1F000CC10001C77A /* course_00.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = course_00.html; sourceTree = "<group>"; };
 		30774C2C1F000CC10001C77A /* course_01.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = course_01.html; sourceTree = "<group>"; };
 		30774C2D1F000CC10001C77A /* course_02.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = course_02.html; sourceTree = "<group>"; };
@@ -610,6 +616,8 @@
 				30E8F6131EFB700000103942 /* GoodsEvaluationVC.m */,
 				30A41DDD1F00EC420051FAF7 /* StoreViewController.h */,
 				30A41DDE1F00EC420051FAF7 /* StoreViewController.m */,
+				3072F61A1F0206A300170C95 /* StoreInfoViewController.h */,
+				3072F61B1F0206A300170C95 /* StoreInfoViewController.m */,
 				3074DCFD1EF8B5D000C8E9C9 /* View */,
 				3061786E1EF7CB8900561495 /* Model */,
 			);
@@ -637,6 +645,8 @@
 			children = (
 				30E8F60C1EFB6F0A00103942 /* GAGoodsEvationCell.h */,
 				30E8F60D1EFB6F0A00103942 /* GAGoodsEvationCell.m */,
+				3072F6171F01F5FF00170C95 /* StoreTableViewCell.h */,
+				3072F6181F01F60000170C95 /* StoreTableViewCell.m */,
 				30E8F67C1EFCC3EE00103942 /* ShopInfoView.h */,
 				30E8F67D1EFCC3EE00103942 /* ShopInfoView.m */,
 			);
@@ -1270,6 +1280,7 @@
 				30E7AD131EE45F5B000609DB /* main.m in Sources */,
 				30E8F61A1EFB70EB00103942 /* GoodsEvaModel.m in Sources */,
 				30A988681EE556F100D04924 /* PersonViewController.m in Sources */,
+				3072F6191F01F60000170C95 /* StoreTableViewCell.m in Sources */,
 				30D601C81EE6E3B700A70B93 /* UIColor+Color.m in Sources */,
 				30263D591EE635ED007B30C8 /* XBArrowSettingItem.m in Sources */,
 				30B0F5971EF6257A008AC7E6 /* AccountViewController.m in Sources */,
@@ -1293,6 +1304,7 @@
 				30C728BE1EE7DFD200CAD4C0 /* BottonView.m in Sources */,
 				301F6B151EE8420200B8443F /* XBWebImgManager.m in Sources */,
 				30A988B31EE57D7A00D04924 /* XBGuidePage.m in Sources */,
+				3072F61C1F0206A300170C95 /* StoreInfoViewController.m in Sources */,
 				30DF95201EE6BA4E000261C8 /* XBTabBar.m in Sources */,
 				30263D621EE63BD5007B30C8 /* XBUITool.m in Sources */,
 				3053DF131EE9237A00552AF8 /* ProductDisplayView.m in Sources */,
