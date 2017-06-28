@@ -7,7 +7,7 @@
 //
 
 #import "XBBaseTableViewCell.h"
-#define HomeSectionTitleCellHeight  (30)
+#define HomeSectionTitleCellHeight  (25)
 @interface HomeSectionTitleCell : XBBaseTableViewCell
 - (void)setSectionTitle:(NSString*)title;
 @end

@@ -121,6 +121,7 @@
 		30CD79F71F03A25900BF4A11 /* BuyLuckBallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CD79F61F03A25900BF4A11 /* BuyLuckBallViewController.m */; };
 		30CD79FA1F03A2A000BF4A11 /* HomeLuckBallEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CD79F91F03A2A000BF4A11 /* HomeLuckBallEntity.m */; };
 		30CD79FD1F03A2D000BF4A11 /* BuyLuckBallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CD79FC1F03A2D000BF4A11 /* BuyLuckBallCell.m */; };
+		30CD7A001F03AC1200BF4A11 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CD79FF1F03AC1200BF4A11 /* MoreViewController.m */; };
 		30D601C81EE6E3B700A70B93 /* UIColor+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D601C71EE6E3B700A70B93 /* UIColor+Color.m */; };
 		30DF95091EE646CE000261C8 /* XBRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DF95081EE646CE000261C8 /* XBRequestModel.m */; };
 		30DF950C1EE69476000261C8 /* Discover.json in Resources */ = {isa = PBXBuildFile; fileRef = 30DF950B1EE69476000261C8 /* Discover.json */; };
@@ -345,6 +346,8 @@
 		30CD79F91F03A2A000BF4A11 /* HomeLuckBallEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeLuckBallEntity.m; sourceTree = "<group>"; };
 		30CD79FB1F03A2D000BF4A11 /* BuyLuckBallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyLuckBallCell.h; sourceTree = "<group>"; };
 		30CD79FC1F03A2D000BF4A11 /* BuyLuckBallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyLuckBallCell.m; sourceTree = "<group>"; };
+		30CD79FE1F03AC1200BF4A11 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		30CD79FF1F03AC1200BF4A11 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		30D601C61EE6E3B700A70B93 /* UIColor+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Color.h"; sourceTree = "<group>"; };
 		30D601C71EE6E3B700A70B93 /* UIColor+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Color.m"; sourceTree = "<group>"; };
 		30DF95071EE646CE000261C8 /* XBRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBRequestModel.h; sourceTree = "<group>"; };
@@ -736,6 +739,8 @@
 				30A9885E1EE556A100D04924 /* HomeViewController.m */,
 				30CD79F51F03A25900BF4A11 /* BuyLuckBallViewController.h */,
 				30CD79F61F03A25900BF4A11 /* BuyLuckBallViewController.m */,
+				30CD79FE1F03AC1200BF4A11 /* MoreViewController.h */,
+				30CD79FF1F03AC1200BF4A11 /* MoreViewController.m */,
 				30F27B191EEBDB5E0005FF16 /* BaseDataVC */,
 				301EB4A31EE81CC00081F1D1 /* Model */,
 				301EB4A21EE81CB90081F1D1 /* View */,
@@ -1340,6 +1345,7 @@
 				30E8F6141EFB700000103942 /* GoodsEvaluationVC.m in Sources */,
 				30A988621EE556C000D04924 /* BaseViewController.m in Sources */,
 				30263D501EE634F9007B30C8 /* XBSettingItem.m in Sources */,
+				30CD7A001F03AC1200BF4A11 /* MoreViewController.m in Sources */,
 				30263D4D1EE634B1007B30C8 /* XBSettingGroup.m in Sources */,
 				30A9885F1EE556A100D04924 /* HomeViewController.m in Sources */,
 			);

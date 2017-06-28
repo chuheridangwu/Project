@@ -15,6 +15,7 @@
 @interface HomeBuyLuckBallCell : XBBaseTableViewCell
 @property (nonatomic,weak)id<HomeBuyLuckBallCellHeight>  delegate;
 @property (nonatomic,strong)NSArray *dataArray;
+@property (nonatomic,assign)BOOL isMore; //是否显示更多
 @end
 
 @protocol HomeBuyLuckBallCellHeight <NSObject>

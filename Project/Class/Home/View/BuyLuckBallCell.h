@@ -13,7 +13,7 @@
 @interface BuyLuckBallCell : XBBaseTableViewCell
 @property (nonatomic,weak)id<BuyLuckBallCellDelegate> delegate;
 @property (nonatomic,strong)HomeLuckBallEntity *entity;
-- (void)setTitleText:(NSString*)text;
+- (void)setTitleText:(NSString*)text  withClickBtn:(NSString*)btnText;
 @end
 
 @protocol BuyLuckBallCellDelegate  <NSObject>

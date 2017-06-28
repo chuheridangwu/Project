@@ -32,6 +32,12 @@
     CGFloat width = (self.contentView.frame.size.width - (count + 1) * margin) / count;
     CGFloat height = (self.contentView.frame.size.height - marginHeight * (dataArray.count % 4 + 1 ) ) / 2;
     for (int i = 0; i < dataArray.count; i++) {
+        if (_isMore) {
+            if (i == 8) {
+                return;
+            }
+        }
+      
         HomeLuckBallEntity  *eneity = dataArray[i];
         NSInteger row = i % count;
         NSInteger low = i / count;

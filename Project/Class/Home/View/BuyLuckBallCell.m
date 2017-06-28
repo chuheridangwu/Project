@@ -13,6 +13,7 @@
 @property (nonatomic,strong)UIButton *selebtn;
 @property (nonatomic,strong)UIView *backView;
 @property (nonatomic,strong)UILabel *titleL;
+@property (nonatomic,strong)NSMutableArray *btns;
 @end
 
 @implementation BuyLuckBallCell
@@ -20,7 +21,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self  = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.mj_h = BuyLuckBallCellHeigth;
-        
+        _btns = [NSMutableArray array];
            }
     return self;
 }
@@ -62,13 +63,19 @@
         [_backView addSubview:btn];
         [btn addTarget:self action:@selector(clickBtn:) forControlEvents:UIControlEventTouchDown];
         
-       
+        [_btns addObject:btn];
     }
     
     
 }
-- (void)setTitleText:(NSString*)text{
+- (void)setTitleText:(NSString*)text withClickBtn:(NSString*)btnText{
     _titleL.text = text;
+    
+    for (UIButton *btn in _btns) {
+        if ([btn.titleLabel.text isEqualToString:btnText]) {
+            [self clickBtn:btn];
+        }
+    }
 }
 
 - (CGFloat)cellheightWithInfo:(id)entity{
@@ -78,7 +85,6 @@
 
 - (void)clickBtn:(UIButton*)btn{
     [self.delegate clickBtnText:btn];
-    
     _selebtn.backgroundColor = [UIColor whiteColor];
     _selebtn.selected = NO;
     
@@ -86,7 +92,7 @@
     btn.backgroundColor = XBAPPBaseColor;
     
     _selebtn = btn;
-  
+   
 }
 
 @end

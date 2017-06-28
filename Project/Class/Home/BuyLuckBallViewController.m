@@ -30,8 +30,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = _entity.name;
-    
-    NSString *noticion = @"选号神器助您中大奖，下注会使用iOS系统内置的Safari浏览器打开彩16官网，彩票开奖信息与苹果公司无关";
+    self.view.backgroundColor = [UIColor whiteColor];
+    NSString *noticion = @"选号神器助您中大奖，下注会使用iOS系统内置的Safari浏览器打开彩16官网，彩票开奖信息和下注信息与苹果公司无关";
     
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 64 - 40, SCREEN_WIDTH, 40)];
     [btn setTitle:@"投注" forState:UIControlStateNormal];
@@ -40,15 +40,19 @@
     btn.titleLabel.font = [UIFont systemFontOfSize:16];
     [self.view addSubview:btn];
     
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 64 - 40 - 20, SCREEN_WIDTH, 20)];
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 64 - 40 - 30, SCREEN_WIDTH, 30)];
     label.text = noticion;
     label.backgroundColor = [UIColor whiteColor];
     label.numberOfLines = 0;
-    label.font = [UIFont systemFontOfSize:14];
-    
+    label.font = [UIFont systemFontOfSize:11];
+    label.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:label];
     
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, SCREEN_HEIGHT - 20 - 40 - 20 - 64)];
+    
+//    UIView *infoView = [];
+    
+    
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 20 - 40 - 30 - 64)];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];
@@ -64,7 +68,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     BuyLuckBallCell *cell = [BuyLuckBallCell tableViewCellInitializeWithTableView:tableView withIdtifier:@"BuyLuckBallCell"];
     cell.entity = _entity;
-    [cell setTitleText:_entity.leaveArray[indexPath.row]];
+    [cell setTitleText:_entity.leaveArray[indexPath.row] withClickBtn:_entity.selearray[indexPath.row]];
     cell.delegate = self;
     return cell;
 }

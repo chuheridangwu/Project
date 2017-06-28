@@ -116,19 +116,17 @@
     CGFloat height;
     switch (section) {
         case  HomeSeciton_List:
-        case  HomeSection_ListNews:
         case HomeSection_DataBase:
-        case  HomeSeciton_Banner:
         height = HomeSectionTitleCellHeight;
         break;
         case  HomeSeciton_SectionBanner:
-        height = 5;
-        break;
         case HomeSection_Circle:
         height = 5;
         break;
         case HomeSeciton_ScrollPicture:
         case  HomeSecitont_Seivice:
+        case  HomeSection_ListNews:
+        case  HomeSeciton_Banner:
         {
             height = 0;
         }
@@ -144,17 +142,23 @@
     HomeSectionTitleCell *cell = [HomeSectionTitleCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"HomeSectionTitleCell"];
     switch (section) {
         case  HomeSeciton_List:
-        [cell setSectionTitle:@"购买奖品"];
-        break;
-        case  HomeSection_ListNews:
-        [cell setSectionTitle:@"足球新闻： 季后赛准备"];
+        {
+            [cell setSectionTitle:@"购买奖品"];
+            UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH  - 70, 0, 60, HomeSectionTitleCellHeight)];
+            [btn setTitle:@"更多" forState:UIControlStateNormal];
+            [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+            btn.titleLabel.font = [UIFont systemFontOfSize:12];
+            [btn addTarget:self action:@selector(clickArrowBtn) forControlEvents:UIControlEventTouchDown];
+            [btn setImage:[UIImage imageNamed:@"arrow"] forState:UIControlStateNormal];
+            [btn buttonImageTitleAlignment:leftTitleRightImage WithSpace:3];
+            [cell.contentView addSubview:btn];
+        }
         break;
         case HomeSection_DataBase:
         [cell setSectionTitle:@"足球资料库：  足球迷的天堂"];
         break;
+        case  HomeSection_ListNews:
         case  HomeSeciton_Banner:
-        [cell setSectionTitle:@"经济新闻"];
-        break;
         case  HomeSeciton_SectionBanner:
         case  HomeSecitont_Seivice:
         case HomeSeciton_ScrollPicture:
@@ -205,6 +209,7 @@
 //购球种类
 - (UITableViewCell*)sectionListCell:(NSIndexPath*)indexPath{
     HomeBuyLuckBallCell *cell = [HomeBuyLuckBallCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"HomeBuyLuckBallCell"];
+    cell.isMore = YES;
     cell.dataArray = _model.luckArray;
     cell.delegate  = self;
     return cell;
@@ -304,31 +309,37 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    switch (indexPath.section) {
-        case HomeSeciton_ScrollPicture:
-        case  HomeSeciton_List:
-        case  HomeSeciton_Banner:
-        {
-            BaseWebViewController *webVC = [[BaseWebViewController alloc]init];
-            [self.navigationController pushViewController:webVC animated:YES];
-            webVC.webUrl = @"http://cai.163.com/wap/jrjc/index.html?channel=appstore&ver=4.33&idfa=52B1B42D-4EEB-4EA8-9B4A-BACA9DD6894B";
-            webVC.title = @"竞彩中心";
-        }
-        break;
-        case  HomeSeciton_SectionBanner:
-        case  HomeSecitont_Seivice:
-        {
-            BaseWebViewController *webVC = [[BaseWebViewController alloc]init];
-            webVC.webUrl = @"https://static.meiqia.com/dist/standalone.html?_=t&eid=60748";
-            webVC.title = @"客服中心";
-            [self.navigationController pushViewController:webVC animated:YES];
-        }
-        break;
-        
-        default:
-        break;
-    }
+//    switch (indexPath.section) {
+//        case HomeSeciton_ScrollPicture:
+//        case  HomeSeciton_List:
+//        case  HomeSeciton_Banner:
+//        {
+//            BaseWebViewController *webVC = [[BaseWebViewController alloc]init];
+//            [self.navigationController pushViewController:webVC animated:YES];
+//            webVC.webUrl = @"http://cai.163.com/wap/jrjc/index.html?channel=appstore&ver=4.33&idfa=52B1B42D-4EEB-4EA8-9B4A-BACA9DD6894B";
+//            webVC.title = @"竞彩中心";
+//        }
+//        break;
+//        case  HomeSeciton_SectionBanner:
+//        case  HomeSecitont_Seivice:
+//        {
+//            BaseWebViewController *webVC = [[BaseWebViewController alloc]init];
+//            webVC.webUrl = @"https://static.meiqia.com/dist/standalone.html?_=t&eid=60748";
+//            webVC.title = @"客服中心";
+//            [self.navigationController pushViewController:webVC animated:YES];
+//        }
+//        break;
+//        
+//        default:
+//        break;
+//    }
     
+}
+
+- (void)clickArrowBtn{
+    MoreViewController *morevc = [[MoreViewController alloc]init];
+    morevc.array = _model.luckArray;
+    [self.navigationController pushViewController:morevc animated:YES];
 }
 
 #define mark  ----- delegate
