@@ -9,12 +9,15 @@
 #import "XBBaseTableViewCell.h"
 
 #define HomeBuyLuckBallCellHeigth  (160)
+
+@class HomeLuckBallEntity;
 @protocol HomeBuyLuckBallCellHeight;
 @interface HomeBuyLuckBallCell : XBBaseTableViewCell
 @property (nonatomic,weak)id<HomeBuyLuckBallCellHeight>  delegate;
+@property (nonatomic,strong)NSArray *dataArray;
 @end
 
 @protocol HomeBuyLuckBallCellHeight <NSObject>
 
-
+- (void)clickPushEntity:(HomeLuckBallEntity*)entity;
 @end

@@ -16,4 +16,9 @@
 @property (nonatomic,strong)NSArray *dataBaseArray; //资料库
 
 @property (nonatomic,strong)NSDictionary *gameNews; //今日竞彩
+
+
+@property (nonatomic,strong)NSArray *luckArray; //购彩的数组
+
+
 @end

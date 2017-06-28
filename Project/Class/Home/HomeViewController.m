@@ -12,7 +12,7 @@
 
 
 
-@interface HomeViewController ()<HomeListSectionCellDelegate,HomeSectionListCellDelegate>
+@interface HomeViewController ()<HomeListSectionCellDelegate,HomeSectionListCellDelegate,HomeBuyLuckBallCellHeight>
 @property (nonatomic,strong)HomeDataModel *model;
 @property (nonatomic,strong)UIViewController *disMissVC;
 @end
@@ -45,7 +45,7 @@
     });
     
     self.requestUrl = @"http://api.caipiao.163.com/getArenaHallInfo_jczq.html?product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=67A4CF88-1A62-435A-A4F9-EE79F0D5064D";
-  
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -56,30 +56,26 @@
     NSInteger row = 0;
     switch (section) {
         case HomeSeciton_ScrollPicture:
-            row = 1;
-            break;
+        row = 1;
+        break;
         case  HomeSeciton_List:
-            row = 1;
-            break;
-        case  HomeSeciton_Banner:
-            row = 1;
-            break;
+        row = 1;
+        break;
         case HomeSection_DataBase:
-            row = self.model.dataBaseArray.count % 2 == 0 ? self.model.dataBaseArray.count / 2 : (self.model.dataBaseArray.count / 2 + 1);
-            break;
-        case HomeSection_ListNews:
-            row = self.model.newsArray.count % 2 == 0 ? self.model.newsArray.count / 2 : (self.model.newsArray.count / 2 + 1);
-            break;
+        row = self.model.dataBaseArray.count % 2 == 0 ? self.model.dataBaseArray.count / 2 : (self.model.dataBaseArray.count / 2 + 1);
+        break;
         case  HomeSeciton_SectionBanner:
         case HomeSection_Circle:
-            row = 1;
-            break;
+        row = 1;
+        break;
+        case HomeSection_ListNews:
+        case  HomeSeciton_Banner:
         case  HomeSecitont_Seivice:
-            row = 0;
-            break;
-            
+        row = 0;
+        break;
+        
         default: row = 0;
-            break;
+        break;
     }
     return row;
 }
@@ -88,30 +84,30 @@
     CGFloat height;
     switch (indexPath.section) {
         case HomeSeciton_ScrollPicture:
-            height = 160;
-            break;
+        height = 160;
+        break;
         case  HomeSeciton_List:
-            height = HomeBuyLuckBallCellHeigth;
-            break;
+        height = HomeBuyLuckBallCellHeigth;
+        break;
         case  HomeSection_ListNews:
         case HomeSection_DataBase:
-            height = HomeListSectionCellHeigth;
-            break;
+        height = HomeListSectionCellHeigth;
+        break;
         case  HomeSeciton_Banner:
-            height = 60;
-            break;
+        height = 60;
+        break;
         case  HomeSeciton_SectionBanner:
-            height = HomeSectionListCellHeight;
-            break;
+        height = HomeSectionListCellHeight;
+        break;
         case HomeSecitont_Seivice:
-            height = 44;
-            break;
+        height = 44;
+        break;
         case HomeSection_Circle:
-            height = XBRunCircleTextCellHeigtHt;
-            break;
-            
+        height = XBRunCircleTextCellHeigtHt;
+        break;
+        
         default: height = 0;
-            break;
+        break;
     }
     return height;
 }
@@ -123,23 +119,23 @@
         case  HomeSection_ListNews:
         case HomeSection_DataBase:
         case  HomeSeciton_Banner:
-            height = HomeSectionTitleCellHeight;
-            break;
+        height = HomeSectionTitleCellHeight;
+        break;
         case  HomeSeciton_SectionBanner:
-            height = 5;
-            break;
+        height = 5;
+        break;
         case HomeSection_Circle:
-            height = 5;
-            break;
+        height = 5;
+        break;
         case HomeSeciton_ScrollPicture:
         case  HomeSecitont_Seivice:
         {
             height = 0;
         }
-            break;
-            
+        break;
+        
         default: height = 0;
-            break;
+        break;
     }
     return height;
 }
@@ -148,17 +144,17 @@
     HomeSectionTitleCell *cell = [HomeSectionTitleCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"HomeSectionTitleCell"];
     switch (section) {
         case  HomeSeciton_List:
-            [cell setSectionTitle:@"购买奖品"];
-            break;
+        [cell setSectionTitle:@"购买奖品"];
+        break;
         case  HomeSection_ListNews:
-            [cell setSectionTitle:@"足球新闻： 季后赛准备"];
-            break;
+        [cell setSectionTitle:@"足球新闻： 季后赛准备"];
+        break;
         case HomeSection_DataBase:
-            [cell setSectionTitle:@"足球资料库：  足球迷的天堂"];
-            break;
+        [cell setSectionTitle:@"足球资料库：  足球迷的天堂"];
+        break;
         case  HomeSeciton_Banner:
-            [cell setSectionTitle:@"经济新闻"];
-            break;
+        [cell setSectionTitle:@"经济新闻"];
+        break;
         case  HomeSeciton_SectionBanner:
         case  HomeSecitont_Seivice:
         case HomeSeciton_ScrollPicture:
@@ -168,10 +164,10 @@
             view.backgroundColor = RGBColor(243, 243, 243);
             return view;
         }
-            break;
-            
+        break;
+        
         default:
-            break;
+        break;
     }
     return cell;
 }
@@ -206,24 +202,11 @@
     return cell;
 }
 
-//彩票新闻列表
+//购球种类
 - (UITableViewCell*)sectionListCell:(NSIndexPath*)indexPath{
-//    HomeListSectionCell *cell = [HomeListSectionCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"HomeListSectionCell"];
-//    cell.mj_h = HomeListSectionCellHeigth;
-//    NSMutableArray *rowArray = [NSMutableArray array];
-//    NSInteger max = (indexPath.row+1)*2;
-//    NSInteger count = [self.model.listArray count];
-//    if(max > count){
-//        max = count;
-//    }
-//    for(NSInteger i = indexPath.row * 2; i < max; i++){
-//        [rowArray addObject:[self.model.listArray objectAtIndex:i]];
-//    }
-//    cell.array = rowArray;
-//    cell.delegate  =self;
-//    return cell;
-
     HomeBuyLuckBallCell *cell = [HomeBuyLuckBallCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"HomeBuyLuckBallCell"];
+    cell.dataArray = _model.luckArray;
+    cell.delegate  = self;
     return cell;
 }
 
@@ -260,7 +243,7 @@
     XBBaseTableViewCell *cell = [XBBaseTableViewCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"32"];
     cell.textLabel.numberOfLines = 0;
     cell.mj_h = HomeListSectionCellHeigth;
-//    cell.textLabel.text = self.model.gameNews[@"title"];
+    //    cell.textLabel.text = self.model.gameNews[@"title"];
     UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(5, 5, cell.mj_h - 10, cell.mj_h - 10)];
     [cell addSubview:imgView];
     imgView.image = [UIImage imageNamed:@"timg"];
@@ -289,31 +272,31 @@
     }
     switch (indexPath.section) {
         case HomeSeciton_ScrollPicture:
-            cell = [self topScrollewPictureCell];
-            break;
+        cell = [self topScrollewPictureCell];
+        break;
         case HomeSection_DataBase:
-            cell = [self dataBaseSectionCell:indexPath];
-            break;
+        cell = [self dataBaseSectionCell:indexPath];
+        break;
         case  HomeSeciton_List:
-            cell = [self sectionListCell:indexPath];
-            break;
+        cell = [self sectionListCell:indexPath];
+        break;
         case  HomeSeciton_Banner:
-            cell = [self gameComputerCell];
-            break;
+        cell = [self gameComputerCell];
+        break;
         case HomeSection_ListNews:
-            cell = [self sectionNewsListCell:indexPath];
-            break;
+        cell = [self sectionNewsListCell:indexPath];
+        break;
         case  HomeSeciton_SectionBanner:
-            cell = [self sectionListCell];
-            break;
+        cell = [self sectionListCell];
+        break;
         case  HomeSecitont_Seivice:
-            cell = [self customerSeverWithCell];
-            break;
+        cell = [self customerSeverWithCell];
+        break;
         case HomeSection_Circle:
-            cell = [self circleTextCell];
-            break;
+        cell = [self circleTextCell];
+        break;
         default:
-            break;
+        break;
     }
     return cell;
 }
@@ -331,7 +314,7 @@
             webVC.webUrl = @"http://cai.163.com/wap/jrjc/index.html?channel=appstore&ver=4.33&idfa=52B1B42D-4EEB-4EA8-9B4A-BACA9DD6894B";
             webVC.title = @"竞彩中心";
         }
-            break;
+        break;
         case  HomeSeciton_SectionBanner:
         case  HomeSecitont_Seivice:
         {
@@ -340,12 +323,12 @@
             webVC.title = @"客服中心";
             [self.navigationController pushViewController:webVC animated:YES];
         }
-            break;
-            
+        break;
+        
         default:
-            break;
+        break;
     }
- 
+    
 }
 
 #define mark  ----- delegate
@@ -368,23 +351,23 @@
     UIViewController *vc;
     switch (tag) {
         case 0:
-            vc = [[GoodsEvaluationVC alloc]init];
-            break;
-            case 1:
-            vc = [[LotteryHelpVC alloc]init];
-            break;
+        vc = [[GoodsEvaluationVC alloc]init];
+        break;
+        case 1:
+        vc = [[LotteryHelpVC alloc]init];
+        break;
         case 2:
-            vc = [[DisViewController alloc]init];
-            break;
+        vc = [[DisViewController alloc]init];
+        break;
         case 3:
         {
-         BaseWebViewController *WebVc = [[BaseWebViewController alloc]init];
+            BaseWebViewController *WebVc = [[BaseWebViewController alloc]init];
             WebVc.webUrl = @"https://static.meiqia.com/dist/standalone.html?_=t&eid=60748";
             vc = WebVc;
         }
-            break;
+        break;
         default:
-            break;
+        break;
     }
     XBNavigationController *nav = [[XBNavigationController alloc]initWithRootViewController:vc];
     [self presentViewController:nav animated:YES completion:nil];
@@ -395,6 +378,15 @@
 - (void)clickCloseVC{
     [self.disMissVC dismissViewControllerAnimated:YES completion:nil];
 }
+
+
+#pragma mark  ---- HomeBuyLuckBallCellHeight
+- (void)clickPushEntity:(HomeLuckBallEntity *)entity{
+    BuyLuckBallViewController *ballVC = [[BuyLuckBallViewController alloc]init];
+    ballVC.entity = entity;
+    [self.navigationController pushViewController:ballVC animated:YES];
+}
+
 
 - (void)requestNetWorkSuccess:(id)outcome{
     [super requestNetWorkSuccess:outcome];
@@ -410,13 +402,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

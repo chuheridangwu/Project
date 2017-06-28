@@ -20,6 +20,7 @@
 #import "DisViewController.h"
 #import "GoodsEvaluationVC.h"
 #import "LotteryHelpVC.h"
+#import "BuyLuckBallViewController.h"
 
 
 #import "HomeTopPhotoCell.h"
@@ -32,7 +33,7 @@
 enum{
     HomeSeciton_ScrollPicture = 0, //轮播图
     HomeSection_Circle,//跑马灯
-    HomeSeciton_SectionBanner, 
+    HomeSeciton_SectionBanner,
     HomeSection_DataBase, // 资料库
     HomeSeciton_List,
     HomeSeciton_Banner,
