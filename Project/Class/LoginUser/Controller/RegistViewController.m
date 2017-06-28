@@ -37,7 +37,7 @@
 
     if ([NSString isMobileNumber:self.TelTextField.text]) {
         self.duanxinBtn.userInteractionEnabled = NO;
-        [SVProgressHUD showSuccessWithStatus:@"手机号已注册"];
+        [XBUITool showRmindView:@"手机号已注册"];
     }
 }
 

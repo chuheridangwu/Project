@@ -137,7 +137,8 @@
 - (IBAction)login:(UIButton *)sender {
     
     if ([self checkUserInfo] && [self.telTextField.text isEqualToString:@"13688886666"] && [self.passWordTextField.text isEqualToString:@"123456"]) {
-        [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+        [XBUITool showRmindView:@"验证码发送成功"];
+
         [self dismissViewControllerAnimated:YES completion:nil];
         if (self.myBlock) {
             self.myBlock();
@@ -153,12 +154,12 @@
 - (BOOL)checkUserInfo{//其实在这里后台会判断的，但是由于要请求网络，判断有延迟，所以自己加了判断
     if (self.telTextField.text.length == 0) {
         [self shakeButton];
-        [SVProgressHUD showErrorWithStatus:@"用户名不能为空"];
+        [XBUITool showRmindView:@"用户名不能为空"];
         return 0;
     }
     if (self.passWordTextField.text.length == 0) {
         [self shakeButton];
-        [SVProgressHUD showErrorWithStatus:@"密码不能为空"];
+        [XBUITool showRmindView:@"密码不能为空"];
         return 0;
     }
     return 1;

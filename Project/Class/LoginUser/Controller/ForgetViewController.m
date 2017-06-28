@@ -37,7 +37,7 @@
 
 - (IBAction)sendYanZhengMa:(UIButton *)sender {
     if ([self checkTel]) {
-       [SVProgressHUD showSuccessWithStatus:@"验证码发送成功"];
+         [XBUITool showRmindView:@"验证码发送成功"];
     }
 }
 
@@ -50,7 +50,8 @@
         [allParams setObject:self.ensurePassTF.text forKey:@"repeatPassword"];
         [allParams setObject:self.yanzhengmaTF.text forKey:@"smsValidCode"];
         if (self.sagaId == nil) {
-            [SVProgressHUD showErrorWithStatus:@"验证码有误"];
+            [XBUITool showRmindView:@"验证码有误"];
+
             return;
         }
     }
@@ -58,23 +59,27 @@
 
 - (BOOL)checkUserInfo{//其实在这里后台会判断的，但是由于要请求网络，判断有延迟，所以自己加了判断
     if (![self.passWordTF.text isEqualToString: self.ensurePassTF.text]) {
-        [SVProgressHUD showErrorWithStatus:@"两次密码不一致"];
+        [XBUITool showRmindView:@"两次密码不一致"];
+
         return 0;
     }
     if (self.passWordTF.text.length == 0) {
-        [SVProgressHUD showErrorWithStatus:@"请输入密码"];
+        [XBUITool showRmindView:@"请输入密码"];
+
         return 0;
     }
     if (!(self.passWordTF.text.length >= 8 && self.passWordTF.text.length <=30)) {
-        [SVProgressHUD showErrorWithStatus:@"密码长度应为8-30个字符"];
+        [XBUITool showRmindView:@"密码长度应为8-30个字符"];
+
         return 0;
     }
     if (self.telTF.text.length == 0) {
-        [SVProgressHUD showErrorWithStatus:@"电话号码不能为空"];
+        [XBUITool showRmindView:@"请输入正确的手机号"];
         return 0;
     }
     if (self.yanzhengmaTF.text.length == 0) {
-        [SVProgressHUD showErrorWithStatus:@"验证码不能为空"];
+        [XBUITool showRmindView:@"验证码不能为空"];
+
         return 0;
     }
     return 1;
@@ -82,11 +87,11 @@
 
 - (BOOL)checkTel{
     if (self.telTF.text.length == 0) {
-        [SVProgressHUD showErrorWithStatus:@"请输入手机号"];
+        [XBUITool showRmindView:@"请输入正确的手机号"];
         return 0;
     }
     if (self.telTF.text.length != 11) {
-        [SVProgressHUD showErrorWithStatus:@"请输入正确的手机号"];
+        [XBUITool showRmindView:@"请输入正确的手机号"];
         return 0;
     }
     return 1;

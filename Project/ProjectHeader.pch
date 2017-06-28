@@ -22,7 +22,6 @@
 #import "AFNetworking.h"
 #import "MJRefresh.h"
 #import "MBProgressHUD.h"
-#import "SVProgressHUD.h"
 
 #import "XBRequestNetTool.h"
 #import "XBUITool.h"

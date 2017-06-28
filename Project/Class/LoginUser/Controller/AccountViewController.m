@@ -46,12 +46,12 @@
 //检验手机号
 - (IBAction)VerificationCodeBtn:(id)sender {
     if ( ![NSString isMobileNumber:self.phoneText.text]) {
-        [SVProgressHUD showErrorWithStatus:@"请输入正确的手机号"];
+        [XBUITool showRmindView:@"请输入正确的手机号"];
         return;
     }
     [self sendVerifCode];
-    
-    [SVProgressHUD showSuccessWithStatus:@"成功获取验证码"];
+    [XBUITool showRmindView:@"成功获取验证码"];
+
 }
 
 - (void)sendVerifCode{
@@ -76,18 +76,18 @@
 //确定
 - (IBAction)determineBtn:(id)sender {
     if ( ![NSString isMobileNumber:self.phoneText.text]) {
-        [SVProgressHUD showErrorWithStatus:@"请输入正确的手机号"];
+        [XBUITool showRmindView:@"请输入正确的手机号"];
         return;
     }
     if (self.valdtionText.text.length == 0) {
-        [SVProgressHUD showErrorWithStatus:@"验证码不能为空"];
+        [XBUITool showRmindView:@"验证码不能为空"];
         return ;
     }
     
     [self.view endEditing:YES];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    
-    [SVProgressHUD showSuccessWithStatus:@"注册成功"];
+    [XBUITool showRmindView:@"注册成功"];
+
 }
 
 
