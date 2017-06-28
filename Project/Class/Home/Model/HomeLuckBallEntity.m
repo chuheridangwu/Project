@@ -16,6 +16,7 @@
     entity.max = [dic[@"max"] intValue];
     entity.min = [dic[@"min"] intValue];
     entity.leaveArray = dic[@"leave"];
+    entity.jumpURL = dic[@"jumpUrl"];
     return entity;
 }
 - (NSMutableArray*)selearray{

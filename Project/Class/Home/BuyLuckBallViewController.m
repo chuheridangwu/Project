@@ -31,13 +31,14 @@
     // Do any additional setup after loading the view.
     self.title = _entity.name;
     self.view.backgroundColor = [UIColor whiteColor];
-    NSString *noticion = @"选号神器助您中大奖，下注会使用iOS系统内置的Safari浏览器打开彩16官网，彩票开奖信息和下注信息与苹果公司无关";
+    NSString *noticion = @"选号神器助您中大奖，下注会使用iOS系统内置的Safari浏览器打开9188官网，彩票开奖信息和下注信息与苹果公司无关";
     
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 64 - 40, SCREEN_WIDTH, 40)];
     [btn setTitle:@"投注" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     btn.backgroundColor = XBAPPBaseColor;
     btn.titleLabel.font = [UIFont systemFontOfSize:16];
+    [btn addTarget:self action:@selector(clickBuyLuckball) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:btn];
     
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 64 - 40 - 30, SCREEN_WIDTH, 30)];
@@ -47,9 +48,6 @@
     label.font = [UIFont systemFontOfSize:11];
     label.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:label];
-    
-    
-//    UIView *infoView = [];
     
     
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 20 - 40 - 30 - 64)];
@@ -71,6 +69,23 @@
     [cell setTitleText:_entity.leaveArray[indexPath.row] withClickBtn:_entity.selearray[indexPath.row]];
     cell.delegate = self;
     return cell;
+}
+
+
+- (void)clickBuyLuckball{
+    NSMutableString *message = [NSMutableString stringWithFormat:@"您选择的号码:\n"];
+    for (NSString *str  in _entity.selearray) {
+        [message appendString:[NSString stringWithFormat:@"  %@",str]];
+    }
+  
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"确定购买" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *canerl = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_entity.jumpURL]];
+    }];
+    [alertVC addAction:cancel];
+    [alertVC addAction:canerl];
+    [self presentViewController:alertVC animated:YES completion:nil];
 }
 
 
