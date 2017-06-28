@@ -83,10 +83,12 @@
 
 + (CGFloat)cellheightWithInfo:(id)entity{
     HomeLuckBallEntity *entity1 = (HomeLuckBallEntity*)entity;
-   
-    CGFloat height =  ((entity1.max + 1) - entity1.min) % 5  == 0 ? (BuyLuckBallCellHeigth + 40) :BuyLuckBallCellHeigth;
-    if ((entity1.min - 1)  > 10) {
+    CGFloat height;
+//    CGFloat height =  ((entity1.max + 1) - entity1.min) % 5  == 0 ? BuyLuckBallCellHeigth : (BuyLuckBallCellHeigth + 40);
+    if (entity1.max  > 10) {
         height = BuyLuckBallCellHeigth + 40;
+    }else{
+        height = BuyLuckBallCellHeigth;
     }
     return height;
 }

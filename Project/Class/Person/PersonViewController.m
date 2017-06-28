@@ -32,15 +32,15 @@
 //    [self presentViewController:navVC animated:YES completion:nil];
     
     self.tableView.tableFooterView = [self tableViewFootView];
-//   __block LoginViewController *loginVC = [[LoginViewController alloc]init];
-//    [self.view addSubview:loginVC.view];
-//    [self addChildViewController:loginVC];
-//    loginVC.myBlock = ^(){
+   __block LoginViewController *loginVC = [[LoginViewController alloc]init];
+    [self.view addSubview:loginVC.view];
+    [self addChildViewController:loginVC];
+    loginVC.myBlock = ^(){
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"帮助" style:UIBarButtonItemStylePlain target:self action:@selector(clickRightBtn)];
-//        [loginVC removeFromParentViewController];
-//        [loginVC.view removeFromSuperview];
-//    };
-    
+        [loginVC removeFromParentViewController];
+        [loginVC.view removeFromSuperview];
+    };
+
     
     self.titleArray = @[@"消息中心",@"开奖推送",@"开奖记录",@"关于",@"清除缓存"];
 //    self.imageArray = @[@"message",@"notice",@"prize",@"game",@"about",@"clear"];

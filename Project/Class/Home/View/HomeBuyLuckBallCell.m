@@ -25,7 +25,7 @@
 
 - (void)setDataArray:(NSArray *)dataArray{
     _dataArray = dataArray;
-    
+    [self.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     NSInteger count = 4;
     CGFloat margin = 10;
     CGFloat marginHeight = 5;

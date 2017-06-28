@@ -72,19 +72,25 @@
     [_gameL mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.offset(0);
         make.left.equalTo(_nameL.right).offset(0);
-        make.width.equalTo(_winL.width).multipliedBy(1);
+        make.width.equalTo(_winL.mas_width).multipliedBy(1);
+        make.width.equalTo(_fairL.mas_width).multipliedBy(1);
+        make.width.equalTo(_losserL.mas_width).multipliedBy(1);
+
     }];
+    
     
     [_winL mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.offset(0);
         make.left.equalTo(_gameL.right).offset(0);
-        make.width.equalTo(_fairL.width).multipliedBy(1);
+//        make.width.equalTo(_gameL.mas_width).multipliedBy(1);
     }];
+    
+  
     
     [_fairL mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.offset(0);
         make.left.equalTo(_winL.right).offset(0);
-        make.width.equalTo(_losserL.width).multipliedBy(1);
+//        make.width.equalTo(_losserL.mas_width).multipliedBy(1);
     }];
     
     [_losserL mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -92,6 +98,23 @@
         make.left.equalTo(_fairL.right).offset(0);
         make.right.equalTo(_integralL.left).offset(0);
     }];
+    
+    
+//    entity.index = @"排名榜";
+//    entity.name = @"球队";
+//    entity.game = @"已赛";
+//    entity.win = @"胜";
+//    entity.fair = @"平";
+//    entity.loser = @"负";
+//    entity.integral = @"积分";
+//    _fairL.backgroundColor = [UIColor redColor];
+//    _losserL.backgroundColor = [UIColor yellowColor];
+//    _winL.backgroundColor = [UIColor blueColor];
+//    _integralL.backgroundColor = [UIColor grayColor];
+//    _nameL.backgroundColor = [UIColor greenColor];
+//    _indexL.backgroundColor = [UIColor redColor];
+//    _fairL.backgroundColor = [UIColor redColor];
+
     
     if (self.isLayer) {
         self.indexNewL.hidden = YES;

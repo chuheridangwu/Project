@@ -31,7 +31,7 @@
     // Do any additional setup after loading the view.
     self.title = _entity.name;
     self.view.backgroundColor = [UIColor whiteColor];
-    NSString *noticion = @"选号神器助您中大奖，下注会使用iOS系统内置的Safari浏览器打开9188官网，彩票开奖信息和下注信息与苹果公司无关";
+    NSString *noticion = @"购彩小帮手助您中大奖，下注会使用iOS系统内置的Safari浏览器打开梦想彩官网，彩票开奖信息和下注信息与苹果公司无关";
     
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 64 - 40, SCREEN_WIDTH, 40)];
     [btn setTitle:@"投注" forState:UIControlStateNormal];
@@ -47,6 +47,7 @@
     label.numberOfLines = 0;
     label.font = [UIFont systemFontOfSize:11];
     label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor grayColor];
     [self.view addSubview:label];
     
     
@@ -77,15 +78,30 @@
 
 
 - (void)clickBuyLuckball{
+    
+    
+    
     NSMutableString *message = [NSMutableString stringWithFormat:@"您选择的号码:\n"];
-    for (NSString *str  in _entity.selearray) {
+    NSMutableArray *array = _entity.selearray;
+    
+    for (int i = 0; i < _entity.selearray.count; i++) {
+        if (i >= _entity.leaveArray.count) {
+            [array removeObject:_entity.selearray[i]];
+        }
+    }
+    
+    for (NSString *str  in array) {
+        if ([str isEqualToString:@"-1"]) {
+            [XBUITool showRmindView:@"您还有未选中的号码"];
+            return;
+        }
         [message appendString:[NSString stringWithFormat:@"  %@",str]];
     }
   
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"确定购买" message:message preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
     UIAlertAction *canerl = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_entity.jumpURL]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_entity.jumpURL] ];
     }];
     [alertVC addAction:cancel];
     [alertVC addAction:canerl];

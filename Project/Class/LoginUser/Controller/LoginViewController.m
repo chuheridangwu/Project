@@ -137,7 +137,7 @@
 - (IBAction)login:(UIButton *)sender {
     
     if ([self checkUserInfo] && [self.telTextField.text isEqualToString:@"13688886666"] && [self.passWordTextField.text isEqualToString:@"123456"]) {
-        [XBUITool showRmindView:@"验证码发送成功"];
+        [XBUITool showRmindView:@"登录成功"];
 
         [self dismissViewControllerAnimated:YES completion:nil];
         if (self.myBlock) {

@@ -70,7 +70,7 @@
 
     // notice: 2.1.5版本的SDK新增的注册方法，改成可上报IDFA，如果没有使用IDFA直接传nil
     // 如需继续使用pushConfig.plist文件声明appKey等配置内容，请依旧使用[JPUSHService setupWithOption:launchOptions]方式初始化。
-    [JPUSHService setupWithOption:launchOptions appKey:@"322569720fee03577b089497"
+    [JPUSHService setupWithOption:launchOptions appKey:@"07efecfaf5493ad0064a28e3"
                           channel:@"appStore"
                  apsForProduction:0
             advertisingIdentifier:advertisingId];

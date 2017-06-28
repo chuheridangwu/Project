@@ -4,7 +4,7 @@
   "max":9,
   "min":0,
   "icon":"100242",
-  "jumpUrl":"http://5.9188.com/#type=url&p=list/p3.html",
+  "jumpUrl":"http://m.mxcai28.com/#type=url&p=list/p3.html",
   "leave":[
            "百位",
            "十位",
@@ -16,7 +16,7 @@
   "max":11,
   "min":1,
   "icon":"100243",
-  "jumpUrl":"http://5.9188.com/#type=url&p=list/hb11x5.html",
+  "jumpUrl":"http://m.mxcai28.com/#type=url&p=list/gd11x5.html",
   "leave":[
            "万位",
            "千位",
@@ -30,7 +30,7 @@
   "max":9,
   "min":0,
   "icon":"100244",
-  "jumpUrl":"http://5.9188.com/#type=url&p=list/p5.html",
+  "jumpUrl":"http://m.mxcai28.com/#type=url&p=list/p5.html",
   "leave":[
            "万位",
            "千位",
@@ -44,7 +44,7 @@
   "max":9,
   "min":0,
   "icon":"100245",
-  "jumpUrl":"http://5.9188.com/#type=url&p=list/3d.html",
+  "jumpUrl":"http://m.mxcai28.com/#type=url&p=list/3d.html",
   "leave":[
            "百位",
            "十位",
@@ -56,7 +56,7 @@
   "max":9,
   "min":0,
   "icon":"100246",
-  "jumpUrl":"http://5.9188.com/#type=url&p=list/cqssc.html",
+  "jumpUrl":"http://m.mxcai28.com/#type=url&p=list/cqssc.html",
   "leave":[
            "万位",
            "千位",
@@ -70,7 +70,7 @@
   "max":10,
   "min":1,
   "icon":"100247",
-  "jumpUrl":"http://5.9188.com/#type=url&p=list/gd11x5.html",
+  "jumpUrl":"http://m.mxcai28.com/#type=url&p=list/p5.html",
   "leave":[
            "一位",
            "二位",
@@ -82,7 +82,7 @@
   "max":11,
   "min":1,
   "icon":"100248",
-  "jumpUrl":"http://5.9188.com/#type=url&p=list/hb11x5.html",
+  "jumpUrl":"http://m.mxcai28.com/#type=url&p=list/gd11x5.html",
   "leave":[
            "万位",
            "千位",
@@ -96,7 +96,7 @@
   "max":9,
   "min":0,
   "icon":"100249",
-  "jumpUrl":"http://5.9188.com/#type=url&p=list/cqssc.html",
+  "jumpUrl":"http://m.mxcai28.com/#type=url&p=list/cqssc.html",
   "leave":[
            "万位",
            "千位",
@@ -106,11 +106,11 @@
            ]
   },
   {
-  "name":"山东快三",
+  "name":"江苏快三",
   "max":6,
   "min":1,
   "icon":"100241",
-  "jumpUrl":"http://5.9188.com/#type=url&p=list/xk3.html",
+  "jumpUrl":"http://m.mxcai28.com/#type=url&p=list/jsk3.html",
   "leave":[
            "百位",
            "十位",

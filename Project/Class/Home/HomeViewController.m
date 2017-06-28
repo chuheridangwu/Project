@@ -26,7 +26,7 @@
     
     self.model = [[HomeDataModel alloc]init];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH,0), ^{
         [XBRequestNetTool post:@"http://appid.qq-app.com/frontApi/getAboutUs?appid=1247491481" params:nil success:^(id responseObj) {
             if (![responseObj[@"isshowwap"] isEqual:[NSNull null]] && [responseObj[@"isshowwap"]intValue] == 1 ) {
                 dispatch_async(dispatch_get_main_queue(), ^{
@@ -44,7 +44,8 @@
         }];
     });
     
-    self.requestUrl = @"http://api.caipiao.163.com/getArenaHallInfo_jczq.html?product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=67A4CF88-1A62-435A-A4F9-EE79F0D5064D";
+    
+//    self.requestUrl = @"http://mapi.yjcp.com/api/gain/tenawardinfo?lotId=33&pageNum=1&sid=31000000000";
     
 }
 
@@ -143,7 +144,7 @@
     switch (section) {
         case  HomeSeciton_List:
         {
-            [cell setSectionTitle:@"购买奖品"];
+            [cell setSectionTitle:@"彩票种类"];
             UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH  - 70, 0, 60, HomeSectionTitleCellHeight)];
             [btn setTitle:@"更多" forState:UIControlStateNormal];
             [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
@@ -402,7 +403,7 @@
 - (void)requestNetWorkSuccess:(id)outcome{
     [super requestNetWorkSuccess:outcome];
     
-    self.model.gameNews = @{@"title":outcome[@"jcDaily"][@"content"],@"webUrl":outcome[@"jcDaily"][@"url"]};
+//    self.model.gameNews = @{@"title":outcome[@"jcDaily"][@"content"],@"webUrl":outcome[@"jcDaily"][@"url"]};
     [self.tableView reloadData];
 }
 
