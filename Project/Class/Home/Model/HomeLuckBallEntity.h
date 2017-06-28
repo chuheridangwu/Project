@@ -11,8 +11,8 @@
 @interface HomeLuckBallEntity : NSObject
 @property (nonatomic,copy)NSString *name;
 @property (nonatomic,copy)NSString *iconName;
-@property (nonatomic,assign)NSInteger max;
-@property (nonatomic,assign)NSInteger min;
+@property (nonatomic,assign)int max;
+@property (nonatomic,assign)int min;
 @property (nonatomic,copy)NSString *jumpURL;
 
 @property (nonatomic,strong)NSArray *leaveArray;

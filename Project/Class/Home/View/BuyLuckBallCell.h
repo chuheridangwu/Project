@@ -14,6 +14,7 @@
 @property (nonatomic,weak)id<BuyLuckBallCellDelegate> delegate;
 @property (nonatomic,strong)HomeLuckBallEntity *entity;
 - (void)setTitleText:(NSString*)text  withClickBtn:(NSString*)btnText;
++ (CGFloat)cellheightWithInfo:(id)entity;
 @end
 
 @protocol BuyLuckBallCellDelegate  <NSObject>

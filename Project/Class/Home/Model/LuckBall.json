@@ -13,8 +13,8 @@
   },
   {
   "name":"广东11选5",
-  "max":9,
-  "min":0,
+  "max":11,
+  "min":1,
   "icon":"100243",
   "jumpUrl":"http://5.9188.com/#type=url&p=list/hb11x5.html",
   "leave":[
@@ -67,7 +67,7 @@
   },
   {
   "name":"三分PK10",
-  "max":6,
+  "max":10,
   "min":1,
   "icon":"100247",
   "jumpUrl":"http://5.9188.com/#type=url&p=list/gd11x5.html",
@@ -79,8 +79,8 @@
   },
   {
   "name":"山东11选5",
-  "max":9,
-  "min":0,
+  "max":11,
+  "min":1,
   "icon":"100248",
   "jumpUrl":"http://5.9188.com/#type=url&p=list/hb11x5.html",
   "leave":[
@@ -107,8 +107,8 @@
   },
   {
   "name":"山东快三",
-  "max":9,
-  "min":0,
+  "max":6,
+  "min":1,
   "icon":"100241",
   "jumpUrl":"http://5.9188.com/#type=url&p=list/xk3.html",
   "leave":[

@@ -55,8 +55,12 @@
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    _tableView.rowHeight = BuyLuckBallCellHeigth;
+    _tableView.rowHeight = [BuyLuckBallCell cellheightWithInfo:_entity];
 }
+
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return [BuyLuckBallCell cellheightWithInfo:_entity];
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return _entity.leaveArray.count;

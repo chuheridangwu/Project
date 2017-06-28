@@ -44,8 +44,10 @@
     
     NSInteger count = 5;
     CGFloat btnWidth = 30;
+    CGFloat max = _entity.min == 1 ? _entity.max : _entity.max + 1;
+    
     CGFloat spaceMargin = (SCREEN_WIDTH - count * btnWidth) / (count + 1);
-    for (int i = 0; i < 10; i ++) {
+    for (int i = 0; i < max; i ++) {
         CGFloat row = i % count;
         CGFloat col = i / count;
         CGFloat X = spaceMargin + (spaceMargin + btnWidth) * row;
@@ -55,7 +57,8 @@
         btn.layer.masksToBounds = YES;
         btn.layer.borderWidth = 2;
         btn.layer.borderColor = XBAPPBaseColor.CGColor;
-        [btn setTitle:[NSString stringWithFormat:@"%d",i] forState:UIControlStateNormal];
+        NSString *title = [NSString stringWithFormat:@"%d", _entity.min == 1 ? i + 1 : i];
+        [btn setTitle:title forState:UIControlStateNormal];
         [btn setTitleColor:XBAPPBaseColor forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
         btn.tag = i;
@@ -78,8 +81,14 @@
     }
 }
 
-- (CGFloat)cellheightWithInfo:(id)entity{
-    return 10;
++ (CGFloat)cellheightWithInfo:(id)entity{
+    HomeLuckBallEntity *entity1 = (HomeLuckBallEntity*)entity;
+   
+    CGFloat height =  ((entity1.max + 1) - entity1.min) % 5  == 0 ? (BuyLuckBallCellHeigth + 40) :BuyLuckBallCellHeigth;
+    if ((entity1.min - 1)  > 10) {
+        height = BuyLuckBallCellHeigth + 40;
+    }
+    return height;
 }
 
 
