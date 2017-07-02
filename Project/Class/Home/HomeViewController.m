@@ -59,9 +59,6 @@
         case HomeSeciton_ScrollPicture:
         row = 1;
         break;
-        case  HomeSeciton_List:
-        row = 1;
-        break;
         case HomeSection_DataBase:
         row = self.model.dataBaseArray.count % 2 == 0 ? self.model.dataBaseArray.count / 2 : (self.model.dataBaseArray.count / 2 + 1);
         break;
@@ -72,6 +69,7 @@
         case HomeSection_ListNews:
         case  HomeSeciton_Banner:
         case  HomeSecitont_Seivice:
+        case  HomeSeciton_List:
         row = 0;
         break;
         
@@ -88,7 +86,7 @@
         height = 160;
         break;
         case  HomeSeciton_List:
-        height = HomeBuyLuckBallCellHeigth;
+        height = 0;
         break;
         case  HomeSection_ListNews:
         case HomeSection_DataBase:
@@ -116,7 +114,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     CGFloat height;
     switch (section) {
-        case  HomeSeciton_List:
         case HomeSection_DataBase:
         height = HomeSectionTitleCellHeight;
         break;
@@ -128,6 +125,7 @@
         case  HomeSecitont_Seivice:
         case  HomeSection_ListNews:
         case  HomeSeciton_Banner:
+        case  HomeSeciton_List:
         {
             height = 0;
         }
@@ -310,31 +308,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-//    switch (indexPath.section) {
-//        case HomeSeciton_ScrollPicture:
-//        case  HomeSeciton_List:
-//        case  HomeSeciton_Banner:
-//        {
-//            BaseWebViewController *webVC = [[BaseWebViewController alloc]init];
-//            [self.navigationController pushViewController:webVC animated:YES];
-//            webVC.webUrl = @"http://cai.163.com/wap/jrjc/index.html?channel=appstore&ver=4.33&idfa=52B1B42D-4EEB-4EA8-9B4A-BACA9DD6894B";
-//            webVC.title = @"竞彩中心";
-//        }
-//        break;
-//        case  HomeSeciton_SectionBanner:
-//        case  HomeSecitont_Seivice:
-//        {
-//            BaseWebViewController *webVC = [[BaseWebViewController alloc]init];
-//            webVC.webUrl = @"https://static.meiqia.com/dist/standalone.html?_=t&eid=60748";
-//            webVC.title = @"客服中心";
-//            [self.navigationController pushViewController:webVC animated:YES];
-//        }
-//        break;
-//        
-//        default:
-//        break;
-//    }
-    
 }
 
 - (void)clickArrowBtn{
@@ -363,7 +336,12 @@
     UIViewController *vc;
     switch (tag) {
         case 0:
-        vc = [[GoodsEvaluationVC alloc]init];
+        {
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"XMGChatingViewController" bundle:nil];
+            XMGChatingViewController *view3 = [storyboard instantiateViewControllerWithIdentifier:@"XMGChatingViewController"];
+        
+            vc = view3;
+        }
         break;
         case 1:
         vc = [[LotteryHelpVC alloc]init];

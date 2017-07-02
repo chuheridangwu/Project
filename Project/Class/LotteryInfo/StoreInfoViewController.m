@@ -7,6 +7,9 @@
 //
 
 #import "StoreInfoViewController.h"
+#import "HomeDataModel.h"
+#import "HomeLuckBallEntity.h"
+#import <SDWebImage/UIButton+WebCache.h>
 
 @interface StoreInfoViewController ()
 @property (nonatomic, strong) UIImageView *iconimage;
@@ -15,6 +18,7 @@
 @property (nonatomic, strong) UIView *listView;
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, strong) UIView *levelView;
+@property (nonatomic, strong) HomeDataModel *model;
 @end
 
 @implementation StoreInfoViewController
@@ -23,7 +27,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"店铺详情";
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -31,8 +35,9 @@
     _contentView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:_contentView];
     
+    _model = [[HomeDataModel alloc]init];
     
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 120)];
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)];
     view.backgroundColor = XBAPPBaseColor;
     [_contentView addSubview:view];
 //    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
@@ -41,7 +46,7 @@
 //    [view addSubview:effectView];
     
     
-    CGFloat imgWidth = 80;
+    CGFloat imgWidth = 60;
     _iconimage = [[UIImageView alloc]initWithFrame:CGRectMake((_contentView.mj_w - imgWidth) / 2, (view.mj_h - imgWidth) / 2, imgWidth,imgWidth)];
     _iconimage.layer.masksToBounds = YES;
     _iconimage.layer.cornerRadius = _iconimage.mj_w / 2;
@@ -103,13 +108,13 @@
     UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, offsetY, _contentView.mj_w, _contentView.mj_h - offsetY)];
     [_contentView addSubview:scrollView];
     
-    CGFloat margin = 5;
+    CGFloat margin = 15;
     NSInteger index = 5;
     CGFloat width = (_contentView.mj_w - margin * (index + 1)) / index;
     CGFloat height = width + 3;
     
-    NSArray *iconArray = @[@"logo_任9场",@"logo_江西时时彩",@"logo_北京单场",@"logo_福彩3D",@"logo_江西时时彩",@"logo_江西时时彩",@"logo_广西快3",@"logo_贵州11选5",@"logo_贵州11选5",@"logo_贵州11选5",@"logo_快乐十分",@"logo_快乐十分",@"logo_快乐十分"];
-    NSInteger count = arc4random()%(iconArray.count) >7 ? arc4random()%(iconArray.count) : 9;
+    NSArray *iconArray = _model.luckArray;
+    NSInteger count = arc4random()%(iconArray.count) >6 ? arc4random()%(iconArray.count) : 9;
     for (int i = 0; i < count; i++) {
         CGFloat row = i % index;
         CGFloat col = i / index;
@@ -118,8 +123,11 @@
         UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(x, y, width, height)];
         [scrollView addSubview:btn];
         
-        [btn setBackgroundImage:[UIImage imageNamed:iconArray[i]] forState:UIControlStateNormal];
-        //        [btn setTitle:entity.shop.nameArray[i] forState:UIControlStateNormal];
+        HomeLuckBallEntity *entity = iconArray[i];
+        
+        //        [btn sd_setImageWithURL:[NSURL URLWithString:entity.iconName] forState:UIControlStateNormal];
+        [btn setBackgroundImage:[UIImage imageNamed:entity.iconName] forState:UIControlStateNormal];
+//        [btn setTitle:entity.name forState:UIControlStateNormal];
         //        [btn setTitleColor:XBAPPBaseColor forState:UIControlStateNormal];
         //        btn.titleLabel.font = [UIFont systemFontOfSize:12];
         [btn buttonImageTitleAlignment:topImageBottomTitle WithSpace:0];

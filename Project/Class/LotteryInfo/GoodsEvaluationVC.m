@@ -9,7 +9,10 @@
 #import "GoodsEvaluationVC.h"
 #import "GAGoodsCeverScrollView.h"
 #import "StoreViewController.h"
+#import "StoreInfoViewController.h"
+#import "XBNavigationController.h"
 
+#import "GAGoodsEvaEntity.h"
 #import "GoodsEvaModel.h"
 #import "ShopInfoView.h"
 #import "GAGoodsEvationCell.h"
@@ -21,6 +24,9 @@
 @property (nonatomic,strong)GoodsEvaModel *GAEvaModel;
 @property (nonatomic,strong) RFSegmentView * segmentControl;
 @property (nonatomic,strong)StoreViewController *storeVC;
+
+@property (nonatomic,strong)UIViewController *disMissVC;
+
 @end
 
 @implementation GoodsEvaluationVC
@@ -71,9 +77,22 @@
 }
 
 - (void)clickShopView:(GAGoodsEvaEntity *)entity{
-    [[ShopInfoView shareShopInfoView] showWithShopInfo:entity];
+//    [[ShopInfoView shareShopInfoView] showWithShopInfo:entity];
+    
+    StoreInfoViewController *storeInfoVC = [[StoreInfoViewController alloc]init];
+    storeInfoVC.shopName = entity.shop.shopName;
+    storeInfoVC.iconName = entity.shop.shopIcom;
+    storeInfoVC.time = entity.shop.time;
+    XBNavigationController *navVC = [[XBNavigationController alloc]initWithRootViewController:storeInfoVC];
+    
+    [self presentViewController:navVC animated:YES completion:nil];
+    storeInfoVC.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"取消"  style:UIBarButtonItemStylePlain target:self action:@selector(clickCloseVC)];
+    self.disMissVC = storeInfoVC;
 }
 
+- (void)clickCloseVC{
+    [self.disMissVC dismissViewControllerAnimated:YES completion:nil];
+}
 - (void)requestNetWorkSuccess:(id)outcome{
     [super requestNetWorkSuccess:outcome];
     

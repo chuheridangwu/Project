@@ -22,6 +22,8 @@
 #import "LotteryHelpVC.h"
 #import "BuyLuckBallViewController.h"
 #import "MoreViewController.h"
+#import "XMGChatingViewController.h"
+
 
 
 #import "HomeTopPhotoCell.h"
@@ -35,8 +37,8 @@ enum{
     HomeSeciton_ScrollPicture = 0, //轮播图
     HomeSection_Circle,//跑马灯
     HomeSeciton_SectionBanner,
-    HomeSeciton_List,
     HomeSection_DataBase, // 资料库
+    HomeSeciton_List,
     HomeSeciton_Banner,
     HomeSection_ListNews, //体育新闻
     HomeSecitont_Seivice,

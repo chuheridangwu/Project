@@ -90,6 +90,13 @@
 		303C65231F0901F6008D806C /* DLScrollTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C65191F0901F6008D806C /* DLScrollTabbarView.m */; };
 		303C65241F0901F6008D806C /* DLTabedSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C651C1F0901F6008D806C /* DLTabedSlideView.m */; };
 		303C65251F0901F6008D806C /* DLUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C651E1F0901F6008D806C /* DLUtility.m */; };
+		303C65311F092C81008D806C /* XMGChatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C65281F092C81008D806C /* XMGChatingViewController.m */; };
+		303C65321F092C81008D806C /* XMGMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C652A1F092C81008D806C /* XMGMeCell.m */; };
+		303C65331F092C81008D806C /* XMGMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C652C1F092C81008D806C /* XMGMessage.m */; };
+		303C65341F092C81008D806C /* XMGMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C652E1F092C81008D806C /* XMGMessageCell.m */; };
+		303C65351F092C81008D806C /* XMGOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C65301F092C81008D806C /* XMGOtherCell.m */; };
+		303C65371F092DA7008D806C /* messages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 303C65361F092DA7008D806C /* messages.plist */; };
+		303C653D1F092E79008D806C /* XMGChatingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 303C653C1F092E79008D806C /* XMGChatingViewController.storyboard */; };
 		3053DF081EE8F84300552AF8 /* HomeListSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053DF071EE8F84300552AF8 /* HomeListSectionCell.m */; };
 		3053DF0A1EE91E1400552AF8 /* HomeHtmlLIst.json in Resources */ = {isa = PBXBuildFile; fileRef = 3053DF091EE91E1400552AF8 /* HomeHtmlLIst.json */; };
 		3053DF0D1EE91E6500552AF8 /* HomeDataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053DF0C1EE91E6500552AF8 /* HomeDataEntity.m */; };
@@ -328,6 +335,18 @@
 		303C651C1F0901F6008D806C /* DLTabedSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTabedSlideView.m; sourceTree = "<group>"; };
 		303C651D1F0901F6008D806C /* DLUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLUtility.h; sourceTree = "<group>"; };
 		303C651E1F0901F6008D806C /* DLUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLUtility.m; sourceTree = "<group>"; };
+		303C65271F092C81008D806C /* XMGChatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGChatingViewController.h; sourceTree = "<group>"; };
+		303C65281F092C81008D806C /* XMGChatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGChatingViewController.m; sourceTree = "<group>"; };
+		303C65291F092C81008D806C /* XMGMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeCell.h; sourceTree = "<group>"; };
+		303C652A1F092C81008D806C /* XMGMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeCell.m; sourceTree = "<group>"; };
+		303C652B1F092C81008D806C /* XMGMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMessage.h; sourceTree = "<group>"; };
+		303C652C1F092C81008D806C /* XMGMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMessage.m; sourceTree = "<group>"; };
+		303C652D1F092C81008D806C /* XMGMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMessageCell.h; sourceTree = "<group>"; };
+		303C652E1F092C81008D806C /* XMGMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMessageCell.m; sourceTree = "<group>"; };
+		303C652F1F092C81008D806C /* XMGOtherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGOtherCell.h; sourceTree = "<group>"; };
+		303C65301F092C81008D806C /* XMGOtherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGOtherCell.m; sourceTree = "<group>"; };
+		303C65361F092DA7008D806C /* messages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = messages.plist; sourceTree = "<group>"; };
+		303C653C1F092E79008D806C /* XMGChatingViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XMGChatingViewController.storyboard; sourceTree = "<group>"; };
 		3053DF051EE8DD4D00552AF8 /* HomeVCHeard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVCHeard.h; sourceTree = "<group>"; };
 		3053DF061EE8F84300552AF8 /* HomeListSectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeListSectionCell.h; sourceTree = "<group>"; };
 		3053DF071EE8F84300552AF8 /* HomeListSectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeListSectionCell.m; sourceTree = "<group>"; };
@@ -848,6 +867,26 @@
 			path = DLTabbarView;
 			sourceTree = "<group>";
 		};
+		303C65261F092BEC008D806C /* ServiceVC */ = {
+			isa = PBXGroup;
+			children = (
+				303C65361F092DA7008D806C /* messages.plist */,
+				303C65271F092C81008D806C /* XMGChatingViewController.h */,
+				303C65281F092C81008D806C /* XMGChatingViewController.m */,
+				303C653C1F092E79008D806C /* XMGChatingViewController.storyboard */,
+				303C65291F092C81008D806C /* XMGMeCell.h */,
+				303C652A1F092C81008D806C /* XMGMeCell.m */,
+				303C652B1F092C81008D806C /* XMGMessage.h */,
+				303C652C1F092C81008D806C /* XMGMessage.m */,
+				303C652D1F092C81008D806C /* XMGMessageCell.h */,
+				303C652E1F092C81008D806C /* XMGMessageCell.m */,
+				303C652F1F092C81008D806C /* XMGOtherCell.h */,
+				303C65301F092C81008D806C /* XMGOtherCell.m */,
+			);
+			name = ServiceVC;
+			path = Service;
+			sourceTree = "<group>";
+		};
 		3053DF191EE95B6600552AF8 /* Found */ = {
 			isa = PBXGroup;
 			children = (
@@ -956,6 +995,7 @@
 				30CD79F61F03A25900BF4A11 /* BuyLuckBallViewController.m */,
 				30CD79FE1F03AC1200BF4A11 /* MoreViewController.h */,
 				30CD79FF1F03AC1200BF4A11 /* MoreViewController.m */,
+				303C65261F092BEC008D806C /* ServiceVC */,
 				30F27B191EEBDB5E0005FF16 /* BaseDataVC */,
 				301EB4A31EE81CC00081F1D1 /* Model */,
 				301EB4A21EE81CB90081F1D1 /* View */,
@@ -1383,6 +1423,7 @@
 				3053DF0A1EE91E1400552AF8 /* HomeHtmlLIst.json in Resources */,
 				30F27B131EEBD6D40005FF16 /* HomeDataBase.json in Resources */,
 				301EB48D1EE80EC60081F1D1 /* helpGroupBuy.html in Resources */,
+				303C65371F092DA7008D806C /* messages.plist in Resources */,
 				301EB4851EE80EC60081F1D1 /* bjdc_howto.html in Resources */,
 				30E7AD211EE45F5B000609DB /* LaunchScreen.storyboard in Resources */,
 				301EB49B1EE80EC60081F1D1 /* rule.css in Resources */,
@@ -1392,6 +1433,7 @@
 				30774C411F000CC10001C77A /* course_10.html in Resources */,
 				3055926D1EE4F9DF00864E6E /* Images.xcassets in Resources */,
 				30774C421F000CC10001C77A /* course_11.html in Resources */,
+				303C653D1F092E79008D806C /* XMGChatingViewController.storyboard in Resources */,
 				30B0F5981EF6257A008AC7E6 /* AccountViewController.xib in Resources */,
 				30E8F61C1EFB730000103942 /* ShopLive.json in Resources */,
 				30774C4B1F000CC10001C77A /* course_32.html in Resources */,
@@ -1514,8 +1556,10 @@
 				3053DF081EE8F84300552AF8 /* HomeListSectionCell.m in Sources */,
 				301F6B141EE8420200B8443F /* XBScrollViewPhoto.m in Sources */,
 				3053DF0D1EE91E6500552AF8 /* HomeDataEntity.m in Sources */,
+				303C65351F092C81008D806C /* XMGOtherCell.m in Sources */,
 				30263D4A1EE6340B007B30C8 /* XBBaseTableViewVC.m in Sources */,
 				30263D531EE63556007B30C8 /* XBSettingCell.m in Sources */,
+				303C65331F092C81008D806C /* XMGMessage.m in Sources */,
 				303C64041F08BAAB008D806C /* UserSettingImageCell.m in Sources */,
 				301EB3EC1EE80B680081F1D1 /* XBHtmlItem.m in Sources */,
 				30263D5F1EE63816007B30C8 /* UIImage+image.m in Sources */,
@@ -1552,6 +1596,7 @@
 				30E8F61A1EFB70EB00103942 /* GoodsEvaModel.m in Sources */,
 				30A988681EE556F100D04924 /* PersonViewController.m in Sources */,
 				3072F6191F01F60000170C95 /* StoreTableViewCell.m in Sources */,
+				303C65311F092C81008D806C /* XMGChatingViewController.m in Sources */,
 				30D601C81EE6E3B700A70B93 /* UIColor+Color.m in Sources */,
 				303C65241F0901F6008D806C /* DLTabedSlideView.m in Sources */,
 				30263D591EE635ED007B30C8 /* XBArrowSettingItem.m in Sources */,
@@ -1560,9 +1605,11 @@
 				303C64161F08CD51008D806C /* NameViewController.m in Sources */,
 				30C728C11EE7DFD200CAD4C0 /* HeardView.m in Sources */,
 				30C728BF1EE7DFD200CAD4C0 /* ContentView.m in Sources */,
+				303C65341F092C81008D806C /* XMGMessageCell.m in Sources */,
 				30B0F5881EF620E6008AC7E6 /* UIView+Extension.m in Sources */,
 				30DF95151EE6AA77000261C8 /* DisContentEntity.m in Sources */,
 				301EB3E01EE800120081F1D1 /* LotteryNoticeVC.m in Sources */,
+				303C65321F092C81008D806C /* XMGMeCell.m in Sources */,
 				30A41DCF1F009C890051FAF7 /* UIButton+XBAlignment.m in Sources */,
 				303C64011F08B6B3008D806C /* UserSettingController.m in Sources */,
 				3072F6271F025D6B00170C95 /* HomeBuyLuckBallCell.m in Sources */,

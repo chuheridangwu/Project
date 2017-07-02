@@ -9,6 +9,10 @@
 #import "StoreViewController.h"
 #import "StoreInfoViewController.h"
 #import "XBNavigationController.h"
+#import "MoreViewController.h"
+
+#import "HomeDataModel.h"
+
 #import "StoreEntity.h"
 #import "StoreTableViewCell.h"
 
@@ -24,6 +28,8 @@
 @property (nonatomic,assign)CLLocationCoordinate2D destinationCoordinate2D;
 @property (nonatomic,strong)UIAlertController *alert;
 @property (nonatomic,assign)NSInteger index;
+@property (nonatomic,strong)UIViewController *disMissVC;
+
 @end
 
 @implementation StoreViewController
@@ -52,16 +58,22 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-   StoreInfoViewController *storeInfo =  [[StoreInfoViewController alloc]init];
-    XBNavigationController *navVC = [[XBNavigationController  alloc]initWithRootViewController:storeInfo];
+
+    HomeDataModel *model = [[HomeDataModel alloc]init];
+    MoreViewController *moreVC = [[MoreViewController alloc]init];
+    moreVC.array = model.luckArray;
+    XBNavigationController *navVC = [[XBNavigationController alloc]initWithRootViewController:moreVC];
+
     [self presentViewController:navVC animated:YES completion:nil];
-    StoreEntity *entity = self.dataList[indexPath.row];
-    storeInfo.iconName = entity.shopIcom;
-     storeInfo.shopName = entity.shopName;
-    
-    NSArray *array = @[@"9:00 ~ 14:00",@"7:00 ~ 19:00",@"8:40 ~ 19:00",@"8:00 ~ 24:00",@"10:00 ~ 22:00",@"9:00 ~ 19:00",@"7:00 ~ 16:00",@"7:30 ~ 19:00",@"8:20 ~ 22:00",@"9:00 ~ 21:00",@"8:00 ~ 14:00"];
-    storeInfo.time = array[arc4random()%11];
+    moreVC.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"取消"  style:UIBarButtonItemStylePlain target:self action:@selector(clickCloseVC)];
+    self.disMissVC = moreVC;
 }
+
+- (void)clickCloseVC{
+    [self.disMissVC dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 
 - (void)getLocation{
     
