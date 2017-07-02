@@ -36,7 +36,6 @@
     [self.view addSubview:loginVC.view];
     [self addChildViewController:loginVC];
     loginVC.myBlock = ^(){
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"帮助" style:UIBarButtonItemStylePlain target:self action:@selector(clickRightBtn)];
         [loginVC removeFromParentViewController];
         [loginVC.view removeFromSuperview];
     };

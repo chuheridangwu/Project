@@ -137,12 +137,20 @@
 - (IBAction)login:(UIButton *)sender {
     
     if ([self checkUserInfo] && [self.telTextField.text isEqualToString:@"13688886666"] && [self.passWordTextField.text isEqualToString:@"123456"]) {
-        [XBUITool showRmindView:@"登录成功"];
-
-        [self dismissViewControllerAnimated:YES completion:nil];
-        if (self.myBlock) {
-            self.myBlock();
-        }
+        [XBRequestNetTool post:@"http://mapi.yjcp.com/api/gain/tenawardinfo?lotId=33&pageNum=1&sid=31000000000" params:nil success:^(id responseObj) {
+            sleep(0.5);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [XBUITool showRmindView:@"登录成功"];
+                
+                [self dismissViewControllerAnimated:YES completion:nil];
+                if (self.myBlock) {
+                    self.myBlock();
+                }
+            });
+        } failure:^(NSError *error) {
+            
+        }];
+   
     }else{
         [XBUITool showRmindView:@"请输入正确的账号密码"];
     }
