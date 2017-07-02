@@ -83,6 +83,13 @@
 		303C64D61F08E71A008D806C /* ProductView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64D51F08E71A008D806C /* ProductView.m */; };
 		303C64D91F08EDB7008D806C /* RechargeHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64D81F08EDB7008D806C /* RechargeHistoryViewController.m */; };
 		303C64F61F08F357008D806C /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64F51F08F357008D806C /* BuyViewController.m */; };
+		303C651F1F0901F6008D806C /* DLLRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C65101F0901F6008D806C /* DLLRUCache.m */; };
+		303C65201F0901F6008D806C /* DLCustomSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C65121F0901F6008D806C /* DLCustomSlideView.m */; };
+		303C65211F0901F6008D806C /* DLSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C65141F0901F6008D806C /* DLSlideView.m */; };
+		303C65221F0901F6008D806C /* DLFixedTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C65171F0901F6008D806C /* DLFixedTabbarView.m */; };
+		303C65231F0901F6008D806C /* DLScrollTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C65191F0901F6008D806C /* DLScrollTabbarView.m */; };
+		303C65241F0901F6008D806C /* DLTabedSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C651C1F0901F6008D806C /* DLTabedSlideView.m */; };
+		303C65251F0901F6008D806C /* DLUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C651E1F0901F6008D806C /* DLUtility.m */; };
 		3053DF081EE8F84300552AF8 /* HomeListSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053DF071EE8F84300552AF8 /* HomeListSectionCell.m */; };
 		3053DF0A1EE91E1400552AF8 /* HomeHtmlLIst.json in Resources */ = {isa = PBXBuildFile; fileRef = 3053DF091EE91E1400552AF8 /* HomeHtmlLIst.json */; };
 		3053DF0D1EE91E6500552AF8 /* HomeDataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053DF0C1EE91E6500552AF8 /* HomeDataEntity.m */; };
@@ -305,6 +312,22 @@
 		303C64D81F08EDB7008D806C /* RechargeHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeHistoryViewController.m; sourceTree = "<group>"; };
 		303C64F41F08F357008D806C /* BuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyViewController.h; sourceTree = "<group>"; };
 		303C64F51F08F357008D806C /* BuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyViewController.m; sourceTree = "<group>"; };
+		303C650E1F0901F6008D806C /* DLCacheProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLCacheProtocol.h; sourceTree = "<group>"; };
+		303C650F1F0901F6008D806C /* DLLRUCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLRUCache.h; sourceTree = "<group>"; };
+		303C65101F0901F6008D806C /* DLLRUCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLRUCache.m; sourceTree = "<group>"; };
+		303C65111F0901F6008D806C /* DLCustomSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLCustomSlideView.h; sourceTree = "<group>"; };
+		303C65121F0901F6008D806C /* DLCustomSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLCustomSlideView.m; sourceTree = "<group>"; };
+		303C65131F0901F6008D806C /* DLSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSlideView.h; sourceTree = "<group>"; };
+		303C65141F0901F6008D806C /* DLSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSlideView.m; sourceTree = "<group>"; };
+		303C65161F0901F6008D806C /* DLFixedTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLFixedTabbarView.h; sourceTree = "<group>"; };
+		303C65171F0901F6008D806C /* DLFixedTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFixedTabbarView.m; sourceTree = "<group>"; };
+		303C65181F0901F6008D806C /* DLScrollTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLScrollTabbarView.h; sourceTree = "<group>"; };
+		303C65191F0901F6008D806C /* DLScrollTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLScrollTabbarView.m; sourceTree = "<group>"; };
+		303C651A1F0901F6008D806C /* DLSlideTabbarProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSlideTabbarProtocol.h; sourceTree = "<group>"; };
+		303C651B1F0901F6008D806C /* DLTabedSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTabedSlideView.h; sourceTree = "<group>"; };
+		303C651C1F0901F6008D806C /* DLTabedSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTabedSlideView.m; sourceTree = "<group>"; };
+		303C651D1F0901F6008D806C /* DLUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLUtility.h; sourceTree = "<group>"; };
+		303C651E1F0901F6008D806C /* DLUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLUtility.m; sourceTree = "<group>"; };
 		3053DF051EE8DD4D00552AF8 /* HomeVCHeard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVCHeard.h; sourceTree = "<group>"; };
 		3053DF061EE8F84300552AF8 /* HomeListSectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeListSectionCell.h; sourceTree = "<group>"; };
 		3053DF071EE8F84300552AF8 /* HomeListSectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeListSectionCell.m; sourceTree = "<group>"; };
@@ -709,6 +732,7 @@
 		30263D5A1EE637A4007B30C8 /* Othre */ = {
 			isa = PBXGroup;
 			children = (
+				303C650C1F0901F6008D806C /* DLSlideView */,
 				303C64BE1F08DE75008D806C /* libs */,
 				30263D5C1EE637DB007B30C8 /* Category */,
 			);
@@ -783,6 +807,45 @@
 				303C64C91F08DE75008D806C /* libFuqianlaSupport.a */,
 			);
 			path = support;
+			sourceTree = "<group>";
+		};
+		303C650C1F0901F6008D806C /* DLSlideView */ = {
+			isa = PBXGroup;
+			children = (
+				303C650D1F0901F6008D806C /* DLCache */,
+				303C65111F0901F6008D806C /* DLCustomSlideView.h */,
+				303C65121F0901F6008D806C /* DLCustomSlideView.m */,
+				303C65131F0901F6008D806C /* DLSlideView.h */,
+				303C65141F0901F6008D806C /* DLSlideView.m */,
+				303C65151F0901F6008D806C /* DLTabbarView */,
+				303C651B1F0901F6008D806C /* DLTabedSlideView.h */,
+				303C651C1F0901F6008D806C /* DLTabedSlideView.m */,
+				303C651D1F0901F6008D806C /* DLUtility.h */,
+				303C651E1F0901F6008D806C /* DLUtility.m */,
+			);
+			path = DLSlideView;
+			sourceTree = "<group>";
+		};
+		303C650D1F0901F6008D806C /* DLCache */ = {
+			isa = PBXGroup;
+			children = (
+				303C650E1F0901F6008D806C /* DLCacheProtocol.h */,
+				303C650F1F0901F6008D806C /* DLLRUCache.h */,
+				303C65101F0901F6008D806C /* DLLRUCache.m */,
+			);
+			path = DLCache;
+			sourceTree = "<group>";
+		};
+		303C65151F0901F6008D806C /* DLTabbarView */ = {
+			isa = PBXGroup;
+			children = (
+				303C65161F0901F6008D806C /* DLFixedTabbarView.h */,
+				303C65171F0901F6008D806C /* DLFixedTabbarView.m */,
+				303C65181F0901F6008D806C /* DLScrollTabbarView.h */,
+				303C65191F0901F6008D806C /* DLScrollTabbarView.m */,
+				303C651A1F0901F6008D806C /* DLSlideTabbarProtocol.h */,
+			);
+			path = DLTabbarView;
 			sourceTree = "<group>";
 		};
 		3053DF191EE95B6600552AF8 /* Found */ = {
@@ -1457,6 +1520,7 @@
 				301EB3EC1EE80B680081F1D1 /* XBHtmlItem.m in Sources */,
 				30263D5F1EE63816007B30C8 /* UIImage+image.m in Sources */,
 				30B0F5701EF61A0A008AC7E6 /* NSString+Helper.m in Sources */,
+				303C65201F0901F6008D806C /* DLCustomSlideView.m in Sources */,
 				30A988B61EE57F8E00D04924 /* XBRequestNetTool.m in Sources */,
 				30C728C41EE7E7AE00CAD4C0 /* MessageViewController.m in Sources */,
 				30B0F5A21EF64DD8008AC7E6 /* PersoninfoCell.m in Sources */,
@@ -1465,7 +1529,9 @@
 				3053DF181EE94DC300552AF8 /* HomeSectionTitleCell.m in Sources */,
 				301EB3E91EE80B1D0081F1D1 /* LotteryHelpContentVC.m in Sources */,
 				30A41DDF1F00EC420051FAF7 /* StoreViewController.m in Sources */,
+				303C65221F0901F6008D806C /* DLFixedTabbarView.m in Sources */,
 				3053DF101EE91F4000552AF8 /* HomeDataModel.m in Sources */,
+				303C65211F0901F6008D806C /* DLSlideView.m in Sources */,
 				30C728C71EE7EAD900CAD4C0 /* AboutViewController.m in Sources */,
 				303C64F61F08F357008D806C /* BuyViewController.m in Sources */,
 				306EFFBE1EEE2BF90000D41F /* UIView+Render.m in Sources */,
@@ -1473,6 +1539,7 @@
 				30DF95091EE646CE000261C8 /* XBRequestModel.m in Sources */,
 				30C728B41EE7DFC900CAD4C0 /* ContinueView.m in Sources */,
 				30A9885C1EE5568800D04924 /* XBNavigationController.m in Sources */,
+				303C65231F0901F6008D806C /* DLScrollTabbarView.m in Sources */,
 				30C728B01EE7DF8D00CAD4C0 /* GameViewController.m in Sources */,
 				30A41DDC1F00E9770051FAF7 /* RFSegmentView.m in Sources */,
 				301F6B131EE8420200B8443F /* XBScrollViewLabel.m in Sources */,
@@ -1486,6 +1553,7 @@
 				30A988681EE556F100D04924 /* PersonViewController.m in Sources */,
 				3072F6191F01F60000170C95 /* StoreTableViewCell.m in Sources */,
 				30D601C81EE6E3B700A70B93 /* UIColor+Color.m in Sources */,
+				303C65241F0901F6008D806C /* DLTabedSlideView.m in Sources */,
 				30263D591EE635ED007B30C8 /* XBArrowSettingItem.m in Sources */,
 				30B0F5971EF6257A008AC7E6 /* AccountViewController.m in Sources */,
 				303C640D1F08C50B008D806C /* UIColor+WX.m in Sources */,
@@ -1508,6 +1576,7 @@
 				30DF95231EE6BAE8000261C8 /* XBTabBarButton.m in Sources */,
 				30A988701EE562B600D04924 /* BaseWebViewController.m in Sources */,
 				30B0F59D1EF6257A008AC7E6 /* RegistViewController.m in Sources */,
+				303C65251F0901F6008D806C /* DLUtility.m in Sources */,
 				30DF95191EE6B1BC000261C8 /* DisContentCell.m in Sources */,
 				30A988651EE556E400D04924 /* DisViewController.m in Sources */,
 				30C728BE1EE7DFD200CAD4C0 /* BottonView.m in Sources */,
@@ -1525,6 +1594,7 @@
 				30A988621EE556C000D04924 /* BaseViewController.m in Sources */,
 				30263D501EE634F9007B30C8 /* XBSettingItem.m in Sources */,
 				30CD7A001F03AC1200BF4A11 /* MoreViewController.m in Sources */,
+				303C651F1F0901F6008D806C /* DLLRUCache.m in Sources */,
 				303C64131F08C985008D806C /* UserSettingInfoCell.m in Sources */,
 				30263D4D1EE634B1007B30C8 /* XBSettingGroup.m in Sources */,
 				30A9885F1EE556A100D04924 /* HomeViewController.m in Sources */,
