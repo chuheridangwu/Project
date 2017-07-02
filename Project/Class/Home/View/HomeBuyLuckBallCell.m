@@ -16,7 +16,7 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
         self.contentView.mj_h = HomeBuyLuckBallCellHeigth;
-        self.mj_w = SCREEN_WIDTH;
+        self.contentView.mj_w = SCREEN_WIDTH;
         
         
         
