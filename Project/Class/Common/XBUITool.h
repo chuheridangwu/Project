@@ -15,4 +15,7 @@
 //当前系统版本号
 +(NSString*)currentVersion;
 
+//模拟网络请求
++ (void)asRequestNetWork:(void(^)())success;
+
 @end

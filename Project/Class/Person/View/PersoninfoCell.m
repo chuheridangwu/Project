@@ -12,7 +12,7 @@
 @property (nonatomic,strong)UILabel *nameL;
 @property (nonatomic,strong)UILabel *userID;
 @property (nonatomic,strong)UILabel *phoneL;
-@property (nonatomic,strong)UIImageView *imgView;
+@property (nonatomic,strong)UIButton *imgView;
 @property (nonatomic,strong)UIImageView *leavenImg;
 
 @end
@@ -52,6 +52,10 @@
             make.height.equalTo(20);
         }];
         
+        
+//        UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(clickUserImg)];
+//        [_imgView addGestureRecognizer:pan];
+        
 //        [_phoneL mas_makeConstraints:^(MASConstraintMaker *make) {
 //            make.left.equalTo(_imgView.right).offset(5);
 //            make.right.offset(-5);
@@ -67,6 +71,10 @@
     return self;
 }
 
+- (void)clickUserImg{
+    [self.delegate clickImgView];
+}
+
 - (void)layoutSubviews{
     [super layoutSubviews];
     [self.contentView setNeedsLayout];
@@ -76,9 +84,12 @@
     self.imgView.layer.cornerRadius = self.imgView.mj_w / 2;
 }
 
-- (UIImageView*)imgView{
+- (UIButton*)imgView{
     if (!_imgView) {
-        _imgView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"timg"]];
+        _imgView = [[UIButton alloc]init];
+        [_imgView setBackgroundImage:[UIImage imageNamed:@"timg"] forState:UIControlStateNormal];
+        _imgView.userInteractionEnabled = YES;
+        [_imgView addTarget:self action:@selector(clickUserImg) forControlEvents:UIControlEventTouchDown];
     }
     return _imgView;
 }
@@ -120,6 +131,7 @@ _userID.text = @"ID: 1102233";
 - (UIImageView*)leavenImg{
     if (!_leavenImg) {
         _leavenImg = [[UIImageView alloc]init];
+        _leavenImg.userInteractionEnabled = YES;
     }
     return _leavenImg;
 }

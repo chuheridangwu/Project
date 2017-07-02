@@ -26,11 +26,13 @@
 #import "XBRequestNetTool.h"
 #import "XBUITool.h"
 
+#import "UIColor+WX.h"
 #import "UIColor+Color.h"
 #import "UIImage+image.h"
 #import "UIView+Render.h"
 #import "NSString+Helper.h"
 #import "UIView+Extension.h"
+#import "UIImage+CH.h"
 #import "UIButton+XBAlignment.h"
 
 

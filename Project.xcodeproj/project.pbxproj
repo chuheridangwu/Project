@@ -54,6 +54,12 @@
 		30263D591EE635ED007B30C8 /* XBArrowSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 30263D581EE635ED007B30C8 /* XBArrowSettingItem.m */; };
 		30263D5F1EE63816007B30C8 /* UIImage+image.m in Sources */ = {isa = PBXBuildFile; fileRef = 30263D5E1EE63816007B30C8 /* UIImage+image.m */; };
 		30263D621EE63BD5007B30C8 /* XBUITool.m in Sources */ = {isa = PBXBuildFile; fileRef = 30263D611EE63BD5007B30C8 /* XBUITool.m */; };
+		303C64011F08B6B3008D806C /* UserSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64001F08B6B3008D806C /* UserSettingController.m */; };
+		303C64041F08BAAB008D806C /* UserSettingImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64031F08BAAB008D806C /* UserSettingImageCell.m */; };
+		303C640D1F08C50B008D806C /* UIColor+WX.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C640C1F08C50B008D806C /* UIColor+WX.m */; };
+		303C64101F08C6EC008D806C /* UIImage+CH.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C640F1F08C6EC008D806C /* UIImage+CH.m */; };
+		303C64131F08C985008D806C /* UserSettingInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64121F08C985008D806C /* UserSettingInfoCell.m */; };
+		303C64161F08CD51008D806C /* NameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64151F08CD51008D806C /* NameViewController.m */; };
 		3053DF081EE8F84300552AF8 /* HomeListSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053DF071EE8F84300552AF8 /* HomeListSectionCell.m */; };
 		3053DF0A1EE91E1400552AF8 /* HomeHtmlLIst.json in Resources */ = {isa = PBXBuildFile; fileRef = 3053DF091EE91E1400552AF8 /* HomeHtmlLIst.json */; };
 		3053DF0D1EE91E6500552AF8 /* HomeDataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053DF0C1EE91E6500552AF8 /* HomeDataEntity.m */; };
@@ -235,6 +241,18 @@
 		30263D5E1EE63816007B30C8 /* UIImage+image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+image.m"; sourceTree = "<group>"; };
 		30263D601EE63BD5007B30C8 /* XBUITool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBUITool.h; sourceTree = "<group>"; };
 		30263D611EE63BD5007B30C8 /* XBUITool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBUITool.m; sourceTree = "<group>"; };
+		303C63FF1F08B6B3008D806C /* UserSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettingController.h; sourceTree = "<group>"; };
+		303C64001F08B6B3008D806C /* UserSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettingController.m; sourceTree = "<group>"; };
+		303C64021F08BAAB008D806C /* UserSettingImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettingImageCell.h; sourceTree = "<group>"; };
+		303C64031F08BAAB008D806C /* UserSettingImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettingImageCell.m; sourceTree = "<group>"; };
+		303C640B1F08C50B008D806C /* UIColor+WX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WX.h"; sourceTree = "<group>"; };
+		303C640C1F08C50B008D806C /* UIColor+WX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WX.m"; sourceTree = "<group>"; };
+		303C640E1F08C6EC008D806C /* UIImage+CH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CH.h"; sourceTree = "<group>"; };
+		303C640F1F08C6EC008D806C /* UIImage+CH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CH.m"; sourceTree = "<group>"; };
+		303C64111F08C985008D806C /* UserSettingInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSettingInfoCell.h; path = ../UserSettingInfoCell.h; sourceTree = "<group>"; };
+		303C64121F08C985008D806C /* UserSettingInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSettingInfoCell.m; path = ../UserSettingInfoCell.m; sourceTree = "<group>"; };
+		303C64141F08CD51008D806C /* NameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameViewController.h; sourceTree = "<group>"; };
+		303C64151F08CD51008D806C /* NameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameViewController.m; sourceTree = "<group>"; };
 		3053DF051EE8DD4D00552AF8 /* HomeVCHeard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVCHeard.h; sourceTree = "<group>"; };
 		3053DF061EE8F84300552AF8 /* HomeListSectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeListSectionCell.h; sourceTree = "<group>"; };
 		3053DF071EE8F84300552AF8 /* HomeListSectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeListSectionCell.m; sourceTree = "<group>"; };
@@ -624,6 +642,10 @@
 				30263D5E1EE63816007B30C8 /* UIImage+image.m */,
 				30D601C61EE6E3B700A70B93 /* UIColor+Color.h */,
 				30D601C71EE6E3B700A70B93 /* UIColor+Color.m */,
+				303C640E1F08C6EC008D806C /* UIImage+CH.h */,
+				303C640F1F08C6EC008D806C /* UIImage+CH.m */,
+				303C640B1F08C50B008D806C /* UIColor+WX.h */,
+				303C640C1F08C50B008D806C /* UIColor+WX.m */,
 				306EFFBC1EEE2BF90000D41F /* UIView+Render.h */,
 				306EFFBD1EEE2BF90000D41F /* UIView+Render.m */,
 				30B0F56E1EF61A0A008AC7E6 /* NSString+Helper.h */,
@@ -755,6 +777,10 @@
 				30A988671EE556F100D04924 /* PersonViewController.m */,
 				30C728C21EE7E7AE00CAD4C0 /* MessageViewController.h */,
 				30C728C31EE7E7AE00CAD4C0 /* MessageViewController.m */,
+				303C63FF1F08B6B3008D806C /* UserSettingController.h */,
+				303C64001F08B6B3008D806C /* UserSettingController.m */,
+				303C64141F08CD51008D806C /* NameViewController.h */,
+				303C64151F08CD51008D806C /* NameViewController.m */,
 				30C728C51EE7EAD900CAD4C0 /* AboutViewController.h */,
 				30C728C61EE7EAD900CAD4C0 /* AboutViewController.m */,
 				30B0F59F1EF64DB0008AC7E6 /* View */,
@@ -843,6 +869,10 @@
 			children = (
 				30B0F5A01EF64DD8008AC7E6 /* PersoninfoCell.h */,
 				30B0F5A11EF64DD8008AC7E6 /* PersoninfoCell.m */,
+				303C64021F08BAAB008D806C /* UserSettingImageCell.h */,
+				303C64031F08BAAB008D806C /* UserSettingImageCell.m */,
+				303C64111F08C985008D806C /* UserSettingInfoCell.h */,
+				303C64121F08C985008D806C /* UserSettingInfoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1282,6 +1312,7 @@
 				3053DF0D1EE91E6500552AF8 /* HomeDataEntity.m in Sources */,
 				30263D4A1EE6340B007B30C8 /* XBBaseTableViewVC.m in Sources */,
 				30263D531EE63556007B30C8 /* XBSettingCell.m in Sources */,
+				303C64041F08BAAB008D806C /* UserSettingImageCell.m in Sources */,
 				301EB3EC1EE80B680081F1D1 /* XBHtmlItem.m in Sources */,
 				30263D5F1EE63816007B30C8 /* UIImage+image.m in Sources */,
 				30B0F5701EF61A0A008AC7E6 /* NSString+Helper.m in Sources */,
@@ -1314,12 +1345,15 @@
 				30D601C81EE6E3B700A70B93 /* UIColor+Color.m in Sources */,
 				30263D591EE635ED007B30C8 /* XBArrowSettingItem.m in Sources */,
 				30B0F5971EF6257A008AC7E6 /* AccountViewController.m in Sources */,
+				303C640D1F08C50B008D806C /* UIColor+WX.m in Sources */,
+				303C64161F08CD51008D806C /* NameViewController.m in Sources */,
 				30C728C11EE7DFD200CAD4C0 /* HeardView.m in Sources */,
 				30C728BF1EE7DFD200CAD4C0 /* ContentView.m in Sources */,
 				30B0F5881EF620E6008AC7E6 /* UIView+Extension.m in Sources */,
 				30DF95151EE6AA77000261C8 /* DisContentEntity.m in Sources */,
 				301EB3E01EE800120081F1D1 /* LotteryNoticeVC.m in Sources */,
 				30A41DCF1F009C890051FAF7 /* UIButton+XBAlignment.m in Sources */,
+				303C64011F08B6B3008D806C /* UserSettingController.m in Sources */,
 				3072F6271F025D6B00170C95 /* HomeBuyLuckBallCell.m in Sources */,
 				301EB3E61EE80AC80081F1D1 /* LotteryHelpVC.m in Sources */,
 				306178741EF7DB4B00561495 /* XBRunCircleTextCell.m in Sources */,
@@ -1337,6 +1371,7 @@
 				301F6B151EE8420200B8443F /* XBWebImgManager.m in Sources */,
 				30A988B31EE57D7A00D04924 /* XBGuidePage.m in Sources */,
 				3072F61C1F0206A300170C95 /* StoreInfoViewController.m in Sources */,
+				303C64101F08C6EC008D806C /* UIImage+CH.m in Sources */,
 				30DF95201EE6BA4E000261C8 /* XBTabBar.m in Sources */,
 				30CD79F71F03A25900BF4A11 /* BuyLuckBallViewController.m in Sources */,
 				30263D621EE63BD5007B30C8 /* XBUITool.m in Sources */,
@@ -1346,6 +1381,7 @@
 				30A988621EE556C000D04924 /* BaseViewController.m in Sources */,
 				30263D501EE634F9007B30C8 /* XBSettingItem.m in Sources */,
 				30CD7A001F03AC1200BF4A11 /* MoreViewController.m in Sources */,
+				303C64131F08C985008D806C /* UserSettingInfoCell.m in Sources */,
 				30263D4D1EE634B1007B30C8 /* XBSettingGroup.m in Sources */,
 				30A9885F1EE556A100D04924 /* HomeViewController.m in Sources */,
 			);

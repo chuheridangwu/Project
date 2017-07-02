@@ -15,9 +15,13 @@
 #import "LotteryHelpVC.h"
 #import "XBNavigationController.h"
 #import "LoginViewController.h"
+#import "UserSettingController.h"
+
+
+
 #import "PersoninfoCell.h"
 
-@interface PersonViewController ()
+@interface PersonViewController ()<PersoninfoCellDelegate>
 @property (nonatomic,strong)NSArray *titleArray;
 @property (nonatomic,strong)NSArray *imageArray;
 @end
@@ -32,13 +36,13 @@
 //    [self presentViewController:navVC animated:YES completion:nil];
     
     self.tableView.tableFooterView = [self tableViewFootView];
-   __block LoginViewController *loginVC = [[LoginViewController alloc]init];
-    [self.view addSubview:loginVC.view];
-    [self addChildViewController:loginVC];
-    loginVC.myBlock = ^(){
-        [loginVC removeFromParentViewController];
-        [loginVC.view removeFromSuperview];
-    };
+//   __block LoginViewController *loginVC = [[LoginViewController alloc]init];
+//    [self.view addSubview:loginVC.view];
+//    [self addChildViewController:loginVC];
+//    loginVC.myBlock = ^(){
+//        [loginVC removeFromParentViewController];
+//        [loginVC.view removeFromSuperview];
+//    };
 
     
     self.titleArray = @[@"消息中心",@"开奖推送",@"开奖记录",@"关于",@"清除缓存"];
@@ -100,14 +104,21 @@
     return 00000.1;
 }
 
+- (UITableViewCell*)UserInfoCell{
+    PersoninfoCell *cell1 = [PersoninfoCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"PersoninfoCell"];
+    cell1.delegate = self;
+    cell1.mj_h = PersoninfoCellHeight;
+    return cell1;
+}
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *str = @"2323";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
+    UITableViewCell *cell;
     if (!cell) {
         if (indexPath.section == 0) {
-            cell = [PersoninfoCell tableViewCellInitializeWithTableView:tableView withIdtifier:@"PersoninfoCell"];
+            cell = [self UserInfoCell];
         }else{
+            cell = [tableView dequeueReusableCellWithIdentifier:str];
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
             cell.textLabel.text = [NSString stringWithFormat:@"%@",self.titleArray[indexPath.row]];
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -171,6 +182,11 @@
     }
 }
 
+
+- (void)clickImgView{
+    UserSettingController *setvc = [[UserSettingController alloc]init];
+    [self.navigationController pushViewController:setvc animated:YES];
+}
 
 
 - (void)didReceiveMemoryWarning {

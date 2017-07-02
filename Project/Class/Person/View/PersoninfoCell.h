@@ -8,6 +8,13 @@
 
 #import "XBBaseTableViewCell.h"
 #define PersoninfoCellHeight  (120)
+@protocol PersoninfoCellDelegate;
 @interface PersoninfoCell : XBBaseTableViewCell
+@property (nonatomic,weak)id <PersoninfoCellDelegate> delegate;
+@end
+
+@protocol PersoninfoCellDelegate <NSObject>
+
+- (void)clickImgView;
 
 @end

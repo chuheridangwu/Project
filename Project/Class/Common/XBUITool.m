@@ -38,4 +38,13 @@
     return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
 }
 
++ (void)asRequestNetWork:(void(^)())success{
+    [XBRequestNetTool post:@"http://mapi.yjcp.com/api/gain/tenawardinfo?lotId=33&pageNum=1&sid=31000000000" params:nil success:^(id responseObj) {
+        sleep(0.1);
+        success();
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
 @end
