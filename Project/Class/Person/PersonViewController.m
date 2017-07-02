@@ -16,6 +16,9 @@
 #import "XBNavigationController.h"
 #import "LoginViewController.h"
 #import "UserSettingController.h"
+#import "ProductViewController.h"
+#import "BuyViewController.h"
+
 
 
 
@@ -24,12 +27,17 @@
 @interface PersonViewController ()<PersoninfoCellDelegate>
 @property (nonatomic,strong)NSArray *titleArray;
 @property (nonatomic,strong)NSArray *imageArray;
+
+@property (nonatomic,strong)NSArray *title1Array;
+@property (nonatomic,strong)NSArray *image1Array;
+
 @end
 
 @implementation PersonViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
 //    UINavigationController  *navVC=  [[XBNavigationController alloc]initWithRootViewController:[[LoginViewController alloc] init]];
 //    navVC.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 100);
@@ -44,9 +52,11 @@
 //        [loginVC.view removeFromSuperview];
 //    };
 
-    
-    self.titleArray = @[@"消息中心",@"开奖推送",@"开奖记录",@"关于",@"清除缓存"];
-//    self.imageArray = @[@"message",@"notice",@"prize",@"game",@"about",@"clear"];
+    self.title1Array = @[@"充值中心",@"购彩记录"];
+    self.image1Array = @[@"UserMoneyImg",@"OrderListImg"];
+
+    self.titleArray = @[@"消息中心",@"开奖推送",@"关于"];
+    self.imageArray = @[@"message",@"message1",@"AboutWxImg"];
 
 }
 
@@ -57,7 +67,7 @@
 
 - (UIView*)tableViewFootView{
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 60)];
-    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(20, 10, SCREEN_WIDTH - 40, view.mj_h - 20)];
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(20, 30, SCREEN_WIDTH - 40, view.mj_h - 20)];
     btn.backgroundColor = XBAPPBaseColor;
     [btn addTarget:self action:@selector(clickBtn) forControlEvents:UIControlEventTouchDown];
     [btn setTitle:@"退出登录" forState:UIControlStateNormal];
@@ -80,7 +90,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
+    return 3;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -91,15 +101,17 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (section == 0) {
+    if (section == 0 ) {
         return 1;
+    }else if (section == 1){
+        return 2;
     }
     return self.titleArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     if (section != 0) {
-        return 20;
+        return 10;
     }
     return 00000.1;
 }
@@ -117,6 +129,12 @@
     if (!cell) {
         if (indexPath.section == 0) {
             cell = [self UserInfoCell];
+        }else if(indexPath.section == 1){
+            cell = [tableView dequeueReusableCellWithIdentifier:str];
+            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+            cell.textLabel.text = [NSString stringWithFormat:@"%@",self.title1Array[indexPath.row]];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            cell.imageView.image = [UIImage imageNamed:self.image1Array[indexPath.row]];
         }else{
             cell = [tableView dequeueReusableCellWithIdentifier:str];
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
@@ -132,9 +150,23 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            [self payMoney];
+        }else{
+            [self buyProductHistory];
+        }
+    }else if (indexPath.section == 2){
         [self didSelectRow:indexPath.row];
+
     }
 }
+
+
+- (void)buyProductHistory{
+    BuyViewController *buyVC = [[BuyViewController alloc]init];
+    [self.navigationController pushViewController:buyVC animated:YES];
+}
+
 
 - (void)didSelectRow:(NSInteger)row{
     switch (row) {
@@ -153,27 +185,8 @@
             break;
         case 2:
         {
-            DisViewController *disVC = [[DisViewController alloc]init];
-            disVC.title = @"开奖记录";
-            [self.navigationController pushViewController:disVC animated:YES];
-        }
-            break;
-        case 3:
-        {
             AboutViewController *gameVC = [[AboutViewController alloc]init];
             [self.navigationController pushViewController:gameVC animated:YES];
-        }
-            break;
-        case 4:
-        {
-            UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否要清楚缓存" preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *carcen = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                [XBUITool showRmindView:@"清除缓存成功"];
-            }];
-            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-            [alertVC addAction:carcen];
-            [alertVC addAction:cancel];
-            [self presentViewController:alertVC animated:YES completion:nil];
         }
             break;
             
@@ -187,6 +200,16 @@
     UserSettingController *setvc = [[UserSettingController alloc]init];
     [self.navigationController pushViewController:setvc animated:YES];
 }
+
+
+
+#pragma mark   ------   支付
+- (void)payMoney{
+    ProductViewController *productVC = [[ProductViewController alloc]init];
+    [self.navigationController pushViewController:productVC animated:YES];
+}
+
+
 
 
 - (void)didReceiveMemoryWarning {

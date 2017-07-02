@@ -1,3 +1,4 @@
+
 //
 //  BuyLuckBallCell.m
 //  Project
@@ -60,7 +61,7 @@
         [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.top.equalTo(5);
             make.right.equalTo(- 5);
-            make.bottom.equalTo(label.top).offset(-5);
+            make.bottom.equalTo(label.mas_top).offset(-5);
         }];
         
         UIButton *btn = [[UIButton alloc]initWithFrame:backView.bounds];

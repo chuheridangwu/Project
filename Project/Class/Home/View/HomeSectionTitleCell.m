@@ -34,7 +34,7 @@
     
     [conteView addSubview:self.titleL];
     [_titleL mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(leftView.right).offset(10);
+        make.left.equalTo(leftView.mas_right).offset(10);
         make.right.bottom.top.offset(0);
     }];
     

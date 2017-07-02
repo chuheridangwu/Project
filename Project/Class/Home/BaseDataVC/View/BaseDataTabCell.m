@@ -60,7 +60,7 @@
     
     [_nameL mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.offset(0);
-        make.left.equalTo(_indexL.right).offset(0);
+        make.left.equalTo(_indexL.mas_right).offset(0);
         make.width.equalTo(80);
     }];
     
@@ -71,7 +71,7 @@
     
     [_gameL mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.offset(0);
-        make.left.equalTo(_nameL.right).offset(0);
+        make.left.equalTo(_nameL.mas_right).offset(0);
         make.width.equalTo(_winL.mas_width).multipliedBy(1);
         make.width.equalTo(_fairL.mas_width).multipliedBy(1);
         make.width.equalTo(_losserL.mas_width).multipliedBy(1);
@@ -81,7 +81,7 @@
     
     [_winL mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.offset(0);
-        make.left.equalTo(_gameL.right).offset(0);
+        make.left.equalTo(_gameL.mas_right).offset(0);
 //        make.width.equalTo(_gameL.mas_width).multipliedBy(1);
     }];
     
@@ -89,14 +89,14 @@
     
     [_fairL mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.offset(0);
-        make.left.equalTo(_winL.right).offset(0);
+        make.left.equalTo(_winL.mas_right).offset(0);
 //        make.width.equalTo(_losserL.mas_width).multipliedBy(1);
     }];
     
     [_losserL mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.offset(0);
-        make.left.equalTo(_fairL.right).offset(0);
-        make.right.equalTo(_integralL.left).offset(0);
+        make.left.equalTo(_fairL.mas_right).offset(0);
+        make.right.equalTo(_integralL.mas_left).offset(0);
     }];
     
     

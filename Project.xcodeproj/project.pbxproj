@@ -60,6 +60,36 @@
 		303C64101F08C6EC008D806C /* UIImage+CH.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C640F1F08C6EC008D806C /* UIImage+CH.m */; };
 		303C64131F08C985008D806C /* UserSettingInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64121F08C985008D806C /* UserSettingInfoCell.m */; };
 		303C64161F08CD51008D806C /* NameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64151F08CD51008D806C /* NameViewController.m */; };
+		303C642C1F08D96C008D806C /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C642B1F08D96C008D806C /* LocalAuthentication.framework */; };
+		303C642E1F08D975008D806C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C642D1F08D975008D806C /* MobileCoreServices.framework */; };
+		303C64301F08D984008D806C /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C642F1F08D984008D806C /* CoreMotion.framework */; };
+		303C64321F08D990008D806C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C64311F08D990008D806C /* CoreTelephony.framework */; };
+		303C64341F08D99B008D806C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C64331F08D99B008D806C /* libsqlite3.0.tbd */; };
+		303C64361F08D9A8008D806C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C64351F08D9A8008D806C /* libz.tbd */; };
+		303C64381F08D9B0008D806C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C64371F08D9B0008D806C /* libc++.tbd */; };
+		303C643A1F08D9B9008D806C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C64391F08D9B9008D806C /* SystemConfiguration.framework */; };
+		303C643C1F08D9C0008D806C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C643B1F08D9C0008D806C /* CFNetwork.framework */; };
+		303C643E1F08D9C7008D806C /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C643D1F08D9C7008D806C /* PassKit.framework */; };
+		303C64B51F08DC8B008D806C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C64B41F08DC8B008D806C /* QuartzCore.framework */; };
+		303C64B91F08DC9E008D806C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C64B81F08DC9E008D806C /* CoreGraphics.framework */; };
+		303C64CA1F08DE75008D806C /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 303C64C11F08DE75008D806C /* AlipaySDK.bundle */; };
+		303C64CB1F08DE75008D806C /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C64C21F08DE75008D806C /* AlipaySDK.framework */; };
+		303C64CC1F08DE75008D806C /* libAli_Adapter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C64C31F08DE75008D806C /* libAli_Adapter.a */; };
+		303C64CD1F08DE75008D806C /* FuqianlaRes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 303C64C61F08DE75008D806C /* FuqianlaRes.bundle */; };
+		303C64CE1F08DE75008D806C /* libFuqianlaPay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C64C71F08DE75008D806C /* libFuqianlaPay.a */; };
+		303C64CF1F08DE75008D806C /* libFuqianlaSupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C64C91F08DE75008D806C /* libFuqianlaSupport.a */; };
+		303C64D01F08E30C008D806C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303C64291F08D964008D806C /* MessageUI.framework */; };
+		303C64D31F08E5F4008D806C /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64D21F08E5F4008D806C /* ProductViewController.m */; };
+		303C64D61F08E71A008D806C /* ProductView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64D51F08E71A008D806C /* ProductView.m */; };
+		303C64D91F08EDB7008D806C /* RechargeHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64D81F08EDB7008D806C /* RechargeHistoryViewController.m */; };
+		303C64ED1F08EEDC008D806C /* DLLRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64DE1F08EEDC008D806C /* DLLRUCache.m */; };
+		303C64EE1F08EEDC008D806C /* DLCustomSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64E01F08EEDC008D806C /* DLCustomSlideView.m */; };
+		303C64EF1F08EEDC008D806C /* DLSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64E21F08EEDC008D806C /* DLSlideView.m */; };
+		303C64F01F08EEDC008D806C /* DLFixedTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64E51F08EEDC008D806C /* DLFixedTabbarView.m */; };
+		303C64F11F08EEDC008D806C /* DLScrollTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64E71F08EEDC008D806C /* DLScrollTabbarView.m */; };
+		303C64F21F08EEDC008D806C /* DLTabedSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64EA1F08EEDC008D806C /* DLTabedSlideView.m */; };
+		303C64F31F08EEDC008D806C /* DLUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64EC1F08EEDC008D806C /* DLUtility.m */; };
+		303C64F61F08F357008D806C /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64F51F08F357008D806C /* BuyViewController.m */; };
 		3053DF081EE8F84300552AF8 /* HomeListSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053DF071EE8F84300552AF8 /* HomeListSectionCell.m */; };
 		3053DF0A1EE91E1400552AF8 /* HomeHtmlLIst.json in Resources */ = {isa = PBXBuildFile; fileRef = 3053DF091EE91E1400552AF8 /* HomeHtmlLIst.json */; };
 		3053DF0D1EE91E6500552AF8 /* HomeDataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053DF0C1EE91E6500552AF8 /* HomeDataEntity.m */; };
@@ -253,6 +283,51 @@
 		303C64121F08C985008D806C /* UserSettingInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSettingInfoCell.m; path = ../UserSettingInfoCell.m; sourceTree = "<group>"; };
 		303C64141F08CD51008D806C /* NameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameViewController.h; sourceTree = "<group>"; };
 		303C64151F08CD51008D806C /* NameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameViewController.m; sourceTree = "<group>"; };
+		303C64291F08D964008D806C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		303C642B1F08D96C008D806C /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		303C642D1F08D975008D806C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		303C642F1F08D984008D806C /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		303C64311F08D990008D806C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		303C64331F08D99B008D806C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		303C64351F08D9A8008D806C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		303C64371F08D9B0008D806C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		303C64391F08D9B9008D806C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		303C643B1F08D9C0008D806C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		303C643D1F08D9C7008D806C /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		303C64B41F08DC8B008D806C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		303C64B61F08DC95008D806C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		303C64B81F08DC9E008D806C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		303C64C11F08DE75008D806C /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		303C64C21F08DE75008D806C /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		303C64C31F08DE75008D806C /* libAli_Adapter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAli_Adapter.a; sourceTree = "<group>"; };
+		303C64C51F08DE75008D806C /* FuqianlaPay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuqianlaPay.h; sourceTree = "<group>"; };
+		303C64C61F08DE75008D806C /* FuqianlaRes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FuqianlaRes.bundle; sourceTree = "<group>"; };
+		303C64C71F08DE75008D806C /* libFuqianlaPay.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFuqianlaPay.a; sourceTree = "<group>"; };
+		303C64C91F08DE75008D806C /* libFuqianlaSupport.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFuqianlaSupport.a; sourceTree = "<group>"; };
+		303C64D11F08E5F4008D806C /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewController.h; sourceTree = "<group>"; };
+		303C64D21F08E5F4008D806C /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
+		303C64D41F08E71A008D806C /* ProductView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductView.h; sourceTree = "<group>"; };
+		303C64D51F08E71A008D806C /* ProductView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductView.m; sourceTree = "<group>"; };
+		303C64D71F08EDB7008D806C /* RechargeHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RechargeHistoryViewController.h; sourceTree = "<group>"; };
+		303C64D81F08EDB7008D806C /* RechargeHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeHistoryViewController.m; sourceTree = "<group>"; };
+		303C64DC1F08EEDC008D806C /* DLCacheProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLCacheProtocol.h; sourceTree = "<group>"; };
+		303C64DD1F08EEDC008D806C /* DLLRUCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLRUCache.h; sourceTree = "<group>"; };
+		303C64DE1F08EEDC008D806C /* DLLRUCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLRUCache.m; sourceTree = "<group>"; };
+		303C64DF1F08EEDC008D806C /* DLCustomSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLCustomSlideView.h; sourceTree = "<group>"; };
+		303C64E01F08EEDC008D806C /* DLCustomSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLCustomSlideView.m; sourceTree = "<group>"; };
+		303C64E11F08EEDC008D806C /* DLSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSlideView.h; sourceTree = "<group>"; };
+		303C64E21F08EEDC008D806C /* DLSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSlideView.m; sourceTree = "<group>"; };
+		303C64E41F08EEDC008D806C /* DLFixedTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLFixedTabbarView.h; sourceTree = "<group>"; };
+		303C64E51F08EEDC008D806C /* DLFixedTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFixedTabbarView.m; sourceTree = "<group>"; };
+		303C64E61F08EEDC008D806C /* DLScrollTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLScrollTabbarView.h; sourceTree = "<group>"; };
+		303C64E71F08EEDC008D806C /* DLScrollTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLScrollTabbarView.m; sourceTree = "<group>"; };
+		303C64E81F08EEDC008D806C /* DLSlideTabbarProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSlideTabbarProtocol.h; sourceTree = "<group>"; };
+		303C64E91F08EEDC008D806C /* DLTabedSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTabedSlideView.h; sourceTree = "<group>"; };
+		303C64EA1F08EEDC008D806C /* DLTabedSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTabedSlideView.m; sourceTree = "<group>"; };
+		303C64EB1F08EEDC008D806C /* DLUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLUtility.h; sourceTree = "<group>"; };
+		303C64EC1F08EEDC008D806C /* DLUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLUtility.m; sourceTree = "<group>"; };
+		303C64F41F08F357008D806C /* BuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyViewController.h; sourceTree = "<group>"; };
+		303C64F51F08F357008D806C /* BuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyViewController.m; sourceTree = "<group>"; };
 		3053DF051EE8DD4D00552AF8 /* HomeVCHeard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVCHeard.h; sourceTree = "<group>"; };
 		3053DF061EE8F84300552AF8 /* HomeListSectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeListSectionCell.h; sourceTree = "<group>"; };
 		3053DF071EE8F84300552AF8 /* HomeListSectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeListSectionCell.m; sourceTree = "<group>"; };
@@ -429,6 +504,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				303C64D01F08E30C008D806C /* MessageUI.framework in Frameworks */,
+				303C64B91F08DC9E008D806C /* CoreGraphics.framework in Frameworks */,
+				303C64B51F08DC8B008D806C /* QuartzCore.framework in Frameworks */,
+				303C643E1F08D9C7008D806C /* PassKit.framework in Frameworks */,
+				303C643C1F08D9C0008D806C /* CFNetwork.framework in Frameworks */,
+				303C643A1F08D9B9008D806C /* SystemConfiguration.framework in Frameworks */,
+				303C64381F08D9B0008D806C /* libc++.tbd in Frameworks */,
+				303C64361F08D9A8008D806C /* libz.tbd in Frameworks */,
+				303C64CF1F08DE75008D806C /* libFuqianlaSupport.a in Frameworks */,
+				303C64CE1F08DE75008D806C /* libFuqianlaPay.a in Frameworks */,
+				303C64341F08D99B008D806C /* libsqlite3.0.tbd in Frameworks */,
+				303C64321F08D990008D806C /* CoreTelephony.framework in Frameworks */,
+				303C64301F08D984008D806C /* CoreMotion.framework in Frameworks */,
+				303C64CB1F08DE75008D806C /* AlipaySDK.framework in Frameworks */,
+				303C64CC1F08DE75008D806C /* libAli_Adapter.a in Frameworks */,
+				303C642E1F08D975008D806C /* MobileCoreServices.framework in Frameworks */,
+				303C642C1F08D96C008D806C /* LocalAuthentication.framework in Frameworks */,
 				D954D468FC561B8034C2A96F /* Pods_Project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,6 +545,20 @@
 		19C4A7394FDA6A0397AA6E56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				303C64B81F08DC9E008D806C /* CoreGraphics.framework */,
+				303C64B61F08DC95008D806C /* CoreText.framework */,
+				303C64B41F08DC8B008D806C /* QuartzCore.framework */,
+				303C643D1F08D9C7008D806C /* PassKit.framework */,
+				303C643B1F08D9C0008D806C /* CFNetwork.framework */,
+				303C64391F08D9B9008D806C /* SystemConfiguration.framework */,
+				303C64371F08D9B0008D806C /* libc++.tbd */,
+				303C64351F08D9A8008D806C /* libz.tbd */,
+				303C64331F08D99B008D806C /* libsqlite3.0.tbd */,
+				303C64311F08D990008D806C /* CoreTelephony.framework */,
+				303C642F1F08D984008D806C /* CoreMotion.framework */,
+				303C642D1F08D975008D806C /* MobileCoreServices.framework */,
+				303C642B1F08D96C008D806C /* LocalAuthentication.framework */,
+				303C64291F08D964008D806C /* MessageUI.framework */,
 				650694DF1DCFA996042890B9 /* Pods_Project.framework */,
 			);
 			name = Frameworks;
@@ -626,6 +732,7 @@
 		30263D5A1EE637A4007B30C8 /* Othre */ = {
 			isa = PBXGroup;
 			children = (
+				303C64BE1F08DE75008D806C /* libs */,
 				30263D5C1EE637DB007B30C8 /* Category */,
 			);
 			path = Othre;
@@ -653,6 +760,91 @@
 			);
 			name = Category;
 			path = Categoty;
+			sourceTree = "<group>";
+		};
+		303C64BE1F08DE75008D806C /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				303C64BF1F08DE75008D806C /* Channels */,
+				303C64C41F08DE75008D806C /* fqlLibs */,
+				303C64C81F08DE75008D806C /* support */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		303C64BF1F08DE75008D806C /* Channels */ = {
+			isa = PBXGroup;
+			children = (
+				303C64C01F08DE75008D806C /* AlipaySDK */,
+			);
+			path = Channels;
+			sourceTree = "<group>";
+		};
+		303C64C01F08DE75008D806C /* AlipaySDK */ = {
+			isa = PBXGroup;
+			children = (
+				303C64C11F08DE75008D806C /* AlipaySDK.bundle */,
+				303C64C21F08DE75008D806C /* AlipaySDK.framework */,
+				303C64C31F08DE75008D806C /* libAli_Adapter.a */,
+			);
+			path = AlipaySDK;
+			sourceTree = "<group>";
+		};
+		303C64C41F08DE75008D806C /* fqlLibs */ = {
+			isa = PBXGroup;
+			children = (
+				303C64C51F08DE75008D806C /* FuqianlaPay.h */,
+				303C64C61F08DE75008D806C /* FuqianlaRes.bundle */,
+				303C64C71F08DE75008D806C /* libFuqianlaPay.a */,
+			);
+			path = fqlLibs;
+			sourceTree = "<group>";
+		};
+		303C64C81F08DE75008D806C /* support */ = {
+			isa = PBXGroup;
+			children = (
+				303C64C91F08DE75008D806C /* libFuqianlaSupport.a */,
+			);
+			path = support;
+			sourceTree = "<group>";
+		};
+		303C64DA1F08EEDC008D806C /* DLSlideView */ = {
+			isa = PBXGroup;
+			children = (
+				303C64DB1F08EEDC008D806C /* DLCache */,
+				303C64DF1F08EEDC008D806C /* DLCustomSlideView.h */,
+				303C64E01F08EEDC008D806C /* DLCustomSlideView.m */,
+				303C64E11F08EEDC008D806C /* DLSlideView.h */,
+				303C64E21F08EEDC008D806C /* DLSlideView.m */,
+				303C64E31F08EEDC008D806C /* DLTabbarView */,
+				303C64E91F08EEDC008D806C /* DLTabedSlideView.h */,
+				303C64EA1F08EEDC008D806C /* DLTabedSlideView.m */,
+				303C64EB1F08EEDC008D806C /* DLUtility.h */,
+				303C64EC1F08EEDC008D806C /* DLUtility.m */,
+			);
+			path = DLSlideView;
+			sourceTree = "<group>";
+		};
+		303C64DB1F08EEDC008D806C /* DLCache */ = {
+			isa = PBXGroup;
+			children = (
+				303C64DC1F08EEDC008D806C /* DLCacheProtocol.h */,
+				303C64DD1F08EEDC008D806C /* DLLRUCache.h */,
+				303C64DE1F08EEDC008D806C /* DLLRUCache.m */,
+			);
+			path = DLCache;
+			sourceTree = "<group>";
+		};
+		303C64E31F08EEDC008D806C /* DLTabbarView */ = {
+			isa = PBXGroup;
+			children = (
+				303C64E41F08EEDC008D806C /* DLFixedTabbarView.h */,
+				303C64E51F08EEDC008D806C /* DLFixedTabbarView.m */,
+				303C64E61F08EEDC008D806C /* DLScrollTabbarView.h */,
+				303C64E71F08EEDC008D806C /* DLScrollTabbarView.m */,
+				303C64E81F08EEDC008D806C /* DLSlideTabbarProtocol.h */,
+			);
+			path = DLTabbarView;
 			sourceTree = "<group>";
 		};
 		3053DF191EE95B6600552AF8 /* Found */ = {
@@ -783,6 +975,12 @@
 				303C64151F08CD51008D806C /* NameViewController.m */,
 				30C728C51EE7EAD900CAD4C0 /* AboutViewController.h */,
 				30C728C61EE7EAD900CAD4C0 /* AboutViewController.m */,
+				303C64D11F08E5F4008D806C /* ProductViewController.h */,
+				303C64D21F08E5F4008D806C /* ProductViewController.m */,
+				303C64D71F08EDB7008D806C /* RechargeHistoryViewController.h */,
+				303C64D81F08EDB7008D806C /* RechargeHistoryViewController.m */,
+				303C64F41F08F357008D806C /* BuyViewController.h */,
+				303C64F51F08F357008D806C /* BuyViewController.m */,
 				30B0F59F1EF64DB0008AC7E6 /* View */,
 				301EB3DD1EE7FFC80081F1D1 /* LotteryNotice */,
 				30C728AD1EE7DF6D00CAD4C0 /* Game */,
@@ -816,6 +1014,7 @@
 		30A9886D1EE55D2D00D04924 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				303C64DA1F08EEDC008D806C /* DLSlideView */,
 				30E8F6151EFB702A00103942 /* GAGoodsCeverScrollView.h */,
 				30E8F6161EFB702A00103942 /* GAGoodsCeverScrollView.m */,
 				30263D601EE63BD5007B30C8 /* XBUITool.h */,
@@ -873,6 +1072,8 @@
 				303C64031F08BAAB008D806C /* UserSettingImageCell.m */,
 				303C64111F08C985008D806C /* UserSettingInfoCell.h */,
 				303C64121F08C985008D806C /* UserSettingInfoCell.m */,
+				303C64D41F08E71A008D806C /* ProductView.h */,
+				303C64D51F08E71A008D806C /* ProductView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1174,6 +1375,7 @@
 				301EB4881EE80EC60081F1D1 /* dlt_howto.html in Resources */,
 				301EB4991EE80EC60081F1D1 /* qlc_howto.html in Resources */,
 				301EB4A01EE80EC60081F1D1 /* y11_howto.html in Resources */,
+				303C64CA1F08DE75008D806C /* AlipaySDK.bundle in Resources */,
 				301EB3EE1EE80C700081F1D1 /* help.json in Resources */,
 				30774C441F000CC10001C77A /* course_13.html in Resources */,
 				30DF950C1EE69476000261C8 /* Discover.json in Resources */,
@@ -1185,6 +1387,7 @@
 				30E7AD211EE45F5B000609DB /* LaunchScreen.storyboard in Resources */,
 				301EB49B1EE80EC60081F1D1 /* rule.css in Resources */,
 				30774C481F000CC10001C77A /* course_23.html in Resources */,
+				303C64CD1F08DE75008D806C /* FuqianlaRes.bundle in Resources */,
 				30774C451F000CC10001C77A /* course_20.html in Resources */,
 				30774C411F000CC10001C77A /* course_10.html in Resources */,
 				3055926D1EE4F9DF00864E6E /* Images.xcassets in Resources */,
@@ -1304,9 +1507,11 @@
 				30CD79FA1F03A2A000BF4A11 /* HomeLuckBallEntity.m in Sources */,
 				30DF951C1EE6B322000261C8 /* XBBaseTableViewCell.m in Sources */,
 				30E8F60E1EFB6F0A00103942 /* GAGoodsEvationCell.m in Sources */,
+				303C64F01F08EEDC008D806C /* DLFixedTabbarView.m in Sources */,
 				30A988591EE5566700D04924 /* XBTabBarController.m in Sources */,
 				30B0F5991EF6257A008AC7E6 /* ForgetViewController.m in Sources */,
 				30E8F6111EFB6F4E00103942 /* GAGoodsEvaEntity.m in Sources */,
+				303C64D61F08E71A008D806C /* ProductView.m in Sources */,
 				3053DF081EE8F84300552AF8 /* HomeListSectionCell.m in Sources */,
 				301F6B141EE8420200B8443F /* XBScrollViewPhoto.m in Sources */,
 				3053DF0D1EE91E6500552AF8 /* HomeDataEntity.m in Sources */,
@@ -1326,6 +1531,7 @@
 				30A41DDF1F00EC420051FAF7 /* StoreViewController.m in Sources */,
 				3053DF101EE91F4000552AF8 /* HomeDataModel.m in Sources */,
 				30C728C71EE7EAD900CAD4C0 /* AboutViewController.m in Sources */,
+				303C64F61F08F357008D806C /* BuyViewController.m in Sources */,
 				306EFFBE1EEE2BF90000D41F /* UIView+Render.m in Sources */,
 				30F27B271EEC49210005FF16 /* HomeSectionListCell.m in Sources */,
 				30DF95091EE646CE000261C8 /* XBRequestModel.m in Sources */,
@@ -1337,9 +1543,11 @@
 				30F27B241EEBDC270005FF16 /* BaseDataEntity.m in Sources */,
 				30C728C01EE7DFD200CAD4C0 /* DidView.m in Sources */,
 				30B0F59B1EF6257A008AC7E6 /* LoginViewController.m in Sources */,
+				303C64D31F08E5F4008D806C /* ProductViewController.m in Sources */,
 				30E7AD161EE45F5B000609DB /* AppDelegate.m in Sources */,
 				30E7AD131EE45F5B000609DB /* main.m in Sources */,
 				30E8F61A1EFB70EB00103942 /* GoodsEvaModel.m in Sources */,
+				303C64F11F08EEDC008D806C /* DLScrollTabbarView.m in Sources */,
 				30A988681EE556F100D04924 /* PersonViewController.m in Sources */,
 				3072F6191F01F60000170C95 /* StoreTableViewCell.m in Sources */,
 				30D601C81EE6E3B700A70B93 /* UIColor+Color.m in Sources */,
@@ -1360,10 +1568,12 @@
 				30F27B211EEBDBC00005FF16 /* BaseDataTabCell.m in Sources */,
 				30DF950F1EE69860000261C8 /* DIscoverItem.m in Sources */,
 				30CD79FD1F03A2D000BF4A11 /* BuyLuckBallCell.m in Sources */,
+				303C64EF1F08EEDC008D806C /* DLSlideView.m in Sources */,
 				30F27B1E1EEBDB9E0005FF16 /* BaseDataViewController.m in Sources */,
 				301F6B181EE8422800B8443F /* HomeTopPhotoCell.m in Sources */,
 				30DF95231EE6BAE8000261C8 /* XBTabBarButton.m in Sources */,
 				30A988701EE562B600D04924 /* BaseWebViewController.m in Sources */,
+				303C64EE1F08EEDC008D806C /* DLCustomSlideView.m in Sources */,
 				30B0F59D1EF6257A008AC7E6 /* RegistViewController.m in Sources */,
 				30DF95191EE6B1BC000261C8 /* DisContentCell.m in Sources */,
 				30A988651EE556E400D04924 /* DisViewController.m in Sources */,
@@ -1373,12 +1583,16 @@
 				3072F61C1F0206A300170C95 /* StoreInfoViewController.m in Sources */,
 				303C64101F08C6EC008D806C /* UIImage+CH.m in Sources */,
 				30DF95201EE6BA4E000261C8 /* XBTabBar.m in Sources */,
+				303C64D91F08EDB7008D806C /* RechargeHistoryViewController.m in Sources */,
+				303C64F21F08EEDC008D806C /* DLTabedSlideView.m in Sources */,
 				30CD79F71F03A25900BF4A11 /* BuyLuckBallViewController.m in Sources */,
 				30263D621EE63BD5007B30C8 /* XBUITool.m in Sources */,
+				303C64ED1F08EEDC008D806C /* DLLRUCache.m in Sources */,
 				3053DF131EE9237A00552AF8 /* ProductDisplayView.m in Sources */,
 				30A41E001F0114E10051FAF7 /* StoreEntity.m in Sources */,
 				30E8F6141EFB700000103942 /* GoodsEvaluationVC.m in Sources */,
 				30A988621EE556C000D04924 /* BaseViewController.m in Sources */,
+				303C64F31F08EEDC008D806C /* DLUtility.m in Sources */,
 				30263D501EE634F9007B30C8 /* XBSettingItem.m in Sources */,
 				30CD7A001F03AC1200BF4A11 /* MoreViewController.m in Sources */,
 				303C64131F08C985008D806C /* UserSettingInfoCell.m in Sources */,
@@ -1538,10 +1752,23 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Project/Project.entitlements;
 				DEVELOPMENT_TEAM = ST37ZVAWVJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Project/Class/Othre/libs/Channels/AlipaySDK",
+					"$(PROJECT_DIR)/Project/Class/Othre/AliPaySDK",
+					"$(PROJECT_DIR)/Project/Class/Othre",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Project/ProjectHeader.pch";
 				INFOPLIST_FILE = Project/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Project/Class/Othre/libs/Channels/AlipaySDK",
+					"$(PROJECT_DIR)/Project/Class/Othre/libs/fqlLibs",
+					"$(PROJECT_DIR)/Project/Class/Othre/libs/support",
+					"$(PROJECT_DIR)/Project/Class/Othre/AliPaySDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Luck.Ball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1557,10 +1784,23 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Project/Project.entitlements;
 				DEVELOPMENT_TEAM = ST37ZVAWVJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Project/Class/Othre/libs/Channels/AlipaySDK",
+					"$(PROJECT_DIR)/Project/Class/Othre/AliPaySDK",
+					"$(PROJECT_DIR)/Project/Class/Othre",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Project/ProjectHeader.pch";
 				INFOPLIST_FILE = Project/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Project/Class/Othre/libs/Channels/AlipaySDK",
+					"$(PROJECT_DIR)/Project/Class/Othre/libs/fqlLibs",
+					"$(PROJECT_DIR)/Project/Class/Othre/libs/support",
+					"$(PROJECT_DIR)/Project/Class/Othre/AliPaySDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Luck.Ball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

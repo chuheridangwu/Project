@@ -35,19 +35,19 @@
             make.top.offset(5);
             make.left.offset(5);
             make.right.offset(-0);
-            make.bottom.equalTo(self.countL.top).offset(-5);
+            make.bottom.equalTo(self.countL.mas_top).offset(-5);
         }];
         
         [self.countL mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.offset(5);
             make.right.offset(-0);
-            make.bottom.equalTo(self.didView.top).offset(-5);
+            make.bottom.equalTo(self.didView.mas_top).offset(-5);
         }];
         
         [self.didView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.offset(0);
             make.right.offset(0);
-            make.bottom.equalTo(self.backView.bottom).offset(-5);
+            make.bottom.equalTo(self.backView.mas_bottom).offset(-5);
         }];
         
     }

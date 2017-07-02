@@ -27,12 +27,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self.view addSubview:self.noneView];
-    [self.noneView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view.centerX).offset(0);
-        make.centerY.equalTo(self.view.centerY).offset(-20);
-        make.left.right.equalTo(0);
-        make.height.equalTo(@180);
-    }];
+  
     
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
     _tableView.delegate = self;
@@ -165,16 +160,16 @@
 
 - (UIView*)noneView{
     if (!_noneView) {
-        _noneView = [[UIView alloc]init];
+        _noneView = [[UIView alloc]initWithFrame:CGRectMake(10, 150, SCREEN_WIDTH - 20, 200)];
         UIImageView *imageView = [UIImageView new];
         imageView.image = [UIImage imageNamed:@"shopEmpty"];
         imageView.contentMode = UIViewContentModeCenter;
         [_noneView addSubview:imageView];
-//        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.left.top.right.equalTo(0);
-//            make.height.equalTo(_noneView.height).multipliedBy(0.5);
-//        }];
-//        
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.top.right.equalTo(0);
+            make.height.equalTo(_noneView.height).multipliedBy(0.5);
+        }];
+        
         UILabel *label = [UILabel new];
         label.text = @"不要刷新那么快嘛!\n人家很辛苦的";
         label.font = [UIFont systemFontOfSize:14];
@@ -183,7 +178,7 @@
         [_noneView addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.bottom.equalTo(0);
-            make.top.equalTo(imageView.bottom).offset(0);
+            make.top.equalTo(imageView.mas_bottom).offset(0);
         }];
     }
     return _noneView;

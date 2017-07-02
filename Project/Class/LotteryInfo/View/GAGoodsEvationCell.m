@@ -57,30 +57,30 @@
         }];
         
         [self.phoneL mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.iconImg.right).offset(10);
+            make.left.equalTo(self.iconImg.mas_right).offset(10);
             make.top.equalTo(10);
             make.right.offset(-10);
             make.height.equalTo(20);
         }];
         
         [self.timeL mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.iconImg.right).offset(10);
-            make.top.equalTo(self.phoneL.bottom).offset(0);
+            make.left.equalTo(self.iconImg.mas_right).offset(10);
+            make.top.equalTo(self.phoneL.mas_bottom).offset(0);
             make.right.equalTo(-10);
             make.height.equalTo(20);
         }];
         
         [self.contentL mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.iconImg.bottom).offset(10);
+            make.top.equalTo(self.iconImg.mas_bottom).offset(10);
             make.left.equalTo(10);
             make.right.equalTo(-10);
-            make.bottom.equalTo(self.imgsView.top).offset(@-10);
+            make.bottom.equalTo(self.imgsView.mas_top).offset(@-10);
         }];
     
         [self.imgsView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(10);
             make.right.equalTo(-10);
-            make.top.equalTo(self.contentL.bottom).offset(10);
+            make.top.equalTo(self.contentL.mas_bottom).offset(10);
             make.bottom.equalTo(-10);
         }];
         

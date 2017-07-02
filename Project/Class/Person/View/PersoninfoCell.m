@@ -39,29 +39,19 @@
         }];
         
         [_nameL mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(_imgView.right).offset(15);
+            make.left.equalTo(_imgView.mas_right).offset(15);
             make.right.offset(-5);
-            make.top.equalTo(_imgView.top).offset(5);
+            make.top.equalTo(_imgView.mas_top).offset(5);
             make.height.equalTo(25);
         }];
         
         [_userID mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(_imgView.right).offset(15);
+            make.left.equalTo(_imgView.mas_right).offset(15);
             make.right.offset(-5);
-            make.top.equalTo(_nameL.bottom).offset(5);
+            make.top.equalTo(_nameL.mas_bottom).offset(5);
             make.height.equalTo(20);
         }];
         
-        
-//        UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(clickUserImg)];
-//        [_imgView addGestureRecognizer:pan];
-        
-//        [_phoneL mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.left.equalTo(_imgView.right).offset(5);
-//            make.right.offset(-5);
-//            make.top.equalTo(_userID.bottom).offset(0);
-//            make.height.equalTo(20);
-//        }];
         
 //        _imgView.backgroundColor = [UIColor redColor];
 //        _userID.backgroundColor = [UIColor yellowColor];

@@ -41,7 +41,7 @@
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.offset(0);
         make.height.equalTo(20);
-        make.top.equalTo(imageView.bottom).offset(10);
+        make.top.equalTo(imageView.mas_bottom).offset(10);
     }];
     
     UILabel *lable1 = [UILabel new];
@@ -52,7 +52,7 @@
     lable1.textColor = [UIColor grayColor];
     [self.view addSubview:lable1];
     [lable1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(label.bottom).offset(10);
+        make.top.equalTo(label.mas_bottom).offset(10);
         make.width.equalTo(200);
         make.height.equalTo(100);
         make.centerX.offset(0);

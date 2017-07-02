@@ -54,17 +54,17 @@
         [self addSubview:_title];
         
         [_title makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(_imageView.right).offset(6);
+            make.left.equalTo(_imageView.mas_right).offset(6);
             make.right.offset(-5);
-            make.bottom.equalTo(_priceL.top).offset(-2);
-            make.top.equalTo(_imageView.top).offset(5);
+            make.bottom.equalTo(_priceL.mas_top).offset(-2);
+            make.top.equalTo(_imageView.mas_top).offset(5);
         }];
         
        
         [_priceL makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(_imageView.right).offset(5);
+            make.left.equalTo(_imageView.mas_right).offset(5);
             make.right.offset(-5);
-            make.bottom.equalTo(_imageView.bottom).offset(-2);
+            make.bottom.equalTo(_imageView.mas_bottom).offset(-2);
         }];
         
     }

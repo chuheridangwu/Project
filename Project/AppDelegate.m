@@ -21,6 +21,7 @@
 
 #import "XBGuidePage.h"
 
+#import "FuqianlaPay.h"
 
 @interface AppDelegate ()<JPUSHRegisterDelegate>
 
@@ -44,6 +45,11 @@
     //极光推送
     [self setJupsh:launchOptions];
    
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    [FuqianlaPay handlePayCallBackUrl:url];
     return YES;
 }
 
@@ -82,6 +88,7 @@
     
     [self addObserver];
 }
+
 
 -(void)addObserver{
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
