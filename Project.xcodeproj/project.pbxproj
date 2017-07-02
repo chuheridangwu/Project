@@ -82,13 +82,6 @@
 		303C64D31F08E5F4008D806C /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64D21F08E5F4008D806C /* ProductViewController.m */; };
 		303C64D61F08E71A008D806C /* ProductView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64D51F08E71A008D806C /* ProductView.m */; };
 		303C64D91F08EDB7008D806C /* RechargeHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64D81F08EDB7008D806C /* RechargeHistoryViewController.m */; };
-		303C64ED1F08EEDC008D806C /* DLLRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64DE1F08EEDC008D806C /* DLLRUCache.m */; };
-		303C64EE1F08EEDC008D806C /* DLCustomSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64E01F08EEDC008D806C /* DLCustomSlideView.m */; };
-		303C64EF1F08EEDC008D806C /* DLSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64E21F08EEDC008D806C /* DLSlideView.m */; };
-		303C64F01F08EEDC008D806C /* DLFixedTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64E51F08EEDC008D806C /* DLFixedTabbarView.m */; };
-		303C64F11F08EEDC008D806C /* DLScrollTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64E71F08EEDC008D806C /* DLScrollTabbarView.m */; };
-		303C64F21F08EEDC008D806C /* DLTabedSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64EA1F08EEDC008D806C /* DLTabedSlideView.m */; };
-		303C64F31F08EEDC008D806C /* DLUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64EC1F08EEDC008D806C /* DLUtility.m */; };
 		303C64F61F08F357008D806C /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C64F51F08F357008D806C /* BuyViewController.m */; };
 		3053DF081EE8F84300552AF8 /* HomeListSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053DF071EE8F84300552AF8 /* HomeListSectionCell.m */; };
 		3053DF0A1EE91E1400552AF8 /* HomeHtmlLIst.json in Resources */ = {isa = PBXBuildFile; fileRef = 3053DF091EE91E1400552AF8 /* HomeHtmlLIst.json */; };
@@ -310,22 +303,6 @@
 		303C64D51F08E71A008D806C /* ProductView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductView.m; sourceTree = "<group>"; };
 		303C64D71F08EDB7008D806C /* RechargeHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RechargeHistoryViewController.h; sourceTree = "<group>"; };
 		303C64D81F08EDB7008D806C /* RechargeHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeHistoryViewController.m; sourceTree = "<group>"; };
-		303C64DC1F08EEDC008D806C /* DLCacheProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLCacheProtocol.h; sourceTree = "<group>"; };
-		303C64DD1F08EEDC008D806C /* DLLRUCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLRUCache.h; sourceTree = "<group>"; };
-		303C64DE1F08EEDC008D806C /* DLLRUCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLRUCache.m; sourceTree = "<group>"; };
-		303C64DF1F08EEDC008D806C /* DLCustomSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLCustomSlideView.h; sourceTree = "<group>"; };
-		303C64E01F08EEDC008D806C /* DLCustomSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLCustomSlideView.m; sourceTree = "<group>"; };
-		303C64E11F08EEDC008D806C /* DLSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSlideView.h; sourceTree = "<group>"; };
-		303C64E21F08EEDC008D806C /* DLSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSlideView.m; sourceTree = "<group>"; };
-		303C64E41F08EEDC008D806C /* DLFixedTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLFixedTabbarView.h; sourceTree = "<group>"; };
-		303C64E51F08EEDC008D806C /* DLFixedTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFixedTabbarView.m; sourceTree = "<group>"; };
-		303C64E61F08EEDC008D806C /* DLScrollTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLScrollTabbarView.h; sourceTree = "<group>"; };
-		303C64E71F08EEDC008D806C /* DLScrollTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLScrollTabbarView.m; sourceTree = "<group>"; };
-		303C64E81F08EEDC008D806C /* DLSlideTabbarProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSlideTabbarProtocol.h; sourceTree = "<group>"; };
-		303C64E91F08EEDC008D806C /* DLTabedSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTabedSlideView.h; sourceTree = "<group>"; };
-		303C64EA1F08EEDC008D806C /* DLTabedSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTabedSlideView.m; sourceTree = "<group>"; };
-		303C64EB1F08EEDC008D806C /* DLUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLUtility.h; sourceTree = "<group>"; };
-		303C64EC1F08EEDC008D806C /* DLUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLUtility.m; sourceTree = "<group>"; };
 		303C64F41F08F357008D806C /* BuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyViewController.h; sourceTree = "<group>"; };
 		303C64F51F08F357008D806C /* BuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyViewController.m; sourceTree = "<group>"; };
 		3053DF051EE8DD4D00552AF8 /* HomeVCHeard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVCHeard.h; sourceTree = "<group>"; };
@@ -808,45 +785,6 @@
 			path = support;
 			sourceTree = "<group>";
 		};
-		303C64DA1F08EEDC008D806C /* DLSlideView */ = {
-			isa = PBXGroup;
-			children = (
-				303C64DB1F08EEDC008D806C /* DLCache */,
-				303C64DF1F08EEDC008D806C /* DLCustomSlideView.h */,
-				303C64E01F08EEDC008D806C /* DLCustomSlideView.m */,
-				303C64E11F08EEDC008D806C /* DLSlideView.h */,
-				303C64E21F08EEDC008D806C /* DLSlideView.m */,
-				303C64E31F08EEDC008D806C /* DLTabbarView */,
-				303C64E91F08EEDC008D806C /* DLTabedSlideView.h */,
-				303C64EA1F08EEDC008D806C /* DLTabedSlideView.m */,
-				303C64EB1F08EEDC008D806C /* DLUtility.h */,
-				303C64EC1F08EEDC008D806C /* DLUtility.m */,
-			);
-			path = DLSlideView;
-			sourceTree = "<group>";
-		};
-		303C64DB1F08EEDC008D806C /* DLCache */ = {
-			isa = PBXGroup;
-			children = (
-				303C64DC1F08EEDC008D806C /* DLCacheProtocol.h */,
-				303C64DD1F08EEDC008D806C /* DLLRUCache.h */,
-				303C64DE1F08EEDC008D806C /* DLLRUCache.m */,
-			);
-			path = DLCache;
-			sourceTree = "<group>";
-		};
-		303C64E31F08EEDC008D806C /* DLTabbarView */ = {
-			isa = PBXGroup;
-			children = (
-				303C64E41F08EEDC008D806C /* DLFixedTabbarView.h */,
-				303C64E51F08EEDC008D806C /* DLFixedTabbarView.m */,
-				303C64E61F08EEDC008D806C /* DLScrollTabbarView.h */,
-				303C64E71F08EEDC008D806C /* DLScrollTabbarView.m */,
-				303C64E81F08EEDC008D806C /* DLSlideTabbarProtocol.h */,
-			);
-			path = DLTabbarView;
-			sourceTree = "<group>";
-		};
 		3053DF191EE95B6600552AF8 /* Found */ = {
 			isa = PBXGroup;
 			children = (
@@ -1014,7 +952,6 @@
 		30A9886D1EE55D2D00D04924 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				303C64DA1F08EEDC008D806C /* DLSlideView */,
 				30E8F6151EFB702A00103942 /* GAGoodsCeverScrollView.h */,
 				30E8F6161EFB702A00103942 /* GAGoodsCeverScrollView.m */,
 				30263D601EE63BD5007B30C8 /* XBUITool.h */,
@@ -1507,7 +1444,6 @@
 				30CD79FA1F03A2A000BF4A11 /* HomeLuckBallEntity.m in Sources */,
 				30DF951C1EE6B322000261C8 /* XBBaseTableViewCell.m in Sources */,
 				30E8F60E1EFB6F0A00103942 /* GAGoodsEvationCell.m in Sources */,
-				303C64F01F08EEDC008D806C /* DLFixedTabbarView.m in Sources */,
 				30A988591EE5566700D04924 /* XBTabBarController.m in Sources */,
 				30B0F5991EF6257A008AC7E6 /* ForgetViewController.m in Sources */,
 				30E8F6111EFB6F4E00103942 /* GAGoodsEvaEntity.m in Sources */,
@@ -1547,7 +1483,6 @@
 				30E7AD161EE45F5B000609DB /* AppDelegate.m in Sources */,
 				30E7AD131EE45F5B000609DB /* main.m in Sources */,
 				30E8F61A1EFB70EB00103942 /* GoodsEvaModel.m in Sources */,
-				303C64F11F08EEDC008D806C /* DLScrollTabbarView.m in Sources */,
 				30A988681EE556F100D04924 /* PersonViewController.m in Sources */,
 				3072F6191F01F60000170C95 /* StoreTableViewCell.m in Sources */,
 				30D601C81EE6E3B700A70B93 /* UIColor+Color.m in Sources */,
@@ -1568,12 +1503,10 @@
 				30F27B211EEBDBC00005FF16 /* BaseDataTabCell.m in Sources */,
 				30DF950F1EE69860000261C8 /* DIscoverItem.m in Sources */,
 				30CD79FD1F03A2D000BF4A11 /* BuyLuckBallCell.m in Sources */,
-				303C64EF1F08EEDC008D806C /* DLSlideView.m in Sources */,
 				30F27B1E1EEBDB9E0005FF16 /* BaseDataViewController.m in Sources */,
 				301F6B181EE8422800B8443F /* HomeTopPhotoCell.m in Sources */,
 				30DF95231EE6BAE8000261C8 /* XBTabBarButton.m in Sources */,
 				30A988701EE562B600D04924 /* BaseWebViewController.m in Sources */,
-				303C64EE1F08EEDC008D806C /* DLCustomSlideView.m in Sources */,
 				30B0F59D1EF6257A008AC7E6 /* RegistViewController.m in Sources */,
 				30DF95191EE6B1BC000261C8 /* DisContentCell.m in Sources */,
 				30A988651EE556E400D04924 /* DisViewController.m in Sources */,
@@ -1584,15 +1517,12 @@
 				303C64101F08C6EC008D806C /* UIImage+CH.m in Sources */,
 				30DF95201EE6BA4E000261C8 /* XBTabBar.m in Sources */,
 				303C64D91F08EDB7008D806C /* RechargeHistoryViewController.m in Sources */,
-				303C64F21F08EEDC008D806C /* DLTabedSlideView.m in Sources */,
 				30CD79F71F03A25900BF4A11 /* BuyLuckBallViewController.m in Sources */,
 				30263D621EE63BD5007B30C8 /* XBUITool.m in Sources */,
-				303C64ED1F08EEDC008D806C /* DLLRUCache.m in Sources */,
 				3053DF131EE9237A00552AF8 /* ProductDisplayView.m in Sources */,
 				30A41E001F0114E10051FAF7 /* StoreEntity.m in Sources */,
 				30E8F6141EFB700000103942 /* GoodsEvaluationVC.m in Sources */,
 				30A988621EE556C000D04924 /* BaseViewController.m in Sources */,
-				303C64F31F08EEDC008D806C /* DLUtility.m in Sources */,
 				30263D501EE634F9007B30C8 /* XBSettingItem.m in Sources */,
 				30CD7A001F03AC1200BF4A11 /* MoreViewController.m in Sources */,
 				303C64131F08C985008D806C /* UserSettingInfoCell.m in Sources */,
