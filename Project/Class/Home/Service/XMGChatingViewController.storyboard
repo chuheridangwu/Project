@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -184,14 +184,14 @@
                                                     </variation>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="other" translatesAutoresizingMaskIntoConstraints="NO" id="Rm1-pt-FKo">
-                                                    <rect key="frame" x="10" y="36" width="50" height="50"/>
+                                                    <rect key="frame" x="10" y="36" width="40" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="t3f-D5-tyl"/>
-                                                        <constraint firstAttribute="height" constant="50" id="xgt-8l-A9y"/>
+                                                        <constraint firstAttribute="width" constant="40" id="t3f-D5-tyl"/>
+                                                        <constraint firstAttribute="height" constant="40" id="xgt-8l-A9y"/>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNu-Zs-uyX">
-                                                    <rect key="frame" x="70" y="36" width="84" height="56"/>
+                                                    <rect key="frame" x="50" y="34" width="84" height="56"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="Hch-rT-o2r"/>
@@ -206,10 +206,10 @@
                                             <constraints>
                                                 <constraint firstAttribute="centerX" secondItem="rxv-7h-LuS" secondAttribute="centerX" id="EYb-30-t9n"/>
                                                 <constraint firstItem="Rm1-pt-FKo" firstAttribute="leading" secondItem="W8J-Pl-T0y" secondAttribute="leading" constant="10" id="Ggs-Pe-pJ9"/>
-                                                <constraint firstItem="Rm1-pt-FKo" firstAttribute="top" secondItem="gNu-Zs-uyX" secondAttribute="top" id="PSt-ee-ql6"/>
+                                                <constraint firstItem="Rm1-pt-FKo" firstAttribute="top" secondItem="gNu-Zs-uyX" secondAttribute="top" constant="2" id="PSt-ee-ql6"/>
                                                 <constraint firstItem="rxv-7h-LuS" firstAttribute="top" secondItem="W8J-Pl-T0y" secondAttribute="top" constant="5" id="l3J-oy-nR9"/>
                                                 <constraint firstItem="Rm1-pt-FKo" firstAttribute="top" secondItem="rxv-7h-LuS" secondAttribute="bottom" constant="10" id="mHV-sE-p1i"/>
-                                                <constraint firstItem="gNu-Zs-uyX" firstAttribute="leading" secondItem="Rm1-pt-FKo" secondAttribute="trailing" constant="10" id="ooL-6R-tTM"/>
+                                                <constraint firstItem="gNu-Zs-uyX" firstAttribute="leading" secondItem="Rm1-pt-FKo" secondAttribute="trailing" id="ooL-6R-tTM"/>
                                                 <constraint firstItem="Rm1-pt-FKo" firstAttribute="top" secondItem="W8J-Pl-T0y" secondAttribute="top" priority="750" constant="10" id="rH3-oA-Waw"/>
                                             </constraints>
                                             <variation key="default">
@@ -272,6 +272,6 @@
         <image name="chat_recive_nor" width="48" height="56"/>
         <image name="chat_send_nor" width="49" height="56"/>
         <image name="me" width="100" height="100"/>
-        <image name="other" width="100" height="100"/>
+        <image name="other" width="64" height="64"/>
     </resources>
 </document>

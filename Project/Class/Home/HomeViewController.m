@@ -64,11 +64,11 @@
         break;
         case  HomeSeciton_SectionBanner:
         case HomeSection_Circle:
+        case  HomeSecitont_Seivice:
         row = 1;
         break;
         case HomeSection_ListNews:
         case  HomeSeciton_Banner:
-        case  HomeSecitont_Seivice:
         case  HomeSeciton_List:
         row = 0;
         break;
