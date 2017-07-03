@@ -40,7 +40,7 @@
     
     
     //引导页
-    [self appGuidaPage:tabbarVC.view];
+//    [self appGuidaPage:tabbarVC.view];
     
     //极光推送
     [self setJupsh:launchOptions];
