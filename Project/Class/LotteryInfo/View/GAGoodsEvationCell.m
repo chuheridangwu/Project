@@ -20,6 +20,8 @@
 @property (nonatomic,strong)UILabel *contentL;
 @property (nonatomic,strong)UIView *imgsView;
 
+
+@property (nonatomic,strong)UIButton *encourageL;
 @property (nonatomic,strong)UIView *didView;
 @end
 
@@ -41,13 +43,14 @@
         [self.contentView addSubview:self.timeL];
         [self.contentView addSubview:self.contentL];
         [self.contentView addSubview:self.imgsView];
+        [self.contentView addSubview:self.encourageL];
         
         CGFloat leftMargin = 10;
         
 //        self.iconImg.backgroundColor = [UIColor redColor];
 //        self.phoneL.backgroundColor = [UIColor yellowColor];
 //        self.timeL.backgroundColor = [UIColor blueColor];
-        
+//        self.encourageL.backgroundColor = XBAPPBaseColor;
         
         [self.iconImg mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(10);
@@ -66,8 +69,15 @@
         [self.timeL mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.iconImg.mas_right).offset(10);
             make.top.equalTo(self.phoneL.mas_bottom).offset(0);
-            make.right.equalTo(-10);
+            make.right.equalTo(_encourageL.mas_left).offset(-5);
             make.height.equalTo(20);
+        }];
+        
+        [self.encourageL mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.phoneL.mas_bottom).offset(0);
+            make.right.offset(-5);
+            make.height.equalTo(20);
+            make.width.equalTo(@50);
         }];
         
         [self.contentL mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -139,6 +149,8 @@
         [imgView addGestureRecognizer:tap];
     }
     
+    int  count = arc4random()%1000 > 500 ?  arc4random()%1000 : 300;
+    [_encourageL setTitle:[NSString stringWithFormat:@"%d",count] forState:UIControlStateNormal];
 }
 
 - (void)clickImgView:(UITapGestureRecognizer*)tapView{
@@ -204,6 +216,19 @@
         _contentL.numberOfLines = 0;
     }
     return _contentL;
+}
+
+- (UIButton*)encourageL{
+    if (!_encourageL) {
+        _encourageL = [UIButton new];
+        _encourageL.titleLabel.font = ContentLabelFont;
+        [_encourageL setImage:[UIImage imageNamed:@"encourage111"] forState:UIControlStateNormal];
+        [_encourageL setTitleColor:RGBColor(81, 81, 81) forState:UIControlStateNormal];
+        _encourageL.titleLabel.font = [UIFont systemFontOfSize:11];
+        _encourageL.userInteractionEnabled = NO;
+        _encourageL.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 3);
+    }
+    return _encourageL;
 }
 
 - (UIImageView*)iconImg{

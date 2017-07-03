@@ -112,7 +112,9 @@
 - (void)userAttentionClick:(UserAttention*)atten clickTag:(UserCollectType)clickTag{
     switch (clickTag) {
         case UserCollectType_Shop:
-            [XBUITool showRmindView:@"点赞成功"];
+            [XBUITool asRequestNetWork:^{
+                [XBUITool showRmindView:@"点赞成功"];
+            }];
             break;
         case UserCollectType_Store:
         {

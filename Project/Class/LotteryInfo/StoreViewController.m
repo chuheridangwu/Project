@@ -233,7 +233,7 @@
         
         MKMapItem *beginItem=[[MKMapItem alloc]initWithPlacemark:mkBeginMark];
         
-        NSArray *array = @[@"浙江省杭州市拱墅区衢州街",@"浙江省杭州市江干区格畈家园北苑",@" 杭州市体育场路",@"杭州市黄龙路",@"杭州市曙光路126号",@" 浙江省杭州市体育场路210号",@"复兴路397号复兴商务大厦B楼"];
+        NSArray *array = @[@"浙江省杭州市拱墅区衢州街",@"浙江省杭州市江干区格畈家园北苑",@"杭州市体育场路",@"杭州市黄龙路",@"杭州市曙光路",@"浙江省杭州市体育场路210号",@"复兴路397号复兴商务大厦B楼"];
         
         [self.geo geocodeAddressString:array[arc4random()%array.count] completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
             
