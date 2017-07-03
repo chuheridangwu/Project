@@ -251,6 +251,7 @@
 		3085724A1F0A383D00526C97 /* MQPullRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 308571D71F0A383C00526C97 /* MQPullRefreshView.m */; };
 		3085724B1F0A383D00526C97 /* MQRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 308571DA1F0A383C00526C97 /* MQRecordView.m */; };
 		3085724C1F0A383D00526C97 /* MQToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 308571DD1F0A383C00526C97 /* MQToast.m */; };
+		308572601F0A65FC00526C97 /* MessageWenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3085725F1F0A65FC00526C97 /* MessageWenVC.m */; };
 		30A41DCF1F009C890051FAF7 /* UIButton+XBAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A41DCE1F009C890051FAF7 /* UIButton+XBAlignment.m */; };
 		30A41DDC1F00E9770051FAF7 /* RFSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A41DDB1F00E9770051FAF7 /* RFSegmentView.m */; };
 		30A41DDF1F00EC420051FAF7 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A41DDE1F00EC420051FAF7 /* StoreViewController.m */; };
@@ -759,6 +760,8 @@
 		308571DA1F0A383C00526C97 /* MQRecordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQRecordView.m; sourceTree = "<group>"; };
 		308571DC1F0A383C00526C97 /* MQToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQToast.h; sourceTree = "<group>"; };
 		308571DD1F0A383C00526C97 /* MQToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQToast.m; sourceTree = "<group>"; };
+		3085725E1F0A65FC00526C97 /* MessageWenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageWenVC.h; sourceTree = "<group>"; };
+		3085725F1F0A65FC00526C97 /* MessageWenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageWenVC.m; sourceTree = "<group>"; };
 		30A41DCD1F009C890051FAF7 /* UIButton+XBAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+XBAlignment.h"; sourceTree = "<group>"; };
 		30A41DCE1F009C890051FAF7 /* UIButton+XBAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XBAlignment.m"; sourceTree = "<group>"; };
 		30A41DDA1F00E9770051FAF7 /* RFSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSegmentView.h; sourceTree = "<group>"; };
@@ -1944,6 +1947,8 @@
 				303C64D81F08EDB7008D806C /* RechargeHistoryViewController.m */,
 				303C64F41F08F357008D806C /* BuyViewController.h */,
 				303C64F51F08F357008D806C /* BuyViewController.m */,
+				3085725E1F0A65FC00526C97 /* MessageWenVC.h */,
+				3085725F1F0A65FC00526C97 /* MessageWenVC.m */,
 				30B0F59F1EF64DB0008AC7E6 /* View */,
 				301EB3DD1EE7FFC80081F1D1 /* LotteryNotice */,
 				30C728AD1EE7DF6D00CAD4C0 /* Game */,
@@ -2679,6 +2684,7 @@
 				308572371F0A383D00526C97 /* SDWebImageManager.m in Sources */,
 				3085720A1F0A383C00526C97 /* MQEvaluationCell.m in Sources */,
 				3085720D1F0A383C00526C97 /* MQFileDownloadCell.m in Sources */,
+				308572601F0A65FC00526C97 /* MessageWenVC.m in Sources */,
 				308571EC1F0A383C00526C97 /* MQMessageFormInputModel.m in Sources */,
 				303C64131F08C985008D806C /* UserSettingInfoCell.m in Sources */,
 				308571F71F0A383C00526C97 /* MQChatViewService.m in Sources */,
