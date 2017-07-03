@@ -11,6 +11,8 @@
 #import "StoreViewController.h"
 #import "StoreInfoViewController.h"
 #import "XBNavigationController.h"
+#import "CommentViewController.h"
+
 
 #import "GAGoodsEvaEntity.h"
 #import "GoodsEvaModel.h"
@@ -79,10 +81,8 @@
 - (void)clickShopView:(GAGoodsEvaEntity *)entity{
 //    [[ShopInfoView shareShopInfoView] showWithShopInfo:entity];
     
-    StoreInfoViewController *storeInfoVC = [[StoreInfoViewController alloc]init];
-    storeInfoVC.shopName = entity.shop.shopName;
-    storeInfoVC.iconName = entity.shop.shopIcom;
-    storeInfoVC.time = entity.shop.time;
+    CommentViewController *storeInfoVC = [[CommentViewController alloc]init];
+    storeInfoVC.entity = entity;
     XBNavigationController *navVC = [[XBNavigationController alloc]initWithRootViewController:storeInfoVC];
     
     [self presentViewController:navVC animated:YES completion:nil];

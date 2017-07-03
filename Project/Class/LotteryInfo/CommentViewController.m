@@ -1,0 +1,154 @@
+//
+//  CommentViewController.m
+//  Project
+//
+//  Created by dym on 2017/7/3.
+//  Copyright © 2017年 zzl. All rights reserved.
+//
+
+#import "CommentViewController.h"
+#import "CommentEntity.h"
+#import "GAGoodsEvationCell.h"
+#import "UserAttention.h"
+
+
+
+@interface CommentViewController ()<UserAttentionDelegate>
+
+@end
+
+@implementation CommentViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    self.title = @"评论详情";
+   
+    self.requestUrl = @"http://mapi.yjcp.com/api/gain/tenawardinfo?lotId=33&pageNum=1&sid=31000000000";
+
+//    self.tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 40);
+    
+    UserAttention *collectView = [[UserAttention alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 40, SCREEN_WIDTH, 40)];
+    collectView.delegate = self;
+    [self.view addSubview:collectView];
+}
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (section == 0) {
+        return 1;
+    }
+    return self.dataList.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        return  0.001;
+    }
+    return 5;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        return [GAGoodsEvationCell goodsEvationHeight:self.entity];
+    }
+    return 44;
+}
+
+- (UITableViewCell*)tableViewSectionStartCell{
+    GAGoodsEvationCell *cell = [GAGoodsEvationCell GAGoodsEvationCellWithTableView:self.tableView];
+    if (self.entity) {
+        cell.height = [GAGoodsEvationCell goodsEvationHeight:self.entity];
+        cell.entity = self.entity;
+        [cell loadCell];
+    }
+    return cell;
+}
+
+- (UITableViewCell*)tableViewSectionCommentCell:(NSIndexPath*)indexPath{
+    UITableViewCell  *Cell= [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"1212"];
+    CommentEntity *entity = self.dataList[indexPath.row];
+    Cell.textLabel.text = entity.name;
+    return Cell;
+}
+
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell  * cell;
+    NSInteger section = indexPath.section;
+    if (section == 0) {
+        cell = [self tableViewSectionStartCell];
+    }else{
+        cell = [self tableViewSectionCommentCell:indexPath];
+    }
+    return cell;
+}
+
+
+
+- (void)userAttentionClick:(UserAttention*)atten clickTag:(UserCollectType)clickTag{
+    
+}
+
+
+
+
+
+
+- (void)requestNetWorkSuccess:(id)outcome{
+    [super requestNetWorkSuccess:outcome];
+    self.dataList = (NSMutableArray*)[self randomArray];
+    [self.tableView reloadData];
+}
+
+
+
+-(NSArray *)randomArray
+{
+    //随机数从这里边产生
+    NSMutableArray *startArray= [NSMutableArray array];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"ShopComment.json" ofType:@""];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    for (NSDictionary *dict in array) {
+        CommentEntity *entity = [CommentEntity commentEntityWithDict:dict];
+        [startArray addObject:entity];
+    }
+    //随机数产生结果
+    NSMutableArray *resultArray=[[NSMutableArray alloc] initWithCapacity:0];
+    //随机数个数
+    NSInteger m = startArray.count;
+    for (int i = 0; i< m; i++) {
+        int t = arc4random()%startArray.count;
+        resultArray[i]=startArray[t];
+        startArray[t]=[startArray lastObject]; //为更好的乱序，故交换下位置
+        [startArray removeLastObject];
+    }
+    return resultArray;
+}
+
+
+
+
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

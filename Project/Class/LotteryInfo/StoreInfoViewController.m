@@ -10,6 +10,8 @@
 #import "HomeDataModel.h"
 #import "HomeLuckBallEntity.h"
 #import <SDWebImage/UIButton+WebCache.h>
+#import "UserAttention.h"
+
 
 @interface StoreInfoViewController ()
 @property (nonatomic, strong) UIImageView *iconimage;
@@ -19,6 +21,7 @@
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, strong) UIView *levelView;
 @property (nonatomic, strong) HomeDataModel *model;
+
 @end
 
 @implementation StoreInfoViewController
@@ -27,7 +30,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"店铺详情";
-//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -40,11 +42,6 @@
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)];
     view.backgroundColor = XBAPPBaseColor;
     [_contentView addSubview:view];
-//    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-//    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
-//    effectView.frame = CGRectMake(0, 0, view.frame.size.width, view.frame.size.height);
-//    [view addSubview:effectView];
-    
     
     CGFloat imgWidth = 60;
     _iconimage = [[UIImageView alloc]initWithFrame:CGRectMake((_contentView.mj_w - imgWidth) / 2, (view.mj_h - imgWidth) / 2, imgWidth,imgWidth)];
@@ -54,7 +51,8 @@
     _iconimage.layer.borderColor = [UIColor whiteColor].CGColor;
     [view addSubview:self.iconimage];
     
-    
+    UserAttention *collectView = [[UserAttention alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)];
+    [self.view addSubview:collectView];
     
     
     

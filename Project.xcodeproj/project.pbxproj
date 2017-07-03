@@ -128,11 +128,18 @@
 		30774C4C1F000CC10001C77A /* course_33.html in Resources */ = {isa = PBXBuildFile; fileRef = 30774C3A1F000CC10001C77A /* course_33.html */; };
 		30774C4D1F000CC10001C77A /* local.html in Resources */ = {isa = PBXBuildFile; fileRef = 30774C3B1F000CC10001C77A /* local.html */; };
 		30774C4E1F000CC10001C77A /* shishicaiIntroduce.html in Resources */ = {isa = PBXBuildFile; fileRef = 30774C3C1F000CC10001C77A /* shishicaiIntroduce.html */; };
+		30856F291F09D2D700526C97 /* UserAttention.m in Sources */ = {isa = PBXBuildFile; fileRef = 30856F281F09D2D700526C97 /* UserAttention.m */; };
+		30856F2F1F09DEC900526C97 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30856F2E1F09DEC900526C97 /* CommentViewController.m */; };
+		30856F451F0A000A00526C97 /* CommentEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 30856F3B1F0A000A00526C97 /* CommentEntity.m */; };
+		30856F461F0A000A00526C97 /* GAGoodsEvaEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 30856F3D1F0A000A00526C97 /* GAGoodsEvaEntity.m */; };
+		30856F471F0A000A00526C97 /* GoodsEvaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30856F3F1F0A000A00526C97 /* GoodsEvaModel.m */; };
+		30856F481F0A000A00526C97 /* ShopComment.json in Resources */ = {isa = PBXBuildFile; fileRef = 30856F401F0A000A00526C97 /* ShopComment.json */; };
+		30856F491F0A000A00526C97 /* ShopLive.json in Resources */ = {isa = PBXBuildFile; fileRef = 30856F411F0A000A00526C97 /* ShopLive.json */; };
+		30856F4A1F0A000A00526C97 /* StoreEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 30856F431F0A000A00526C97 /* StoreEntity.m */; };
+		30856F4B1F0A000A00526C97 /* StoreList.json in Resources */ = {isa = PBXBuildFile; fileRef = 30856F441F0A000A00526C97 /* StoreList.json */; };
 		30A41DCF1F009C890051FAF7 /* UIButton+XBAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A41DCE1F009C890051FAF7 /* UIButton+XBAlignment.m */; };
 		30A41DDC1F00E9770051FAF7 /* RFSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A41DDB1F00E9770051FAF7 /* RFSegmentView.m */; };
 		30A41DDF1F00EC420051FAF7 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A41DDE1F00EC420051FAF7 /* StoreViewController.m */; };
-		30A41DFD1F0114400051FAF7 /* StoreList.json in Resources */ = {isa = PBXBuildFile; fileRef = 30A41DFC1F0114400051FAF7 /* StoreList.json */; };
-		30A41E001F0114E10051FAF7 /* StoreEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A41DFF1F0114E10051FAF7 /* StoreEntity.m */; };
 		30A988591EE5566700D04924 /* XBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A988581EE5566700D04924 /* XBTabBarController.m */; };
 		30A9885C1EE5568800D04924 /* XBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9885B1EE5568800D04924 /* XBNavigationController.m */; };
 		30A9885F1EE556A100D04924 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9885E1EE556A100D04924 /* HomeViewController.m */; };
@@ -182,11 +189,8 @@
 		30E7AD2C1EE45F5B000609DB /* ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7AD2B1EE45F5B000609DB /* ProjectTests.m */; };
 		30E7AD371EE45F5B000609DB /* ProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7AD361EE45F5B000609DB /* ProjectUITests.m */; };
 		30E8F60E1EFB6F0A00103942 /* GAGoodsEvationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E8F60D1EFB6F0A00103942 /* GAGoodsEvationCell.m */; };
-		30E8F6111EFB6F4E00103942 /* GAGoodsEvaEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E8F6101EFB6F4E00103942 /* GAGoodsEvaEntity.m */; };
 		30E8F6141EFB700000103942 /* GoodsEvaluationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E8F6131EFB700000103942 /* GoodsEvaluationVC.m */; };
 		30E8F6171EFB702A00103942 /* GAGoodsCeverScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E8F6161EFB702A00103942 /* GAGoodsCeverScrollView.m */; };
-		30E8F61A1EFB70EB00103942 /* GoodsEvaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E8F6191EFB70EB00103942 /* GoodsEvaModel.m */; };
-		30E8F61C1EFB730000103942 /* ShopLive.json in Resources */ = {isa = PBXBuildFile; fileRef = 30E8F61B1EFB730000103942 /* ShopLive.json */; };
 		30E8F67E1EFCC3EE00103942 /* ShopInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E8F67D1EFCC3EE00103942 /* ShopInfoView.m */; };
 		30F27B131EEBD6D40005FF16 /* HomeDataBase.json in Resources */ = {isa = PBXBuildFile; fileRef = 30F27B121EEBD6D40005FF16 /* HomeDataBase.json */; };
 		30F27B1E1EEBDB9E0005FF16 /* BaseDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F27B1D1EEBDB9E0005FF16 /* BaseDataViewController.m */; };
@@ -391,15 +395,27 @@
 		30774C3A1F000CC10001C77A /* course_33.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = course_33.html; sourceTree = "<group>"; };
 		30774C3B1F000CC10001C77A /* local.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = local.html; sourceTree = "<group>"; };
 		30774C3C1F000CC10001C77A /* shishicaiIntroduce.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = shishicaiIntroduce.html; sourceTree = "<group>"; };
+		30856F271F09D2D700526C97 /* UserAttention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAttention.h; sourceTree = "<group>"; };
+		30856F281F09D2D700526C97 /* UserAttention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAttention.m; sourceTree = "<group>"; };
+		30856F2D1F09DEC900526C97 /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
+		30856F2E1F09DEC900526C97 /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
+		30856F3A1F0A000A00526C97 /* CommentEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentEntity.h; sourceTree = "<group>"; };
+		30856F3B1F0A000A00526C97 /* CommentEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentEntity.m; sourceTree = "<group>"; };
+		30856F3C1F0A000A00526C97 /* GAGoodsEvaEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAGoodsEvaEntity.h; sourceTree = "<group>"; };
+		30856F3D1F0A000A00526C97 /* GAGoodsEvaEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAGoodsEvaEntity.m; sourceTree = "<group>"; };
+		30856F3E1F0A000A00526C97 /* GoodsEvaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsEvaModel.h; sourceTree = "<group>"; };
+		30856F3F1F0A000A00526C97 /* GoodsEvaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsEvaModel.m; sourceTree = "<group>"; };
+		30856F401F0A000A00526C97 /* ShopComment.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ShopComment.json; sourceTree = "<group>"; };
+		30856F411F0A000A00526C97 /* ShopLive.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ShopLive.json; sourceTree = "<group>"; };
+		30856F421F0A000A00526C97 /* StoreEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreEntity.h; sourceTree = "<group>"; };
+		30856F431F0A000A00526C97 /* StoreEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreEntity.m; sourceTree = "<group>"; };
+		30856F441F0A000A00526C97 /* StoreList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StoreList.json; sourceTree = "<group>"; };
 		30A41DCD1F009C890051FAF7 /* UIButton+XBAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+XBAlignment.h"; sourceTree = "<group>"; };
 		30A41DCE1F009C890051FAF7 /* UIButton+XBAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XBAlignment.m"; sourceTree = "<group>"; };
 		30A41DDA1F00E9770051FAF7 /* RFSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSegmentView.h; sourceTree = "<group>"; };
 		30A41DDB1F00E9770051FAF7 /* RFSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSegmentView.m; sourceTree = "<group>"; };
 		30A41DDD1F00EC420051FAF7 /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
 		30A41DDE1F00EC420051FAF7 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
-		30A41DFC1F0114400051FAF7 /* StoreList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StoreList.json; sourceTree = "<group>"; };
-		30A41DFE1F0114E10051FAF7 /* StoreEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreEntity.h; sourceTree = "<group>"; };
-		30A41DFF1F0114E10051FAF7 /* StoreEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreEntity.m; sourceTree = "<group>"; };
 		30A988571EE5566700D04924 /* XBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBTabBarController.h; sourceTree = "<group>"; };
 		30A988581EE5566700D04924 /* XBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBTabBarController.m; sourceTree = "<group>"; };
 		30A9885A1EE5568800D04924 /* XBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBNavigationController.h; sourceTree = "<group>"; };
@@ -494,15 +510,10 @@
 		30E7AD381EE45F5B000609DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30E8F60C1EFB6F0A00103942 /* GAGoodsEvationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAGoodsEvationCell.h; sourceTree = "<group>"; };
 		30E8F60D1EFB6F0A00103942 /* GAGoodsEvationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAGoodsEvationCell.m; sourceTree = "<group>"; };
-		30E8F60F1EFB6F4E00103942 /* GAGoodsEvaEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAGoodsEvaEntity.h; sourceTree = "<group>"; };
-		30E8F6101EFB6F4E00103942 /* GAGoodsEvaEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAGoodsEvaEntity.m; sourceTree = "<group>"; };
 		30E8F6121EFB700000103942 /* GoodsEvaluationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsEvaluationVC.h; sourceTree = "<group>"; };
 		30E8F6131EFB700000103942 /* GoodsEvaluationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsEvaluationVC.m; sourceTree = "<group>"; };
 		30E8F6151EFB702A00103942 /* GAGoodsCeverScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAGoodsCeverScrollView.h; sourceTree = "<group>"; };
 		30E8F6161EFB702A00103942 /* GAGoodsCeverScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAGoodsCeverScrollView.m; sourceTree = "<group>"; };
-		30E8F6181EFB70EB00103942 /* GoodsEvaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsEvaModel.h; sourceTree = "<group>"; };
-		30E8F6191EFB70EB00103942 /* GoodsEvaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsEvaModel.m; sourceTree = "<group>"; };
-		30E8F61B1EFB730000103942 /* ShopLive.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ShopLive.json; sourceTree = "<group>"; };
 		30E8F67C1EFCC3EE00103942 /* ShopInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopInfoView.h; sourceTree = "<group>"; };
 		30E8F67D1EFCC3EE00103942 /* ShopInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopInfoView.m; sourceTree = "<group>"; };
 		30F27B121EEBD6D40005FF16 /* HomeDataBase.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HomeDataBase.json; sourceTree = "<group>"; };
@@ -896,26 +907,13 @@
 				30A41DDE1F00EC420051FAF7 /* StoreViewController.m */,
 				3072F61A1F0206A300170C95 /* StoreInfoViewController.h */,
 				3072F61B1F0206A300170C95 /* StoreInfoViewController.m */,
+				30856F2D1F09DEC900526C97 /* CommentViewController.h */,
+				30856F2E1F09DEC900526C97 /* CommentViewController.m */,
+				30856F391F0A000A00526C97 /* Model */,
 				3074DCFD1EF8B5D000C8E9C9 /* View */,
-				3061786E1EF7CB8900561495 /* Model */,
 			);
 			name = Found;
 			path = LotteryInfo;
-			sourceTree = "<group>";
-		};
-		3061786E1EF7CB8900561495 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				30A41DFC1F0114400051FAF7 /* StoreList.json */,
-				30E8F61B1EFB730000103942 /* ShopLive.json */,
-				30A41DFE1F0114E10051FAF7 /* StoreEntity.h */,
-				30A41DFF1F0114E10051FAF7 /* StoreEntity.m */,
-				30E8F60F1EFB6F4E00103942 /* GAGoodsEvaEntity.h */,
-				30E8F6101EFB6F4E00103942 /* GAGoodsEvaEntity.m */,
-				30E8F6181EFB70EB00103942 /* GoodsEvaModel.h */,
-				30E8F6191EFB70EB00103942 /* GoodsEvaModel.m */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		3074DCFD1EF8B5D000C8E9C9 /* View */ = {
@@ -927,6 +925,8 @@
 				3072F6181F01F60000170C95 /* StoreTableViewCell.m */,
 				30E8F67C1EFCC3EE00103942 /* ShopInfoView.h */,
 				30E8F67D1EFCC3EE00103942 /* ShopInfoView.m */,
+				30856F271F09D2D700526C97 /* UserAttention.h */,
+				30856F281F09D2D700526C97 /* UserAttention.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -954,6 +954,24 @@
 				30774C3C1F000CC10001C77A /* shishicaiIntroduce.html */,
 			);
 			path = html;
+			sourceTree = "<group>";
+		};
+		30856F391F0A000A00526C97 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30856F3A1F0A000A00526C97 /* CommentEntity.h */,
+				30856F3B1F0A000A00526C97 /* CommentEntity.m */,
+				30856F3C1F0A000A00526C97 /* GAGoodsEvaEntity.h */,
+				30856F3D1F0A000A00526C97 /* GAGoodsEvaEntity.m */,
+				30856F3E1F0A000A00526C97 /* GoodsEvaModel.h */,
+				30856F3F1F0A000A00526C97 /* GoodsEvaModel.m */,
+				30856F401F0A000A00526C97 /* ShopComment.json */,
+				30856F411F0A000A00526C97 /* ShopLive.json */,
+				30856F421F0A000A00526C97 /* StoreEntity.h */,
+				30856F431F0A000A00526C97 /* StoreEntity.m */,
+				30856F441F0A000A00526C97 /* StoreList.json */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		30A988511EE5564700D04924 /* Class */ = {
@@ -1435,7 +1453,6 @@
 				30774C421F000CC10001C77A /* course_11.html in Resources */,
 				303C653D1F092E79008D806C /* XMGChatingViewController.storyboard in Resources */,
 				30B0F5981EF6257A008AC7E6 /* AccountViewController.xib in Resources */,
-				30E8F61C1EFB730000103942 /* ShopLive.json in Resources */,
 				30774C4B1F000CC10001C77A /* course_32.html in Resources */,
 				301EB4A11EE80EC60081F1D1 /* znzh.html in Resources */,
 				30774C4E1F000CC10001C77A /* shishicaiIntroduce.html in Resources */,
@@ -1444,8 +1461,10 @@
 				301EB49E1EE80EC60081F1D1 /* ssq_howto.html in Resources */,
 				30774C471F000CC10001C77A /* course_22.html in Resources */,
 				301EB49A1EE80EC60081F1D1 /* qxc_howto.html in Resources */,
+				30856F491F0A000A00526C97 /* ShopLive.json in Resources */,
 				301EB4921EE80EC60081F1D1 /* k2_howto.html in Resources */,
 				30B0F59A1EF6257A008AC7E6 /* ForgetViewController.xib in Resources */,
+				30856F481F0A000A00526C97 /* ShopComment.json in Resources */,
 				301EB49C1EE80EC60081F1D1 /* sfc_howto.html in Resources */,
 				301EB48F1EE80EC60081F1D1 /* jczq_howto.html in Resources */,
 				301EB4941EE80EC60081F1D1 /* kl8_howto.html in Resources */,
@@ -1467,8 +1486,8 @@
 				30774C401F000CC10001C77A /* course_03.html in Resources */,
 				30774C461F000CC10001C77A /* course_21.html in Resources */,
 				301EB4961EE80EC60081F1D1 /* networkconnectedfailed.html in Resources */,
+				30856F4B1F0A000A00526C97 /* StoreList.json in Resources */,
 				30774C4A1F000CC10001C77A /* course_31.html in Resources */,
-				30A41DFD1F0114400051FAF7 /* StoreList.json in Resources */,
 				301EB4861EE80EC60081F1D1 /* coupon_help.html in Resources */,
 				30774C3F1F000CC10001C77A /* course_02.html in Resources */,
 				301ADFC41F02841D00268DA1 /* LuckBall.json in Resources */,
@@ -1548,10 +1567,11 @@
 				30E8F6171EFB702A00103942 /* GAGoodsCeverScrollView.m in Sources */,
 				30CD79FA1F03A2A000BF4A11 /* HomeLuckBallEntity.m in Sources */,
 				30DF951C1EE6B322000261C8 /* XBBaseTableViewCell.m in Sources */,
+				30856F2F1F09DEC900526C97 /* CommentViewController.m in Sources */,
 				30E8F60E1EFB6F0A00103942 /* GAGoodsEvationCell.m in Sources */,
+				30856F291F09D2D700526C97 /* UserAttention.m in Sources */,
 				30A988591EE5566700D04924 /* XBTabBarController.m in Sources */,
 				30B0F5991EF6257A008AC7E6 /* ForgetViewController.m in Sources */,
-				30E8F6111EFB6F4E00103942 /* GAGoodsEvaEntity.m in Sources */,
 				303C64D61F08E71A008D806C /* ProductView.m in Sources */,
 				3053DF081EE8F84300552AF8 /* HomeListSectionCell.m in Sources */,
 				301F6B141EE8420200B8443F /* XBScrollViewPhoto.m in Sources */,
@@ -1585,6 +1605,7 @@
 				30A9885C1EE5568800D04924 /* XBNavigationController.m in Sources */,
 				303C65231F0901F6008D806C /* DLScrollTabbarView.m in Sources */,
 				30C728B01EE7DF8D00CAD4C0 /* GameViewController.m in Sources */,
+				30856F4A1F0A000A00526C97 /* StoreEntity.m in Sources */,
 				30A41DDC1F00E9770051FAF7 /* RFSegmentView.m in Sources */,
 				301F6B131EE8420200B8443F /* XBScrollViewLabel.m in Sources */,
 				30F27B241EEBDC270005FF16 /* BaseDataEntity.m in Sources */,
@@ -1593,7 +1614,6 @@
 				303C64D31F08E5F4008D806C /* ProductViewController.m in Sources */,
 				30E7AD161EE45F5B000609DB /* AppDelegate.m in Sources */,
 				30E7AD131EE45F5B000609DB /* main.m in Sources */,
-				30E8F61A1EFB70EB00103942 /* GoodsEvaModel.m in Sources */,
 				30A988681EE556F100D04924 /* PersonViewController.m in Sources */,
 				3072F6191F01F60000170C95 /* StoreTableViewCell.m in Sources */,
 				303C65311F092C81008D806C /* XMGChatingViewController.m in Sources */,
@@ -1608,12 +1628,14 @@
 				303C65341F092C81008D806C /* XMGMessageCell.m in Sources */,
 				30B0F5881EF620E6008AC7E6 /* UIView+Extension.m in Sources */,
 				30DF95151EE6AA77000261C8 /* DisContentEntity.m in Sources */,
+				30856F461F0A000A00526C97 /* GAGoodsEvaEntity.m in Sources */,
 				301EB3E01EE800120081F1D1 /* LotteryNoticeVC.m in Sources */,
 				303C65321F092C81008D806C /* XMGMeCell.m in Sources */,
 				30A41DCF1F009C890051FAF7 /* UIButton+XBAlignment.m in Sources */,
 				303C64011F08B6B3008D806C /* UserSettingController.m in Sources */,
 				3072F6271F025D6B00170C95 /* HomeBuyLuckBallCell.m in Sources */,
 				301EB3E61EE80AC80081F1D1 /* LotteryHelpVC.m in Sources */,
+				30856F471F0A000A00526C97 /* GoodsEvaModel.m in Sources */,
 				306178741EF7DB4B00561495 /* XBRunCircleTextCell.m in Sources */,
 				30F27B211EEBDBC00005FF16 /* BaseDataTabCell.m in Sources */,
 				30DF950F1EE69860000261C8 /* DIscoverItem.m in Sources */,
@@ -1632,11 +1654,11 @@
 				3072F61C1F0206A300170C95 /* StoreInfoViewController.m in Sources */,
 				303C64101F08C6EC008D806C /* UIImage+CH.m in Sources */,
 				30DF95201EE6BA4E000261C8 /* XBTabBar.m in Sources */,
+				30856F451F0A000A00526C97 /* CommentEntity.m in Sources */,
 				303C64D91F08EDB7008D806C /* RechargeHistoryViewController.m in Sources */,
 				30CD79F71F03A25900BF4A11 /* BuyLuckBallViewController.m in Sources */,
 				30263D621EE63BD5007B30C8 /* XBUITool.m in Sources */,
 				3053DF131EE9237A00552AF8 /* ProductDisplayView.m in Sources */,
-				30A41E001F0114E10051FAF7 /* StoreEntity.m in Sources */,
 				30E8F6141EFB700000103942 /* GoodsEvaluationVC.m in Sources */,
 				30A988621EE556C000D04924 /* BaseViewController.m in Sources */,
 				30263D501EE634F9007B30C8 /* XBSettingItem.m in Sources */,
