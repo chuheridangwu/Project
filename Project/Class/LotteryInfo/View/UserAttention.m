@@ -18,7 +18,6 @@
 - (UIView*)dicideView{
     if (!_dicideView) {
         _dicideView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 1, self.mj_h)];
-        self.backgroundColor = [UIColor redColor];
     }
     return _dicideView;
 }
@@ -33,19 +32,21 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         self.userInteractionEnabled = YES;
-        
-        NSArray *collectArr = @[@0,@0,@0];
-        NSArray *attenArr = @[@"收藏的商品",@"关注的店铺",@"关注的发型师"];
-        
-        CGFloat backW = self.mj_w / 3;
-        CGFloat backH = self.mj_h;
+        self.backgroundColor = XBAPPBaseColor;
+
+        NSArray *attenArr = @[@"点赞",@"评论",@"分享"];
+        NSArray *collectArr = @[@"encourage",@"comment",@"share"];
+        CGFloat backW = SCREEN_WIDTH / 3;
+        CGFloat backH = 40;
         for (int i = 0; i < 3; i++) {
             UIButton *back = [[UIButton alloc]init];
             CGFloat imageX = i *backW;
             back.frame = CGRectMake(imageX, 0, backW, backH);
             [back setTitle:attenArr[i] forState:UIControlStateNormal];
-//            back.collect = [NSString stringWithFormat:@"%@",collectArr[i]];
+            [back setImage:[UIImage imageNamed:collectArr[i]] forState:UIControlStateNormal];
             [self addSubview:back];
+            back.titleLabel.font = [UIFont systemFontOfSize:14];
+            back.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 5);
             
             UITapGestureRecognizer *pan = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickBackImage:)];
             [back addGestureRecognizer:pan];
@@ -54,8 +55,8 @@
             
             CGFloat viewW = (i + 1) *backW;
             if (i == 0 || i == 1) {
-                UIView *dicideView = [[UIView alloc]initWithFrame:CGRectMake(viewW, 0, 1, self.mj_h)];
-                dicideView.backgroundColor = RGB_COLOR(114, 41, 111);
+                UIView *dicideView = [[UIView alloc]initWithFrame:CGRectMake(viewW, 0, 1,40)];
+                dicideView.backgroundColor = [UIColor whiteColor];
                 [self addSubview:dicideView];
             }
             

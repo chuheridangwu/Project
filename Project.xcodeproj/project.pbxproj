@@ -137,6 +137,9 @@
 		30856F491F0A000A00526C97 /* ShopLive.json in Resources */ = {isa = PBXBuildFile; fileRef = 30856F411F0A000A00526C97 /* ShopLive.json */; };
 		30856F4A1F0A000A00526C97 /* StoreEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 30856F431F0A000A00526C97 /* StoreEntity.m */; };
 		30856F4B1F0A000A00526C97 /* StoreList.json in Resources */ = {isa = PBXBuildFile; fileRef = 30856F441F0A000A00526C97 /* StoreList.json */; };
+		30856F4E1F0A016100526C97 /* CommentShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30856F4D1F0A016100526C97 /* CommentShopCell.m */; };
+		30856F511F0A11BE00526C97 /* TSShareHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 30856F501F0A11BE00526C97 /* TSShareHelper.m */; };
+		30856F541F0A191500526C97 /* SubmitCommentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 30856F531F0A191500526C97 /* SubmitCommentVC.m */; };
 		30A41DCF1F009C890051FAF7 /* UIButton+XBAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A41DCE1F009C890051FAF7 /* UIButton+XBAlignment.m */; };
 		30A41DDC1F00E9770051FAF7 /* RFSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A41DDB1F00E9770051FAF7 /* RFSegmentView.m */; };
 		30A41DDF1F00EC420051FAF7 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A41DDE1F00EC420051FAF7 /* StoreViewController.m */; };
@@ -410,6 +413,12 @@
 		30856F421F0A000A00526C97 /* StoreEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreEntity.h; sourceTree = "<group>"; };
 		30856F431F0A000A00526C97 /* StoreEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreEntity.m; sourceTree = "<group>"; };
 		30856F441F0A000A00526C97 /* StoreList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StoreList.json; sourceTree = "<group>"; };
+		30856F4C1F0A016100526C97 /* CommentShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentShopCell.h; sourceTree = "<group>"; };
+		30856F4D1F0A016100526C97 /* CommentShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentShopCell.m; sourceTree = "<group>"; };
+		30856F4F1F0A11BE00526C97 /* TSShareHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSShareHelper.h; sourceTree = "<group>"; };
+		30856F501F0A11BE00526C97 /* TSShareHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSShareHelper.m; sourceTree = "<group>"; };
+		30856F521F0A191500526C97 /* SubmitCommentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitCommentVC.h; sourceTree = "<group>"; };
+		30856F531F0A191500526C97 /* SubmitCommentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitCommentVC.m; sourceTree = "<group>"; };
 		30A41DCD1F009C890051FAF7 /* UIButton+XBAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+XBAlignment.h"; sourceTree = "<group>"; };
 		30A41DCE1F009C890051FAF7 /* UIButton+XBAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XBAlignment.m"; sourceTree = "<group>"; };
 		30A41DDA1F00E9770051FAF7 /* RFSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSegmentView.h; sourceTree = "<group>"; };
@@ -909,6 +918,8 @@
 				3072F61B1F0206A300170C95 /* StoreInfoViewController.m */,
 				30856F2D1F09DEC900526C97 /* CommentViewController.h */,
 				30856F2E1F09DEC900526C97 /* CommentViewController.m */,
+				30856F521F0A191500526C97 /* SubmitCommentVC.h */,
+				30856F531F0A191500526C97 /* SubmitCommentVC.m */,
 				30856F391F0A000A00526C97 /* Model */,
 				3074DCFD1EF8B5D000C8E9C9 /* View */,
 			);
@@ -927,6 +938,8 @@
 				30E8F67D1EFCC3EE00103942 /* ShopInfoView.m */,
 				30856F271F09D2D700526C97 /* UserAttention.h */,
 				30856F281F09D2D700526C97 /* UserAttention.m */,
+				30856F4C1F0A016100526C97 /* CommentShopCell.h */,
+				30856F4D1F0A016100526C97 /* CommentShopCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1073,6 +1086,8 @@
 		30A9886D1EE55D2D00D04924 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				30856F4F1F0A11BE00526C97 /* TSShareHelper.h */,
+				30856F501F0A11BE00526C97 /* TSShareHelper.m */,
 				30E8F6151EFB702A00103942 /* GAGoodsCeverScrollView.h */,
 				30E8F6161EFB702A00103942 /* GAGoodsCeverScrollView.m */,
 				30263D601EE63BD5007B30C8 /* XBUITool.h */,
@@ -1585,6 +1600,7 @@
 				30263D5F1EE63816007B30C8 /* UIImage+image.m in Sources */,
 				30B0F5701EF61A0A008AC7E6 /* NSString+Helper.m in Sources */,
 				303C65201F0901F6008D806C /* DLCustomSlideView.m in Sources */,
+				30856F511F0A11BE00526C97 /* TSShareHelper.m in Sources */,
 				30A988B61EE57F8E00D04924 /* XBRequestNetTool.m in Sources */,
 				30C728C41EE7E7AE00CAD4C0 /* MessageViewController.m in Sources */,
 				30B0F5A21EF64DD8008AC7E6 /* PersoninfoCell.m in Sources */,
@@ -1600,6 +1616,7 @@
 				303C64F61F08F357008D806C /* BuyViewController.m in Sources */,
 				306EFFBE1EEE2BF90000D41F /* UIView+Render.m in Sources */,
 				30F27B271EEC49210005FF16 /* HomeSectionListCell.m in Sources */,
+				30856F541F0A191500526C97 /* SubmitCommentVC.m in Sources */,
 				30DF95091EE646CE000261C8 /* XBRequestModel.m in Sources */,
 				30C728B41EE7DFC900CAD4C0 /* ContinueView.m in Sources */,
 				30A9885C1EE5568800D04924 /* XBNavigationController.m in Sources */,
@@ -1663,6 +1680,7 @@
 				30A988621EE556C000D04924 /* BaseViewController.m in Sources */,
 				30263D501EE634F9007B30C8 /* XBSettingItem.m in Sources */,
 				30CD7A001F03AC1200BF4A11 /* MoreViewController.m in Sources */,
+				30856F4E1F0A016100526C97 /* CommentShopCell.m in Sources */,
 				303C651F1F0901F6008D806C /* DLLRUCache.m in Sources */,
 				303C64131F08C985008D806C /* UserSettingInfoCell.m in Sources */,
 				30263D4D1EE634B1007B30C8 /* XBSettingGroup.m in Sources */,

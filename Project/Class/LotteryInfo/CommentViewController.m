@@ -7,13 +7,18 @@
 //
 
 #import "CommentViewController.h"
+#import "SubmitCommentVC.h"
+
 #import "CommentEntity.h"
 #import "GAGoodsEvationCell.h"
+#import "CommentShopCell.h"
+
+#import "TSShareHelper.h"
 #import "UserAttention.h"
 
 
 
-@interface CommentViewController ()<UserAttentionDelegate>
+@interface CommentViewController ()<UserAttentionDelegate,GAGoodsEvationCellDelegate>
 
 @end
 
@@ -26,11 +31,17 @@
    
     self.requestUrl = @"http://mapi.yjcp.com/api/gain/tenawardinfo?lotId=33&pageNum=1&sid=31000000000";
 
-//    self.tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 40);
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    UserAttention *collectView = [[UserAttention alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 40, SCREEN_WIDTH, 40)];
+    UserAttention *collectView = [[UserAttention alloc]initWithFrame:CGRectZero];
     collectView.delegate = self;
     [self.view addSubview:collectView];
+    [collectView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.bottom.right.offset(0);
+        make.height.equalTo(@40);
+    }];
+    
+ 
 }
 
 
@@ -56,7 +67,7 @@
     if (indexPath.section == 0) {
         return [GAGoodsEvationCell goodsEvationHeight:self.entity];
     }
-    return 44;
+    return [CommentShopCell goodsEvationHeight:self.dataList[indexPath.row]];
 }
 
 - (UITableViewCell*)tableViewSectionStartCell{
@@ -66,14 +77,15 @@
         cell.entity = self.entity;
         [cell loadCell];
     }
+    cell.delegate = self;
     return cell;
 }
 
 - (UITableViewCell*)tableViewSectionCommentCell:(NSIndexPath*)indexPath{
-    UITableViewCell  *Cell= [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"1212"];
+    CommentShopCell  *cell = [CommentShopCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"CommentShopCell"];
     CommentEntity *entity = self.dataList[indexPath.row];
-    Cell.textLabel.text = entity.name;
-    return Cell;
+    cell.entity = entity;
+    return cell;
 }
 
 
@@ -88,10 +100,38 @@
     return cell;
 }
 
+- (void)clickGoodsEvationCellImgFrame:(CGRect)frame imgsURL:(NSArray*)imgsURL index:(NSInteger)index{
+    
+}
 
+
+- (void)clickShopView:(GAGoodsEvaEntity*)entity{
+    
+}
 
 - (void)userAttentionClick:(UserAttention*)atten clickTag:(UserCollectType)clickTag{
-    
+    switch (clickTag) {
+        case UserCollectType_Shop:
+            [XBUITool showRmindView:@"点赞成功"];
+            break;
+        case UserCollectType_Store:
+        {
+            SubmitCommentVC *subVC = [[SubmitCommentVC alloc]init];
+            [self.navigationController pushViewController:subVC animated:YES];
+        }
+            break;
+        case UserCollectType_Stylist:
+        {
+            UIImage *image = [UIImage imageNamed:@"Icon"];
+            if ([TSShareHelper shareWithType:TSShareHelperShareTypeWeChat andController:self andItems:@[image]]) {
+                [XBUITool showRmindView:@""];
+            }
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 
