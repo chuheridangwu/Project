@@ -27,16 +27,6 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_bottom_bg" translatesAutoresizingMaskIntoConstraints="NO" id="lUe-zE-OEl">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozH-7m-Vln">
-                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="44" id="aB1-AK-dgI"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="chat_bottom_voice_nor">
-                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <state key="highlighted" backgroundImage="chat_bottom_voice_press"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VS-Da-4WS">
                                         <rect key="frame" x="331" y="0.0" width="44" height="44"/>
                                         <constraints>
@@ -48,43 +38,26 @@
                                         </state>
                                         <state key="highlighted" backgroundImage="chat_bottom_up_press"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybc-J6-wFP">
-                                        <rect key="frame" x="287" y="0.0" width="44" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="44" id="D90-3A-Hcm"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="vEC-bU-rcA"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="chat_bottom_smile_nor">
-                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <state key="highlighted" backgroundImage="chat_bottom_smile_press"/>
-                                    </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="chat_bottom_textfield" translatesAutoresizingMaskIntoConstraints="NO" id="2Oq-Yf-hcW">
-                                        <rect key="frame" x="44" y="5" width="243" height="34"/>
+                                        <rect key="frame" x="10" y="5" width="270" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.59362031869999998" blue="0.74681548269999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="2Oq-Yf-hcW" firstAttribute="leading" secondItem="TwE-Wr-kP3" secondAttribute="leading" constant="10" id="5H2-1j-3d9"/>
                                     <constraint firstItem="lUe-zE-OEl" firstAttribute="top" secondItem="TwE-Wr-kP3" secondAttribute="top" id="8Xd-c0-tSG"/>
-                                    <constraint firstItem="Ybc-J6-wFP" firstAttribute="top" secondItem="TwE-Wr-kP3" secondAttribute="top" id="9UZ-dQ-Acv"/>
                                     <constraint firstAttribute="bottom" secondItem="2Oq-Yf-hcW" secondAttribute="bottom" constant="5" id="A8V-Zh-WZm"/>
                                     <constraint firstAttribute="trailing" secondItem="lUe-zE-OEl" secondAttribute="trailing" id="Kiv-U2-mfZ"/>
                                     <constraint firstAttribute="height" constant="44" id="Lja-Z0-Iga"/>
-                                    <constraint firstItem="ozH-7m-Vln" firstAttribute="top" secondItem="TwE-Wr-kP3" secondAttribute="top" id="UXC-l7-tUr"/>
-                                    <constraint firstAttribute="bottom" secondItem="ozH-7m-Vln" secondAttribute="bottom" id="YhQ-ff-Wqn"/>
-                                    <constraint firstItem="2Oq-Yf-hcW" firstAttribute="leading" secondItem="ozH-7m-Vln" secondAttribute="trailing" id="ZxR-xX-cAb"/>
                                     <constraint firstAttribute="trailing" secondItem="4VS-Da-4WS" secondAttribute="trailing" id="lNg-YH-C3Y"/>
                                     <constraint firstItem="2Oq-Yf-hcW" firstAttribute="top" secondItem="TwE-Wr-kP3" secondAttribute="top" constant="5" id="mWK-kn-YI5"/>
                                     <constraint firstItem="lUe-zE-OEl" firstAttribute="leading" secondItem="TwE-Wr-kP3" secondAttribute="leading" id="mYV-xn-dfi"/>
                                     <constraint firstAttribute="bottom" secondItem="4VS-Da-4WS" secondAttribute="bottom" id="mp8-hy-Zxe"/>
                                     <constraint firstItem="4VS-Da-4WS" firstAttribute="top" secondItem="TwE-Wr-kP3" secondAttribute="top" id="nOm-tu-EOL"/>
-                                    <constraint firstItem="4VS-Da-4WS" firstAttribute="leading" secondItem="Ybc-J6-wFP" secondAttribute="trailing" id="pbq-5e-hlg"/>
-                                    <constraint firstItem="ozH-7m-Vln" firstAttribute="leading" secondItem="TwE-Wr-kP3" secondAttribute="leading" id="tYW-Sp-7wJ"/>
-                                    <constraint firstItem="Ybc-J6-wFP" firstAttribute="leading" secondItem="2Oq-Yf-hcW" secondAttribute="trailing" id="w9a-uu-Jjh"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ybc-J6-wFP" secondAttribute="bottom" id="xhC-ye-2mW"/>
                                     <constraint firstAttribute="bottom" secondItem="lUe-zE-OEl" secondAttribute="bottom" id="ynN-B0-wEJ"/>
+                                    <constraint firstItem="4VS-Da-4WS" firstAttribute="leading" secondItem="2Oq-Yf-hcW" secondAttribute="trailing" constant="51" id="zBd-V9-Ror"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="158" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XPB-1U-wba">
@@ -99,7 +72,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昨天 10:10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxZ-uT-UPt">
-                                                    <rect key="frame" x="112.5" y="5" width="150" height="21"/>
+                                                    <rect key="frame" x="113" y="5" width="150" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="5nb-bk-7ax"/>
                                                         <constraint firstAttribute="width" constant="150" id="OFb-Ld-1JD"/>
@@ -165,7 +138,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昨天 10:10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxv-7h-LuS">
-                                                    <rect key="frame" x="112.5" y="5" width="150" height="21"/>
+                                                    <rect key="frame" x="113" y="5" width="150" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="K2Y-ul-DCy"/>
                                                         <constraint firstAttribute="width" constant="150" id="MB1-Ut-Duz"/>
@@ -257,18 +230,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="178" y="311"/>
+            <point key="canvasLocation" x="176.80000000000001" y="310.79460269865069"/>
         </scene>
     </scenes>
     <resources>
         <image name="chat_bottom_bg" width="10" height="42"/>
-        <image name="chat_bottom_smile_nor" width="34" height="34"/>
-        <image name="chat_bottom_smile_press" width="34" height="34"/>
         <image name="chat_bottom_textfield" width="166" height="31"/>
         <image name="chat_bottom_up_nor" width="34" height="34"/>
         <image name="chat_bottom_up_press" width="34" height="34"/>
-        <image name="chat_bottom_voice_nor" width="34" height="34"/>
-        <image name="chat_bottom_voice_press" width="34" height="34"/>
         <image name="chat_recive_nor" width="48" height="56"/>
         <image name="chat_send_nor" width="49" height="56"/>
         <image name="me" width="100" height="100"/>

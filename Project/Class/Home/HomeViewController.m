@@ -228,10 +228,12 @@
 
 // 客服
 - (UITableViewCell*)customerSeverWithCell{
-    XBBaseTableViewCell *cell = [XBBaseTableViewCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"Customer"];
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:cell.contentView.bounds];
-    imageView.image = [UIImage imageNamed:@"sevice"];
-    [cell.contentView addSubview:imageView];
+    XBBaseTableViewCell *cell = [XBBaseTableViewCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"XBBaseTableViewCell"];
+    cell.imageView.image = [UIImage imageNamed:@"other"];
+    cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    cell.textLabel.text = @"客服中心";
+    cell.detailTextLabel.text = @"有什么问题您可以问我哟";
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
@@ -302,9 +304,13 @@
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
     if (indexPath.section == HomeSecitont_Seivice) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"XMGChatingViewController" bundle:nil];
-        XMGChatingViewController *view3 = [storyboard instantiateViewControllerWithIdentifier:@"XMGChatingViewController"];
-        [self.navigationController pushViewController:view3 animated:YES];
+        MQChatViewManager *chatViewManager = [[MQChatViewManager alloc] init];
+        [chatViewManager setMessageLinkRegex:@"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)|([a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)"];
+        [chatViewManager enableChatWelcome:true];
+        [chatViewManager setChatWelcomeText:@"你好，请问有什么可以帮助到您？"];
+        //    [chatViewManager.chatViewStyle setIncomingMsgSoundFileName:@"MQNewMessageRingStyleTwo.wav"];
+        [chatViewManager enableMessageSound:true];
+        [chatViewManager pushMQChatViewControllerInViewController:self];
     }else if (indexPath.section == HomeSection_Skill){
         LotteryHelpVC *skillVC = [[LotteryHelpVC alloc]init];
         [self.navigationController pushViewController:skillVC animated:YES];

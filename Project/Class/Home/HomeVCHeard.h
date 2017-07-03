@@ -24,6 +24,10 @@
 #import "MoreViewController.h"
 #import "XMGChatingViewController.h"
 
+#import "MQChatViewManager.h"
+#import "MQAssetUtil.h"
+#import "MQMessageFormViewController.h"
+#import "MQMessageFormViewManager.h"
 
 
 #import "HomeTopPhotoCell.h"
@@ -39,10 +43,10 @@ enum{
     HomeSection_Circle,//跑马灯
     HomeSeciton_SectionBanner,
     HomeSection_DataBase, // 资料库
+    HomeSecitont_Seivice,
     HomeSection_Skill, //选彩技巧
     HomeSeciton_List,
     HomeSeciton_Banner,
-    HomeSecitont_Seivice,
     HomeSeciton_Invalid
 };
 
