@@ -62,12 +62,12 @@
         case HomeSection_DataBase:
         row = self.model.dataBaseArray.count % 2 == 0 ? self.model.dataBaseArray.count / 2 : (self.model.dataBaseArray.count / 2 + 1);
         break;
-        case  HomeSeciton_SectionBanner:
         case HomeSection_Circle:
         case  HomeSecitont_Seivice:
+        case HomeSection_Skill:
         row = 1;
         break;
-        case HomeSection_ListNews:
+        case  HomeSeciton_SectionBanner:
         case  HomeSeciton_Banner:
         case  HomeSeciton_List:
         row = 0;
@@ -88,18 +88,17 @@
         case  HomeSeciton_List:
         height = 0;
         break;
-        case  HomeSection_ListNews:
         case HomeSection_DataBase:
         height = HomeListSectionCellHeigth;
         break;
         case  HomeSeciton_Banner:
+        case  HomeSection_Skill:
+        case HomeSecitont_Seivice:
+
         height = 60;
         break;
         case  HomeSeciton_SectionBanner:
         height = HomeSectionListCellHeight;
-        break;
-        case HomeSecitont_Seivice:
-        height = 44;
         break;
         case HomeSection_Circle:
         height = XBRunCircleTextCellHeigtHt;
@@ -117,15 +116,17 @@
         case HomeSection_DataBase:
         height = HomeSectionTitleCellHeight;
         break;
-        case  HomeSeciton_SectionBanner:
         case HomeSection_Circle:
+        case  HomeSecitont_Seivice:
+        case  HomeSection_Skill:
+
         height = 5;
         break;
         case HomeSeciton_ScrollPicture:
-        case  HomeSecitont_Seivice:
-        case  HomeSection_ListNews:
         case  HomeSeciton_Banner:
         case  HomeSeciton_List:
+        case  HomeSeciton_SectionBanner:
+
         {
             height = 0;
         }
@@ -154,9 +155,9 @@
         }
         break;
         case HomeSection_DataBase:
-        [cell setSectionTitle:@"足球资料库：  足球迷的天堂"];
+        [cell setSectionTitle:@"足球资料库：  最新的比分资讯"];
         break;
-        case  HomeSection_ListNews:
+        case  HomeSection_Skill:
         case  HomeSeciton_Banner:
         case  HomeSeciton_SectionBanner:
         case  HomeSecitont_Seivice:
@@ -214,21 +215,13 @@
     return cell;
 }
 
-//新闻列表
+//选彩技巧
 - (UITableViewCell*)sectionNewsListCell:(NSIndexPath*)indexPath{
-    HomeListSectionCell *cell = [HomeListSectionCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"HomeListSectionCell"];
-    cell.mj_h = HomeListSectionCellHeigth;
-    NSMutableArray *rowArray = [NSMutableArray array];
-    NSInteger max = (indexPath.row+1)*2;
-    NSInteger count = [self.model.newsArray count];
-    if(max > count){
-        max = count;
-    }
-    for(NSInteger i = indexPath.row * 2; i < max; i++){
-        [rowArray addObject:[self.model.newsArray objectAtIndex:i]];
-    }
-    cell.array = rowArray;
-    cell.delegate  =self;
+    XBBaseTableViewCell *cell = [XBBaseTableViewCell tableViewCellInitializeWithTableView:self.tableView withIdtifier:@"XBBaseTableViewCell"];
+    cell.imageView.image = [UIImage imageNamed:@"help"];
+    cell.textLabel.text = @"选彩攻略";
+    cell.detailTextLabel.text = @"这里有最新的选彩技巧";
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
@@ -287,7 +280,7 @@
         case  HomeSeciton_Banner:
         cell = [self gameComputerCell];
         break;
-        case HomeSection_ListNews:
+        case HomeSection_Skill:
         cell = [self sectionNewsListCell:indexPath];
         break;
         case  HomeSeciton_SectionBanner:
@@ -308,6 +301,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
+    if (indexPath.section == HomeSecitont_Seivice) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"XMGChatingViewController" bundle:nil];
+        XMGChatingViewController *view3 = [storyboard instantiateViewControllerWithIdentifier:@"XMGChatingViewController"];
+        [self.navigationController pushViewController:view3 animated:YES];
+    }else if (indexPath.section == HomeSection_Skill){
+        LotteryHelpVC *skillVC = [[LotteryHelpVC alloc]init];
+        [self.navigationController pushViewController:skillVC animated:YES];
+    }
 }
 
 - (void)clickArrowBtn{
@@ -339,7 +340,6 @@
         {
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"XMGChatingViewController" bundle:nil];
             XMGChatingViewController *view3 = [storyboard instantiateViewControllerWithIdentifier:@"XMGChatingViewController"];
-        
             vc = view3;
         }
         break;

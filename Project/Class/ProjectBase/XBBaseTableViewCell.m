@@ -13,9 +13,9 @@
 + (instancetype)tableViewCellInitializeWithTableView:(UITableView*)tableView  withIdtifier:(NSString*)idtifier{
     XBBaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:idtifier];
     if (!cell) {
-        cell = [[NSClassFromString(idtifier) alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:idtifier];
+        cell = [[NSClassFromString(idtifier) alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:idtifier];
         if (!cell) {
-            cell = [[XBBaseTableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:idtifier];
+            cell = [[XBBaseTableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:idtifier];
         }
     }
     return cell;

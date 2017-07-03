@@ -46,6 +46,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"客服中心";
     self.view.backgroundColor = [UIColor whiteColor];
     
     // 设置文本框左边的内容
@@ -56,6 +57,14 @@
     
     // 监听键盘通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(clickView)];
+    [self.view addGestureRecognizer:pan];
+}
+
+- (void)clickView{
+    // 退出键盘
+    [self.view endEditing:YES];
 }
 
 - (void)dealloc

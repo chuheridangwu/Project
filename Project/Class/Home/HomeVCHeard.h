@@ -32,17 +32,17 @@
 #import "HomeSectionListCell.h"
 #import "XBRunCircleTextCell.h"
 #import "HomeBuyLuckBallCell.h"
+#import "XBBaseTableViewCell.h"
 
 enum{
     HomeSeciton_ScrollPicture = 0, //轮播图
     HomeSection_Circle,//跑马灯
     HomeSeciton_SectionBanner,
     HomeSection_DataBase, // 资料库
+    HomeSection_Skill, //选彩技巧
     HomeSeciton_List,
     HomeSeciton_Banner,
-    HomeSection_ListNews, //体育新闻
     HomeSecitont_Seivice,
-    
     HomeSeciton_Invalid
 };
 
