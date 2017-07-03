@@ -1358,7 +1358,7 @@
 				TargetAttributes = {
 					30E7AD0D1EE45F5B000609DB = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = ST37ZVAWVJ;
+						DevelopmentTeam = G7BTP3V7YL;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -1798,7 +1798,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Project/Project.entitlements;
-				DEVELOPMENT_TEAM = ST37ZVAWVJ;
+				DEVELOPMENT_TEAM = G7BTP3V7YL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Project/Class/Othre/libs/Channels/AlipaySDK",
@@ -1816,7 +1816,7 @@
 					"$(PROJECT_DIR)/Project/Class/Othre/libs/support",
 					"$(PROJECT_DIR)/Project/Class/Othre/AliPaySDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Luck.Ball;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Luck.Ball-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
@@ -1830,7 +1830,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Project/Project.entitlements;
-				DEVELOPMENT_TEAM = ST37ZVAWVJ;
+				DEVELOPMENT_TEAM = G7BTP3V7YL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Project/Class/Othre/libs/Channels/AlipaySDK",
@@ -1848,7 +1848,7 @@
 					"$(PROJECT_DIR)/Project/Class/Othre/libs/support",
 					"$(PROJECT_DIR)/Project/Class/Othre/AliPaySDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Luck.Ball;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Luck.Ball-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";

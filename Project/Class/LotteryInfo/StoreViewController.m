@@ -30,6 +30,12 @@
 @property (nonatomic,assign)NSInteger index;
 @property (nonatomic,strong)UIViewController *disMissVC;
 
+
+@property(nonatomic,strong) CLGeocoder *geo;
+@property(nonatomic,strong) NSArray *localArray;
+
+
+
 @end
 
 @implementation StoreViewController
@@ -131,6 +137,7 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:( NSArray<CLLocation *> *)locations{
     //取出位置对象
     CLLocation *cll = [locations firstObject ];
+    self.localArray = locations;
     
     //取出坐标
     CLLocationCoordinate2D  coord = cll.coordinate ;
@@ -139,11 +146,6 @@
     //停止定位
     
     [self.manger stopUpdatingLocation ];
-    
-//    self.index ++;
-//    if (self.index > 1) {
-//        return;
-//    }
     
     self.alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"打开去店铺的路线" preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
@@ -221,29 +223,39 @@
 
 //苹果地图
 - (void)navAppleMap{
-    
-    //获取当前位置
-    MKMapItem *mylocation = [MKMapItem mapItemForCurrentLocation];
-    //目的地位置
-    CLLocationCoordinate2D coords2;
-    coords2.latitude= 120.17;
-    coords2.longitude= 30.25;
-    
-    //当前的位置
-    MKMapItem *currentLocation = [MKMapItem mapItemForCurrentLocation];
-    
-    //目的地的位置
-    MKMapItem *toLocation = [[MKMapItem alloc] initWithPlacemark:[[MKPlacemark alloc] initWithCoordinate:coords2 addressDictionary:nil]];
-    
-    
-    
-    toLocation.name = @"目的地";
-    NSArray *items = [NSArray arrayWithObjects:currentLocation, toLocation, nil];
-    
-    NSDictionary *options = @{ MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving, MKLaunchOptionsMapTypeKey: [NSNumber numberWithInteger:MKMapTypeStandard], MKLaunchOptionsShowsTrafficKey:@YES };
-    
-    //打开苹果自身地图应用，并呈现特定的item
-    [MKMapItem openMapsWithItems:items launchOptions:options];
+
+    [self.geo reverseGeocodeLocation:[self.localArray firstObject ] completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        
+        //用户当前的位置
+        CLPlacemark *beginMark=placemarks.firstObject;
+        
+        MKPlacemark *mkBeginMark=[[MKPlacemark alloc]initWithPlacemark:beginMark];
+        
+        MKMapItem *beginItem=[[MKMapItem alloc]initWithPlacemark:mkBeginMark];
+        
+        NSArray *array = @[@"浙江省杭州市拱墅区衢州街",@"浙江省杭州市江干区格畈家园北苑",@" 杭州市体育场路",@"杭州市黄龙路",@"杭州市曙光路126号",@" 浙江省杭州市体育场路210号",@"复兴路397号复兴商务大厦B楼"];
+        
+        [self.geo geocodeAddressString:array[arc4random()%array.count] completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+            
+            CLPlacemark *endMark=placemarks.firstObject;
+            
+            MKPlacemark *mkEndMark=[[MKPlacemark alloc]initWithPlacemark:endMark];
+            
+            MKMapItem *endItem=[[MKMapItem alloc]initWithPlacemark:mkEndMark];
+            
+            
+            NSDictionary *dict=@{
+                                 
+                                 MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving,
+                                 MKLaunchOptionsMapTypeKey:@(MKMapTypeHybrid),
+                                 MKLaunchOptionsShowsTrafficKey:@(YES)
+                                 
+                                 };
+            
+            [MKMapItem openMapsWithItems:@[beginItem,endItem] launchOptions:dict];
+        }];
+        
+    }];
 }
 
 #pragma mark - 导航方法
@@ -269,6 +281,15 @@
     return maps;
 }
 
+
+
+-(CLGeocoder *)geo{
+    
+    if (_geo==nil) {
+        _geo=[[CLGeocoder alloc]init];
+    }
+    return _geo;
+}
 
 
 - (CLLocationManager*)manger{
