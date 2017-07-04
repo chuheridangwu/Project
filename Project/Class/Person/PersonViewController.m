@@ -44,13 +44,13 @@
 //    [self presentViewController:navVC animated:YES completion:nil];
     
     self.tableView.tableFooterView = [self tableViewFootView];
-//   __block LoginViewController *loginVC = [[LoginViewController alloc]init];
-//    [self.view addSubview:loginVC.view];
-//    [self addChildViewController:loginVC];
-//    loginVC.myBlock = ^(){
-//        [loginVC removeFromParentViewController];
-//        [loginVC.view removeFromSuperview];
-//    };
+   __block LoginViewController *loginVC = [[LoginViewController alloc]init];
+    [self.view addSubview:loginVC.view];
+    [self addChildViewController:loginVC];
+    loginVC.myBlock = ^(){
+        [loginVC removeFromParentViewController];
+        [loginVC.view removeFromSuperview];
+    };
 
     self.title1Array = @[@"充值中心",@"购彩记录"];
     self.image1Array = @[@"UserMoneyImg",@"OrderListImg"];

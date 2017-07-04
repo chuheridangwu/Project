@@ -2850,6 +2850,11 @@
 					"$(PROJECT_DIR)/Project/Class/Othre/libs/Channels/AlipaySDK",
 					"$(PROJECT_DIR)/Project/Class/Othre/AliPaySDK",
 					"$(PROJECT_DIR)/Project/Class/Othre",
+					"$(PROJECT_DIR)/Project/Class/Othre/ShareSDK",
+					"$(PROJECT_DIR)/Project/Class/Othre/ShareSDK/Support/Optional",
+					"$(PROJECT_DIR)/Project/Class/Othre/ShareSDK/Support/PlatformConnector",
+					"$(PROJECT_DIR)/Project/Class/Othre/ShareSDK/Support/PlatformSDK/QQSDK",
+					"$(PROJECT_DIR)/Project/Class/Othre/ShareSDK/Support/Required",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Project/ProjectHeader.pch";
 				INFOPLIST_FILE = Project/Info.plist;
@@ -2862,6 +2867,8 @@
 					"$(PROJECT_DIR)/Project/Class/Othre/libs/support",
 					"$(PROJECT_DIR)/Project/Class/Othre/AliPaySDK",
 					"$(PROJECT_DIR)/Project/Class/Home/MQChatViewController/Vendors/MLAudioRecorder/amr_en_de/lib",
+					"$(PROJECT_DIR)/Project/Class/Othre/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
+					"$(PROJECT_DIR)/Project/Class/Othre/ShareSDK/Support/PlatformSDK/WeChatSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Luck.Ball-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2883,6 +2890,11 @@
 					"$(PROJECT_DIR)/Project/Class/Othre/libs/Channels/AlipaySDK",
 					"$(PROJECT_DIR)/Project/Class/Othre/AliPaySDK",
 					"$(PROJECT_DIR)/Project/Class/Othre",
+					"$(PROJECT_DIR)/Project/Class/Othre/ShareSDK",
+					"$(PROJECT_DIR)/Project/Class/Othre/ShareSDK/Support/Optional",
+					"$(PROJECT_DIR)/Project/Class/Othre/ShareSDK/Support/PlatformConnector",
+					"$(PROJECT_DIR)/Project/Class/Othre/ShareSDK/Support/PlatformSDK/QQSDK",
+					"$(PROJECT_DIR)/Project/Class/Othre/ShareSDK/Support/Required",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Project/ProjectHeader.pch";
 				INFOPLIST_FILE = Project/Info.plist;
@@ -2895,6 +2907,8 @@
 					"$(PROJECT_DIR)/Project/Class/Othre/libs/support",
 					"$(PROJECT_DIR)/Project/Class/Othre/AliPaySDK",
 					"$(PROJECT_DIR)/Project/Class/Home/MQChatViewController/Vendors/MLAudioRecorder/amr_en_de/lib",
+					"$(PROJECT_DIR)/Project/Class/Othre/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
+					"$(PROJECT_DIR)/Project/Class/Othre/ShareSDK/Support/PlatformSDK/WeChatSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Luck.Ball-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";

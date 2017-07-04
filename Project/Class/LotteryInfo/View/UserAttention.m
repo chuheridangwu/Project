@@ -34,11 +34,11 @@
         self.userInteractionEnabled = YES;
         self.backgroundColor = XBAPPBaseColor;
 
-        NSArray *attenArr = @[@"点赞",@"评论",@"分享"];
-        NSArray *collectArr = @[@"encourage",@"comment",@"share"];
-        CGFloat backW = SCREEN_WIDTH / 3;
+        NSArray *attenArr = @[@"点赞",@"评论"];
+        NSArray *collectArr = @[@"encourage",@"comment"];
+        CGFloat backW = SCREEN_WIDTH / 2;
         CGFloat backH = 40;
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < attenArr.count; i++) {
             UIButton *back = [[UIButton alloc]init];
             CGFloat imageX = i *backW;
             back.frame = CGRectMake(imageX, 0, backW, backH);
@@ -54,7 +54,7 @@
             
             
             CGFloat viewW = (i + 1) *backW;
-            if (i == 0 || i == 1) {
+            if (i == 0) {
                 UIView *dicideView = [[UIView alloc]initWithFrame:CGRectMake(viewW, 0, 1,40)];
                 dicideView.backgroundColor = [UIColor whiteColor];
                 [self addSubview:dicideView];

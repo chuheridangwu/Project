@@ -18,8 +18,9 @@
 
 
 
-@interface CommentViewController ()<UserAttentionDelegate,GAGoodsEvationCellDelegate>
-
+@interface CommentViewController ()<UITableViewDelegate,UITableViewDataSource,UserAttentionDelegate,GAGoodsEvationCellDelegate>
+@property (nonatomic,strong)UITableView *tableView;
+@property (nonatomic,strong)NSArray *dataList;
 @end
 
 @implementation CommentViewController
@@ -28,8 +29,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"评论详情";
-   
-    self.requestUrl = @"http://mapi.yjcp.com/api/gain/tenawardinfo?lotId=33&pageNum=1&sid=31000000000";
+    
+    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds];
+    [self.view addSubview:self.tableView];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    
+    WS(ws);
+    [XBUITool asRequestNetWork:^{
+        ws.dataList = [self randomArray];
+        [ws.tableView reloadData];
+    }];
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
@@ -139,13 +149,6 @@
 
 
 
-
-
-- (void)requestNetWorkSuccess:(id)outcome{
-    [super requestNetWorkSuccess:outcome];
-    self.dataList = (NSMutableArray*)[self randomArray];
-    [self.tableView reloadData];
-}
 
 
 
