@@ -31,7 +31,7 @@
     // Do any additional setup after loading the view.
     self.title = _entity.name;
     self.view.backgroundColor = [UIColor whiteColor];
-    NSString *noticion = @"购彩小帮手助您中大奖，下注会使用iOS系统内置的Safari浏览器打开梦想彩官网，彩票开奖信息和下注信息与苹果公司无关";
+    NSString *noticion = @"购彩小帮手助您中大奖，下注会使用iOS系统内置的Safari浏览器打开梦想彩官网，彩票开奖信息与苹果公司无关";
     
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 64 - 40, SCREEN_WIDTH, 40)];
     [btn setTitle:@"投注" forState:UIControlStateNormal];

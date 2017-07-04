@@ -35,7 +35,7 @@
     _tableView.rowHeight = SCREEN_HEIGHT;
     
     
-    NSString *noticion = @"  购彩小帮手助您中大奖，下注会使用iOS系统内置的Safari浏览器打开梦想彩官网，彩票开奖信息和下注信息与苹果公司无关";
+    NSString *noticion = @"  购彩小帮手助您中大奖，下注会使用iOS系统内置的Safari浏览器打开梦想彩官网，彩票开奖信息与苹果公司无关";
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 5 - 64  - 45, SCREEN_WIDTH, 45)];
     label.text = noticion;
     label.backgroundColor = [UIColor whiteColor];
